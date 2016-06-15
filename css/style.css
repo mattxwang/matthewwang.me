@@ -12,7 +12,15 @@ body {
     width: 100%;
     height: 100%;
 		position: relative;
-		text-align: center;
+}
+p,h1,h2,h3,h4,h5,h6{
+	color:inherit;
+}
+.bg-info, .bg-success{
+	color:white;
+}
+.well, .panel{
+	color:black;
 }
 .section{
 	padding-top:50px;
@@ -21,10 +29,13 @@ body {
 	min-width: 100%;
 }
 .footer{
-	padding-top: 30px;
+	padding-top: 10px;
 	padding-bottom: 20px;
 }
 .link-normal a{
+	color:inherit;
+}
+.link-underline a{
 	color:inherit;
 	text-decoration: underline;
 }
