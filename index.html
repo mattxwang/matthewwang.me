@@ -11,43 +11,13 @@
 		<link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body data-spy="scroll" data-target="#navbar-container" data-offset="50">
-		<div id="navbar-container">
-			<nav class="navbar navbar-default navbar-fixed-top">
-			  <div class="container-fluid">
-			    <div class="navbar-header">
-			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-container">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			      </button>
-			      <a class="navbar-brand page-scroll" href="#page-start">Matthew Wang</a>
-			    </div>
-
-			    <div class="collapse navbar-collapse" id="navbar-collapse-container">
-			      <ul class="nav navbar-nav">
-			        <li class="nav-link"><a class="page-scroll" href="#page-about">About</a></li>
-							<li class="nav-link"><a class="page-scroll" href="#page-projects">Projects</a></li>
-							<li class="nav-link"><a class="page-scroll" href="#page-skills">Skills</a></li>
-							<li class="nav-link"><a class="page-scroll" href="#page-timeline">Timeline</a></li>
-							<li class="nav-link"><a class="page-scroll" href="#page-contact">Contact</a></li>
-			      </ul>
-			      <ul class="nav navbar-nav navbar-right">
-			        <li><a href="http://matthewwang.me">Directory</a></li>
-			      </ul>
-			    </div>
-			  </div>
-			</nav>
-		</div>
-		<div class="section bg-info" id="page-start" style="padding-top:100px; text-align:center;">
-	    <div class="container">
-				<div class="animated fadeInDown">
+  <body>
+		<div class="section bg-info text-center">
+	    <div class="container animated fadeInDown">
 		    	<h1>Hey there!</h1>
-					<img src="img/matt.png"></img>
+					<img class="img-responsive img-circle img-profile" src="img/matt.png"></img>
 					<h1>I'm Matthew Wang</h1>
 					<h2>Nice to meet you.</h2>
-				</div>
 			</div>
 		</div>
 		<div class="section" id="page-about">
@@ -283,6 +253,19 @@
 		</div>
 		<div class="section" id="page-contact">
 			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 text-center">
+						<span class="social-buttons"><a class="text-black" href="https://github.com/malsf21"><span class="fa fa-github"></span>  GitHub</a></span>
+					</div>
+					<div class="col-sm-4 text-center">
+						<span class="social-buttons"><a href="https://twitter.com/malsf21"><span class="fa fa-twitter"></span> Twitter</a></span>
+					</div>
+					<div class="col-sm-4 text-center">
+						<span class="social-buttons"><a href="mailto:malsf21@gmail.com"><span class="fa fa-envelope"></span> Email</a></span>
+					</div>
+				</div>
+			</div>
+			<div class="container">
 				<h1 class="page-header">Contact Me</h1>
 				<div class="list-group">
 				  <a href="https://github.com/malsf21" class="list-group-item"><span class="fa fa-github"></span> GitHub</a>
@@ -298,7 +281,6 @@
 		</div>
 
     <script src="js/jquery.js"></script>
-		<script src="js/jquery.easing.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 		<script>
 			//jQuery for page scrolling feature - requires jQuery Easing plugin
