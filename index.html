@@ -1,313 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Hey, you're looking through the source code here? Cool! Most of the stuff is pretty standard, but you can check out the CSS framework I used to make most of this happen at its GitHub Repo: https://github.com/malsf21/liteweight -->
-
-  <head>
+	<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Matthew Wang</title>
-    <meta name="description" content="The website for the second coolest Matthew Wang ever: a student developer, competitive debater, and a serial pun maker. His mom calls him Matt.">
-    <!-- Now, before you tell me that most of this is unnecessary, I agree with you. But, it helps with SEO, and it also makes things slightly more accessible for a small subset of users. I think it's worth the extra 500 bytes. -->
-    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <link rel="manifest" href="manifest.json">
-    <meta name="msapplication-TileColor" content="#e95420">
-    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
-    <meta name="theme-color" content="#e95420">
-
-    <link rel="stylesheet" href="css/liteweight-nexa.min.css" />
-    <!-- If you're giving me squinty eyes while reading this, it basically makes Font Awesome non-render blocking. Since it isn't "essential" to the viewing experience of the site, we let it load after the site is done loading. I am considering just using SVGs though and not loading the font, but we'll see.-->
-    <link rel="stylesheet" href="css/font-awesome.min.css" media="none" onload="if(media!='all')media='all'" />
-    <noscript>
-        <link rel="stylesheet" href="css/font-awesome.min.css"/>
-      </noscript>
-    <style>
-      @media only screen and (min-width: 768px) {
-        .list-items {
-          font-size: 1.5em;
-          padding: 0;
-          margin: 0;
-          list-style: none;
-        }
-      }
-
-      @media only screen and (max-width: 768px) {
-        .list-items {
-          font-size: 1.25em;
-        }
-      }
-    </style>
+		<link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/liteweight-nexa.min.css?v2beta" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+		<style>
+			.list-items{
+				font-size: 1.5em;
+			}
+		</style>
   </head>
+  <body class="main-body">
+		<div class="card text-center">
+    	<span class="fa-2x">Hey there!</span>
+			<h1 class="fa-3x">My name is Matthew Wang</h1>
+			<p class="text">
+				But you can call me Matt.
+			</p>
+		</div>
+		<div class="card card-bordered-primary fa-2x">
+			Quick Links: <a href="https://blog.matthewwang.me">Blog</a>, <a href="https://github.com/malsf21/">GitHub</a>, <a href="files/resume.pdf">Résumé</a>, <a href="https://www.linkedin.com/in/matthew-wang-510992136/">LinkedIn</a>
+		</div>
+		<div class="card card-bg-primary">
+			<h2>Fun Fact</h2>
+			<p class="text">
+				I wrote the CSS framework used in this website! Check it out <a class="link-white" href="https://github.com/malsf21/liteweight">on GitHub!</a>
+			</p>
+		</div>
+		<div class="card card-bordered-primary">
+			<h1>About Me</h1>
+			<p class="text">
+				I'm a huge computer nerd: you'll usually find me working on some programming projects, like making websites, applications, or traversing the rabbit hole that is GitHub to find other cool projects. I'm also a huge debating nerd: I compete in high school debating and Model UN, and regularly use arguments in my code (hah!). I'm also a strong believer in education: not only do I take senior teaching and leadership roles in debating and computer science, I've spearheaded programs like Horizons Robotics, where we give chances for inner-city kids to learn awesome things about awesome robots. In my spare time, if I'm not brewing something up with my computer, I'm often listening to music, reading, or playing video games.
+			</>
+		</div>
 
-  <body>
-    <div class="card text-center">
-      <p class="fa-2x">Hey there!</p>
-      <h1 class="fa-3x">My name is Matthew Wang</h1>
-      <p class="text">
-        But you can call me Matt.
-      </p>
-    </div>
-    <div class="text-center fa-2x">
-      Quick Links: <a rel="noopener" href="https://blog.matthewwang.me">Blog</a>, <a rel="noopener" href="https://github.com/malsf21/">GitHub</a>, <a rel="noopener" href="files/resume.pdf">Résumé</a>, <a rel="noopener" href="https://www.linkedin.com/in/matthew-wang-510992136/">LinkedIn</a>
-    </div>
-    <div class="card card-bordered-primary">
-      <h1>About Me</h1>
-      <p class="text">
-        Now, I could tell you that I'm an "inspiring public speaker", or an "innovative and disruptive student developer", or a "funny person", but that's boring, and you have no way of knowing if it's true or not (hint, the last one's a lie). Instead, let me tell you what I care about.
-      </p>
-      <p class="text">
-        I care about <b>education</b>. That's a pretty broad topic, but that means there's a lot to do. I've created and fostered programs like Horizons Robotics, where I lead a team of tutors to give awesome inner-city kids the opportunity to learn awesome things about robotics..
-      </p>
-      <p class="text">
-        I care about <b>technology</b>. I know, that's pretty stereotypical, but it's true. Modern technology and the internet have a treasure trove of cool things. I try to do make cool things too, like web applications, pretty graphics, and lean machines. Sometimes, they're cool too.
-      </p>
-      <p class="text">
-        I care about <b>debate</b>. Weird thing to care about, but trust me. It's a great way for me to learn about all the different ways I've been wrong about things in life. Plus, I get to spread the knowledge in my own school's club, and also as a camp counselor at Debate Camp Canada.
-      </p>
-      <p class="text">
-        In my spare time, I do some <a rel="noopener" href="https://blog.matthewwang.me">blogging</a>, <a rel="noopener" href="https://open.spotify.com/user/11156788800">listen to music</a>, read, and play video games. And think of good puns.
-      </p>
-    </div>
+		<div class="card card-bg-primary">
+			<h2>Fun Fact</h2>
+			<p class="text">
+				When I went to the U.K. for the International Competition for Young Debaters, I also picked up the underappreciated skill of <a class="link-white" href="https://en.wikipedia.org/wiki/Punt_(boat)">punting</a>, which is basically pushing boats forward with large sticks.
+			</p>
+		</div>
 
-    <div class="card card-bg-primary">
-      <h2>Pun Fact</h2>
-      <p class="text">
-        I enjoy making pun names for my Spotify playlists. For example, I have a playlist called <b>amperes</b> that has all the music I'm <em>current-ly</em> listening to. Don't lie, I knew you chuckled a bit there.
-      </p>
-    </div>
+		<div class="card card-bordered-primary">
+			<h1>My Projects</h1>
+			<ul class="list-unstyled list-items">
+				<li>
+					Convergence Layout and Website <a target="_blank" href="https://convergence.today"><span class="fa fa-link"></span></a> <a target="_blank" href="https://github.com/malsf21/convergence"><span class="fa fa-github"></span></a>
+				</li>
+				<li>
+					Digital Media/Computer Science Club Website <a target="_blank" href="https://dmcs.tech"><span class="fa fa-link"></span></a> <a target="_blank" href="https://github.com/uccdmcs/dmcs.tech"><span class="fa fa-github"></span></a>
+				</li>
+				<li>
+				 	Fair Chair Desktop App (WIP) <a target="_blank" href="https://github.com/malsf21/fair-chair"><span class="fa fa-github"></span></a>
+				</li>
+				<li>
+				 	Fancy Streamers <a target="_blank" href="https://malsf21.github.io/fancy-streamers/"><span class="fa fa-link"></span></a> <a target="_blank" href="https://github.com/malsf21/fancy-streamers"><span class="fa fa-github"></span></a>
+				</li>
+				<li>
+					FoodSpan Mobile + Web App, Website, Backend
+					<a target="_blank" href="https://foodspan.ca"><span class="fa fa-link"></span></a> <a target="_blank" href="https://github.com/foodspan/foodspan-app"><span class="fa fa-mobile-phone"></span></a> <a target="_blank" href="https://github.com/foodspan/foodspan-website"><span class="fa fa-github"></span></a>
+				</li>
+				<li>
+					Liteweight CSS Framework <a target="_blank" href="http://malsf21.github.io/liteweight/components.html"><span class="fa fa-link"></span></a> <a target="_blank" href="https://github.com/malsf21/liteweight"><span class="fa fa-github"></span></a>
+				</li>
+				<li>
+					Lowkey (my blog) <a target="_blank" href="https://blog.matthewwang.me"><span class="fa fa-link"></span></a> <a target="_blank" href="https://github.com/malsf21/lowkey"><span class="fa fa-github"></span></a>
+				</li>
+				<li>
+					Ontario Model United Nations Website and App <a target="_blank" href="https://omun.ca"><span class="fa fa-link"></span></a> <a target="_blank" href="https://github.com/malsf21/omun-app"><span class="fa fa-mobile-phone"></span></a> <a target="_blank" href="https://github.com/malsf21/omun.ca"><span class="fa fa-github"></span></a>
+				</li>
+				<li>
+					Paleta Style Guide <a target="_blank" href="https://matthewwang.me/paleta/"><span class="fa fa-link"></span></a> <a target="_blank" href="https://github.com/malsf21/paleta"><span class="fa fa-github"></span></a>
+				</li>
+				<li>
+					Prefects Cup Website <a target="_blank" href="http://pc.ucc.on.ca"><span class="fa fa-link"></span></a> <a target="_blank" href="https://github.com/malsf21/prefects-cup-website"><span class="fa fa-github"></span></a>
+				</li>
+				<li>
+					Student Server Space (WIP) <a target="_blank" href="https://studentserver.space"><span class="fa fa-link"></span></a> <a target="_blank" href="https://github.com/studentserverspace/"><span class="fa fa-github"></span></a>
+				</li>
+				<li>
+					World Affairs Conference Website <a target="_blank" href="https://world.ac"><span class="fa fa-link"></span></a> <a target="_blank" href="https://github.com/malsf21/world.ac"><span class="fa fa-github"></span></a>
+				</li>
+			</ul>
+			<p class="text">
+				You can find most of my projects <a target="_blank" href="https://github.com/malsf21">on my GitHub account.</a>
+			</p>
+		</div>
 
-    <div class="card card-bordered-primary">
-      <h1>My Projects and Work</h1>
-      <ul class="list-unstyled list-items">
-        <li>
-          AudioNotch Website Redesign and Mobile App <a rel="noopener" target="_blank" href="https://audionotch.com"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://itunes.apple.com/us/app/audionotch/id1270247019?ls=1&mt=8"><span class="fa fa-apple" aria-label="App Store Link"></span></a> <a rel="noopener" target="_blank" href="https://play.google.com/store/apps/details?id=com.audionotch.audionotch&hl=en"><span class="fa fa-android" aria-label="Google Play Store Link"></span></a>
-        </li>
-        <li>
-          Convergence Layout, Website <a rel="noopener" target="_blank" href="https://convergence.today"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/convergence"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
-        </li>
-        <li>
-          DMCS Club Website <a rel="noopener" target="_blank" href="https://dmcs.tech"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/uccdmcs/dmcs.tech"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
-        </li>
-        <li>
-          Fair Chair Desktop App (WIP) <a rel="noopener" target="_blank" href="https://github.com/malsf21/fair-chair"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
-        </li>
-        <li>
-          Fancy Streamers <a rel="noopener" target="_blank" href="https://malsf21.github.io/fancy-streamers/"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/fancy-streamers"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
-        </li>
-        <li>
-          FoodSpan Mobile + Web App, Website, Backend
-          <a rel="noopener" target="_blank" href="https://foodspan.github.io"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-app"><span class="fa fa-mobile-phone" aria-label="GitHub Repository"></span></a> <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-website"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
-        </li>
-        <li>
-          Liteweight CSS Framework <a rel="noopener" target="_blank" href="http://malsf21.github.io/liteweight/"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/liteweight"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
-        </li>
-        <li>
-          Lowkey (my blog) <a rel="noopener" target="_blank" href="https://blog.matthewwang.me"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/lowkey"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
-        </li>
-        <li>
-          Ontario Model United Nations Website, App <a rel="noopener" target="_blank" href="https://omun.ca"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/omun-app"><span class="fa fa-mobile-phone" aria-label="GitHub Repository"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/omun.ca"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
-        </li>
-        <li>
-          Paleta Style Guide <a rel="noopener" target="_blank" href="https://matthewwang.me/paleta/"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/paleta"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
-        </li>
-        <li>
-          Prefects Cup Website <a rel="noopener" target="_blank" href="http://pc.ucc.on.ca"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/prefects-cup-website"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
-        </li>
-        <li>
-          Student Server Space (WIP) <a rel="noopener" target="_blank" href="https://studentserver.space"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/studentserverspace/"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
-        </li>
-        <li>
-          World Affairs Conference Website <a rel="noopener" target="_blank" href="https://world.ac"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/world.ac"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
-        </li>
-      </ul>
-      <p class="text">
-        You can find most of my projects <a rel="noopener" target="_blank" href="https://github.com/malsf21">on my GitHub account.</a>
-      </p>
-    </div>
+		<div class="card card-bg-primary">
+			<h2>Fun Fact</h2>
+			<p class="text">
+				I'm a huge GitHub fanboy: not only are all of my open-source projects hosted there, but I own a GitHub T-Shirt, almost a hundred GitHub stickers, and regularly recommend GitHub to my friends.
+			</p>
+		</div>
 
-    <div class="card card-bg-primary">
-      <h2><code>this.fact.isFun() === true;</code></h2>
-      <p class="text">
-        I wrote the CSS framework used in this website! Check it out <a rel="noopener" class="link-white" href="https://github.com/malsf21/liteweight">on GitHub!</a>
-      </p>
-    </div>
-
-    <div class="card card-bordered-primary">
-      <h1>Skills</h1>
-      <h2>Full Stack Development</h2>
-      <p class="text">
-        I know my way around HTML + CSS, JS and its all too many frameworks, and I can comfortably code in Java, Python, PHP, and Ruby. Plus, I know how to use SQL, and I love using git.
-      </p>
-      <h2>Graphic Design and Layout</h2>
-      <p class="text">
-        Making things pretty is pretty cool: I can do branding, marketing materials, publications, UI/UX Design, and product prototyping. I've try to make things look good with Photoshop, Illustrator, and InDesign.
-      </p>
-      <h2>Event Organisation</h2>
-      <p class="text">
-        I've helped organise a <b>lot</b> of events in my high school "career", ranging from technical roles like creating a registration system, to administrative roles where we decide an event's "vision", to getting stuff done like audio/visual work.
-      </p>
-    </div>
-    <div class="card card-bg-primary">
-      <h2>Unique Fact</h2>
-      <p class="text">
-        My most well-known skill is making killer instant noodles. My secret is to follow the instructions on the box, and sprinkle in some green onion.
-      </p>
-    </div>
-    <div class="card card-bordered-primary">
-      <h1>Achievements</h1>
-      <ul class="list-items">
-        <li>
-          BMUN 2017 Best Delegate
-        </li>
-        <li>
-          Hart House Debate 2017 20th Speaker, Quarterfinalist
-        </li>
-        <li>
-          HMUN 2017 Best Delegate
-        </li>
-        <li>
-          John Dobson Entrepreneurship Cup Finalist, Best Website
-        </li>
-        <li>
-          ICYD 2016 Canadian Representative, 6th Speaker, Semifinalist
-        </li>
-        <li>
-          ECOO 2016 Regionals Top 8
-        </li>
-        <li>
-          Scored Perfect on the Junior CCC 2016
-        </li>
-        <li>
-          SSUNS 2015, SSUNS 2016 Best Delegate
-        </li>
-        <li>
-          BMUN 2015, BMUN 2016 Outstanding Delegate
-        </li>
-        <li>
-          Reach for the Top 2016 Provincial Finalist, Regional Champion
-        </li>
-        <li>
-          McGill Debate 2015 10th Speaker, Semifinalist
-        </li>
-        <li>
-          Hart House Debate 2015 2nd Junior Speaker
-        </li>
-        <li>
-          Debate Junior Nationals 2015 12th Speaker
-        </li>
-        <li>
-          McGill Debate 2014 Top Junior Speaker, Junior Champion
-        </li>
-      </ul>
-    </div>
-    <div class="card card-bg-primary">
-      <h2>Technically True Fun Fact</h2>
-      <p class="text">
-        Not to brag, but I also have 3 participation ribbons from houseleague hockey, am a previous record holder of "World's Youngest Person", and I was <a rel="noopener" class="link-white" href="http://content.time.com/time/specials/packages/0,28757,2019341,00.html">TIME Magazine's Person of the Year in 2006</a>. Plus, I'm the second coolest Matthew Wang I know.
-      </p>
-    </div>
-    <div class="card card-bordered-primary">
-      <h1>Work and Extracurricular Experience</h1>
-      <ul class="list-items">
-        <li>
-          Debate Camp Canada Camp Counsellor
-        </li>
-        <li>
-          AudioNotch Software Development Intern
-        </li>
-        <li>
-          FoodSpan Lead Developer
-        </li>
-        <li>
-          SHAD 2016 Fellow
-        </li>
-        <li>
-          UCC Debate Club Head
-        </li>
-        <li>
-          Horizons Robotics Co-Founder and Lead Tutor
-        </li>
-        <li>
-          WAC Director General (Previous Head of Technology)
-        </li>
-        <li>
-          OMUN USG of Communications, Lead Web Developer
-        </li>
-        <li>
-          Digital Media/Computer Science Club Head
-        </li>
-        <li>
-          Convergence (school newspaper) Layout Editor
-        </li>
-      </ul>
-      <p class="text">
-        Need a reference? <a rel="noopener" href="mailto:matt@matthewwang.me">Shoot me an email</a> and I can get you in touch with someone.
-      </p>
-    </div>
-    <div class="card card-bg-primary">
-      <h2>Not So Fun Fact</h2>
-      <p class="text">
-        I was also a Hydration Specialist and Seating Apparatus Thermal Engineer for my high school football team, before I got a concussion in non-contact football. <b>Seriously.</b>
-      </p>
-    </div>
-    <div class="card card-bordered-primary">
-      <h1>Contact Me</h1>
-      <p class="text">
-        I won't byte, I promise.
-      </p>
-      <ul class="list-unstyled list-items">
-        <li>
-          <a rel="noopener" href="mailto:matt@matthewwang.me"><span class="fa fa-envelope"></span> Email: matt@matthewwang.me</a>
-        </li>
-        <li>
-          <a rel="noopener" href="https://github.com/malsf21"><span class="fa fa-github" aria-label="GitHub Repository"></span> GitHub: malsf21</a>
-        </li>
-        <li>
-          <a rel="noopener" href="https://www.linkedin.com/in/matthew-wang-510992136/"><span class="fa fa-linkedin"></span> LinkedIn: Matthew Wang</a>
-        </li>
-        <li>
-          <a rel="noopener" href="https://twitter.com/malsf21"><span class="fa fa-twitter"></span> Twitter: malsf21</a>
-        </li>
-      </ul>
-    </div>
-    <footer class="text-center">
-      <div class="fa-2x">Made by <a rel="noopener" href="https://matthewwang.me">Matthew Wang</a></div>
-      <div class="text">
-        <span class="fa fa-heart text-primary"></span> <span class="fa fa-heart text-primary"></span> <span class="fa fa-heart text-primary"></span>
-      </div>
-    </footer>
-    <script>
-      /*
-            I think this is pretty cool: basically, you can use CSS styles for console logs. You can check out what this looks like by looking at the Javascript console.
-
-            Here's what the banner text looks like:
-
-               __   __  _______  _______  _______
-              |  |_|  ||   _   ||       ||       |
-              |       ||  |_|  ||_     _||_     _|
-              |       ||       |  |   |    |   |
-              |       ||       |  |   |    |   |
-              | ||_|| ||   _   |  |   |    |   |
-              |_|   |_||__| |__|  |___|    |___|
-
-            While this isn't my favourite font or anything, it has no backslashes: those often cause problems in javascript.
-
-            */
-      console.log("%c\n __   __  _______  _______  _______ \n|  |_|  ||   _   ||       ||       |\n|       ||  |_|  ||_     _||_     _|\n|       ||       |  |   |    |   |  \n|       ||       |  |   |    |   |  \n| ||_|| ||   _   |  |   |    |   |  \n|_|   |_||__| |__|  |___|    |___|  ", "color:#e95420;")
-      console.log("%cThis page doesn't actually run any javascript (other than this fancy console stuff), so there isn't much reason to peer here.", "color:#e95420;")
-      console.log("%cAnyways, have fun browsing the rest of the website. If you have any feedback, let me know on my GitHub repo for this landing page: \nhttps://github.com/malsf21/matthewwang.me", "color:#e95420;")
-    </script>
+		<div class="card card-bordered-primary">
+			<h1>Skills</h1>
+			<ul class="list-items">
+				<li>
+					Fluent in English, Passably Fluent in French and Mandarin
+				</li>
+				<li>
+					Developed in HTML, CSS, JS, Java, Python, PHP, SQL, and Git
+				</li>
+				<li>
+					Proficient in Word, Excel, Photoshop, Illustrator, InDesign, and Premiere
+				</li>
+				<li>
+					4+ Years of Public Speaking Experience
+				</li>
+				<li>
+					Seasoned Project Manager and Team Lead
+				</li>
+			</ul>
+		</div>
+		<div class="card card-bg-primary">
+			<h2>Fun Fact</h2>
+			<p class="text">
+				My most well-known skill is making killer instant noodles.
+			</p>
+		</div>
+		<div class="card card-bordered-primary">
+			<h1>Achievements</h1>
+			<ul class="list-items">
+				<li>
+					BMUN 2017 Best Delegate
+				</li>
+				<li>
+					Ontario Debate Provincials 13th Speaker, Qualifier
+				</li>
+				<li>
+					Hart House Debate 2017 20th Speaker, Quarterfinalist
+				</li>
+				<li>
+					HMUN 2017 Best Delegate
+				</li>
+				<li>
+					John Dobson Entrepreneurship Cup Finalist, Best Website
+				</li>
+				<li>
+					ICYD 2016 Canadian Representative, 6th Speaker, 5th overall
+				</li>
+				<li>
+					ECOO 2016 Regionals Top 8
+				</li>
+				<li>
+					Scored Perfect on the Junior CCC 2016
+				</li>
+				<li>
+					SSUNS 2015, SSUNS 2016 Best Delegate
+				</li>
+				<li>
+					BMUN 2015, BMUN 2016 Outstanding Delegate
+				</li>
+				<li>
+					Reach for the Top 2016 Provincial Finalist, Regional Champion
+				</li>
+				<li>
+					McGill High School Debate 2015 10th Speaker, Semifinalist
+				</li>
+				<li>
+					2015 Hart House Debate 2nd Junior Speaker
+				</li>
+				<li>
+					2015 Debate Junior Nationals 12th Speaker
+				</li>
+				<li>
+					McGill HSBP 2014 Top Junior Speaker, Junior Champion
+				</li>
+			</ul>
+		</div>
+		<div class="card card-bg-primary">
+			<h2>Fun Fact</h2>
+			<p class="text">
+				Not to brag, but I also have 3 participation ribbons from houseleague hockey, and a "Most Improved Player" award from Grade 1.
+			</p>
+		</div>
+		<div class="card card-bordered-primary">
+			<h1>Work and Extracurricular Experience</h1>
+			<ul class="list-items">
+				<li>
+					Debate Camp Canada Camp Counsellor
+				</li>
+				<li>
+					FoodSpan Lead Developer
+				</li>
+				<li>
+					SHAD 2016 Fellow
+				</li>
+				<li>
+					UCC Debate Communications Officer
+				</li>
+				<li>
+					Horizons Robotics Co-Founder and Lead Tutor
+				</li>
+				<li>
+					World Affairs Conference Head of Registration and Media, Head of Technology, Lead Web Developer
+				</li>
+				<li>
+					Ontario Model UN Under-Secretary General of Communications, Lead Web Developer
+				</li>
+				<li>
+					Digital Media/Computer Science Club Head
+				</li>
+				<li>
+					Convergence (school newspaper) Layout Editor
+				</li>
+				<li>
+					UCC Audio/Visual Team Member
+				</li>
+			</ul>
+			<p class="text">
+				Need a reference? <a href="mailto:malsf21@gmail.com">Shoot me an email</a> and I can get you in touch with someone.
+			</p>
+		</div>
+		<div class="card card-bg-primary">
+			<h2>Fun Fact</h2>
+			<p class="text">
+				I've also been the world's youngest person, <a class="link-white" href="http://content.time.com/time/specials/packages/0,28757,2019341,00.html">TIME Magazine's Person of the Year in 2006</a>, and unofficial #0 best programmer.
+			</p>
+		</div>
+		<div class="card card-bordered-primary">
+			<h1>Contact Me</h1>
+			<p class="text">
+				I won't byte, I promise.
+			</p>
+			<ul class="list-unstyled list-items">
+				<li>
+					<a href="mailto:malsf21@gmail.com"><span class="fa fa-envelope"></span> Email: malsf21@gmail.com</a>
+				</li>
+				<li>
+					<a href="https://github.com/malsf21"><span class="fa fa-github"></span> GitHub: malsf21</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/in/matthew-wang-510992136/"><span class="fa fa-linkedin"></span> LinkedIn: Matthew Wang</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/malsf21"><span class="fa fa-twitter"></span> Twitter: malsf21</a>
+				</li>
+			</ul>
+		</div>
+		<footer class="text-center">
+			<div class="fa-2x">Made by <a href="https://matthewwang.me">Matthew Wang</a></div>
+			<div class="text">
+				<span class="fa fa-heart text-primary"></span> <span class="fa fa-heart text-primary"></span> <span class="fa fa-heart text-primary"></span>
+			</div>
+		</footer>
   </body>
 </html>
