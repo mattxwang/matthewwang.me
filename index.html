@@ -9,24 +9,24 @@
     <title>Matthew Wang</title>
     <meta name="description" content="The website for the second coolest Matthew Wang ever: a student developer, competitive debater, and a serial pun maker. His mom calls him Matt.">
     <!-- Now, before you tell me that most of this is unnecessary, I agree with you. But, it helps with SEO, and it also makes things slightly more accessible for a small subset of users. I think it's worth the extra 500 bytes. -->
-    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="files/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="files/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="files/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="files/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="files/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="files/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="files/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="files/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="files/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="files/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="files/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="files/img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="files/img/favicon-16x16.png">
     <link rel="manifest" href="manifest.json">
     <meta name="msapplication-TileColor" content="#e95420">
     <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
     <meta name="theme-color" content="#e95420">
-
+    <!-- Heard there's a cool CSS framework called Liteweight: https://github.com/malsf21/liteweight -->
     <link rel="stylesheet" href="css/liteweight-nexa.min.css?v2.0.0" />
     <!-- If you're giving me squinty eyes while reading this, it basically makes Font Awesome non-render blocking. Since it isn't "essential" to the viewing experience of the site, we let it load after the site is done loading. I am considering just using SVGs though and not loading the font, but we'll see.-->
     <link rel="stylesheet" href="css/font-awesome.min.css" media="none" onload="if(media!='all')media='all'" />
@@ -35,17 +35,12 @@
       </noscript>
     <style>
       @media only screen and (min-width: 768px) {
+        /* This is so that things I did look big on big screens, but look medium on medium and small screens. */
         .list-items {
           font-size: 1.5em;
           padding: 0;
           margin: 0;
           list-style: none;
-        }
-      }
-
-      @media only screen and (max-width: 768px) {
-        .list-items {
-          font-size: 1.25em;
         }
       }
     </style>
@@ -55,7 +50,7 @@
     <div class="card text-center">
       <p class="fa-2x">Hey there!</p>
       <h1 class="fa-3x">My name is Matthew Wang</h1>
-      <p class="text">
+      <p>
         But you can call me Matt.
       </p>
     </div>
@@ -64,60 +59,89 @@
     </div>
     <div class="card card-bordered-primary">
       <h1>About Me</h1>
-      <p class="text">
+      <p>
         Now, I could tell you that I'm an "inspiring public speaker", or an "innovative and disruptive student developer", or a "funny person", but that's boring, and you have no way of knowing if it's true or not (hint, the last one's a lie). Instead, let me tell you what I care about.
       </p>
-      <p class="text">
+      <p>
         I care about <b>education</b>. That's a pretty broad topic, but that means there's a lot to do. I've created and fostered programs like Horizons Robotics, where I lead a team of tutors to give awesome inner-city kids the opportunity to learn awesome things about robotics.
       </p>
-      <p class="text">
+      <p>
         I care about <b>technology</b>. I know, that's pretty stereotypical, but it's true. Modern technology and the internet have a treasure trove of cool things. I try to do make cool things too, like web applications, pretty graphics, and lean machines. Sometimes, they're cool too.
       </p>
-      <p class="text">
+      <p>
         I care about <b>debate</b>. Weird thing to care about, but trust me. It's helped me realize all the different ways I've been wrong about things, but also how to learn from those experiences. Plus, I get to spread the knowledge in my own school's club, and also as a camp counselor at Debate Camp Canada.
       </p>
-      <p class="text">
+      <p>
         In my spare time, I do some <a rel="noopener" href="https://blog.matthewwang.me">blogging</a>, <a rel="noopener" href="https://open.spotify.com/user/11156788800">listen to music</a>, read, and play video games. And think of good puns.
       </p>
     </div>
 
     <div class="card card-bg-primary">
       <h2>Pun Fact</h2>
-      <p class="text">
+      <p>
         I enjoy making pun names for my Spotify playlists. For example, I have a playlist called <b>amperes</b> that has all the music I'm <em>current-ly</em> listening to. Don't lie, I knew you chuckled a bit there.
       </p>
     </div>
 
     <div class="card card-bordered-primary">
       <h1>My Projects and Work</h1>
+      <p>
+        <a class="text-primary"><span class="fa fa-fw fa-github"></span></a> GitHub Repository,
+        <a class="text-primary"><span class="fa fa-fw fa-link"></span></a> Link to Website,
+        <a class="text-primary"><span class="fa fa-fw fa-image"></span></a> Visual Work,
+        <a class="text-primary"><span class="fa fa-fw fa-mobile"></span><span class="fa fa-fw fa-apple"></span><span class="fa fa-fw fa-android"></span></a> Mobile App
+      </p>
+      <hr />
       <ul class="list-unstyled list-items">
         <li>
-          AudioNotch Website Redesign and Mobile App <a rel="noopener" target="_blank" href="https://audionotch.com"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://itunes.apple.com/us/app/audionotch/id1270247019?ls=1&mt=8"><span class="fa fa-apple" aria-label="App Store Link"></span></a> <a rel="noopener" target="_blank" href="https://play.google.com/store/apps/details?id=com.audionotch.audionotch&hl=en"><span class="fa fa-android" aria-label="Google Play Store Link"></span></a>
+          AudioNotch Website Redesign and Mobile App
+          <a rel="noopener" target="_blank" href="https://audionotch.com"><span class="fa fa-link" aria-label="Website Link"></span></a>
+          <a rel="noopener" target="_blank" href="https://itunes.apple.com/us/app/audionotch/id1270247019?ls=1&mt=8"><span class="fa fa-apple" aria-label="App Store Link"></span></a>
+          <a rel="noopener" target="_blank" href="https://play.google.com/store/apps/details?id=com.audionotch.audionotch&hl=en"><span class="fa fa-android" aria-label="Google Play Store Link"></span></a>
         </li>
         <li>
-          Convergence Layout, Website <a rel="noopener" target="_blank" href="https://convergence.today"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/convergence"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          Convergence Layout, Website
+          <a rel="noopener" target="_blank" href="https://convergence.today"><span class="fa fa-link" aria-label="Website Link"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/malsf21/convergence"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="files/work/c-lite-cover.png"><span class="fa fa-image" aria-label="Example Convergence Cover"></span></a>
+          <a rel="noopener" target="_blank" href="files/work/batt-ball-infographic.png"><span class="fa fa-image" aria-label="Batt Ball Infographic"></span></a>
+          <a rel="noopener" target="_blank" href="files/work/TPP.png"><span class="fa fa-image" aria-label="TPP Infographic"></span></a>
         </li>
         <li>
-          DMCS Club Website <a rel="noopener" target="_blank" href="https://dmcs.tech"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/uccdmcs/dmcs.tech"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          DMCS Club Website and Design
+          <a rel="noopener" target="_blank" href="https://dmcs.tech"><span class="fa fa-link" aria-label="Website Link"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/uccdmcs/dmcs.tech"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="files/work/dmcs-poster.png"><span class="fa fa-image" aria-label="DMCS Poster"></span></a>
         </li>
         <li>
-          Fair Chair Desktop App (WIP) <a rel="noopener" target="_blank" href="https://github.com/malsf21/fair-chair"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          Fair Chair Desktop App (WIP)
+          <a rel="noopener" target="_blank" href="https://github.com/malsf21/fair-chair"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
-          Fancy Streamers <a rel="noopener" target="_blank" href="https://malsf21.github.io/fancy-streamers/"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/fancy-streamers"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          Fancy Streamers (WIP)
+          <a rel="noopener" target="_blank" href="https://malsf21.github.io/fancy-streamers/"><span class="fa fa-link" aria-label="Website Link"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/malsf21/fancy-streamers"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
           FoodSpan Mobile + Web App, Website, Backend
-          <a rel="noopener" target="_blank" href="https://foodspan.github.io"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-app"><span class="fa fa-mobile-phone" aria-label="GitHub Repository"></span></a> <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-website"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="https://foodspan.github.io"><span class="fa fa-link" aria-label="Website Link"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-app"><span class="fa fa-mobile-phone" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-website"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
-          Liteweight CSS Framework <a rel="noopener" target="_blank" href="http://malsf21.github.io/liteweight/"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/liteweight"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          Liteweight CSS/SASS Framework <a rel="noopener" target="_blank" href="http://malsf21.github.io/liteweight/"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/liteweight"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
           Lowkey (my blog) <a rel="noopener" target="_blank" href="https://blog.matthewwang.me"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/lowkey"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
-          Ontario Model United Nations Website, App <a rel="noopener" target="_blank" href="https://omun.ca"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/omun-app"><span class="fa fa-mobile-phone" aria-label="GitHub Repository"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/omun.ca"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          Ontario Model United Nations Website, App, Design
+          <a rel="noopener" target="_blank" href="https://omun.ca"><span class="fa fa-link" aria-label="Website Link"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/malsf21/omun-app"><span class="fa fa-mobile-phone" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/malsf21/omun.ca"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="files/work/omun-cover.png"><span class="fa fa-image" aria-label="OMUN Delegate Package Cover"></span></a>
+          <a rel="noopener" target="_blank" href="files/work/omun-placard.png"><span class="fa fa-image" aria-label="OMUN Placards"></span></a>
+          <a rel="noopener" target="_blank" href="files/work/omun-room.png"><span class="fa fa-image" aria-label="OMUN Room Signs"></span></a>
         </li>
         <li>
           Paleta Style Guide <a rel="noopener" target="_blank" href="https://matthewwang.me/paleta/"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/paleta"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
@@ -129,17 +153,23 @@
           Student Server Space (WIP) <a rel="noopener" target="_blank" href="https://studentserver.space"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/studentserverspace/"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
-          World Affairs Conference Website <a rel="noopener" target="_blank" href="https://world.ac"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/world.ac"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          World Affairs Conference Website, Design
+          <a rel="noopener" target="_blank" href="https://world.ac"><span class="fa fa-link" aria-label="Website Link"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/malsf21/world.ac"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="files/work/wac-cover.png"><span class="fa fa-image" aria-label="WAC Delegate Package Cover"></span></a>
+          <a rel="noopener" target="_blank" href="files/work/wac-recruitment.png"><span class="fa fa-image" aria-label="WAC Recruitment Poster"></span></a>
+          <a rel="noopener" target="_blank" href="files/work/wac-spread.png"><span class="fa fa-image" aria-label="WAC Logo Spread"></span></a>
         </li>
       </ul>
-      <p class="text">
-        You can find most of my projects <a rel="noopener" target="_blank" href="https://github.com/malsf21">on my GitHub account.</a>
+      <hr />
+      <p>
+        I've also done a few odd design jobs for <a rel="noopener" target="_blank" href="files/work/stewards.png">the Stewards Dance</a>, <a rel="noopener" target="_blank" href="files/work/robotics-fm.png">our Robotics Club</a>, and <a rel="noopener" target="_blank" href="files/work/amnesty-international-poster.png">the Amnesty International Club</a>.
       </p>
     </div>
 
     <div class="card card-bg-primary">
       <h2>this.fact.isFun() === true;</h2>
-      <p class="text">
+      <p>
         I wrote the CSS framework used in this website! Check it out <a rel="noopener" class="link-white" href="https://github.com/malsf21/liteweight">on GitHub!</a>
       </p>
     </div>
@@ -147,29 +177,30 @@
     <div class="card card-bordered-primary">
       <h1>Skills</h1>
       <h2>Full Stack Development</h2>
-      <p class="text">
+      <p>
         I know my way around HTML + CSS, JS and its all too many frameworks, and I can comfortably code in Java, Python, PHP, and Ruby. Plus, I know how to use SQL, and I love using git.
       </p>
       <h2>Graphic Design and Layout</h2>
-      <p class="text">
+      <p>
         Making things pretty is pretty cool: I can do branding, marketing materials, publications, UI/UX Design, and product prototyping. I've try to make things look good with Photoshop, Illustrator, and InDesign.
       </p>
       <h2>Educational Experiences</h2>
-      <p class="text">
+      <p>
         I'm passionate about education, and what I do shows it. I've spent hundreds of hours teaching in peer-tutoring programs, and I started a few educational programs at my school: creating curriculums, organising instructors, and teaching inner-city students 4-week courses on Computer Science and Robotics.
       </p>
       <h2>Event Organisation</h2>
-      <p class="text">
+      <p>
         I've helped organise a <b>lot</b> of events in my high school "career", ranging from technical roles like creating a registration system, to administrative roles where we decide an event's "vision", to getting stuff done like audio/visual work.
       </p>
-      <p class="text">
+      <hr />
+      <p>
         Want a more formal, detailed breakdown? Check out my <a rel="noopener" href="files/resume.pdf">résumé.</a>
       </p>
     </div>
     </div>
     <div class="card card-bg-primary">
       <h2>Unique Fact</h2>
-      <p class="text">
+      <p>
         My most well-known skill is making killer instant noodles. My secret is to follow the instructions on the box, and sprinkle in some green onion.
       </p>
     </div>
@@ -225,7 +256,7 @@
     </div>
     <div class="card card-bg-primary">
       <h2>Technically True Fun Fact</h2>
-      <p class="text">
+      <p>
         Not to brag, but I also have 3 participation ribbons from houseleague hockey, am a previous record holder of "World's Youngest Person", and I was <a rel="noopener" class="link-white" href="http://content.time.com/time/specials/packages/0,28757,2019341,00.html">TIME Magazine's Person of the Year in 2006</a>. Plus, I'm the second coolest Matthew Wang I know.
       </p>
     </div>
@@ -240,6 +271,9 @@
         </li>
         <li>
           FoodSpan Lead Developer
+        </li>
+        <li>
+          Treasurer for the Board of Stewards (student gov't)
         </li>
         <li>
           UCC Debate Club Head
@@ -263,19 +297,20 @@
           Convergence (school newspaper) Executive Writer
         </li>
       </ul>
-      <p class="text">
+      <hr />
+      <p>
         Need a reference? <a rel="noopener" href="mailto:matt@matthewwang.me">Shoot me an email</a> and I can get you in touch with someone.
       </p>
     </div>
     <div class="card card-bg-primary">
       <h2>Not So Fun Fact</h2>
-      <p class="text">
+      <p>
         I was also a Hydration Specialist and Seating Apparatus Thermal Engineer for my high school football team, before I got a concussion in non-contact football. <b>Seriously.</b>
       </p>
     </div>
     <div class="card card-bordered-primary">
       <h1>Contact Me</h1>
-      <p class="text">
+      <p>
         I won't byte, I promise.
       </p>
       <ul class="list-unstyled list-items">
