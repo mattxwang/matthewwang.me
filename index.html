@@ -34,6 +34,13 @@
         <link rel="stylesheet" href="css/font-awesome.min.css"/>
       </noscript>
     <style>
+      /* Don't peer behind the curtain. */
+      :root {
+        --animation1-percent1: -100%;
+        --animation1-percent2: -100%;
+        --animation2-percent1: 100%;
+        --animation2-percent2: 100%;
+      }
       @media only screen and (min-width: 768px) {
         /* This is so that things I did look big on big screens, but look medium on medium and small screens. */
         .list-items {
@@ -42,6 +49,44 @@
           margin: 0;
           list-style: none;
         }
+        /* This is me playing around with what I think is a cool CSS animation. We'll see whether or not this is actually a good idea. Basically, I set defaults the translation, but then I also change the CSS variable (if supported) randomly on page load. And of course I disabled it on mobile, it looks terrible there. */
+        @keyframes slide1 {
+          from {
+            transform: translate3d(-100%, -100%, 0);
+            transform: translate3d(var(--animation1-percent1), var(--animation1-percent2), 0);
+            visibility: visible;
+          }
+
+          to {
+            transform: translate3d(0, 0, 0);
+          }
+        }
+
+        @keyframes slide2 {
+          from {
+            transform: translate3d(100%, 100%, 0);
+            transform: translate3d(var(--animation2-percent1), var(--animation2-percent2), 0);
+            visibility: visible;
+          }
+
+          to {
+            transform: translate3d(0, 0, 0);
+          }
+        }
+        /* I could probably have better variable names here, right? */
+        .slide1 {
+          animation-name: slide1;
+          animation-duration: 1.25s;
+          animation-fill-mode: both;
+          display: inline-block;
+        }
+
+        .slide2 {
+          animation-name: slide2;
+          animation-duration: 1.25s;
+          animation-fill-mode: both;
+          display: inline-block;
+        }
       }
     </style>
   </head>
@@ -49,13 +94,17 @@
   <body class="main-body">
     <div class="card text-center">
       <p class="fa-2x">Hey there!</p>
-      <h1 class="fa-3x">My name is Matthew Wang</h1>
+      <h1 class="fa-3x">My name is <span class="slide1">Matthew</span> <span class="slide2">Wang</span></h1>
       <p>
-        But you can call me Matt.
+        But you can call me <span class="slide1">Matt</span>.
       </p>
     </div>
     <div class="text-center fa-2x">
-      Quick Links: <a rel="noopener" href="https://blog.matthewwang.me">Blog</a>, <a rel="noopener" href="https://github.com/malsf21/">GitHub</a>, <a rel="noopener" href="files/resume.pdf">Résumé</a>, <a rel="noopener" href="https://www.linkedin.com/in/matthew-wang-510992136/">LinkedIn</a>
+      Quick Links:
+      <a class="slide1" rel="noopener" href="https://blog.matthewwang.me">Blog</a>
+      <a class="slide2" rel="noopener" href="https://github.com/malsf21/">GitHub</a>
+      <a class="slide1" rel="noopener" href="files/resume.pdf">Résumé</a>
+      <a class="slide2" rel="noopener" href="https://www.linkedin.com/in/matthew-wang-510992136/">LinkedIn</a>
     </div>
     <div class="card card-bordered-primary">
       <h1>About Me</h1>
@@ -106,6 +155,11 @@
           <a rel="noopener" target="_blank" href="files/work/c-lite-cover.png"><span class="fa fa-image" aria-label="Example Convergence Cover"></span></a>
           <a rel="noopener" target="_blank" href="files/work/batt-ball-infographic.png"><span class="fa fa-image" aria-label="Batt Ball Infographic"></span></a>
           <a rel="noopener" target="_blank" href="files/work/TPP.png"><span class="fa fa-image" aria-label="TPP Infographic"></span></a>
+        </li>
+        <li>
+          Debatable Website
+          <a rel="noopener" target="_blank" href="https://trydebatable.com"><span class="fa fa-link" aria-label="Website Link"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/malsf21/trydebatable"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
           DMCS Club Website and Design
@@ -279,19 +333,22 @@
           FoodSpan Lead Developer
         </li>
         <li>
+          Horizons Robotics Co-Founder &amp; Program Director
+        </li>
+        <li>
+          Horizons CS/Game Design Founder &amp; Program Director
+        </li>
+        <li>
           Treasurer for the Board of Stewards (student gov't)
         </li>
         <li>
           UCC Debate Club Head
         </li>
         <li>
-          Horizons Robotics Co-Founder and Lead Tutor
+          WAC Director General
         </li>
         <li>
-          WAC Director General (Previous Head of Technology)
-        </li>
-        <li>
-          SHAD Fellow
+          SHAD @ McMaster Alumni
         </li>
         <li>
           OMUN USG of Communications, Lead Web Developer
@@ -305,13 +362,13 @@
       </ul>
       <hr />
       <p>
-        Need a reference? <a rel="noopener" href="mailto:matt@matthewwang.me">Shoot me an email</a> and I can get you in touch with someone.
+        Need a reference, or want to see more of my work? <a rel="noopener" href="mailto:matt@matthewwang.me">Shoot me an email!</a>
       </p>
     </div>
     <div class="card card-bg-primary">
       <h2>Not So Fun Fact</h2>
       <p>
-        I was also a Hydration Specialist and Seating Apparatus Thermal Engineer for my high school football team, before I got a concussion in non-contact football. <b>Seriously.</b>
+        I was also a Hydration Specialist and Seating Apparatus Thermal Engineer (<b>read: water boy and benchwarmer</b>) for my high school football team, before I got a concussion in non-contact football.
       </p>
     </div>
     <div class="card card-bordered-primary">
@@ -335,31 +392,40 @@
       </ul>
     </div>
     <footer class="text-center">
-      <div class="fa-2x">Made by <a rel="noopener" href="https://matthewwang.me">Matthew Wang</a></div>
+      <div class="fa-2x">Made by <a rel="noopener" href="https://github.com/malsf21/">Matthew Wang</a></div>
       <div class="text">
         <span class="fa fa-heart text-primary"></span> <span class="fa fa-heart text-primary"></span> <span class="fa fa-heart text-primary"></span>
       </div>
     </footer>
     <script>
       /*
-            I think this is pretty cool: basically, you can use CSS styles for console logs. You can check out what this looks like by looking at the Javascript console.
+        I think this is pretty cool: basically, you can use CSS styles for console logs. You can check out what this looks like by looking at the Javascript console.
 
-            Here's what the banner text looks like:
+        Here's what the banner text looks like:
 
-               __   __  _______  _______  _______
-              |  |_|  ||   _   ||       ||       |
-              |       ||  |_|  ||_     _||_     _|
-              |       ||       |  |   |    |   |
-              |       ||       |  |   |    |   |
-              | ||_|| ||   _   |  |   |    |   |
-              |_|   |_||__| |__|  |___|    |___|
+           __   __  _______  _______  _______
+          |  |_|  ||   _   ||       ||       |
+          |       ||  |_|  ||_     _||_     _|
+          |       ||       |  |   |    |   |
+          |       ||       |  |   |    |   |
+          | ||_|| ||   _   |  |   |    |   |
+          |_|   |_||__| |__|  |___|    |___|
 
-            While this isn't my favourite font or anything, it has no backslashes: those often cause problems in javascript.
+        While this isn't my favourite font or anything, it has no backslashes: those often cause problems in javascript.
 
-            */
+      */
       console.log("%c\n __   __  _______  _______  _______ \n|  |_|  ||   _   ||       ||       |\n|       ||  |_|  ||_     _||_     _|\n|       ||       |  |   |    |   |  \n|       ||       |  |   |    |   |  \n| ||_|| ||   _   |  |   |    |   |  \n|_|   |_||__| |__|  |___|    |___|  ", "color:#e95420;")
-      console.log("%cThis page doesn't actually run any javascript (other than this fancy console stuff), so there isn't much reason to peer here.", "color:#e95420;")
+      console.log("%cThis page runs very minimal Javascript (just a function that changes a CSS variable for what I think is a cool intro animation), so don't fret.", "color:#e95420;")
+      console.log("%cThough, I am planning on revamping this website and adding some fancy stuff. Stay tuned!", "color:#e95420;")
       console.log("%cAnyways, have fun browsing the rest of the website. If you have any feedback, let me know on my GitHub repo for this landing page: \nhttps://github.com/malsf21/matthewwang.me", "color:#e95420;")
+
+      // This is the function that generates that SICK intro animation :P
+      function randomAnimation(animationVar){
+        document.documentElement.style.setProperty(animationVar + '-percent1', (Math.random()*5-2.5)*100 + '%')
+        document.documentElement.style.setProperty(animationVar + '-percent2', (Math.random()*5-2.5)*100 + '%')
+      }
+      randomAnimation("--animation1")
+      randomAnimation("--animation2")
     </script>
   </body>
 </html>
