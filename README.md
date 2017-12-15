@@ -1,6 +1,6 @@
 # [matthewwang.me](https://matthewwang.me)
 
-Hey there! This is my (Matthew Wang's) portfolio website. It's made entirely by my own CSS + a few fonts. I'll update the website as I get new content, and I will try to do some documentation (but there isn't much need to).
+Hey there! This is my (Matthew Wang's) portfolio website. It's made entirely by my own CSS + a few fonts. I'm planning on changing this layout (again) because I think it's a little bland and unexciting - expect some cool changes soon!
 
 ## Development Notes
 
