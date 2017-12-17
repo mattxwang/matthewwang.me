@@ -9,30 +9,27 @@
     <title>Matthew Wang</title>
     <meta name="description" content="The website for the second coolest Matthew Wang ever: a student developer, competitive debater, and a serial pun maker. His mom calls him Matt.">
     <!-- Now, before you tell me that most of this is unnecessary, I agree with you. But, it helps with SEO, and it also makes things slightly more accessible for a small subset of users. I think it's worth the extra 500 bytes. -->
-    <link rel="apple-touch-icon" sizes="57x57" href="files/img/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="files/img/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="files/img/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="files/img/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="files/img/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="files/img/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="files/img/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="files/img/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="files/img/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="files/img/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="files/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="files/img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="files/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
     <link rel="manifest" href="manifest.json">
     <meta name="msapplication-TileColor" content="#e95420">
-    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="assets/img/ms-icon-144x144.png">
     <meta name="theme-color" content="#e95420">
     <!-- Heard there's a cool CSS framework called Liteweight: https://github.com/malsf21/liteweight -->
-    <link rel="stylesheet" href="css/liteweight-nexa.min.css?v2.0.0" />
-    <!-- If you're giving me squinty eyes while reading this, it basically makes Font Awesome non-render blocking. Since it isn't "essential" to the viewing experience of the site, we let it load after the site is done loading. I am considering just using SVGs though and not loading the font, but we'll see.-->
-    <link rel="stylesheet" href="css/font-awesome.min.css" media="none" onload="if(media!='all')media='all'" />
-    <noscript>
-        <link rel="stylesheet" href="css/font-awesome.min.css"/>
-      </noscript>
+    <link rel="stylesheet" href="assets/css/liteweight-nexa.min.css?v2.0.0" />
+    <!-- This is me loading Font Awesome - I've deferred it as it's not critical to the page load, but it's still pretty cool. FA5 features a cool set of SVG+JS icon loading mechanics, though I'm not sure if it's better than FA4's webfont system.-->
+    <script defer src="assets/js/fontawesome-all.min.js"></script>
     <style>
       /* Don't peer behind the curtain. */
       :root {
@@ -135,23 +132,23 @@
     <div class="card card-bordered-primary">
       <h1>My Projects and Work</h1>
       <p>
-        <a class="text-primary"><span class="fa fa-fw fa-github"></span></a> GitHub Repository,
-        <a class="text-primary"><span class="fa fa-fw fa-link"></span></a> Link to Website,
-        <a class="text-primary"><span class="fa fa-fw fa-image"></span></a> Visual Work,
-        <a class="text-primary"><span class="fa fa-fw fa-mobile"></span><span class="fa fa-fw fa-apple"></span><span class="fa fa-fw fa-android"></span></a> Mobile App
+        <span class="tag tag-bordered-primary"><a class="text-primary"><i class="fab fa-fw fa-github"></i></a> GitHub Repository</span>
+        <a class="text-primary"><span class="fa fa-fw fa-link"></span></a> Link to Website
+        <a class="text-primary"><span class="fa fa-fw fa-image"></span></a> Visual Work
+        <a class="text-primary"><span class="fa fa-fw fa-mobile"></span><span class="fab fa-fw fa-apple"></span><span class="fab fa-fw fa-android"></span></a> Mobile App
       </p>
       <hr />
       <ul class="list-unstyled list-items">
         <li>
           AudioNotch Website Redesign and Mobile App
           <a rel="noopener" target="_blank" href="https://audionotch.com"><span class="fa fa-link" aria-label="Website Link"></span></a>
-          <a rel="noopener" target="_blank" href="https://itunes.apple.com/us/app/audionotch/id1270247019?ls=1&mt=8"><span class="fa fa-apple" aria-label="App Store Link"></span></a>
-          <a rel="noopener" target="_blank" href="https://play.google.com/store/apps/details?id=com.audionotch.audionotch&hl=en"><span class="fa fa-android" aria-label="Google Play Store Link"></span></a>
+          <a rel="noopener" target="_blank" href="https://itunes.apple.com/us/app/audionotch/id1270247019?ls=1&mt=8"><span class="fab fa-apple" aria-label="App Store Link"></span></a>
+          <a rel="noopener" target="_blank" href="https://play.google.com/store/apps/details?id=com.audionotch.audionotch&hl=en"><span class="fab fa-android" aria-label="Google Play Store Link"></span></a>
         </li>
         <li>
           Convergence Layout, Website
           <a rel="noopener" target="_blank" href="https://convergence.today"><span class="fa fa-link" aria-label="Website Link"></span></a>
-          <a rel="noopener" target="_blank" href="https://github.com/malsf21/convergence"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/malsf21/convergence"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
           <a rel="noopener" target="_blank" href="files/work/c-lite-cover.png"><span class="fa fa-image" aria-label="Example Convergence Cover"></span></a>
           <a rel="noopener" target="_blank" href="files/work/batt-ball-infographic.png"><span class="fa fa-image" aria-label="Batt Ball Infographic"></span></a>
           <a rel="noopener" target="_blank" href="files/work/TPP.png"><span class="fa fa-image" aria-label="TPP Infographic"></span></a>
@@ -159,57 +156,57 @@
         <li>
           Debatable Website
           <a rel="noopener" target="_blank" href="https://trydebatable.com"><span class="fa fa-link" aria-label="Website Link"></span></a>
-          <a rel="noopener" target="_blank" href="https://github.com/malsf21/trydebatable"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/malsf21/trydebatable"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
           DMCS Club Website and Design
           <a rel="noopener" target="_blank" href="https://dmcs.tech"><span class="fa fa-link" aria-label="Website Link"></span></a>
-          <a rel="noopener" target="_blank" href="https://github.com/uccdmcs/dmcs.tech"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/uccdmcs/dmcs.tech"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
           <a rel="noopener" target="_blank" href="files/work/dmcs-poster.png"><span class="fa fa-image" aria-label="DMCS Poster"></span></a>
         </li>
         <li>
           Fair Chair Desktop App (WIP)
-          <a rel="noopener" target="_blank" href="https://github.com/malsf21/fair-chair"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/malsf21/fair-chair"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
           Fancy Streamers (WIP)
           <a rel="noopener" target="_blank" href="https://malsf21.github.io/fancy-streamers/"><span class="fa fa-link" aria-label="Website Link"></span></a>
-          <a rel="noopener" target="_blank" href="https://github.com/malsf21/fancy-streamers"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/malsf21/fancy-streamers"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
           FoodSpan Mobile + Web App, Website, Backend
           <a rel="noopener" target="_blank" href="https://foodspan.github.io"><span class="fa fa-link" aria-label="Website Link"></span></a>
-          <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-app"><span class="fa fa-mobile-phone" aria-label="GitHub Repository"></span></a>
-          <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-website"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-app"><span class="fa fa-mobile" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-website"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
-          Liteweight CSS/SASS Framework <a rel="noopener" target="_blank" href="http://malsf21.github.io/liteweight/"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/liteweight"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          Liteweight CSS/SASS Framework <a rel="noopener" target="_blank" href="http://malsf21.github.io/liteweight/"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/liteweight"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
-          Lowkey (my blog) <a rel="noopener" target="_blank" href="https://blog.matthewwang.me"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/lowkey"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          Lowkey (my blog) <a rel="noopener" target="_blank" href="https://blog.matthewwang.me"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/lowkey"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
           Ontario Model United Nations Website, App, Design
           <a rel="noopener" target="_blank" href="https://omun.ca"><span class="fa fa-link" aria-label="Website Link"></span></a>
-          <a rel="noopener" target="_blank" href="https://github.com/malsf21/omun-app"><span class="fa fa-mobile-phone" aria-label="GitHub Repository"></span></a>
-          <a rel="noopener" target="_blank" href="https://github.com/malsf21/omun.ca"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/malsf21/omun-app"><span class="fa fa-mobile" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/malsf21/omun.ca"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
           <a rel="noopener" target="_blank" href="files/work/omun-cover.png"><span class="fa fa-image" aria-label="OMUN Delegate Package Cover"></span></a>
           <a rel="noopener" target="_blank" href="files/work/omun-placard.png"><span class="fa fa-image" aria-label="OMUN Placards"></span></a>
           <a rel="noopener" target="_blank" href="files/work/omun-room.png"><span class="fa fa-image" aria-label="OMUN Room Signs"></span></a>
         </li>
         <li>
-          Paleta Style Guide <a rel="noopener" target="_blank" href="https://matthewwang.me/paleta/"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/paleta"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          Paleta Style Guide <a rel="noopener" target="_blank" href="https://matthewwang.me/paleta/"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/paleta"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
-          Prefects Cup Website <a rel="noopener" target="_blank" href="http://pc.ucc.on.ca"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/prefects-cup-website"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          Prefects Cup Website <a rel="noopener" target="_blank" href="http://pc.ucc.on.ca"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/prefects-cup-website"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
-          Student Server Space (WIP) <a rel="noopener" target="_blank" href="https://studentserver.space"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/studentserverspace/"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          Student Server Space (WIP) <a rel="noopener" target="_blank" href="https://studentserver.space"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/studentserverspace/"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
           World Affairs Conference Website, Design
           <a rel="noopener" target="_blank" href="https://world.ac"><span class="fa fa-link" aria-label="Website Link"></span></a>
-          <a rel="noopener" target="_blank" href="https://github.com/malsf21/world.ac"><span class="fa fa-github" aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/malsf21/world.ac"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
           <a rel="noopener" target="_blank" href="files/work/wac-cover.png"><span class="fa fa-image" aria-label="WAC Delegate Package Cover"></span></a>
           <a rel="noopener" target="_blank" href="files/work/wac-recruitment.png"><span class="fa fa-image" aria-label="WAC Recruitment Poster"></span></a>
           <a rel="noopener" target="_blank" href="files/work/wac-spread.png"><span class="fa fa-image" aria-label="WAC Logo Spread"></span></a>
@@ -384,13 +381,13 @@
           <a rel="noopener" href="mailto:matt@matthewwang.me"><span class="fa fa-envelope"></span> Email: matt@matthewwang.me</a>
         </li>
         <li>
-          <a rel="noopener" href="https://github.com/malsf21"><span class="fa fa-github" aria-label="GitHub Repository"></span> GitHub: malsf21</a>
+          <a rel="noopener" href="https://github.com/malsf21"><span class="fab fa-github" aria-label="GitHub Repository"></span> GitHub: malsf21</a>
         </li>
         <li>
-          <a rel="noopener" href="https://www.linkedin.com/in/matthew-wang-510992136/"><span class="fa fa-linkedin"></span> LinkedIn: Matthew Wang</a>
+          <a rel="noopener" href="https://www.linkedin.com/in/matthew-wang-510992136/"><span class="fab fa-linkedin"></span> LinkedIn: Matthew Wang</a>
         </li>
         <li>
-          <a rel="noopener" href="https://twitter.com/malsf21"><span class="fa fa-twitter"></span> Twitter: malsf21</a>
+          <a rel="noopener" href="https://twitter.com/malsf21"><span class="fab fa-twitter"></span> Twitter: malsf21</a>
         </li>
       </ul>
     </div>
@@ -418,7 +415,7 @@
 
       */
       console.log("%c\n __   __  _______  _______  _______ \n|  |_|  ||   _   ||       ||       |\n|       ||  |_|  ||_     _||_     _|\n|       ||       |  |   |    |   |  \n|       ||       |  |   |    |   |  \n| ||_|| ||   _   |  |   |    |   |  \n|_|   |_||__| |__|  |___|    |___|  ", "color:#e95420;")
-      console.log("%cThis page runs very minimal Javascript (just a function that changes a CSS variable for what I think is a cool intro animation), so don't fret.", "color:#e95420;")
+      console.log("%cThis page runs very minimal Javascript (just a function that changes a CSS variable for what I think is a cool intro animation and Font Awesome), so don't fret.", "color:#e95420;")
       console.log("%cThough, I am planning on revamping this website and adding some fancy stuff. Stay tuned!", "color:#e95420;")
       console.log("%cAnyways, have fun browsing the rest of the website. If you have any feedback, let me know on my GitHub repo for this landing page: \nhttps://github.com/malsf21/matthewwang.me", "color:#e95420;")
 
