@@ -27,65 +27,11 @@
     <meta name="msapplication-TileImage" content="assets/img/ms-icon-144x144.png">
     <meta name="theme-color" content="#e95420">
     <!-- Heard there's a cool CSS framework called Liteweight: https://github.com/malsf21/liteweight -->
-    <link rel="stylesheet" href="assets/css/liteweight-nexa.min.css?v2.0.0" />
+    <link rel="stylesheet" href="assets/css/liteweight-duo.min.css?v3.0.0-beta" />
+    <!-- Here are a few more of my special additions for the site. -->
+    <link rel="stylesheet" href="assets/css/style.css?v3.0.0-beta" />
     <!-- This is me loading Font Awesome - I've deferred it as it's not critical to the page load, but it's still pretty cool. FA5 features a cool set of SVG+JS icon loading mechanics, though I'm not sure if it's better than FA4's webfont system.-->
-    <script defer src="assets/js/fontawesome-all.min.js"></script>
-    <style>
-      /* Don't peer behind the curtain. */
-      :root {
-        --animation1-percent1: -100%;
-        --animation1-percent2: -100%;
-        --animation2-percent1: 100%;
-        --animation2-percent2: 100%;
-      }
-      @media only screen and (min-width: 768px) {
-        /* This is so that things I did look big on big screens, but look medium on medium and small screens. */
-        .list-items {
-          font-size: 1.5em;
-          padding: 0;
-          margin: 0;
-          list-style: none;
-        }
-        /* This is me playing around with what I think is a cool CSS animation. We'll see whether or not this is actually a good idea. Basically, I set defaults the translation, but then I also change the CSS variable (if supported) randomly on page load. And of course I disabled it on mobile, it looks terrible there. */
-        @keyframes slide1 {
-          from {
-            transform: translate3d(-100%, -100%, 0);
-            transform: translate3d(var(--animation1-percent1), var(--animation1-percent2), 0);
-            visibility: visible;
-          }
-
-          to {
-            transform: translate3d(0, 0, 0);
-          }
-        }
-
-        @keyframes slide2 {
-          from {
-            transform: translate3d(100%, 100%, 0);
-            transform: translate3d(var(--animation2-percent1), var(--animation2-percent2), 0);
-            visibility: visible;
-          }
-
-          to {
-            transform: translate3d(0, 0, 0);
-          }
-        }
-        /* I could probably have better variable names here, right? */
-        .slide1 {
-          animation-name: slide1;
-          animation-duration: 1.25s;
-          animation-fill-mode: both;
-          display: inline-block;
-        }
-
-        .slide2 {
-          animation-name: slide2;
-          animation-duration: 1.25s;
-          animation-fill-mode: both;
-          display: inline-block;
-        }
-      }
-    </style>
+    <script defer src="assets/js/fontawesome-all.min.js?v5.3.1"></script>
   </head>
 
   <body class="main-body">
@@ -102,40 +48,40 @@
       <a class="slide1" rel="noopener" href="assets/files/resume.pdf">Résumé</a> |
       <a class="slide2" rel="noopener" href="https://www.linkedin.com/in/matthew-x-wang/">LinkedIn</a>
     </div>
-    <div class="card card-bordered-primary">
-      <h1>About Me</h1>
+    <div class="card border-primary">
+      <h1>Who's Matt?</h1>
       <p>
-        Now, I could tell you that I'm an "inspiring public speaker", or an "innovative and disruptive student developer", or a "funny person", but that's boring, and you have no way of knowing if it's true or not (hint, the last one's a lie). Instead, I'll go with another more meaningful cliché - I'll tell you what I care about.
+        That's me! I'm currently studying the arcane art of computer science at the University of California, Los Angeles. I <span class="fa fa-heart animated-heartbeat" style="color:red;"></span> working with computers - making websites, apps, frameworks, backends, designing semi-cool things, and occasionally sneaking in some video games.
       </p>
       <p>
-        I care about <b>education</b>. That's a pretty broad topic, but that means there's a lot to do. I've created and fostered programs like Horizons Robotics, where I lead a team of tutors to give awesome inner-city kids the opportunity to learn awesome things about robotics.
+        I have a few other loves too 😉! I enjoy working with kids (i.e. community service and camp counselling), especially teaching them about technology like computer science or robotics. I'm a big politics and economics junkie, borne from years of competitive high school debating and Model UN. And, I love writing about social issues, current affairs, and music, as well as exploring new mediums to convey those stories - though I'm no Ta-Nehisi Coates!
       </p>
       <p>
-        I care about <b>technology</b>. I know, that's pretty stereotypical, but it's true. Modern technology and the internet have a treasure trove of cool things. I try to do make cool things too, like web applications, pretty graphics, and lean machines. Sometimes, they're cool too.
+        In my spare time, I do some <a rel="noopener" href="https://blog.matthewwang.me">blogging</a>, <a rel="noopener" href="https://open.spotify.com/user/11156788800">listen to music</a>, and read.
       </p>
       <p>
-        I care about <b>debate</b>. Weird thing to care about, but trust me. It's helped me realize all the different ways I've been wrong about things, but also how to learn from those experiences. Plus, I get to spread the knowledge in my own school's club, and also as a camp counselor at Debate Camp Canada.
-      </p>
-      <p>
-        In my spare time, I do some <a rel="noopener" href="https://blog.matthewwang.me">blogging</a>, <a rel="noopener" href="https://open.spotify.com/user/11156788800">listen to music</a>, read, and play video games. And think of good puns.
+        And come up with mediocre puns.
       </p>
     </div>
 
-    <div class="card card-bg-primary">
+    <div class="card bg-primary">
       <h2>Pun Fact</h2>
       <p>
-        One of my pastimes is making pun names for my Spotify playlists. For example, I have a playlist called <a rel="noopener" class="link-white" href="https://open.spotify.com/user/11156788800/playlist/2cT6Y3KwCvep7JZE6OUMlj">amperes</a> that has all the music I'm <em>current-ly</em> listening to. I'm sorry in advance.
+        When I name my Spotify playlists, I abuse mediocre puns. For example, I have a playlist called <a rel="noopener" class="link-white" href="https://open.spotify.com/user/11156788800/playlist/2cT6Y3KwCvep7JZE6OUMlj">amperes</a> that has all the music I'm <em>current-ly</em> listening to.
       </p>
     </div>
 
-    <div class="card card-bordered-primary">
-      <h1>My Projects and Work</h1>
+    <div class="card border-primary">
+      <h1>My Projects &amp; Work</h1>
       <p>
-        <span class="text-primary"><span class="fab fa-fw fa-github"></span></span> GitHub Repository
-        <span class="text-primary"><span class="fa fa-fw fa-link"></span></span> Website
-        <span class="text-primary"><span class="fa fa-fw fa-image"></span></span> Visual Work
-        <span class="text-primary"><span class="fa fa-fw fa-mobile"></span><span class="fab fa-fw fa-app-store-ios"></span><span class="fab fa-fw fa-google-play"></span></span> Mobile App
-        <span class="text-primary"><span class="fab fa-fw fa-app-store"></span></span> Desktop App
+        I occasionally do things. Here are the big ones.
+      </p>
+      <p>
+        <span class="fab fa-fw fa-github text-primary"></span> GitHub Repository
+        <span class="fa fa-fw fa-link text-primary"></span> Website
+        <span class="fa fa-fw fa-image text-primary"></span> Visual Work
+        <span class="fa fa-fw fa-mobile text-primary"></span><span class="fab fa-fw fa-app-store-ios text-primary"></span><span class="fab fa-fw fa-google-play text-primary"></span> Mobile App
+        <span class="fab fa-fw fa-app-store text-primary"></span> Desktop App
       </p>
       <hr />
       <ul class="list-unstyled list-items">
@@ -146,7 +92,7 @@
           <a rel="noopener" target="_blank" href="https://play.google.com/store/apps/details?id=com.audionotch.audionotch&hl=en"><span class="fab fa-google-play" aria-label="Google Play Store Link"></span></a>
         </li>
         <li>
-          Convergence: Print Layout, Website
+          Convergence: Senior Editor, Print Layout, Website
           <a rel="noopener" target="_blank" href="https://convergence.today"><span class="fa fa-link" aria-label="Website Link"></span></a>
           <a rel="noopener" target="_blank" href="https://github.com/malsf21/convergence"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
           <a rel="noopener" target="_blank" href="assets/files/work/c-lite-cover.png"><span class="fa fa-image" aria-label="Example Convergence Cover"></span></a>
@@ -170,7 +116,7 @@
           Liteweight CSS Framework <a rel="noopener" target="_blank" href="http://malsf21.github.io/liteweight/"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/liteweight"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
-          Lowkey (my blog) <a rel="noopener" target="_blank" href="https://blog.matthewwang.me"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/lowkey"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
+          Lowkey: Blog <a rel="noopener" target="_blank" href="https://blog.matthewwang.me"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/lowkey"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
           Ontario Model United Nations: Website, Design
@@ -179,9 +125,6 @@
           <a rel="noopener" target="_blank" href="assets/files/work/omun-cover.png"><span class="fa fa-image" aria-label="OMUN Delegate Package Cover"></span></a>
           <a rel="noopener" target="_blank" href="assets/files/work/omun-placard.png"><span class="fa fa-image" aria-label="OMUN Placards"></span></a>
           <a rel="noopener" target="_blank" href="assets/files/work/omun-schedule.pdf"><span class="fa fa-image" aria-label="OMUN Schedule"></span></a>
-        </li>
-        <li>
-          Paleta Style Guide <a rel="noopener" target="_blank" href="https://matthewwang.me/paleta/"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/paleta"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
         </li>
         <li>
           Prefects Cup Website <a rel="noopener" target="_blank" href="http://pc.ucc.on.ca"><span class="fa fa-link" aria-label="Website Link"></span></a> <a rel="noopener" target="_blank" href="https://github.com/malsf21/prefects-cup-website"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
@@ -197,34 +140,37 @@
       </ul>
       <hr />
       <p>
-        I've also done a few odd design jobs for <a rel="noopener" target="_blank" href="assets/files/work/stewards.png">the Stewards Dance</a>, <a rel="noopener" target="_blank" href="assets/files/work/rivalry-week.png">Rivalry Week</a>, <a rel="noopener" target="_blank" href="assets/files/work/robotics-fm.png">our Robotics Club</a>, and <a rel="noopener" target="_blank" href="assets/files/work/amnesty-international-poster.png">the Amnesty International Club</a>.
+        I've also done a few odd design jobs for <a rel="noopener" target="_blank" href="assets/files/work/stewards.png">the Stewards Dance</a>, <a rel="noopener" target="_blank" href="assets/files/work/rivalry-week.png">Rivalry Week</a>, <a rel="noopener" target="_blank" href="assets/files/work/robotics-fm.png">our Robotics Club</a>, and <a rel="noopener" target="_blank" href="assets/files/work/amnesty-international-poster.png">the Amnesty International Club</a>. You can also find fragments of code and defunct projects <a rel="noopener" target="_blank" href="https://github.com/malsf21">on my GitHub profile.</a>
       </p>
     </div>
 
-    <div class="card card-bg-primary">
-      <h2>print fact.isFun <span class="fa fa-arrow-right"></span> <code>true</code></h2>
+    <div class="card bg-primary">
+      <h2>print fact.isFun <span class="fa fa-arrow-right"></span> <code class="bg-white">true</code></h2>
       <p>
-        I wrote almost all the code for this website (just not the logos); I even wrote the CSS framework! Check it out <a rel="noopener" class="link-white" href="https://github.com/malsf21/liteweight">on GitHub.</a>
+        I wrote almost all the code for this website (just not the fonts); I even wrote the CSS framework! Check it out <a rel="noopener" class="link-white" href="https://github.com/malsf21/liteweight">on GitHub.</a>
       </p>
     </div>
 
-    <div class="card card-bordered-primary">
+    <div class="card border-primary">
       <h1>Skills</h1>
+      <p>
+        I am sometimes good at things.
+      </p>
       <h2>Full Stack Development</h2>
       <p>
-        I know my way around HTML + CSS, JS and many of its frameworks (Node, React, Angular, Ionic/Cordova, Electron, jQuery), and I can comfortably code in Java, Python, PHP, and Ruby. I'm familiar with SQL, mySQL, phpmyadmin, and Firebase, I've managed several webservers (Nginx and Apache), and am comfortable with the command line. And, of course, I love using git.
+        I know my way around HTML + CSS, JS and a big chunk of its massive ecosystem (Node, React, Angular, Ionic/Cordova, Electron, jQuery), and I can comfortably code in Java, Python (Django), PHP, and Ruby. I'm familiar with SQL, mySQL, phpmyadmin, and Firebase, I've managed several webservers (Nginx and Apache), and am comfortable with the command line. And, of course, I <span class="fa fa-heart animated-heartbeat" style="color:red;"></span> using git/GitHub.
       </p>
       <h2>Graphic Design and Layout</h2>
       <p>
-        Making things pretty is pretty cool: I can do branding, marketing materials, event materials, publications, UI/UX Design, and product prototyping. I try to make things look pretty with Photoshop, Illustrator, and InDesign.
+        Making things pretty is pretty cool: I mainly focus on digital design, event materials, and print publications, though I have experience with organizational branding, marketing materials, UI/UX design, and product prototyping. I've worked with large-scale events, student organisations, publications, and companies. I try to make things look pretty with Photoshop, Illustrator, and InDesign.
       </p>
       <h2>Educational Experiences</h2>
       <p>
-        I'm passionate about education, and what I do shows it. I've spent hundreds of hours teaching in peer-tutoring programs, and I started a few educational programs at my school: creating curriculums, organising instructors, and teaching inner-city students 4-week courses on Computer Science and Robotics.
+        I'm passionate about education, and what I do shows it. I've spent hundreds of hours teaching in peer-tutoring programs, and I started a few educational programs at my school: creating curriculums, organising instructors, and teaching students 4-week courses on Computer Science and Robotics. I set up a brand new robotics camp at UCC Summer Camps, creating a new curriculum, doing hiring, and managing a large budget + inventory.
       </p>
       <h2>Event Organisation</h2>
       <p>
-        I've helped organise a <b>lot</b> of events in my high school "career", ranging from technical roles like creating a registration system to administrative roles where we decide an event's "vision".
+        I've helped organise a <b>lot</b> of events in my high school "career", ranging from technical roles like creating a registration system to administrative roles where we decide an event's "vision". I've done operations and event management at conferences with over 1000 attendees, and can help at any segment in the pipeline.
       </p>
       <hr />
       <p>
@@ -232,14 +178,17 @@
       </p>
     </div>
     </div>
-    <div class="card card-bg-primary">
+    <div class="card bg-primary">
       <h2>Instant Fact</h2>
       <p>
         My most well-known skill is making killer instant noodles. My secret is to just follow the instructions on the box.
       </p>
     </div>
-    <div class="card card-bordered-primary">
+    <div class="card border-primary">
       <h1>Work and Extracurricular Experience</h1>
+      <p>
+        I work with people, companies, and things.
+      </p>
       <ul class="list-items">
         <li>
           UCC Robotics Camp Director
@@ -277,38 +226,41 @@
         Need a reference, or want to see more of my work? <a rel="noopener" href="mailto:matt@matthewwang.me">Shoot me an email!</a>
       </p>
     </div>
-    <div class="card card-bg-primary">
+    <div class="card bg-primary">
       <h2>Not So Fun Fact</h2>
       <p>
         I was also a Hydration Specialist and Seating Apparatus Thermal Engineer (<b>read: water boy and benchwarmer</b>) for my high school football team, before I got a concussion in non-contact football.
       </p>
     </div>
-    <div class="card card-bordered-primary">
+    <div class="card border-primary">
       <h1>Achievements</h1>
+      <p>
+        Most of the time, I don't win things. Sometimes though, I do. I'm as surprised as you are.
+      </p>
       <ul class="list-items">
         <li>
           Class of '62 Trophy
         </li>
         <li>
-          SSUNS 2017, SSUNS 2016, SSUNS 2015 Best Delegate
+          Wallace Rankine Nesbitt Prize for Debating and Public Speaking
+        </li>
+        <li>
+          Willis S. McLeese Prize for Debating
+        </li>
+        <li>
+          Donald Cooper Award for Community Service
         </li>
         <li>
           Oxford Cup 2017 Provincial Qualifier Top Speaker, Semifinalist
         </li>
         <li>
-          McGill Debate 2017 8th Speaker, Semifinalist
+          Berkeley MUN 2017 Best Delegate
         </li>
         <li>
-          2017 Donald Cooper Award (Community Service)
+          Havard MUN 2017 Best Delegate
         </li>
         <li>
-          BMUN 2017 Best Delegate
-        </li>
-        <li>
-          Hart House Debate 2017 20th Speaker, Quarterfinalist
-        </li>
-        <li>
-          HMUN 2017 Best Delegate
+          SSUNS 2017, SSUNS 2016, SSUNS 2015 Best Delegate
         </li>
         <li>
           2016 John Dobson Entrepreneurship Cup Finalist, Best Website
@@ -318,13 +270,13 @@
         </li>
       </ul>
     </div>
-    <div class="card card-bg-primary">
+    <div class="card bg-primary">
       <h2>Technically True Fun Fact</h2>
       <p>
         Not to brag, but I also have 3 participation ribbons from houseleague hockey, am a previous record holder of "World's Youngest Person", and I was <a rel="noopener" class="link-white" href="http://content.time.com/time/specials/packages/0,28757,2019341,00.html">TIME Magazine's Person of the Year in 2006</a>. Plus, I'm the second coolest Matthew Wang I know.
       </p>
     </div>
-    <div class="card card-bordered-primary">
+    <div class="card border-primary">
       <h1>Contact Me</h1>
       <p>
         I won't byte, I promise.
@@ -334,7 +286,7 @@
           <a rel="noopener" href="mailto:matt@matthewwang.me"><span class="fa fa-envelope"></span> Email: matt@matthewwang.me</a>
         </li>
         <li>
-          <a rel="noopener" href="https://github.com/malsf21"><span class="fab fa-github" aria-label="GitHub Repository"></span> GitHub: malsf21</a>
+          <a rel="noopener" href="https://github.com/malsf21"><span class="fab fa-github"></span> GitHub: malsf21</a>
         </li>
         <li>
           <a rel="noopener" href="https://www.linkedin.com/in/matthew-wang-510992136/"><span class="fab fa-linkedin"></span> LinkedIn: Matthew Wang</a>
@@ -347,7 +299,9 @@
     <footer class="text-center">
       <div class="fa-2x">Made by <a rel="noopener" href="https://github.com/malsf21/">Matthew Wang</a></div>
       <div class="text">
-        <span class="fa fa-heart text-primary"></span> <span class="fa fa-heart text-primary"></span> <span class="fa fa-heart text-primary"></span>
+        <span class="fa fa-heart text-primary animated-heartbeat"></span>
+        <a rel="noopener" href="https://github.com/malsf21/matthewwang.me"><span class="fab fa-github text-black" aria-label="GitHub Repository"></span></a>
+        <span class="fa fa-heart text-primary animated-heartbeat"></span>
       </div>
     </footer>
     <script>
