@@ -29,7 +29,114 @@
     <!-- Heard there's a cool CSS framework called Liteweight: https://github.com/malsf21/liteweight -->
     <link rel="stylesheet" href="assets/css/liteweight-duo.min.css?v3.0.0-beta" />
     <!-- Here are a few more of my special additions for the site. -->
-    <link rel="stylesheet" href="assets/css/style.css?v3.0.0-beta" />
+    <style>
+      /* Fonts. Boring. */
+
+      @font-face {
+      	font-family: Nexa;
+      	src: url(./assets/fonts/nexa/nexa_light.otf)
+      }
+
+      @font-face {
+      	font-family: Nexa;
+      	font-weight: 700;
+      	src: url(./assets/fonts/nexa/nexa_bold.otf)
+      }
+
+      @font-face {
+      	font-family: Nexa Slab;
+      	src: url(./assets/fonts/nexaslab/nexa_slab_regular.otf)
+      }
+
+      @font-face {
+      	font-family: Nexa Slab;
+      	font-weight: 700;
+      	src: url(./assets/fonts/nexaslab/nexa_slab_bold.otf)
+      }
+
+      body {
+      	font-family: Nexa, Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      .link-white{
+      	text-decoration: underline;
+      }
+
+      .list-items {
+      	font-size: 1.5em;
+      	padding: 0;
+      	margin: 0;
+      	list-style: none;
+      }
+
+      :root {
+      	--animation1-percent1: -100%;
+      	--animation1-percent2: -100%;
+      	--animation2-percent1: 100%;
+      	--animation2-percent2: 100%;
+      }
+    	/* This is me playing around with what I think is a cool CSS animation. We'll see whether or not this is actually a good idea. Basically, I set defaults the translation, but then I also change the CSS variable (if supported) randomly on page load. */
+    	@keyframes slide1 {
+    		from {
+    			transform: translate3d(-100%, -100%, 0);
+    			transform: translate3d(var(--animation1-percent1), var(--animation1-percent2), 0);
+    			visibility: visible;
+    		}
+
+    		to {
+    			transform: translate3d(0, 0, 0);
+    		}
+    	}
+
+    	@keyframes slide2 {
+    		from {
+    			transform: translate3d(100%, 100%, 0);
+    			transform: translate3d(var(--animation2-percent1), var(--animation2-percent2), 0);
+    			visibility: visible;
+    		}
+
+    		to {
+    			transform: translate3d(0, 0, 0);
+    		}
+    	}
+    	/* I could probably have better variable names here, right? */
+    	.slide1 {
+    		animation-name: slide1;
+    		animation-duration: 1.25s;
+    		animation-fill-mode: both;
+    		display: inline-block;
+    	}
+
+    	.slide2 {
+    		animation-name: slide2;
+    		animation-duration: 1.25s;
+    		animation-fill-mode: both;
+    		display: inline-block;
+    	}
+
+      /* The keyframes + class for the heartbeat animation I use across the site. */
+      @keyframes heartbeat {
+      	0% {
+      		transform: scale(0.75);
+      	}
+      	25% {
+      		transform: scale(1);
+      	}
+      	50% {
+      		transform: scale(0.75);
+      	}
+      	75% {
+      		transform: scale(1);
+      	}
+      	100% {
+      		transform: scale(0.75);
+      	}
+      }
+
+      .animated-heartbeat {
+      	animation: heartbeat 2s infinite;
+      }
+    </style>
     <!-- This is me loading Font Awesome - I've deferred it as it's not critical to the page load, but it's still pretty cool. FA5 features a cool set of SVG+JS icon loading mechanics, though I'm not sure if it's better than FA4's webfont system.-->
     <script defer src="assets/js/fontawesome-all.min.js?v5.3.1"></script>
   </head>
@@ -43,10 +150,10 @@
       </p>
     </div>
     <div class="text-center fa-2x">
-      <a class="slide1" rel="noopener" href="https://blog.matthewwang.me">Blog</a> |
-      <a class="slide2" rel="noopener" href="https://github.com/malsf21/">GitHub</a> |
-      <a class="slide1" rel="noopener" href="assets/files/resume.pdf">Résumé</a> |
-      <a class="slide2" rel="noopener" href="https://www.linkedin.com/in/matthew-x-wang/">LinkedIn</a>
+      <a class="slide1" rel="noopener" target="_blank" href="https://blog.matthewwang.me">Blog</a> |
+      <a class="slide2" rel="noopener" target="_blank" href="https://github.com/malsf21/">GitHub</a> |
+      <a class="slide1" rel="noopener" target="_blank" href="assets/files/resume.pdf">Résumé</a> |
+      <a class="slide2" rel="noopener" target="_blank" href="https://www.linkedin.com/in/matthew-x-wang/">LinkedIn</a>
     </div>
     <div class="card border-primary">
       <h1>Who's Matt?</h1>
@@ -57,7 +164,7 @@
         I have a few other loves too 😉! I enjoy working with kids (i.e. community service and camp counselling), especially teaching them about technology like computer science or robotics. I'm a big politics and economics junkie, borne from years of competitive high school debating and Model UN. And, I love writing about social issues, current affairs, and music, as well as exploring new mediums to convey those stories - though I'm no Ta-Nehisi Coates!
       </p>
       <p>
-        In my spare time, I do some <a rel="noopener" href="https://blog.matthewwang.me">blogging</a>, <a rel="noopener" href="https://open.spotify.com/user/11156788800">listen to music</a>, and read.
+        In my spare time, I do some <a rel="noopener" target="blank" href="https://blog.matthewwang.me">blogging</a>, <a rel="noopener" target="_blank" href="https://open.spotify.com/user/11156788800">listen to music</a>, and read.
       </p>
       <p>
         And come up with mediocre puns.
@@ -67,7 +174,7 @@
     <div class="card bg-primary">
       <h2>Pun Fact</h2>
       <p>
-        When I name my Spotify playlists, I abuse mediocre puns. For example, I have a playlist called <a rel="noopener" class="link-white" href="https://open.spotify.com/user/11156788800/playlist/2cT6Y3KwCvep7JZE6OUMlj">amperes</a> that has all the music I'm <em>current-ly</em> listening to.
+        When I name my Spotify playlists, I abuse mediocre puns. For example, I have a playlist called <a rel="noopener" target="_blank" class="link-white" href="https://open.spotify.com/user/11156788800/playlist/2cT6Y3KwCvep7JZE6OUMlj">amperes</a> that has all the music I'm <em>current-ly</em> listening to.
       </p>
     </div>
 
@@ -147,7 +254,7 @@
     <div class="card bg-primary">
       <h2>print fact.isFun <span class="fa fa-arrow-right"></span> <code class="bg-white">true</code></h2>
       <p>
-        I wrote almost all the code for this website (just not the fonts); I even wrote the CSS framework! Check it out <a rel="noopener" class="link-white" href="https://github.com/malsf21/liteweight">on GitHub.</a>
+        I wrote almost all the code for this website (just not the fonts); I even wrote the CSS framework! Check it out <a rel="noopener" target="_blank" class="link-white" href="https://github.com/malsf21/liteweight">on GitHub.</a>
       </p>
     </div>
 
@@ -174,7 +281,7 @@
       </p>
       <hr />
       <p>
-        Want a more formal, detailed breakdown? Check out my <a rel="noopener" href="assets/files/resume.pdf">résumé</a>, or <a href="mailto:matt@matthewwang.me">send me an email</a>.
+        Want a more formal, detailed breakdown? Check out my <a rel="noopener" target="_blank" href="assets/files/resume.pdf">résumé</a>, or <a href="mailto:matt@matthewwang.me">send me an email</a>.
       </p>
     </div>
     </div>
@@ -273,7 +380,7 @@
     <div class="card bg-primary">
       <h2>Technically True Fun Fact</h2>
       <p>
-        Not to brag, but I also have 3 participation ribbons from houseleague hockey, am a previous record holder of "World's Youngest Person", and I was <a rel="noopener" class="link-white" href="http://content.time.com/time/specials/packages/0,28757,2019341,00.html">TIME Magazine's Person of the Year in 2006</a>. Plus, I'm the second coolest Matthew Wang I know.
+        Not to brag, but I also have 3 participation ribbons from houseleague hockey, am a previous record holder of "World's Youngest Person", and I was <a rel="noopener" target="_blank" class="link-white" href="https://en.wikipedia.org/wiki/You_(Time_Person_of_the_Year)">TIME Magazine's Person of the Year in 2006</a>. Plus, I'm the second coolest Matthew Wang I know.
       </p>
     </div>
     <div class="card border-primary">
