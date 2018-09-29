@@ -72,8 +72,10 @@
       :root {
       	--animation1-percent1: -100%;
       	--animation1-percent2: -100%;
+        --animation1-delay: 250ms;
       	--animation2-percent1: 100%;
       	--animation2-percent2: 100%;
+        --animation2-delay: 500ms;
       }
     	/* This is me playing around with what I think is a cool CSS animation. We'll see whether or not this is actually a good idea. Basically, I set defaults the translation, but then I also change the CSS variable (if supported) randomly on page load. */
     	@keyframes slide1 {
@@ -103,6 +105,7 @@
     	.slide1 {
     		animation-name: slide1;
     		animation-duration: 1.25s;
+        animation-delay: var(--animation1-delay);
     		animation-fill-mode: both;
     		display: inline-block;
     	}
@@ -110,6 +113,7 @@
     	.slide2 {
     		animation-name: slide2;
     		animation-duration: 1.25s;
+        animation-delay: var(--animation2-delay);
     		animation-fill-mode: both;
     		display: inline-block;
     	}
@@ -143,13 +147,13 @@
 
   <body class="main-body">
     <div class="card text-center">
-      <p class="fa-2x">Hey there!</p>
-      <h1 class="fa-3x">My name is <span class="slide1">Matthew</span> <span class="slide2">Wang</span></h1>
+      <p class="text-2x">Hey there!</p>
+      <h1 class="text-3x">My name is <span class="slide1">Matthew</span> <span class="slide2">Wang</span></h1>
       <p>
         But you can call me <span class="slide1">Matt</span>.
       </p>
     </div>
-    <div class="text-center fa-2x">
+    <div class="text-center text-2x">
       <a class="slide1" rel="noopener" target="_blank" href="https://blog.matthewwang.me">Blog</a> |
       <a class="slide2" rel="noopener" target="_blank" href="https://github.com/malsf21/">GitHub</a> |
       <a class="slide1" rel="noopener" target="_blank" href="assets/files/resume.pdf">Résumé</a> |
@@ -254,7 +258,7 @@
     <div class="card bg-primary">
       <h2>print fact.isFun <span class="fa fa-arrow-right"></span> <code class="bg-white">true</code></h2>
       <p>
-        I wrote almost all the code for this website (just not the fonts); I even wrote the CSS framework! Check it out <a rel="noopener" target="_blank" class="link-white" href="https://github.com/malsf21/liteweight">on GitHub.</a>
+        I wrote all the code for this website (sans fonts), including the CSS framework! Check it out <a rel="noopener" target="_blank" class="link-white" href="https://github.com/malsf21/liteweight">on GitHub.</a>
       </p>
     </div>
 
@@ -433,14 +437,19 @@
       console.log("%cThough, I am planning on revamping this website and adding some fancy stuff. Stay tuned!", "color:#e95420;")
       console.log("%cAnyways, have fun browsing the rest of the website. If you have any feedback, let me know on my GitHub repo for this landing page: \nhttps://github.com/malsf21/matthewwang.me", "color:#e95420;")
 
-      // This is the function that generates that SICK intro animation :P
+      // These are the functions that generate that SICK intro animation :P
       // Maybe it's not that sick :(
       function randomAnimation(animationVar){
         document.documentElement.style.setProperty(animationVar + '-percent1', (Math.random()*5-2.5)*100 + '%')
         document.documentElement.style.setProperty(animationVar + '-percent2', (Math.random()*5-2.5)*100 + '%')
       }
+      function randomDelay(animationVar){
+        document.documentElement.style.setProperty(animationVar + '-delay', (Math.random()*5+1)*100 + 'ms')
+      }
       randomAnimation("--animation1")
       randomAnimation("--animation2")
+      randomDelay("--animation1")
+      randomDelay("--animation2")
     </script>
   </body>
 </html>
