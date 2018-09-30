@@ -101,6 +101,15 @@
     			transform: translate3d(0, 0, 0);
     		}
     	}
+
+      @keyframes underline {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
     	/* I could probably have better variable names here, right? */
     	.slide1 {
     		animation-name: slide1;
@@ -117,6 +126,19 @@
     		animation-fill-mode: both;
     		display: inline-block;
     	}
+      .underline-expand{
+        display: inline-block;
+      }
+      .underline-expand:after{
+        animation-name: underline;
+        animation-duration: 1.5s;
+        animation-delay: var(--animation1-delay);
+        animation-fill-mode: both;
+        content: "";
+        display: block;
+        height: 5px;
+        background-color: #E95420;
+      }
 
       /* The keyframes + class for the heartbeat animation I use across the site. */
       @keyframes heartbeat {
@@ -146,11 +168,14 @@
   </head>
 
   <body class="main-body">
-    <div class="card text-center">
+    <div class="text-center">
       <p class="text-2x">Hey there!</p>
-      <h1 class="text-3x">My name is <span class="slide1">Matthew</span> <span class="slide2">Wang</span></h1>
+      <h1 class="text-3x">My name is <span class="underline-expand"><span class="slide1">Matthew</span> <span class="slide2">Wang</span></span></h1>
       <p>
-        But you can call me <span class="slide1">Matt</span>.
+        <span class="slide1">But you can call me</span> <span class="slide1">Matt</span>.
+      </p>
+      <p class="text-2x">
+        I work on <span class="underline-expand">unscrambling your problems</span>.
       </p>
     </div>
     <div class="text-center text-2x">
@@ -440,11 +465,11 @@
       // These are the functions that generate that SICK intro animation :P
       // Maybe it's not that sick :(
       function randomAnimation(animationVar){
-        document.documentElement.style.setProperty(animationVar + '-percent1', (Math.random()*5-2.5)*100 + '%')
-        document.documentElement.style.setProperty(animationVar + '-percent2', (Math.random()*5-2.5)*100 + '%')
+        document.documentElement.style.setProperty(animationVar + '-percent1', (Math.random()*8-4)*100 + '%')
+        document.documentElement.style.setProperty(animationVar + '-percent2', (Math.random()*8-4)*100 + '%')
       }
       function randomDelay(animationVar){
-        document.documentElement.style.setProperty(animationVar + '-delay', (Math.random()*5+1)*100 + 'ms')
+        document.documentElement.style.setProperty(animationVar + '-delay', (Math.random()*5+4)*100 + 'ms')
       }
       randomAnimation("--animation1")
       randomAnimation("--animation2")
