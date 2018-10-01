@@ -126,18 +126,22 @@
     		animation-fill-mode: both;
     		display: inline-block;
     	}
-      .underline-expand{
-        display: inline-block;
-      }
-      .underline-expand:after{
-        animation-name: underline;
-        animation-duration: 1.5s;
-        animation-delay: var(--animation1-delay);
-        animation-fill-mode: both;
-        content: "";
-        display: block;
-        height: 5px;
-        background-color: #E95420;
+
+      /* This is the underline animation for the hero. It looks real bad on mobile so I've disabled it there */
+      @media only screen and (min-width: 768px) {
+        .underline-expand{
+          display: inline-block;
+        }
+        .underline-expand:after{
+          animation-name: underline;
+          animation-duration: 1.5s;
+          animation-delay: var(--animation1-delay);
+          animation-fill-mode: both;
+          content: "";
+          display: block;
+          height: 5px;
+          background-color: #E95420;
+        }
       }
 
       /* The keyframes + class for the heartbeat animation I use across the site. */
