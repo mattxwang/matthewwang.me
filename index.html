@@ -28,7 +28,7 @@
     <meta name="theme-color" content="#e95420">
     <!-- Heard there's a cool CSS framework called Liteweight: https://github.com/malsf21/liteweight -->
     <link rel="stylesheet" href="assets/css/liteweight-duo.min.css?v3.0.0-beta" />
-    <!-- Here are a few more of my special additions for the site. -->
+    <!-- Here are a few more of my special additions for the site. I don't put it in a separate CSS file since this is the only page in this "site", and it can cause some jittery styling issues. -->
     <style>
       /* Fonts. Boring. */
 
@@ -172,8 +172,10 @@
       	animation: heartbeat 2s infinite;
       }
     </style>
-    <!-- This is me loading Font Awesome - I've deferred it as it's not critical to the page load, but it's still pretty cool. FA5 features a cool set of SVG+JS icon loading mechanics, though I'm not sure if it's better than FA4's webfont system.-->
-    <script defer src="assets/js/fontawesome-all.min.js?v5.3.1"></script>
+    <!-- This is me loading Font Awesome - I've deferred it as it's not critical to the page load, but it's still pretty cool. I've opted to use Font Awesome's SVG + JS features instead of webfonts, just to see how it is! -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/solid.js" integrity="sha384-GJiigN/ef2B3HMj0haY+eMmG4EIIrhWgGJ2Rv0IaWnNdWdbWPr1sRLkGz7xfjOFw" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/brands.js" integrity="sha384-2vdvXGQdnt+ze3ylY5ESeZ9TOxwxlOsldUzQBwtjvRpen1FwDT767SqyVbYrltjb" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/fontawesome.js" integrity="sha384-2OfHGv4zQZxcNK+oL8TR9pA+ADXtUODqGpIRy1zOgioC4X3+2vbOAp5Qv7uHM4Z8" crossorigin="anonymous"></script>
   </head>
 
   <body class="main-body">
@@ -598,6 +600,7 @@
         'I never understood Fifty Shades of Gray - there are at least thousands in RGB color space.'
       ]
 
+      // I do this so that the randomPunFact function can be called again by the refresh button - if not, I would've not made this a function
       function randomPunFact(){
         document.getElementById('pun-fact').innerHTML = '<p class="pun-fact">' + punFacts[Math.floor(Math.random()*punFacts.length)] + '</p>'
       }
