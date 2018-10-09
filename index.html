@@ -34,24 +34,13 @@
 
       @font-face {
       	font-family: Nexa;
-      	src: url(./assets/fonts/nexa/nexa_light.otf)
+      	src: url(./assets/fonts/nexa/nexa_regular.ttf)
       }
 
       @font-face {
       	font-family: Nexa;
       	font-weight: 700;
       	src: url(./assets/fonts/nexa/nexa_bold.otf)
-      }
-
-      @font-face {
-      	font-family: Nexa Slab;
-      	src: url(./assets/fonts/nexaslab/nexa_slab_regular.otf)
-      }
-
-      @font-face {
-      	font-family: Nexa Slab;
-      	font-weight: 700;
-      	src: url(./assets/fonts/nexaslab/nexa_slab_bold.otf)
       }
 
       body {
@@ -80,7 +69,6 @@
     	/* This is me playing around with what I think is a cool CSS animation. We'll see whether or not this is actually a good idea. Basically, I set defaults the translation, but then I also change the CSS variable (if supported) randomly on page load. */
     	@keyframes slide1 {
     		from {
-    			transform: translate3d(-100%, -100%, 0);
     			transform: translate3d(var(--animation1-percent1), var(--animation1-percent2), 0);
     			visibility: visible;
     		}
@@ -92,7 +80,6 @@
 
     	@keyframes slide2 {
     		from {
-    			transform: translate3d(100%, 100%, 0);
     			transform: translate3d(var(--animation2-percent1), var(--animation2-percent2), 0);
     			visibility: visible;
     		}
@@ -102,14 +89,6 @@
     		}
     	}
 
-      @keyframes underline {
-        from {
-          width: 0;
-        }
-        to {
-          width: 100%;
-        }
-      }
     	/* I could probably have better variable names here, right? */
     	.slide1 {
     		animation-name: slide1;
@@ -127,7 +106,33 @@
     		display: inline-block;
     	}
 
+      /* These are keyframes for the transition on pun facts */
+
+      @keyframes grow {
+        from {
+          transform: scale(0.1);
+        }
+
+        to {
+          transform: scale(1);
+        }
+      }
+
+      .pun-fact{
+        animation: grow 0.75s;
+      }
+
       /* This is the underline animation for the hero. It looks real bad on mobile so I've disabled it there */
+
+      @keyframes underline {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
       @media only screen and (min-width: 768px) {
         .underline-expand{
           display: inline-block;
@@ -194,7 +199,7 @@
         That's me! I'm currently studying the arcane art of computer science at the University of California, Los Angeles. I <span class="fa fa-heart animated-heartbeat" style="color:red;"></span> working with computers - making websites, apps, frameworks, backends, designing semi-cool things, and occasionally sneaking in some video games.
       </p>
       <p>
-        I have a few other loves too 😉! I enjoy working with kids (i.e. community service and camp counselling), especially teaching them about technology like computer science or robotics. I'm a big politics and economics junkie, borne from years of competitive high school debating and Model UN. And, I love writing about social issues, current affairs, and music, as well as exploring new mediums to convey those stories - though I'm no Ta-Nehisi Coates!
+        I have a few other loves too! I enjoy working with kids (i.e. community service and camp counselling), especially teaching them about technology like computer science or robotics. I'm a big politics and economics junkie, borne from years of competitive high school debating and Model UN. And, I love writing about social issues, current affairs, and music, as well as exploring new mediums to convey those stories - though I'm no Ta-Nehisi Coates!
       </p>
       <p>
         In my spare time, I do some <a rel="noopener" target="blank" href="https://blog.matthewwang.me">blogging</a>, <a rel="noopener" target="_blank" href="https://open.spotify.com/user/11156788800">listen to music</a>, and read.
@@ -207,8 +212,12 @@
     <div class="card bg-primary">
       <h2>Pun Fact</h2>
       <p>
-        When I name my Spotify playlists, I abuse mediocre puns. For example, I have a playlist called <a rel="noopener" target="_blank" class="link-white" href="https://open.spotify.com/user/11156788800/playlist/2cT6Y3KwCvep7JZE6OUMlj">amperes</a> that has all the music I'm <em>current-ly</em> listening to.
+        <i>Picked from my library of pun facts.</i>
+        <a class="button button-white" onclick="randomPunFact()"><span class="fa fa-redo"></span> Refresh</a>
       </p>
+      <div id="pun-fact">
+
+      </div>
     </div>
 
     <div class="card border-primary">
@@ -524,7 +533,7 @@
           <a rel="noopener" href="https://github.com/malsf21"><span class="fab fa-github"></span> GitHub: malsf21</a>
         </li>
         <li>
-          <a rel="noopener" href="https://www.linkedin.com/in/matthew-wang-510992136/"><span class="fab fa-linkedin"></span> LinkedIn: Matthew Wang</a>
+          <a rel="noopener" href="https://www.linkedin.com/in/matthew-x-wang/"><span class="fab fa-linkedin"></span> LinkedIn: Matthew Wang</a>
         </li>
         <li>
           <a rel="noopener" href="https://twitter.com/malsf21"><span class="fab fa-twitter"></span> Twitter: malsf21</a>
@@ -532,12 +541,10 @@
       </ul>
     </div>
     <footer class="text-center">
-      <div class="fa-2x">Made by <a rel="noopener" href="https://github.com/malsf21/">Matthew Wang</a></div>
-      <div class="text">
-        <span class="fa fa-heart text-primary animated-heartbeat"></span>
-        <a rel="noopener" href="https://github.com/malsf21/matthewwang.me"><span class="fab fa-github text-black" aria-label="GitHub Repository"></span></a>
-        <span class="fa fa-heart text-primary animated-heartbeat"></span>
-      </div>
+      <div class="text-2x"><b>Made by <a rel="noopener" href="https://github.com/malsf21/">Matthew Wang</a></b></div>
+      <span class="fa fa-heart text-primary animated-heartbeat"></span>
+      <a rel="noopener" href="https://github.com/malsf21/matthewwang.me"><span class="fab fa-github text-black" aria-label="GitHub Repository"></span></a>
+      <span class="fa fa-heart text-primary animated-heartbeat"></span>
     </footer>
     <script>
       /*
@@ -557,7 +564,7 @@
 
       */
       console.log("%c\n __   __  _______  _______  _______ \n|  |_|  ||   _   ||       ||       |\n|       ||  |_|  ||_     _||_     _|\n|       ||       |  |   |    |   |  \n|       ||       |  |   |    |   |  \n| ||_|| ||   _   |  |   |    |   |  \n|_|   |_||__| |__|  |___|    |___|  ", "color:#e95420;")
-      console.log("%cThis page runs very minimal Javascript (just a function that changes a CSS variable for what I think is a cool intro animation and Font Awesome), so don't fret.", "color:#e95420;")
+      console.log("%cThis page runs very minimal Javascript (just a function that changes a CSS variable for what I think is a cool intro animation, pun-facts that change on page refresh, and Font Awesome), so don't fret.", "color:#e95420;")
       console.log("%cThough, I am planning on revamping this website and adding some fancy stuff. Stay tuned!", "color:#e95420;")
       console.log("%cAnyways, have fun browsing the rest of the website. If you have any feedback, let me know on my GitHub repo for this landing page: \nhttps://github.com/malsf21/matthewwang.me", "color:#e95420;")
 
@@ -574,6 +581,28 @@
       randomAnimation("--animation2")
       randomDelay("--animation1")
       randomDelay("--animation2")
+
+      // Here, we pick a random pun fact and put it into the pun fact div.
+      var punFacts = [
+        'I love using mediocre puns for my Spotify playlist titles. For example, I have a playlist called <a rel="noopener" target="_blank" class="link-white" href="https://open.spotify.com/user/11156788800/playlist/2cT6Y3KwCvep7JZE6OUMlj">amperes</a> that has all the music I\'m current-ly listening to.',
+        'I\'m from Canada, which uses the metric system. This creates some oddities: while spiders in America have 8 feet, spiders in Canada have <a rel="noopener" target="_blank" class="link-white" href="https://www.google.com/search?q=8+feet+to+meters&oq=8+feet+to+meters">2.4 meters</a>!',
+        'I\'ve been told that college is the time to go on dates. To me, the perfect date would be DD/MM/YYYY; MM/DD/YY is just so cliché.',
+        'It has taken me several years to <code class="text-primary">git good</code> at git and GitHub.',
+        'I love telling chemistry jokes, but all the good ones <i>Argon</i>! <br /><br /> Or, they\'re too <i>Boron</i> to tell!',
+        'After taking physics in high school, I realised how much <i>potential</i> there is for puns!',
+        'One time (true story), I cut myself on a broken window. It was a world of <i>pane</i>.',
+        'I used to play a lot of hockey and ice skate, which invovled me slipping and falling all the time. Though, it works as a great <i>icebreaker</i>!',
+        'I don\'t have great eyesight (I wear contacts), but I have no fear: I\'ll get my adult <i>supervision</i> soon!',
+        'I like ketchup, mustard, and mayo, but as soon as I see ranch, I dip.',
+        'Many Canadians love ketchup chips, but I\'m pretty impartial to them - I never had them when I was younger, and now there\'s too much ground to ketchup on.',
+        'I never understood Fifty Shades of Gray - there are at least thousands in RGB color space.'
+      ]
+
+      function randomPunFact(){
+        document.getElementById('pun-fact').innerHTML = '<p class="pun-fact">' + punFacts[Math.floor(Math.random()*punFacts.length)] + '</p>'
+      }
+
+      randomPunFact()
     </script>
   </body>
 </html>
