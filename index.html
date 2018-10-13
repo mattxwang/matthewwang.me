@@ -597,12 +597,16 @@
         'I don\'t have great eyesight (I wear contacts), but I have no fear: I\'ll get my adult <i>supervision</i> soon!',
         'I like ketchup, mustard, and mayo, but as soon as I see ranch, I dip.',
         'Many Canadians love ketchup chips, but I\'m pretty impartial to them - I never had them when I was younger, and now there\'s too much ground to ketchup on.',
-        'I never understood Fifty Shades of Gray - there are at least thousands in RGB color space.'
+        'I never understood Fifty Shades of Gray - there are at least thousands in RGB color space.',
+        'I used to play houseleague baseball, though I was awful; but nobody is good at baseball <i>right off the bat</i>!',
+        'I don\'t get cold very easily, but if I am, I just draw a square on the ground and stand in one of the corners - it\'s always 90 degrees!',
+        'One of my favourite comfort foods to make is mashed potatoes - it\'s usually a s-mash hit!'
+
       ]
 
       // I do this so that the randomPunFact function can be called again by the refresh button - if not, I would've not made this a function
       function randomPunFact(){
-        document.getElementById('pun-fact').innerHTML = '<p class="pun-fact">' + punFacts[Math.floor(Math.random()*punFacts.length)] + '</p>'
+        document.getElementById('pun-fact').innerHTML = '<p class="pun-fact">' + punFacts[Math.floor(Math.random()*punFacts.length)] + '</p>' // I do this instead of directly changing the paragraph's innerHTML so the transition replays when the <p> is created
       }
 
       randomPunFact()
