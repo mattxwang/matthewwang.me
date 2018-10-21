@@ -549,6 +549,7 @@
       <span class="fa fa-heart text-primary animated-heartbeat"></span>
     </footer>
     <script>
+      "use strict";
       /*
         I think this is pretty cool: basically, you can use CSS styles for console logs. You can check out what this looks like by looking at the Javascript console.
 
@@ -570,8 +571,8 @@
       console.log("%cThough, I am planning on revamping this website and adding some fancy stuff. Stay tuned!", "color:#e95420;")
       console.log("%cAnyways, have fun browsing the rest of the website. If you have any feedback, let me know on my GitHub repo for this landing page: \nhttps://github.com/malsf21/matthewwang.me", "color:#e95420;")
 
-      // These are the functions that generate that SICK intro animation :P
-      // Maybe it's not that sick :(
+      // These are the functions that generate that SICK intro animation!
+      // Well, if you think it's sick that is. Basically, it sets the CSS variable for the x and y transform distance to a random number, so it's different on each page load!
       function randomAnimation(animationVar){
         document.documentElement.style.setProperty(animationVar + '-percent1', (Math.random()*8-4)*100 + '%')
         document.documentElement.style.setProperty(animationVar + '-percent2', (Math.random()*8-4)*100 + '%')
@@ -584,8 +585,8 @@
       randomDelay("--animation1")
       randomDelay("--animation2")
 
-      // Here, we pick a random pun fact and put it into the pun fact div.
-      var punFacts = [
+      // Here's my list of fun facts. Or punFacts. It's up to you ;)
+      const punFacts = [
         'I love using mediocre puns for my Spotify playlist titles. For example, I have a playlist called <a rel="noopener" target="_blank" class="link-white" href="https://open.spotify.com/user/11156788800/playlist/2cT6Y3KwCvep7JZE6OUMlj">amperes</a> that has all the music I\'m current-ly listening to.',
         'I\'m from Canada, which uses the metric system. This creates some oddities: while spiders in America have 8 feet, spiders in Canada have <a rel="noopener" target="_blank" class="link-white" href="https://www.google.com/search?q=8+feet+to+meters&oq=8+feet+to+meters">2.4 meters</a>!',
         'I\'ve been told that college is the time to go on dates. To me, the perfect date would be DD/MM/YYYY; MM/DD/YY is just so cliché.',
@@ -604,9 +605,27 @@
 
       ]
 
-      // I do this so that the randomPunFact function can be called again by the refresh button - if not, I would've not made this a function
+      // This randomly "shuffles" the punFacts array - this is so the "order" of the punFacts is different on every visit!
+
+      for (let i = punFacts.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [punFacts[i], punFacts[j]] = [punFacts[j], punFacts[i]];
+      }
+
+      // To ensure that you don't get the same punFact twice in a row, we iterate through the random array so that you see each punFact at least once before you see one twice. Thanks to Allison for prompting me to do this!
+
+      var counter = 0;
+
       function randomPunFact(){
-        document.getElementById('pun-fact').innerHTML = '<p class="pun-fact">' + punFacts[Math.floor(Math.random()*punFacts.length)] + '</p>' // I do this instead of directly changing the paragraph's innerHTML so the transition replays when the <p> is created
+        document.getElementById('pun-fact').innerHTML = '<p class="pun-fact">' + punFacts[counter] + '</p>' // I do this instead of directly changing the paragraph's innerHTML so the transition replays when the <p> is created
+
+        // here we just increment counter, and reset it to zero - creating an "infinite loop" through the array
+        if (counter + 1  == punFacts.length){
+          counter = 0;
+        }
+        else{
+          counter += 1;
+        }
       }
 
       randomPunFact()
