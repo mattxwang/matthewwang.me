@@ -167,9 +167,19 @@
       		transform: scale(0.75);
       	}
       }
-
       .animated-heartbeat {
       	animation: heartbeat 2s infinite;
+      }
+      .toggle-content {
+        display: none;
+        height: 0;
+        overflow: hidden;
+        transition: height 350ms ease-in-out;
+      }
+
+      .toggle-content.is-visible {
+        display: block;
+        height: auto;
       }
     </style>
     <!-- This is me loading Font Awesome - I've deferred it as it's not critical to the page load, but it's still pretty cool. I've opted to use Font Awesome's SVG + JS features instead of webfonts, just to see how it is! -->
@@ -215,8 +225,8 @@
     <div class="card bg-primary">
       <h2>Pun Fact</h2>
       <p>
-        <i>Picked from my library of pun facts.</i>
         <a class="button button-white" onclick="randomPunFact()"><span class="fa fa-redo"></span> Refresh</a>
+        <i> Picked from my library of pun facts.</i>
       </p>
       <div id="pun-fact">
 
@@ -250,20 +260,6 @@
         </li>
         <li>
           <h2>
-            Convergence
-            <a rel="noopener" target="_blank" href="https://convergence.today"><span class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/convergence"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/c-lite-cover.png"><span class="fa fa-image" aria-label="Example Convergence Cover"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/batt-ball-infographic-2017.png"><span class="fa fa-image" aria-label="Batt Ball Infographic 2017"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/batt-ball-infographic-2018.png"><span class="fa fa-image" aria-label="Batt Ball Infographic 2018"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/TPP.png"><span class="fa fa-image" aria-label="TPP Infographic"></span></a>
-          </h2>
-          <p>
-            Designed print layout for school newspaper using InDesign, created infographics with Illustrator and Photoshop, wrote and edited articles. Developed website with Jekyll.
-          </p>
-        </li>
-        <li>
-          <h2>
             Fair Chair
             <a rel="noopener" target="_blank" href="https://itunes.apple.com/us/app/fair-chair/id1365686846"><span class="fab fa-app-store" aria-label="Mac App Store Link"></span></a>
             <a rel="noopener" target="_blank" href="https://malsf21.github.io/fair-chair/"><span class="fa fa-link" aria-label="Website Link"></span></a>
@@ -281,7 +277,7 @@
             <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-website"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
           </h2>
           <p>
-            Developed front-end website (Jekyll + Bootstrap) and backend API + authentication flow (PHP + mySQL) for food inventory web-app. Developed iOS and Android app using Ionic (Cordova + AngularJS). Supported development of Arduino with NFC.
+            Developed front-end website (Jekyll + Bootstrap) and backend API + authentication flow (PHP + mySQL) for food inventory web-app. Developed iOS and Android app using Ionic (Cordova + AngularJS). Supported development of Arduino program with NFC.
           </p>
         </li>
         <li>
@@ -292,16 +288,6 @@
           </h2>
           <p>
             Developed CSS framework using SASS and Grunt, set up Travis CI jobs to build, test, and distribute files. Documented framework online.
-          </p>
-        </li>
-        <li>
-          <h2>
-            Lowkey
-            <a rel="noopener" target="_blank" href="https://blog.matthewwang.me"><span class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/lowkey"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
-          </h2>
-          <p>
-            Personal blog, developed with Liteweight (self-made CSS framework) and Jekyll.
           </p>
         </li>
         <li>
@@ -319,12 +305,21 @@
         </li>
         <li>
           <h2>
+            pop 'n lock
+            <a rel="noopener" target="_blank" href="https://github.com/malsf21/ideahacks-2019"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
+          </h2>
+          <p>
+            Best project at IDEA Hacks 2019. Created RFID and Bluetooth enabled smart lock with Arduino board, RFID sensor, and small servo.
+          </p>
+        </li>
+        <li>
+          <h2>
             Prefects Cup Website
             <a rel="noopener" target="_blank" href="http://pc.ucc.on.ca"><span class="fa fa-link" aria-label="Website Link"></span></a>
             <a rel="noopener" target="_blank" href="https://github.com/malsf21/prefects-cup-website"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
           </h2>
           <p>
-            Developed website to track house points for high school, built with Bulma, Chart.js, and Firebase. Website includes authentication flow but has no file-based backend, and is deployed to GitHub Pages.
+            Developed website to track house points for high school, built with Bulma, Chart.js, and Firebase. Uses Firebase authentication and data store, and is deployed to GitHub Pages.
           </p>
         </li>
         <li>
@@ -346,7 +341,7 @@
         I have some smaller projects too! They're still pretty cool, and you should check them out!
       </p>
       <p>
-        But only if you want to, I don't want to force you.
+        <small>(but only if you want to, I don't want to force you)</small>
       </p>
       <ul class="list-unstyled">
         <li>
@@ -357,8 +352,13 @@
         </li>
         <li>
           <h3>
-            Dance Poster
-            <a rel="noopener" target="_blank" href="assets/files/work/stewards.png"><span class="fa fa-image" aria-label="Stewards Dance Poster"></span></a>
+            Convergence (High School Newspaper)
+            <a rel="noopener" target="_blank" href="https://convergence.today"><span class="fa fa-link" aria-label="Website Link"></span></a>
+            <a rel="noopener" target="_blank" href="https://github.com/malsf21/convergence"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
+            <a rel="noopener" target="_blank" href="assets/files/work/c-lite-cover.png"><span class="fa fa-image" aria-label="Example Convergence Cover"></span></a>
+            <a rel="noopener" target="_blank" href="assets/files/work/batt-ball-infographic-2017.png"><span class="fa fa-image" aria-label="Batt Ball Infographic 2017"></span></a>
+            <a rel="noopener" target="_blank" href="assets/files/work/batt-ball-infographic-2018.png"><span class="fa fa-image" aria-label="Batt Ball Infographic 2018"></span></a>
+            <a rel="noopener" target="_blank" href="assets/files/work/TPP.png"><span class="fa fa-image" aria-label="TPP Infographic"></span></a>
           </h3>
         </li>
         <li>
@@ -369,14 +369,27 @@
         </li>
         <li>
           <h3>
-            IB Math Exploration (on Lotka-Volterra equations), including web-app
+            IB Math Exploration (on Lotka-Volterra equations, includes web-app)
             <a rel="noopener" target="_blank" href="https://malsf21.github.io/lotka-volterra/"><span class="fa fa-link" aria-label="Math Exploration Web App"></span></a>
             <a rel="noopener" target="_blank" href="assets/files/work/math-exploration.pdf"><span class="fa fa-file" aria-label="Math Exploration File"></span></a>
           </h3>
         </li>
         <li>
           <h3>
-            Spirit Week Posters
+            Lowkey (Personal Blog)
+            <a rel="noopener" target="_blank" href="https://blog.matthewwang.me"><span class="fa fa-link" aria-label="Website Link"></span></a>
+            <a rel="noopener" target="_blank" href="https://github.com/malsf21/lowkey"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            High School Dance Poster
+            <a rel="noopener" target="_blank" href="assets/files/work/stewards.png"><span class="fa fa-image" aria-label="Stewards Dance Poster"></span></a>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            High School Spirit Week Posters
             <a rel="noopener" target="_blank" href="assets/files/work/rivalry-week-bh.png"><span class="fa fa-image" aria-label="Rivalry Week Poster 1"></span></a>
             <a rel="noopener" target="_blank" href="assets/files/work/rivalry-week-mj.png"><span class="fa fa-image" aria-label="Rivalry Week Poster 2"></span></a>
             <a rel="noopener" target="_blank" href="assets/files/work/rivalry-week-mm.png"><span class="fa fa-image" aria-label="Rivalry Week Poster 3"></span></a>
@@ -413,7 +426,7 @@
       </p>
       <h2>Education</h2>
       <p>
-        I'm passionate about education, and what I do shows it. Right now, I volunteer with BEAM at UCLA to teach STEM to underserved elementary kids in LA/ I've spent hundreds of hours teaching in peer-tutoring programs, and I started a few educational programs in high school: creating curriculums, organising instructors, and teaching students 4-week courses on Computer Science and Robotics. I set up a brand new robotics camp at UCC Summer Camps, creating a new curriculum, doing hiring, and managing a large budget + inventory.
+        I'm passionate about education outreach, and what I do shows it. Right now, I volunteer with BEAM at UCLA to teach STEM to underserved elementary kids in LA; in high school I started a few educational programs, creating curriculums, organising instructors, and teaching students 4-week courses on Computer Science and Robotics.
       </p>
       <hr />
       <p>
@@ -447,7 +460,7 @@
         At Debate Camp Canada, I taught lessons on public speaking and debate to over 300 kids throughout spring break and the summer.
       </p>
       <hr/>
-      <h1>Volunteer</h1>
+      <h1>Volunteering</h1>
       <h2>BEAM (2018-*)</h2>
       <p>
         As a member of BEAM @ UCLA, I run weekly STEM workshops with underserved kids in the LA area, and come up with new lessons and curriculum throughout the school year.
@@ -457,9 +470,8 @@
         As the program director of Horizons Robotics, I developed and taught a 4-week curriculum (using mBots, Scratch, and Makey-Makeys) taught to 100+ underserved middle-school students in Toronto. I also procured inventory and trained student instructors. Similarly, as the program director and founder of Horizons Computer Science, I designed a 4-week curriculum (centred on Scratch), procured inventory and trained instructors, and led classes.
       </p>
       <hr />
-      <h1>High School Extracurriculars</h1>
-      <p>It was fun white it lasted!</p>
-      <ul class="list-items">
+      <h2><a id="hs-ecs-link">High School <small>(click to expand)</small></a></h2>
+      <ul class="list-items toggle-content" id="hs-ecs-content">
         <li>
           WAC Director General, Lead Developer
         </li>
@@ -502,6 +514,14 @@
         Most of the time, I don't win things. Sometimes though, I do. I'm as surprised as you are.
       </p>
       <ul class="list-items">
+        <li>Muriel K. and Robert B. Allan Fund Recipient 2018-2019</li>
+        <li>UCLA Achievement Scholarship Recipient 2018-2019</li>
+        <li>IDEA Hacks 2019 Best Project <a rel="noopener" target="_blank" href="https://github.com/malsf21/ideahacks-2019"><span class="fab fa-github" aria-label="GitHub Repository"></span></a></li>
+        <li>Berkeley Debate IV 2019 Champion</li>
+      </ul>
+      <hr />
+      <h2><a id="hs-awards-link">High School <small>(click to expand)</small></a></h2>
+      <ul class="list-items toggle-content" id="hs-awards-content">
         <li>
           Class of '62 Trophy
         </li>
@@ -624,19 +644,15 @@
       ]
 
       // This randomly "shuffles" the punFacts array - this is so the "order" of the punFacts is different on every visit!
-
       for (let i = punFacts.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [punFacts[i], punFacts[j]] = [punFacts[j], punFacts[i]];
       }
 
       // To ensure that you don't get the same punFact twice in a row, we iterate through the random array so that you see each punFact at least once before you see one twice. Thanks to Allison for prompting me to do this!
-
-      var counter = 0;
-
+      let counter = 0;
       function randomPunFact(){
         document.getElementById('pun-fact').innerHTML = '<p class="pun-fact">' + punFacts[counter] + '</p>' // I do this instead of directly changing the paragraph's innerHTML so the transition replays when the <p> is created
-
         // here we just increment counter, and reset it to zero - creating an "infinite loop" through the array
         if (counter + 1  == punFacts.length){
           counter = 0;
@@ -645,8 +661,49 @@
           counter += 1;
         }
       }
-
       randomPunFact()
+
+      // these are the controllers for the expanding content boxes
+      // i use a method from https://gomakethings.com/how-to-add-transition-animations-to-vanilla-javascript-show-and-hide-methods/ , which bypasses some issues with just setting display:block;
+
+      function getHeight (elem) {
+        elem.style.display = 'block';
+        let height = elem.scrollHeight + 'px';
+        elem.style.display = '';
+        return height;
+      };
+
+      function show(elem) {
+      	let height = getHeight(elem);
+      	elem.classList.add('is-visible');
+      	elem.style.height = height;
+
+      	window.setTimeout(function () {
+      		elem.style.height = '';
+      	}, 350);
+      };
+
+      function hide(elem) {
+        elem.style.height = elem.scrollHeight + 'px';
+        window.setTimeout(function () {
+        	elem.style.height = '0';
+        }, 1);
+        window.setTimeout(function () {
+        	elem.classList.remove('is-visible');
+        }, 350);
+      };
+
+      function toggle(elem) {
+        if (elem.classList.contains('is-visible')) {
+          hide(elem);
+        }
+        else{
+          show(elem);
+        }
+      };
+
+      document.getElementById('hs-ecs-link').onclick = function(){toggle(document.getElementById('hs-ecs-content'))};
+      document.getElementById('hs-awards-link').onclick = function(){toggle(document.getElementById('hs-awards-content'))};
     </script>
   </body>
 </html>
