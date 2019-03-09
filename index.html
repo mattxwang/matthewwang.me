@@ -303,16 +303,6 @@
         </li>
         <li>
           <h2>
-            Prefects Cup Website
-            <a rel="noopener" target="_blank" href="http://pc.ucc.on.ca"><span class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/prefects-cup-website"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
-          </h2>
-          <p>
-            Developed website to track house points for high school, built with Bulma, Chart.js, and Firebase. Uses Firebase authentication and data store, and is deployed to GitHub Pages.
-          </p>
-        </li>
-        <li>
-          <h2>
             World Affairs Conference
             <a rel="noopener" target="_blank" href="https://worldaffairsconference.github.io/wac-2018/"><span class="fa fa-link" aria-label="Website Link"></span></a>
             <a rel="noopener" target="_blank" href="https://github.com/malsf21/world.ac"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
@@ -330,9 +320,9 @@
         I have some smaller projects too! They're still pretty cool, and you should check them out!
       </p>
       <p>
-        <small>(but only if you want to, I don't want to force you)</small>
+        <small><a id="small-projects-link">(click to expand. but only if you want to, I don't want to force you)</a></small>
       </p>
-      <ul class="list-unstyled">
+      <ul class="list-unstyled toggle-content" id="small-projects-content">
         <li>
           <h3>
             Convergence (High School Newspaper)
@@ -370,6 +360,13 @@
             Lowkey (Personal Blog)
             <a rel="noopener" target="_blank" href="https://blog.matthewwang.me"><span class="fa fa-link" aria-label="Website Link"></span></a>
             <a rel="noopener" target="_blank" href="https://github.com/malsf21/lowkey"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            Prefects Cup Website
+            <a rel="noopener" target="_blank" href="http://pc.ucc.on.ca"><span class="fa fa-link" aria-label="Website Link"></span></a>
+            <a rel="noopener" target="_blank" href="https://github.com/malsf21/prefects-cup-website"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
           </h3>
         </li>
         <li>
@@ -711,6 +708,7 @@
         }
       };
 
+      document.getElementById('small-projects-link').onclick = function(){toggle(document.getElementById('small-projects-content'))};
       document.getElementById('hs-ecs-link').onclick = function(){toggle(document.getElementById('hs-ecs-content'))};
       document.getElementById('hs-awards-link').onclick = function(){toggle(document.getElementById('hs-awards-content'))};
     </script>
