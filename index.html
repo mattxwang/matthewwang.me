@@ -59,10 +59,10 @@
       }
 
       :root {
-      	--animation1-percent1: -100%;
+      	--animation1-percent1: -20%;
       	--animation1-percent2: -100%;
         --animation1-delay: 250ms;
-      	--animation2-percent1: 100%;
+      	--animation2-percent1: 20%;
       	--animation2-percent2: 100%;
         --animation2-delay: 500ms;
       }
@@ -133,7 +133,6 @@
         }
       }
 
-      @media only screen and (min-width: 768px) {
         .underline-expand{
           display: inline-block;
         }
@@ -147,7 +146,7 @@
           height: 5px;
           background-color: #E95420;
         }
-      }
+      
 
       /* The keyframes + class for the heartbeat animation I use across the site. */
       @keyframes heartbeat {
@@ -663,11 +662,16 @@
       console.log("%cThough, I am planning on revamping this website and adding some fancy stuff. Stay tuned!", "color:#e95420;")
       console.log("%cAnyways, have fun browsing the rest of the website. If you have any feedback, let me know on my GitHub repo for this landing page: \nhttps://github.com/malsf21/matthewwang.me", "color:#e95420;")
 
-      // These are the functions that generate that SICK intro animation!
-      // Well, if you think it's sick that is. Basically, it sets the CSS variable for the x and y transform distance to a random number, so it's different on each page load!
+      // checks if the browser is safari - shamelessly stolen from https://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
+      const isSafari = (navigator.userAgent.indexOf("Safari") != -1) && (navigator.userAgent.indexOf("Chrome") === -1);
+
+      // These are the functions that generate the meh intro animations.
+      // Basically, it sets the CSS variable for the x and y transform distance to a random number, so it's different on each page load!
       function randomAnimation(animationVar){
-        document.documentElement.style.setProperty(animationVar + '-percent1', (Math.random()*8-4)*100 + '%')
-        document.documentElement.style.setProperty(animationVar + '-percent2', (Math.random()*8-4)*100 + '%')
+        if (!isSafari){ // safari acts weirdly
+          document.documentElement.style.setProperty(animationVar + '-percent1', (Math.random()*8-4)*100 + '%')
+          document.documentElement.style.setProperty(animationVar + '-percent2', (Math.random()*8-4)*100 + '%')
+        }
       }
       function randomDelay(animationVar){
         document.documentElement.style.setProperty(animationVar + '-delay', (Math.random()*5+4)*100 + 'ms')
