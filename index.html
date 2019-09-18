@@ -1,775 +1,879 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Hey, you're looking through the source code here? Cool! Most of the stuff is pretty standard, but you can check out the CSS framework I used to make most of this happen at its GitHub Repo: https://github.com/malsf21/liteweight -->
+<!-- Hey, you're looking through the source code here? Cool! Most of the stuff is pretty standard, but you can check out the CSS framework I used to make most of this happen at its GitHub Repo: https://github.com/malsf21/liteweight -->
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Matthew Wang</title>
-    <meta name="description" content="The website for the second coolest Matthew Wang ever: a student developer, competitive debater, and a serial pun maker. His mom calls him Matt.">
-    <!-- Now, before you tell me that most of this is unnecessary, I agree with you. But, it helps with SEO, and it also makes things slightly more accessible for a small subset of users. I think it's worth the extra 500 bytes. -->
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-    <link rel="manifest" href="manifest.json">
-    <meta name="msapplication-TileColor" content="#e95420">
-    <meta name="msapplication-TileImage" content="assets/img/ms-icon-144x144.png">
-    <meta name="theme-color" content="#e95420">
-    <!-- Heard there's a cool CSS framework called Liteweight: https://github.com/malsf21/liteweight -->
-    <link rel="stylesheet" href="assets/css/liteweight-duo.min.css?v3.0.0-beta" />
-    <!-- Here are a few more of my special additions for the site. I don't put it in a separate CSS file since this is the only page in this "site", and it can cause some jittery styling issues. -->
-    <style>
-      /* Fonts. Boring. */
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Matthew Wang</title>
+  <meta name="description"
+    content="Matt is a computer science student at UCLA. He usually likes computers. He also likes education, helping people, and is probably interested in seeing how computers can help us help people. He's the second coolest Matt Wang he knows.">
+  <!-- Now, before you tell me that most of this is unnecessary, I agree with you. But, it helps with SEO, and it also makes things slightly more accessible for a small subset of users. I think it's worth the extra 500 bytes. -->
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#e95420">
+  <meta name="msapplication-TileImage" content="assets/img/ms-icon-144x144.png">
+  <meta name="theme-color" content="#e95420">
+  <!-- Heard there's a cool CSS framework called Liteweight: https://github.com/malsf21/liteweight -->
+  <link rel="stylesheet" href="assets/css/liteweight-duo.min.css?v3.0.0-beta" />
+  <!-- Here are a few more of my special additions for the site. I don't put it in a separate CSS file since this is the only page in this "site", and it can cause some jittery styling issues. -->
+  <style>
+    /* Fonts. Boring. */
 
-      @font-face {
-      	font-family: Nexa;
-      	src: url(./assets/fonts/nexa/nexa_regular.ttf)
+    @font-face {
+      font-family: Nexa;
+      src: url(./assets/fonts/nexa/nexa_regular.ttf)
+    }
+
+    @font-face {
+      font-family: Nexa;
+      font-weight: 700;
+      src: url(./assets/fonts/nexa/nexa_bold.otf)
+    }
+
+    body {
+      font-family: Nexa, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .link-white {
+      text-decoration: underline;
+    }
+
+    .list-items {
+      font-size: 1.5em;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    :root {
+      --animation1-percent1: -20%;
+      --animation1-percent2: -100%;
+      --animation1-delay: 250ms;
+      --animation2-percent1: 20%;
+      --animation2-percent2: 100%;
+      --animation2-delay: 500ms;
+    }
+
+    /* This is me playing around with what I think is a cool CSS animation. We'll see whether or not this is actually a good idea. Basically, I set defaults the translation, but then I also change the CSS variable (if supported) randomly on page load. */
+    @keyframes slide1 {
+      from {
+        transform: translate3d(var(--animation1-percent1), var(--animation1-percent2), 0);
+        visibility: visible;
       }
 
-      @font-face {
-      	font-family: Nexa;
-      	font-weight: 700;
-      	src: url(./assets/fonts/nexa/nexa_bold.otf)
+      to {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes slide2 {
+      from {
+        transform: translate3d(var(--animation2-percent1), var(--animation2-percent2), 0);
+        visibility: visible;
       }
 
-      body {
-      	font-family: Nexa, Roboto, Helvetica, Arial, sans-serif;
+      to {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    /* I could probably have better variable names here, right? */
+    .slide1 {
+      animation-name: slide1;
+      animation-duration: 1.25s;
+      animation-delay: var(--animation1-delay);
+      animation-fill-mode: both;
+      display: inline-block;
+    }
+
+    .slide2 {
+      animation-name: slide2;
+      animation-duration: 1.25s;
+      animation-delay: var(--animation2-delay);
+      animation-fill-mode: both;
+      display: inline-block;
+    }
+
+    /* These are keyframes for the transition on pun facts */
+
+    @keyframes grow {
+      from {
+        transform: scale(0.1);
       }
 
-      .link-white{
-      	text-decoration: underline;
+      to {
+        transform: scale(1);
+      }
+    }
+
+    .pun-fact {
+      animation: grow 0.75s;
+    }
+
+    /* This is the underline animation for the hero. It looks real bad on mobile so I've disabled it there */
+
+    @keyframes underline {
+      from {
+        width: 0;
       }
 
-      .list-items {
-      	font-size: 1.5em;
-      	padding: 0;
-      	margin: 0;
-      	list-style: none;
+      to {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      .underline-expand {
+        display: inline-block;
       }
 
-      :root {
-      	--animation1-percent1: -20%;
-      	--animation1-percent2: -100%;
-        --animation1-delay: 250ms;
-      	--animation2-percent1: 20%;
-      	--animation2-percent2: 100%;
-        --animation2-delay: 500ms;
-      }
-    	/* This is me playing around with what I think is a cool CSS animation. We'll see whether or not this is actually a good idea. Basically, I set defaults the translation, but then I also change the CSS variable (if supported) randomly on page load. */
-    	@keyframes slide1 {
-    		from {
-    			transform: translate3d(var(--animation1-percent1), var(--animation1-percent2), 0);
-    			visibility: visible;
-    		}
-
-    		to {
-    			transform: translate3d(0, 0, 0);
-    		}
-    	}
-
-    	@keyframes slide2 {
-    		from {
-    			transform: translate3d(var(--animation2-percent1), var(--animation2-percent2), 0);
-    			visibility: visible;
-    		}
-
-    		to {
-    			transform: translate3d(0, 0, 0);
-    		}
-    	}
-
-    	/* I could probably have better variable names here, right? */
-    	.slide1 {
-    		animation-name: slide1;
-    		animation-duration: 1.25s;
-        animation-delay: var(--animation1-delay);
-    		animation-fill-mode: both;
-    		display: inline-block;
-    	}
-
-    	.slide2 {
-    		animation-name: slide2;
-    		animation-duration: 1.25s;
-        animation-delay: var(--animation2-delay);
-    		animation-fill-mode: both;
-    		display: inline-block;
-    	}
-
-      /* These are keyframes for the transition on pun facts */
-
-      @keyframes grow {
-        from {
-          transform: scale(0.1);
-        }
-
-        to {
-          transform: scale(1);
-        }
-      }
-
-      .pun-fact{
-        animation: grow 0.75s;
-      }
-
-      /* This is the underline animation for the hero. It looks real bad on mobile so I've disabled it there */
-
-      @keyframes underline {
-        from {
-          width: 0;
-        }
-        to {
-          width: 100%;
-        }
-      }
-      @media only screen and (min-width: 768px) {
-        .underline-expand{
-          display: inline-block;
-        }
-        .underline-expand:after{
-          animation-name: underline;
-          animation-duration: 1.5s;
-          animation-delay: var(--animation1-delay);
-          animation-fill-mode: both;
-          content: "";
-          display: block;
-          height: 5px;
-          background-color: #E95420;
-        }
-      }
-
-      /* The keyframes + class for the heartbeat animation I use across the site. */
-      @keyframes heartbeat {
-      	0% {
-      		transform: scale(0.75);
-      	}
-      	25% {
-      		transform: scale(1);
-      	}
-      	50% {
-      		transform: scale(0.75);
-      	}
-      	75% {
-      		transform: scale(1);
-      	}
-      	100% {
-      		transform: scale(0.75);
-      	}
-      }
-      .animated-heartbeat {
-      	animation: heartbeat 2s infinite;
-      }
-      .toggle-content {
-        display: none;
-        height: 0;
-        overflow: hidden;
-        transition: height 350ms ease-in-out;
-      }
-
-      .toggle-content.is-visible {
+      .underline-expand:after {
+        animation-name: underline;
+        animation-duration: 1.5s;
+        animation-delay: calc(var(--animation1-delay) + 1s);
+        animation-fill-mode: both;
+        content: "";
         display: block;
-        height: auto;
+        height: 5px;
+        background-color: #E95420;
       }
-    </style>
-    <!-- This is me loading Font Awesome - I've deferred it as it's not critical to the page load, but it's still pretty cool. I've opted to use Font Awesome's SVG + JS features instead of webfonts, just to see how it is! -->
-    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/solid.js" integrity="sha384-IA6YnujJIO+z1m4NKyAGvZ9Wmxrd4Px8WFqhFcgRmwLaJaiwijYgApVpo1MV8p77" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/brands.js" integrity="sha384-rUOIFHM3HXni/WG5pzDhA1e2Js5nn4bWudTYujHbbI9ztBIxK54CL4ZNZWwcBQeD" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/fontawesome.js" integrity="sha384-EMmnH+Njn8umuoSMZ3Ae3bC9hDknHKOWL2e9WJD/cN6XLeAN7tr5ZQ0Hx5HDHtkS" crossorigin="anonymous"></script>
-  </head>
+    }
 
-  <body class="main-body">
-    <div class="text-center">
-      <p class="text-2x">Hey there!</p>
-      <h1 class="text-3x">My name is <span class="underline-expand"><span class="slide1">Matthew</span> <span class="slide2">Wang</span></span></h1>
-      <p>
-        <span class="slide1">But you can call me</span> <span class="slide1">Matt</span>.
-      </p>
-      <p class="text-2x">
-        I work on <span class="underline-expand">unscrambling your problems</span>.
-        <!-- I thought this was funny, since the animation is kinda like unscrambling. If you don't like it, fine - whatever butters your croissant. -->
-      </p>
-    </div>
-    <div class="text-center text-2x">
-      <a class="slide1" rel="noopener" target="_blank" href="https://blog.matthewwang.me">Blog</a> |
-      <a class="slide2" rel="noopener" target="_blank" href="https://github.com/malsf21/">GitHub</a> |
-      <a class="slide1" rel="noopener" target="_blank" href="assets/files/resume.pdf">Résumé</a> |
-      <a class="slide2" rel="noopener" target="_blank" href="https://www.linkedin.com/in/matthew-x-wang/">LinkedIn</a>
-    </div>
-    <div class="card border-primary">
-      <h1>Who's Matt?</h1>
-      <p>
-        That's me! I'm currently studying the arcane art of computer science at UCLA and interning at Booz Allen Hamilton. I <span class="fa fa-heart animated-heartbeat" style="color:red;"></span> working with computers - making websites, apps, frameworks, backends, designing semi-cool things, and occasionally sneaking in some video games.
-      </p>
-      <p>
-        I do a few other things too. I love working with kids, especially through teaching science and technology. I'm a huge politics and economics junkie, which is a rather gloomy passion to have. And, I enjoy fiddling around with laser cutters and 3D printers enough that it's my job.
-      </p>
-      <p>
-        In my spare time, I do some <a rel="noopener" target="blank" href="https://blog.matthewwang.me">blogging</a>, <a rel="noopener" target="_blank" href="https://open.spotify.com/user/11156788800">listen to music</a>, and <a rel="noopener" target="_blank" href="https://desk.matthewwang.me">read</a>.
-      </p>
-      <p>
-        And come up with mediocre puns.
-      </p>
-    </div>
+    /* The keyframes for the waving hand emojis. Basic. I know. */
 
-    <div class="card bg-primary">
-      <h2>Pun Fact</h2>
-      <p>
-        <a class="button button-white" onclick="randomPunFact()"><span class="fa fa-redo"></span> Refresh</a>
-        <i> Picked from my library of pun facts.</i>
-      </p>
-      <div id="pun-fact">
+    .handwave1 {
+      animation-name: handwave;
+      animation-duration: 2.5s;
+      animation-iteration-count: infinite;
+      transform-origin: 70% 70%;
+      display: inline-block;
+    }
 
-      </div>
+    .handwave2 {
+      animation-name: handwave;
+      animation-duration: 2.5s;
+      animation-delay: 1.25s;
+      animation-iteration-count: infinite;
+      transform-origin: 70% 70%;
+      display: inline-block;
+    }
+
+    @keyframes handwave {
+      0% {
+        transform: rotate(0.0deg)
+      }
+
+      10% {
+        transform: rotate(-10.0deg)
+      }
+
+      20% {
+        transform: rotate(12.0deg)
+      }
+
+      30% {
+        transform: rotate(-10.0deg)
+      }
+
+      40% {
+        transform: rotate(9.0deg)
+      }
+
+      50% {
+        transform: rotate(0.0deg)
+      }
+
+      100% {
+        transform: rotate(0.0deg)
+      }
+    }
+
+    /* The keyframes + class for the heartbeat animation I use across the site. */
+    @keyframes heartbeat {
+      0% {
+        transform: scale(0.75);
+      }
+
+      25% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(0.75);
+      }
+
+      75% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(0.75);
+      }
+    }
+
+    .animated-heartbeat {
+      animation: heartbeat 2s infinite;
+    }
+
+    .toggle-content {
+      display: none;
+      height: 0;
+      overflow: hidden;
+      transition: height 350ms ease-in-out;
+    }
+
+    .toggle-content.is-visible {
+      display: block;
+      height: auto;
+    }
+  </style>
+  <!-- This is me loading Font Awesome - I've deferred it as it's not critical to the page load, but it's still pretty cool. I've opted to use Font Awesome's SVG + JS features instead of webfonts, just to see how it is! -->
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/solid.js"
+    integrity="sha384-IA6YnujJIO+z1m4NKyAGvZ9Wmxrd4Px8WFqhFcgRmwLaJaiwijYgApVpo1MV8p77" crossorigin="anonymous">
+  </script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/brands.js"
+    integrity="sha384-rUOIFHM3HXni/WG5pzDhA1e2Js5nn4bWudTYujHbbI9ztBIxK54CL4ZNZWwcBQeD" crossorigin="anonymous">
+  </script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/fontawesome.js"
+    integrity="sha384-EMmnH+Njn8umuoSMZ3Ae3bC9hDknHKOWL2e9WJD/cN6XLeAN7tr5ZQ0Hx5HDHtkS" crossorigin="anonymous">
+  </script>
+</head>
+
+<body class="main-body">
+  <div class="text-center">
+    <p class="text-2x"><span class="handwave1">👋</span> Hey there! <span class="handwave2">👋</span></p>
+    <h1 class="text-3x">My name is <span class="underline-expand"><span class="slide1">Matthew</span> <span
+          class="slide2">Wang</span></span></h1>
+    <p>
+      <span class="slide1">But you can call me</span> <span class="slide1">Matt</span>.
+    </p>
+  </div>
+  <div class="text-center text-2x">
+    <a class="slide1" rel="noopener" target="_blank" href="https://blog.matthewwang.me">Blog</a> |
+    <a class="slide2" rel="noopener" target="_blank" href="https://github.com/malsf21/">GitHub</a> |
+    <a class="slide1" rel="noopener" target="_blank" href="assets/files/resume.pdf">Résumé</a> |
+    <a class="slide2" rel="noopener" target="_blank" href="https://www.linkedin.com/in/matthew-x-wang/">LinkedIn</a>
+  </div>
+  <div class="card border-primary">
+    <h1>Who's Matt?</h1>
+    <p>
+      That's me! I'm currently studying the arcane art of computer science at UCLA. I <span
+        class="fa fa-heart animated-heartbeat" style="color:red;"></span> working with computers: making websites, apps,
+      frameworks, backends, contributing to open-source, and occasionally sneaking in some video games. <b>I'm especially
+        interested in how I can use computers to empower people.</b>
+    </p>
+    <p>
+      I do a few other things too. I love education and working with kids, especially through STEM outreach. I'm a huge
+      politics and economics junkie, which is unfortunately a gloomy passion to have. And, I enjoy fiddling around with
+      laser cutters and 3D printers enough that it's my job.
+    </p>
+    <p>
+      In my spare time, I like to read, <a rel="noopener" target="_blank"
+        href="https://open.spotify.com/user/11156788800">listen to music</a>, and <a rel="noopener" target="blank"
+        href="https://blog.matthewwang.me">write a bad blog</a>.
+    </p>
+    <p>
+      And come up with mediocre puns.
+    </p>
+  </div>
+
+  <div class="card bg-primary">
+    <h2>Pun Fact</h2>
+    <p>
+      <a class="button button-white" onclick="randomPunFact()"><span class="fa fa-redo"></span> Refresh</a>
+      <i> Picked from my library of pun facts.</i>
+    </p>
+    <div id="pun-fact">
+
     </div>
+  </div>
 
-    <div class="card border-primary">
-      <h1>My Projects &amp; Work</h1>
-      <p>
-        I occasionally do things. Here are the big ones.
-      </p>
-      <p>
-        <span class="fab fa-fw fa-github text-primary"></span> GitHub Repository
-        <span class="fa fa-fw fa-link text-primary"></span> Website
-        <span class="fa fa-fw fa-image text-primary"></span> Visual Work
-        <span class="fab fa-fw fa-app-store-ios text-primary"></span><span class="fab fa-fw fa-google-play text-primary"></span> Mobile App
-        <span class="fab fa-fw fa-app-store text-primary"></span> Desktop App
-      </p>
-      <hr />
+  <div class="card border-primary">
+    <h1>My Projects &amp; Work</h1>
+    <p>
+      I occasionally do things with computers. Here are the big ones.
+    </p>
+    <p>
+      <span class="fab fa-fw fa-github text-primary"></span> GitHub Repository
+      <span class="fa fa-fw fa-link text-primary"></span> Website
+      <span class="fa fa-fw fa-image text-primary"></span> Visual Work
+      <span class="fab fa-fw fa-app-store-ios text-primary"></span><span
+        class="fab fa-fw fa-google-play text-primary"></span> Mobile App
+      <span class="fab fa-fw fa-app-store text-primary"></span> Desktop App
+    </p>
+    <hr />
+    <ul class="list-unstyled">
+      <li>
+        <h2 id="booz">Booz Allen Hamilton</h2>
+        <p>
+          As a Summer Games 2019 Intern, I was part of a team of five interns that developed a pocket-sized embedded
+          system used to hack into a maritime vessel. We were able to remotely control the ship's rudder, spoof the GPS,
+          manipulate the AIS, map connected devices, and turn on the fire alarm.
+        </p>
+        <p>
+          As the sole software developer of the team, I performed several key responsibilities:
+        </p>
+        <ul>
+          <li>Reverse-engineered closed-source NMEA 2000 protocol by analyzing network traffic</li>
+          <li>Parsed & decoded data live ship data from sensors to CLI & over-the-air server (C)</li>
+          <li>Fabricated data packets to disable devices and spoof GPS, navigation, AIS, autopilot (C)</li>
+          <li>Developed GUI to control embedded system over TCP (React, Electron)</li>
+          <li>Presented solution to senior leadership at McLean headquarters</li>
+          <li>Supported at Hack the Machine, 700+ participant hackathon on maritime security</li>
+        </ul>
+        </p>
+      </li>
+      <li>
+        <h2 id="audionotch">
+          AudioNotch
+          <a rel="noopener" target="_blank" href="https://audionotch.com"><span class="fa fa-link"
+              aria-label="Website Link"></span></a>
+          <a rel="noopener" target="_blank" href="https://itunes.apple.com/us/app/audionotch/id1270247019"><span
+              class="fab fa-app-store-ios" aria-label="iOS App Store Link"></span></a>
+          <a rel="noopener" target="_blank"
+            href="https://play.google.com/store/apps/details?id=com.audionotch.audionotch&hl=en"><span
+              class="fab fa-google-play" aria-label="Google Play Store Link"></span></a>
+        </h2>
+        <p>
+          AudioNotch is a web and mobile app that's designed to help people who suffer from tinnitus through
+          experimental audio therapy. I interned at AudioNotch as a software developer and put my hand in a lot of
+          different baskets, mainly focusing on creating a new mobile app and updating their web application.
+        </p>
+        <small><a id="audionotch-link">click for more detail</a></small>
+        <div class="toggle-content" id="audionotch-content">
+          <p>I put my hand in a lot of baskets. Here's a list of what I did:</p>
+          <ul>
+            <li>
+              Developed a brand-new mobile app for iOS and Android using the Ionic Framework (Angular on top of
+              Cordova), with multi-page navigation, authentication, audio manipulation, and in-app purchases
+            </li>
+            <li>
+              Updated Django backend API to handle app authentication
+            </li>
+            <li>
+              Redesigned front-end of website (Django + WordPress) using Bootstrap &amp; jQuery
+            </li>
+            <li>
+              Refactored JS WebAudio web application
+            </li>
+            <li>
+              Tested changes with Google Analytics and Google Optimize
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <h2>
+          World Affairs Conference
+          <a rel="noopener" target="_blank" href="https://worldaffairsconference.github.io/wac-2018/"><span
+              class="fa fa-link" aria-label="Website Link"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/malsf21/world.ac"><span class="fab fa-github"
+              aria-label="GitHub Repository"></span></a>
+          <a rel="noopener" target="_blank" href="assets/files/work/wac-cover.png"><span class="fa fa-image"
+              aria-label="WAC Delegate Package Cover"></span></a>
+          <a rel="noopener" target="_blank" href="assets/files/work/wac-recruitment.png"><span class="fa fa-image"
+              aria-label="WAC Recruitment Poster"></span></a>
+          <a rel="noopener" target="_blank" href="assets/files/work/wac-spread.png"><span class="fa fa-image"
+              aria-label="WAC Logo Spread"></span></a>
+        </h2>
+        <p>
+          The World Affairs Conference was a current-affairs conference that I ran in high school for five years. I
+          juggled numerous reponsbilities while I was there, with a balance of administrative, software development, and
+          graphic design work - my magnum opus being creating an online registration system.
+        </p>
+        <small><a id="wac-link">click for more detail</a></small>
+        <div class="toggle-content" id="wac-content">
+          <p>I did a lot of things for WAC over five years; here they are.</p>
+          <ul>
+            <li>
+              Developed online registration system to manage registered schools and delegates (v1 PHP + mySQL, v2 React
+              + Firebase)
+            </li>
+            <li>
+              Designed front-end website (Jekyll + Bootstrap) with automated deployment via Travis
+            </li>
+            <li>
+              Created preference-matching algorithm to optimize delegates' assigned events and venue capacity
+            </li>
+            <li>
+              Designed promotional materials (e.g. nametags, event package, posters)
+            </li>
+            <li>
+              Created style guide and handbook for conference design style and vision
+            </li>
+            <li>
+              Managed livestreaming of conference speakers and events
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <hr />
+    <p>
+      I have some smaller projects too! They're still pretty cool, and you should check them out!
+    </p>
+    <p>
+      <small><a id="small-projects-link">(click to expand. but only if you want to, I don't want to force
+          you)</a></small>
+    </p>
+    <div class="toggle-content" id="small-projects-content">
       <ul class="list-unstyled">
-        <li>
-          <h2>
-            AudioNotch
-            <a rel="noopener" target="_blank" href="https://audionotch.com"><span class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://itunes.apple.com/us/app/audionotch/id1270247019"><span class="fab fa-app-store-ios" aria-label="iOS App Store Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://play.google.com/store/apps/details?id=com.audionotch.audionotch&hl=en"><span class="fab fa-google-play" aria-label="Google Play Store Link"></span></a>
-          </h2>
-          <p>
-            AudioNotch is a web and mobile app that's designed to help people who suffer from tinnitus through experimental audio therapy. I interned at AudioNotch as a software developer and put my hand in a lot of different baskets, mainly focusing on creating a new mobile app and updating their web application.
-          </p>
-          <small><a id="audionotch-link">click for more detail</a></small>
-          <div class="toggle-content" id="audionotch-content">
-            <p>I put my hand in a lot of baskets. Here's a list of what I did:</p>
-            <ul>
-                <li>
-                  Developed a brand-new mobile app for iOS and Android using the Ionic Framework (Angular on top of Cordova), with multi-page navigation, authentication, audio manipulation, and in-app purchases
-                </li>
-                <li>
-                  Updated Django backend API to handle app authentication
-                </li>
-                <li>
-                  Redesigned front-end of website (Django + WordPress) using Bootstrap &amp; jQuery 
-                </li>
-                <li>
-                  Refactored JS WebAudio web application
-                </li>
-                <li>
-                  Tested changes with Google Analytics and Google Optimize
-                </li>
-              </ul>
-          </div>
-        </li>
-        <li>
-          <h2>
-            Fair Chair
-            <a rel="noopener" target="_blank" href="https://itunes.apple.com/us/app/fair-chair/id1365686846"><span class="fab fa-app-store" aria-label="Mac App Store Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://malsf21.github.io/fair-chair/"><span class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/fair-chair"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
-          </h2>
-          <p>
-            Fair Chair is a desktop app designed to help chairs in hosting Model UN conferences. I built Fair Chair with Electron &amp; Angular, and used a Travis CI pipeline to package and distribute the app on the Mac App Store.
-          </p>
-        </li>
-        <li>
-          <h2>
-            Liteweight
-            <a rel="noopener" target="_blank" href="http://malsf21.github.io/liteweight/"><span class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/liteweight"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
-          </h2>
-          <p>
-            Liteweight is a CSS framework that I developed for use on many of my personal projects (including this site). I wrote the code with SASS, and used Grunt and Travis CI to help build, test, and distribute files.
-          </p>
-        </li>
-        <li>
-          <h2>
-            pop 'n lock
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/ideahacks-2019"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
-          </h2>
-          <p>
-            pop 'n lock was the best project at IDEA Hacks 2019. We created an RFID and Bluetooth enabled 3D-printed smart lock with an Arduino board, RFID sensor, and small servo.
-          </p>
-        </li>
-        <li>
-          <h2>
-            World Affairs Conference
-            <a rel="noopener" target="_blank" href="https://worldaffairsconference.github.io/wac-2018/"><span class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/world.ac"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/wac-cover.png"><span class="fa fa-image" aria-label="WAC Delegate Package Cover"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/wac-recruitment.png"><span class="fa fa-image" aria-label="WAC Recruitment Poster"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/wac-spread.png"><span class="fa fa-image" aria-label="WAC Logo Spread"></span></a>
-          </h2>
-          <p>
-            The World Affairs Conference was a current-affairs conference that I ran in high school for five years. I juggled numerous reponsbilities while I was there, with a balance of administrative, software development, and graphic design work - my magnum opus being creating an online registration system.
-          </p>
-          <small><a id="wac-link">click for more detail</a></small>
-          <div class="toggle-content" id="wac-content">
-            <p>I did a lot of things for WAC over five years; here they are.</p>
-            <ul>
-              <li>
-                Developed online registration system to manage registered schools and delegates (v1 PHP + mySQL, v2 React + Firebase)
-              </li>
-              <li>
-                Designed front-end website (Jekyll + Bootstrap) with automated deployment via Travis
-              </li>
-              <li>
-                Created preference-matching algorithm to optimize delegates' assigned events and venue capacity
-              </li>
-              <li>
-                Designed promotional materials (e.g. nametags, event package, posters)
-              </li>
-              <li>
-                Created style guide and handbook for conference design style and vision
-              </li>
-              <li>
-                Managed livestreaming of conference speakers and events
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-      <hr />
-      <p>
-        I have some smaller projects too! They're still pretty cool, and you should check them out!
-      </p>
-      <p>
-        <small><a id="small-projects-link">(click to expand. but only if you want to, I don't want to force you)</a></small>
-      </p>
-      <ul class="list-unstyled toggle-content" id="small-projects-content">
         <li>
           <h3>
             angery reacts (sentiment analysis on song lyrics, React &amp; Flask)
-            <a rel="noopener" target="_blank" href="https://malsf21.github.io/angery-reacts"><span class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/angery-reacts"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
+            <a rel="noopener" target="_blank" href="https://malsf21.github.io/angery-reacts"><span class="fa fa-link"
+                aria-label="Website Link"></span></a>
+            <a rel="noopener" target="_blank" href="https://github.com/malsf21/angery-reacts"><span
+                class="fab fa-github" aria-label="GitHub Repository"></span></a>
           </h3>
         </li>
         <li>
           <h3>
-            Convergence (High School Newspaper)
-            <a rel="noopener" target="_blank" href="https://convergence.today"><span class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/convergence"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/c-lite-cover.png"><span class="fa fa-image" aria-label="Example Convergence Cover"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/batt-ball-infographic-2017.png"><span class="fa fa-image" aria-label="Batt Ball Infographic 2017"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/batt-ball-infographic-2018.png"><span class="fa fa-image" aria-label="Batt Ball Infographic 2018"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/TPP.png"><span class="fa fa-image" aria-label="TPP Infographic"></span></a>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            FoodSpan (old project for business competition)
-            <a rel="noopener" target="_blank" href="https://foodspan.github.io"><span class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-app"><span class="fa fa-mobile" aria-label="GitHub Repository"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-website"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            IB Extended Essay (on image compression)
-            <a rel="noopener" target="_blank" href="assets/files/work/extended-essay.pdf"><span class="fa fa-file" aria-label="Extended Essay File"></span></a>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            IB Math Exploration (on Lotka-Volterra equations, includes web-app)
-            <a rel="noopener" target="_blank" href="https://malsf21.github.io/lotka-volterra/"><span class="fa fa-link" aria-label="Math Exploration Web App"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/math-exploration.pdf"><span class="fa fa-file" aria-label="Math Exploration File"></span></a>
+            Fair Chair (Angular + Electron app for Model UN)
+            <a rel="noopener" target="_blank" href="https://itunes.apple.com/us/app/fair-chair/id1365686846"><span
+                class="fab fa-app-store" aria-label="Mac App Store Link"></span></a>
+            <a rel="noopener" target="_blank" href="https://malsf21.github.io/fair-chair/"><span class="fa fa-link"
+                aria-label="Website Link"></span></a>
+            <a rel="noopener" target="_blank" href="https://github.com/malsf21/fair-chair"><span class="fab fa-github"
+                aria-label="GitHub Repository"></span></a>
           </h3>
         </li>
         <li>
           <h3>
             i don't got no type (typing game, React)
-            <a rel="noopener" target="_blank" href="https://malsf21.github.io/i-dont-got-no-type"><span class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/i-dont-got-no-type"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
+            <a rel="noopener" target="_blank" href="https://malsf21.github.io/i-dont-got-no-type"><span
+                class="fa fa-link" aria-label="Website Link"></span></a>
+            <a rel="noopener" target="_blank" href="https://github.com/malsf21/i-dont-got-no-type"><span
+                class="fab fa-github" aria-label="GitHub Repository"></span></a>
           </h3>
         </li>
         <li>
           <h3>
-            Lowkey (Personal Blog)
-            <a rel="noopener" target="_blank" href="https://blog.matthewwang.me"><span class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/lowkey"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
+            Liteweight (self-made CSS framework, SASS)
+            <a rel="noopener" target="_blank" href="http://malsf21.github.io/liteweight/"><span class="fa fa-link"
+                aria-label="Website Link"></span></a>
+            <a rel="noopener" target="_blank" href="https://github.com/malsf21/liteweight"><span class="fab fa-github"
+                aria-label="GitHub Repository"></span></a>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            Lowkey (personal blog)
+            <a rel="noopener" target="_blank" href="https://blog.matthewwang.me"><span class="fa fa-link"
+                aria-label="Website Link"></span></a>
+            <a rel="noopener" target="_blank" href="https://github.com/malsf21/lowkey"><span class="fab fa-github"
+                aria-label="GitHub Repository"></span></a>
           </h3>
         </li>
         <li>
           <h3>
             onechan (online chatroom, React + Firebase)
-            <a rel="noopener" target="_blank" href="https://onechan.matthewwang.me/"><span class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/onechan"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
+            <a rel="noopener" target="_blank" href="https://onechan.matthewwang.me/"><span class="fa fa-link"
+                aria-label="Website Link"></span></a>
+            <a rel="noopener" target="_blank" href="https://github.com/malsf21/onechan"><span class="fab fa-github"
+                aria-label="GitHub Repository"></span></a>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            pop 'n lock (smart lock, IDEA Hacks 2019 best project)
+            <a rel="noopener" target="_blank" href="https://github.com/malsf21/ideahacks-2019"><span
+                class="fab fa-github" aria-label="GitHub Repository"></span></a>
+          </h3>
+        </li>
+      </ul>
+      <hr />
+      <p>And things I did in high school...</p>
+      <ul class="list-unstyled">
+        <li>
+          <h3>
+            Convergence (high school newspaper website & design)
+            <a rel="noopener" target="_blank" href="https://convergence.today"><span class="fa fa-link"
+                aria-label="Website Link"></span></a>
+            <a rel="noopener" target="_blank" href="https://github.com/malsf21/convergence"><span class="fab fa-github"
+                aria-label="GitHub Repository"></span></a>
+            <a rel="noopener" target="_blank" href="assets/files/work/c-lite-cover.png"><span class="fa fa-image"
+                aria-label="Example Convergence Cover"></span></a>
+            <a rel="noopener" target="_blank" href="assets/files/work/batt-ball-infographic-2017.png"><span
+                class="fa fa-image" aria-label="Batt Ball Infographic 2017"></span></a>
+            <a rel="noopener" target="_blank" href="assets/files/work/batt-ball-infographic-2018.png"><span
+                class="fa fa-image" aria-label="Batt Ball Infographic 2018"></span></a>
+            <a rel="noopener" target="_blank" href="assets/files/work/TPP.png"><span class="fa fa-image"
+                aria-label="TPP Infographic"></span></a>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            FoodSpan (old project for business competition)
+            <a rel="noopener" target="_blank" href="https://foodspan.github.io"><span class="fa fa-link"
+                aria-label="Website Link"></span></a>
+            <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-app"><span class="fa fa-mobile"
+                aria-label="GitHub Repository"></span></a>
+            <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-website"><span
+                class="fab fa-github" aria-label="GitHub Repository"></span></a>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            IB Extended Essay (on image compression)
+            <a rel="noopener" target="_blank" href="assets/files/work/extended-essay.pdf"><span class="fa fa-file"
+                aria-label="Extended Essay File"></span></a>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            IB Math Exploration (on Lotka-Volterra equations, includes web-app)
+            <a rel="noopener" target="_blank" href="https://malsf21.github.io/lotka-volterra/"><span class="fa fa-link"
+                aria-label="Math Exploration Web App"></span></a>
+            <a rel="noopener" target="_blank" href="assets/files/work/math-exploration.pdf"><span class="fa fa-file"
+                aria-label="Math Exploration File"></span></a>
           </h3>
         </li>
         <li>
           <h3>
             Ontario Model United Nations Website &amp; Graphic Design
-            <a rel="noopener" target="_blank" href="http://malsf21.github.io/omun.ca/"><span class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/omun.ca"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/omun-cover.png"><span class="fa fa-image" aria-label="OMUN Delegate Package Cover"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/omun-placard.png"><span class="fa fa-image" aria-label="OMUN Placards"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/omun-schedule.pdf"><span class="fa fa-image" aria-label="OMUN Schedule"></span></a>
-            </h3>
-        </li>
-        <li>
-          <h3>
-            Prefects Cup Website
-            <a rel="noopener" target="_blank" href="http://pc.ucc.on.ca"><span class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/prefects-cup-website"><span class="fab fa-github" aria-label="GitHub Repository"></span></a>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            High School Event Posters
-            <a rel="noopener" target="_blank" href="assets/files/work/stewards.png"><span class="fa fa-image" aria-label="Stewards Dance Poster"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/amnesty-international-poster.png"><span class="fa fa-image" aria-label="Amnesty International Poster"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/rivalry-week-bh.png"><span class="fa fa-image" aria-label="Rivalry Week Poster 1"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/rivalry-week-mj.png"><span class="fa fa-image" aria-label="Rivalry Week Poster 2"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/rivalry-week-mm.png"><span class="fa fa-image" aria-label="Rivalry Week Poster 3"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/rivalry-week-os.png"><span class="fa fa-image" aria-label="Rivalry Week Poster 4"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/rivalry-week-sw.png"><span class="fa fa-image" aria-label="Rivalry Week Poster 5"></span></a>
+            <a rel="noopener" target="_blank" href="http://malsf21.github.io/omun.ca/"><span class="fa fa-link"
+                aria-label="Website Link"></span></a>
+            <a rel="noopener" target="_blank" href="https://github.com/malsf21/omun.ca"><span class="fab fa-github"
+                aria-label="GitHub Repository"></span></a>
+            <a rel="noopener" target="_blank" href="assets/files/work/omun-cover.png"><span class="fa fa-image"
+                aria-label="OMUN Delegate Package Cover"></span></a>
+            <a rel="noopener" target="_blank" href="assets/files/work/omun-placard.png"><span class="fa fa-image"
+                aria-label="OMUN Placards"></span></a>
+            <a rel="noopener" target="_blank" href="assets/files/work/omun-schedule.pdf"><span class="fa fa-image"
+                aria-label="OMUN Schedule"></span></a>
           </h3>
         </li>
       </ul>
-      <p>
-        You can also find fragments of code and defunct projects
-        <a rel="noopener" target="_blank" href="https://github.com/malsf21">on my GitHub profile.</a>
-      </p>
     </div>
+    <p>
+      You can also find fragments of code and defunct projects
+      <a rel="noopener" target="_blank" href="https://github.com/malsf21">on my GitHub profile.</a>
+    </p>
+  </div>
 
-    <div class="card bg-primary">
-      <h2>print fact.isFun <span class="fa fa-arrow-right"></span> <code class="bg-white">true</code></h2>
-      <p>
-        I wrote all the code for this website, including the CSS framework! Check it out <a rel="noopener" target="_blank" class="link-white" href="https://github.com/malsf21/liteweight">on GitHub.</a>
-      </p>
-    </div>
+  <div class="card bg-primary">
+    <h2>print fact.isFun <span class="fa fa-arrow-right"></span> <code class="bg-white">true</code></h2>
+    <p>
+      I wrote the CSS framework on this website! Check it out <a rel="noopener" target="_blank"
+        class="link-white" href="https://github.com/malsf21/liteweight">on GitHub.</a>
+    </p>
+  </div>
 
-    <div class="card border-primary">
-      <h1>Skills</h1>
+  <div class="card border-primary">
+    <h1>Skills</h1>
+    <p>
+      I am sometimes good at things.
+    </p>
+    <h2>Full Stack Development</h2>
+    <p>
+      I know my way around web development and a big chunk of its massive ecosystem (React + Redux, Electron, Angular,
+      Ionic, Node, jQuery Jekyll, SASS, SQL, Firebase, HTML + CSS), and I can comfortably code in C, C++, and Python
+      (Django, Flask). I'm a bit rusty on Java, Swift, Objective-C, Ruby, and PHP, but could jump right back in if
+      needed. I've deployed projects on webservers (Nginx or Apache) GitHub Pages, and on the iOS and Android app
+      stores; I love using continuous integration to make deployment easier. And, of course, I <span
+        class="fa fa-heart animated-heartbeat" style="color:red;"></span> using git &amp; GitHub.
+    </p>
+    <h2>Graphic Design and Layout</h2>
+    <p>
+      Making things pretty is pretty cool: I mainly focus on digital design, laser cutting, and print publications,
+      though I have experience with organizational branding, marketing materials, UI/UX design, 3D printing, and product
+      prototyping. I've worked with large-scale events, student organisations, publications, and companies. I try to
+      make things look pretty with Photoshop, Illustrator, and InDesign.
+    </p>
+    <h2>Education &amp; Outreach</h2>
+    <p>
+      I'm passionate about education and outreach, and what I do shows it. Right now, I volunteer with BEAM at UCLA to
+      teach STEM to underserved elementary kids in LA, and with ACM Teach LA's Dev team to better empower them to spread
+      the wonders of computer science. In high school I started a couple of educational programs aimed at bringing
+      computer science and robotics to underprivileged students in Toronto, which involved creating curriculums,
+      organising instructors, and teaching students.
+    </p>
+    <hr />
+    <p>
+      Want a more formal, detailed breakdown? Check out my <a rel="noopener" target="_blank"
+        href="assets/files/resume.pdf">résumé</a>, or <a href="mailto:matt@matthewwang.me">send me an email</a>.
+    </p>
+  </div>
+  <div class="card bg-primary">
+    <h2>Instant Fact</h2>
+    <p>
+      My most well-known skill is making killer instant noodles. My secret is to just follow the instructions on the
+      box.
+    </p>
+  </div>
+  <div class="card border-primary">
+    <h1>Experience</h1>
+    <p>
+      I work with people, companies, and things. Usually, I end up being helpful.
+      <hr />
+      <h2>Booz Allen Hamilton (2019)</h2>
+      <p><b>Software Development Intern (Summer Games)</b></p>
       <p>
-        I am sometimes good at things.
+        At Booz Allen, I wrote software to hack into boats. You should check the <a href="#booz">above blurb</a> for
+        more information, or get in touch with me if you want to talk!
       </p>
-      <h2>Full Stack Development</h2>
+
+      <h2>UCLA MakerSpace (2019-*)</h2>
+      <p><b>Lead Technician</b></p>
       <p>
-        I know my way around web development and a big chunk of its massive ecosystem (Node, React &amp; Redux, Angular, Ionic &amp; Cordova, Electron, jQuery, Jekyll, SASS, SQL, Firebase), and I can comfortably code in C++, Python (Django), Java, and PHP (phpMyAdmin). I've deployed projects on webservers (Nginx or Apache), though GitHub Pages with CIs, and on the iOS and Android app stores. And, of course, I <span class="fa fa-heart animated-heartbeat" style="color:red;"></span> using git &amp; GitHub.
+        At UCLA's MakerSpace, I help other students create awesome things using laser cutters, 3D printers,
+        microcontrollers, and wood working machines, among other things. In addition to supervising the space and
+        helping people who come in, I also teach classes and maintain the equipment. I also do some administrative
+        things as a lead technician, including expanding the space as a place for sales and services.
       </p>
-      <h2>Graphic Design and Layout</h2>
+      <h2>ACM Teach LA (2018-*)</h2>
+      <p><b>Project Director, Developer</b></p>
       <p>
-        Making things pretty is pretty cool: I mainly focus on digital design, laser cutting, and print publications, though I have experience with organizational branding, marketing materials, UI/UX design, 3D printing, and product prototyping. I've worked with large-scale events, student organisations, publications, and companies. I try to make things look pretty with Photoshop, Illustrator, and InDesign.
+        ACM Teach LA is a nonprofit organization that teaches computer science to underserved students in the Greater
+        Los Angeles area. As a dev team member, I write an online IDE that allow our students to develop, run, and save
+        code online; the project is developed with a Node-heavy ecosystem of React, Redux, Express, and Firebase. In
+        addition, I recently became the project director: I now manage the project's vision, and also write the code for a
+        static publicity site as well.
       </p>
-      <h2>Education</h2>
+      <h2>AudioNotch (2017)</h2>
+      <p><b>Software Development Intern</b></p>
       <p>
-        I'm passionate about education outreach, and what I do shows it. Right now, I volunteer with BEAM at UCLA to teach STEM to underserved elementary kids in LA, and with ACM Teach LA's Dev team to better empower them to spread the wonders of computer science. In high school I started a couple of educational programs aimed at bringing computer science and robotics to underprivileged students in Toronto, which involved creating curriculums, organising instructors, and teaching students.
+        At AudioNotch, I spearheaded the development of a mobile app that helped people with tinnitus. You can <a
+          href="#audionotch">read my previous ramble</a> for more information!
       </p>
       <hr />
-      <p>
-        Want a more formal, detailed breakdown? Check out my <a rel="noopener" target="_blank" href="assets/files/resume.pdf">résumé</a>, or <a href="mailto:matt@matthewwang.me">send me an email</a>.
-      </p>
-    </div>
-    <div class="card bg-primary">
-      <h2>Instant Fact</h2>
-      <p>
-        My most well-known skill is making killer instant noodles. My secret is to just follow the instructions on the box.
-      </p>
-    </div>
-    <div class="card border-primary">
-      <h1>Experience</h1>
-      <p>
-        I work with people, companies, and things. Usually, I end up being helpful.
-      <hr />
-      <h1>Work</h1>
-      <h2>UCLA ResLife MakerSpace Technician (2019-*)</h2>
-      <p>
-        At UCLA's MakerSpace, I help other students create awesome things using laser cutters, 3D printers, microcontrollers, and wood working machines, among other things. In addition to supervising the space and helping people who come in, I also teach classes and maintain the equipment.
-      </p>
-      <h2>UCC Robotics Summer Camp Director (2018)</h2>
-      <p>
-        At UCC Summer Camps, I kickstarted the brand-new robotics program. As the director of the program, I designed a weekly curriculum focused on VEX Robotics and RobotC, procured all the inventory and managed our budget, and hired and led a team of six counsellors over the summer to teach 200 kids.
-      </p>
-      <h2>AudioNotch Software Development Intern (2017)</h2>
-      <p>
-        At AudioNotch, I spearheaded the development of a mobile app that helped people with tinnitus: built on top of Angular + Ionic/Cordova, it featured an authentication flow, multi-page navigation, downloading audio files from a server and playing them, and in-app purchases. I built an accompanying Django API endpoint, and also managed the app's distribution on the iOS App Store and Google Play Store. In addition, I redesigned the company's Django-based website and WordPress blog, as well as refactored their JS WebAudio API-based web app, and used Google Analytics + Google Optimize for A/B testing.
-      </p>
-      <hr/>
       <h1>Volunteering</h1>
       <h2>BEAM (2018-*)</h2>
       <p>
-        Building Engineers and Mentors (BEAM) is a science outreach club devoted to promoting science and engineering to underserved kids in the LA area. As a member, I run weekly STEM workshops and develop lessons and curriculum throughout the school year.
-      </p>
-      <h2>ACM Teach LA Dev Team (2018-*)</h2>
-      <p>
-        ACM Teach LA is a nonprofit organization that teaches computer science to underserved students in the Greater Los Angeles area. As a dev team member, I write an online IDE that allow our students to develop, run, and save code online; the project is developed with a Node-heavy ecosystem of React, Redux, Express, and Firebase.
+        Building Engineers and Mentors (BEAM) is a science outreach club devoted to promoting science and engineering to
+        underserved kids in the LA area. As a member, I run weekly STEM workshops and develop lessons and curriculum
+        throughout the school year.
       </p>
       <h2>Horizons Robotics &amp; Computer Science (2014-2018)</h2>
       <p>
-        As the program director of Horizons Robotics, I developed and taught a 4-week curriculum (using mBots, Scratch, and Makey-Makeys) taught to 100+ underserved middle-school students in Toronto. I also procured inventory and trained student instructors. Similarly, as the program director and founder of Horizons Computer Science, I designed a 4-week curriculum (centred on Scratch), procured inventory and trained instructors, and led classes.
+        As the program director of Horizons Robotics, I developed and taught a 4-week curriculum (using mBots, Scratch,
+        and Makey-Makeys) taught to 100+ underserved middle-school students in Toronto. I also procured inventory and
+        trained student instructors. Similarly, as the program director and founder of Horizons Computer Science, I
+        designed a 4-week curriculum (centred on Scratch), procured inventory and trained instructors, and led classes.
       </p>
       <hr />
-      <h2><a id="hs-ecs-link">High School <small>(click to expand)</small></a></h2>
-      <ul class="list-items toggle-content" id="hs-ecs-content">
-        <li>
-          WAC Director General, Lead Developer
-        </li>
-        <li>
-          OMUN USG Communications, Lead Web Developer
-        </li>
-        <li>
-          Treasurer for the Board of Stewards (student gov't)
-        </li>
-        <li>
-          UCC Debate Club Head
-        </li>
-        <li>
-          Convergence Executive Writer &amp; Layout Editor
-        </li>
-        <li>
-          Digital Media/Computer Science Club Head
-        </li>
-        <li>
-          Robotics Club Head
-        </li>
-        <li>
-          Debate Camp Canada Counsellor
-        </li>
-        <li>
-          SHAD @ McMaster Alumni
-        </li>
-      </ul>
-      <hr />
       <p>
-        Need a reference, or want to see more of my work? <a rel="noopener" href="mailto:matt@matthewwang.me">Shoot me an email!</a>
+        Need a reference, or want to see more of my work? <a rel="noopener" href="mailto:matt@matthewwang.me">Shoot me
+          an email!</a>
       </p>
-    </div>
-    <div class="card bg-primary">
-      <h2>Not So Fun Fact</h2>
-      <p>
-        I was also a Hydration Specialist and Seating Apparatus Thermal Engineer (<b>read: water boy and benchwarmer</b>) for my high school football team, before I got a concussion in non-contact football.
-      </p>
-    </div>
-    <div class="card border-primary">
-      <h1>Achievements</h1>
-      <p>
-        Most of the time, I don't win things. Sometimes though, I do. I'm as surprised as you are.
-      </p>
-      <ul class="list-items">
-        <li>Muriel K. and Robert B. Allan Fund Recipient 2018-2019</li>
-        <li>UCLA Achievement Scholarship Recipient 2018-2019</li>
-        <li>IDEA Hacks 2019 Best Project <a rel="noopener" target="_blank" href="https://github.com/malsf21/ideahacks-2019"><span class="fab fa-github" aria-label="GitHub Repository"></span></a></li>
-        <li>USC Debate IV 2019 Champion, Top Team, Top Speaker</li>
-        <li>UC Berkeley Debate IV 2019 Champion</li>
-      </ul>
-      <hr />
-      <h2><a id="hs-awards-link">High School <small>(click to expand)</small></a></h2>
-      <ul class="list-items toggle-content" id="hs-awards-content">
-        <li>
-          Class of '62 Trophy
-        </li>
-        <li>
-          Wallace Rankine Nesbitt Prize for Debating and Public Speaking
-        </li>
-        <li>
-          Willis S. McLeese Prize for Debating
-        </li>
-        <li>
-          Donald Cooper Award for Community Service
-        </li>
-        <li>
-          Oxford Cup 2017 Provincial Qualifier Top Speaker, Semifinalist
-        </li>
-        <li>
-          Berkeley MUN 2017 Best Delegate
-        </li>
-        <li>
-          Havard MUN 2017 Best Delegate
-        </li>
-        <li>
-          SSUNS 2017, SSUNS 2016, SSUNS 2015 Best Delegate
-        </li>
-        <li>
-          2016 John Dobson Entrepreneurship Cup Finalist, Best Website
-        </li>
-        <li>
-          ICYD 2016 Canadian Representative, 6th Speaker, Semifinalist
-        </li>
-      </ul>
-    </div>
-    <div class="card bg-primary">
-      <h2>Technically True Fun Fact</h2>
-      <p>
-        Not to brag, but I also have 3 participation ribbons from houseleague hockey, am a previous record holder of "World's Youngest Person", and I was <a rel="noopener" target="_blank" class="link-white" href="https://en.wikipedia.org/wiki/You_(Time_Person_of_the_Year)">TIME Magazine's Person of the Year in 2006</a>. Plus, I'm the second coolest Matthew Wang I know.
-      </p>
-    </div>
-    <div class="card border-primary">
-      <h1>Contact Me</h1>
-      <p>
-        I won't byte, I promise.
-      </p>
-      <ul class="list-unstyled list-items">
-        <li>
-          <a rel="noopener" href="mailto:matt@matthewwang.me"><span class="fa fa-envelope"></span> Email: matt@matthewwang.me</a>
-        </li>
-        <li>
-          <a rel="noopener" href="https://github.com/malsf21"><span class="fab fa-github"></span> GitHub: malsf21</a>
-        </li>
-        <li>
-          <a rel="noopener" href="https://www.linkedin.com/in/matthew-x-wang/"><span class="fab fa-linkedin"></span> LinkedIn: Matthew Wang</a>
-        </li>
-        <li>
-          <a rel="noopener" href="https://twitter.com/malsf21"><span class="fab fa-twitter"></span> Twitter: malsf21</a>
-        </li>
-      </ul>
-    </div>
-    <footer class="text-center">
-      <div class="text-2x"><b>Made by <a rel="noopener" href="https://github.com/malsf21/">Matthew Wang</a></b></div>
-      <span class="fa fa-heart text-primary animated-heartbeat"></span>
-      <a rel="noopener" href="https://github.com/malsf21/matthewwang.me"><span class="fab fa-github text-black" aria-label="GitHub Repository"></span></a>
-      <span class="fa fa-heart text-primary animated-heartbeat"></span>
-    </footer>
-    <script>
-      "use strict";
-      /*
-        I think this is pretty cool: basically, you can use CSS styles for console logs. You can check out what this looks like by looking at the Javascript console.
+  </div>
+  <div class="card bg-primary">
+    <h2>Not So Fun Fact</h2>
+    <p>
+      I was also a Hydration Specialist and Seating Apparatus Thermal Engineer (<b>read: water boy and benchwarmer</b>)
+      for my high school football team, before I got a concussion in non-contact football.
+    </p>
+  </div>
+  <div class="card border-primary">
+    <h1>Achievements</h1>
+    <p>
+      Most of the time, I don't win things. Sometimes though, I do. I'm as surprised as you are.
+    </p>
+    <ul class="list-items">
+      <li>Muriel K. and Robert B. Allan Fund Recipient 2018-2019</li>
+      <li>UCLA Achievement Scholarship Recipient 2018-2019</li>
+      <li>IDEA Hacks 2019 Best Project <a rel="noopener" target="_blank"
+          href="https://github.com/malsf21/ideahacks-2019"><span class="fab fa-github"
+            aria-label="GitHub Repository"></span></a></li>
+      <li>USC Debate IV 2019 Champion, Top Team, Top Speaker</li>
+      <li>UC Berkeley Debate IV 2019 Champion</li>
+    </ul>
+  </div>
+  <div class="card bg-primary">
+    <h2>Technically True Fun Fact</h2>
+    <p>
+      Not to brag, but I also have 3 participation ribbons from houseleague hockey, am a previous record holder of
+      "World's Youngest Person", and I was <a rel="noopener" target="_blank" class="link-white"
+        href="https://en.wikipedia.org/wiki/You_(Time_Person_of_the_Year)">TIME Magazine's Person of the Year in
+        2006</a>. Plus, I'm the second coolest Matthew Wang I know.
+    </p>
+  </div>
+  <div class="card border-primary">
+    <h1>Contact Me</h1>
+    <p>
+      I won't byte, I promise.
+    </p>
+    <ul class="list-unstyled list-items">
+      <li>
+        <a rel="noopener" href="mailto:matt@matthewwang.me"><span class="fa fa-envelope"></span> Email:
+          matt@matthewwang.me</a>
+      </li>
+      <li>
+        <a rel="noopener" href="https://github.com/malsf21"><span class="fab fa-github"></span> GitHub: malsf21</a>
+      </li>
+      <li>
+        <a rel="noopener" href="https://www.linkedin.com/in/matthew-x-wang/"><span class="fab fa-linkedin"></span>
+          LinkedIn: Matthew Wang</a>
+      </li>
+    </ul>
+  </div>
+  <footer class="text-center">
+    <div class="text-2x"><b>Made by <a rel="noopener" href="https://github.com/malsf21/">Matthew Wang</a></b></div>
+    <span class="fa fa-heart text-primary animated-heartbeat"></span>
+    <a rel="noopener" href="https://github.com/malsf21/matthewwang.me"><span class="fab fa-github text-black"
+        aria-label="GitHub Repository"></span></a>
+    <span class="fa fa-heart text-primary animated-heartbeat"></span>
+  </footer>
+  <script>
+    "use strict";
+    /*
+      I think this is pretty cool: basically, you can use CSS styles for console logs. You can check out what this looks like by looking at the Javascript console.
 
-        Here's what the banner text looks like:
+      Here's what the banner text looks like:
 
-           __   __  _______  _______  _______
-          |  |_|  ||   _   ||       ||       |
-          |       ||  |_|  ||_     _||_     _|
-          |       ||       |  |   |    |   |
-          |       ||       |  |   |    |   |
-          | ||_|| ||   _   |  |   |    |   |
-          |_|   |_||__| |__|  |___|    |___|
+         __   __  _______  _______  _______
+        |  |_|  ||   _   ||       ||       |
+        |       ||  |_|  ||_     _||_     _|
+        |       ||       |  |   |    |   |
+        |       ||       |  |   |    |   |
+        | ||_|| ||   _   |  |   |    |   |
+        |_|   |_||__| |__|  |___|    |___|
 
-        While this isn't my favourite font or anything, it has no backslashes: those often cause problems in javascript.
+      While this isn't my favourite font or anything, it has no backslashes: those often cause problems in javascript.
 
-      */
-      console.log("%c\n __   __  _______  _______  _______ \n|  |_|  ||   _   ||       ||       |\n|       ||  |_|  ||_     _||_     _|\n|       ||       |  |   |    |   |  \n|       ||       |  |   |    |   |  \n| ||_|| ||   _   |  |   |    |   |  \n|_|   |_||__| |__|  |___|    |___|  ", "color:#e95420;")
-      console.log("%cThis page runs very minimal Javascript (just a function that changes a CSS variable for what I think is a cool intro animation, pun-facts that change on page refresh, and Font Awesome), so don't fret.", "color:#e95420;")
-      console.log("%cThough, I am planning on revamping this website and adding some fancy stuff. Stay tuned!", "color:#e95420;")
-      console.log("%cAnyways, have fun browsing the rest of the website. If you have any feedback, let me know on my GitHub repo for this landing page: \nhttps://github.com/malsf21/matthewwang.me", "color:#e95420;")
+    */
+    console.log(
+      "%c\n __   __  _______  _______  _______ \n|  |_|  ||   _   ||       ||       |\n|       ||  |_|  ||_     _||_     _|\n|       ||       |  |   |    |   |  \n|       ||       |  |   |    |   |  \n| ||_|| ||   _   |  |   |    |   |  \n|_|   |_||__| |__|  |___|    |___|  ",
+      "color:#e95420;")
+    console.log(
+      "%cThis page runs very minimal Javascript (just a function that changes a CSS variable for what I think is a cool intro animation, pun-facts that change on page refresh, and Font Awesome), so don't fret.",
+      "color:#e95420;")
+    console.log("%cThough, I am planning on revamping this website and adding some fancy stuff. Stay tuned!",
+      "color:#e95420;")
+    console.log(
+      "%cAnyways, have fun browsing the rest of the website. If you have any feedback, let me know on my GitHub repo for this landing page: \nhttps://github.com/malsf21/matthewwang.me",
+      "color:#e95420;")
 
-      // checks if the browser is safari - shamelessly stolen from https://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
-      const isSafari = (navigator.userAgent.indexOf("Safari") != -1) && (navigator.userAgent.indexOf("Chrome") === -1);
+    // checks if the browser is safari - shamelessly stolen from https://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
+    const isSafari = (navigator.userAgent.indexOf("Safari") != -1) && (navigator.userAgent.indexOf("Chrome") === -1);
 
-      // These are the functions that generate the meh intro animations.
-      // Basically, it sets the CSS variable for the x and y transform distance to a random number, so it's different on each page load!
-      function randomAnimation(animationVar){
-        if (!isSafari){ // safari acts weirdly
-          document.documentElement.style.setProperty(animationVar + '-percent1', (Math.random()*8-4)*100 + '%')
-          document.documentElement.style.setProperty(animationVar + '-percent2', (Math.random()*8-4)*100 + '%')
-        }
+    // These are the functions that generate the meh intro animations.
+    // Basically, it sets the CSS variable for the x and y transform distance to a random number, so it's different on each page load!
+    function randomAnimation(animationVar) {
+      if (!isSafari) { // safari acts weirdly
+        document.documentElement.style.setProperty(animationVar + '-percent1', (Math.random() * 8 - 4) * 100 + '%')
+        document.documentElement.style.setProperty(animationVar + '-percent2', (Math.random() * 8 - 4) * 100 + '%')
       }
-      function randomDelay(animationVar){
-        document.documentElement.style.setProperty(animationVar + '-delay', (Math.random()*5+4)*100 + 'ms')
+    }
+
+    function randomDelay(animationVar) {
+      document.documentElement.style.setProperty(animationVar + '-delay', (Math.random() * 5 + 4) * 100 + 'ms')
+    }
+    randomAnimation("--animation1")
+    randomAnimation("--animation2")
+    randomDelay("--animation1")
+    randomDelay("--animation2")
+
+    // Here's my list of fun facts. Or punFacts. It's up to you ;)
+    const punFacts = [
+      'I love using mediocre puns for my Spotify playlist titles. For example, I have a playlist called <a rel="noopener" target="_blank" class="link-white" href="https://open.spotify.com/user/11156788800/playlist/2cT6Y3KwCvep7JZE6OUMlj">amperes</a> that has all the music I\'m current-ly listening to.',
+      'I\'m from Canada, which uses the metric system. This creates some oddities: while spiders in America have 8 feet, spiders in Canada have <a rel="noopener" target="_blank" class="link-white" href="https://www.google.com/search?q=8+feet+to+meters&oq=8+feet+to+meters">2.4 meters</a>!',
+      'I\'ve been told that college is the time to go on dates. To me, the perfect date would be DD/MM/YYYY; MM/DD/YY is just so cliché.',
+      'It has taken me several years to <code class="text-primary">git good</code> at git and GitHub.',
+      'I love telling chemistry jokes, but all the good ones argon! Or, they\'re too boron to tell!',
+      'After taking physics in high school, I realised how much potential there is for puns!',
+      'One time (true story), I cut myself on a broken window. It was a world of pane.',
+      'I used to play a lot of hockey and ice skate, which involved me slipping and falling all the time. Though, it works as a great icebreaker!',
+      'I don\'t have great eyesight (I wear contacts), but I have no fear: I\'ll get my adult supervision soon!',
+      'I like ketchup, mustard, and mayo, but as soon as I see ranch, I dip.',
+      'Many Canadians love ketchup chips, but I\'m pretty impartial to them - I never had them when I was younger, and now there\'s too much ground to ketchup on.',
+      'I never understood Fifty Shades of Gray - there are at least thousands in RGB color space.',
+      'I used to play houseleague baseball, though I was awful; but nobody is good at baseball right off the bat! I really was awful though.',
+      'I don\'t get cold very easily, but if I am, I just draw a square on the ground and stand in one of the corners - it\'s always 90 degrees!',
+      //'One of my favourite comfort foods to make is mashed potatoes - it\'s usually a s-mash hit!',
+      'Learning recursion was a bit hard for me, but I figured it out eventually: I first had to learn recursion.',
+      'Sometimes, I struggle reading other developer\'s handwriting: it\'s like a code!',
+      'I respect spiders because they\'re such good web developers.',
+      'I try my best with my chemistry puns, but they usually get a bad reaction.',
+      'At UCLA\'s gym, I sometimes lift dumbells. When I graduate, I plan on lifting smartbells instead.',
+      'Paradoxically, taking computer organisation has made my computer less organized; there\'s stacks and heaps of files everywhere now!',
+      'I forking hate merge conflicts.'
+
+    ]
+
+    // This randomly "shuffles" the punFacts array - this is so the "order" of the punFacts is different on every visit!
+    for (let i = punFacts.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [punFacts[i], punFacts[j]] = [punFacts[j], punFacts[i]];
+    }
+
+    // To ensure that you don't get the same punFact twice in a row, we iterate through the random array so that you see each punFact at least once before you see one twice. Thanks to Allison for prompting me to do this!
+    let counter = 0;
+
+    function randomPunFact() {
+      document.getElementById('pun-fact').innerHTML = '<p class="pun-fact">' + punFacts[counter] +
+        '</p>' // I do this instead of directly changing the paragraph's innerHTML so the transition replays when the <p> is created
+      // here we just increment counter, and reset it to zero - creating an "infinite loop" through the array
+      if (counter + 1 == punFacts.length) {
+        counter = 0;
+      } else {
+        counter += 1;
       }
-      randomAnimation("--animation1")
-      randomAnimation("--animation2")
-      randomDelay("--animation1")
-      randomDelay("--animation2")
+    }
+    randomPunFact()
 
-      // Here's my list of fun facts. Or punFacts. It's up to you ;)
-      const punFacts = [
-        'I love using mediocre puns for my Spotify playlist titles. For example, I have a playlist called <a rel="noopener" target="_blank" class="link-white" href="https://open.spotify.com/user/11156788800/playlist/2cT6Y3KwCvep7JZE6OUMlj">amperes</a> that has all the music I\'m current-ly listening to.',
-        'I\'m from Canada, which uses the metric system. This creates some oddities: while spiders in America have 8 feet, spiders in Canada have <a rel="noopener" target="_blank" class="link-white" href="https://www.google.com/search?q=8+feet+to+meters&oq=8+feet+to+meters">2.4 meters</a>!',
-        'I\'ve been told that college is the time to go on dates. To me, the perfect date would be DD/MM/YYYY; MM/DD/YY is just so cliché.',
-        'It has taken me several years to <code class="text-primary">git good</code> at git and GitHub.',
-        'I love telling chemistry jokes, but all the good ones argon! Or, they\'re too boron to tell!',
-        'After taking physics in high school, I realised how much potential there is for puns!',
-        'One time (true story), I cut myself on a broken window. It was a world of pane.',
-        'I used to play a lot of hockey and ice skate, which involved me slipping and falling all the time. Though, it works as a great icebreaker!',
-        'I don\'t have great eyesight (I wear contacts), but I have no fear: I\'ll get my adult supervision soon!',
-        'I like ketchup, mustard, and mayo, but as soon as I see ranch, I dip.',
-        'Many Canadians love ketchup chips, but I\'m pretty impartial to them - I never had them when I was younger, and now there\'s too much ground to ketchup on.',
-        'I never understood Fifty Shades of Gray - there are at least thousands in RGB color space.',
-        'I used to play houseleague baseball, though I was awful; but nobody is good at baseball right off the bat! I really was awful though.',
-        'I don\'t get cold very easily, but if I am, I just draw a square on the ground and stand in one of the corners - it\'s always 90 degrees!',
-        //'One of my favourite comfort foods to make is mashed potatoes - it\'s usually a s-mash hit!',
-        'Learning recursion was a bit hard for me, but I figured it out eventually: I first had to learn recursion.',
-        'Sometimes, I struggle reading other developer\'s handwriting: it\'s like a code!',
-        'I respect spiders because they\'re such good web developers.',
-        'I try my best with my chemistry puns, but they usually get a bad reaction.',
-        'At UCLA\'s gym, I sometimes lift dumbells. When I graduate, I plan on lifting smartbells instead.',
-        'Paradoxically, taking computer organisation has made my computer less organized; there\'s stacks and heaps of files everywhere now!',
-        'I forking hate merge conflicts.'
+    // these are the controllers for the expanding content boxes
+    // i use a method from https://gomakethings.com/how-to-add-transition-animations-to-vanilla-javascript-show-and-hide-methods/ , which bypasses some issues with just setting display:block;
 
-      ]
+    function getHeight(elem) {
+      elem.style.display = 'block';
+      let height = elem.scrollHeight + 'px';
+      elem.style.display = '';
+      return height;
+    };
 
-      // This randomly "shuffles" the punFacts array - this is so the "order" of the punFacts is different on every visit!
-      for (let i = punFacts.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [punFacts[i], punFacts[j]] = [punFacts[j], punFacts[i]];
+    function show(elem) {
+      let height = getHeight(elem);
+      elem.classList.add('is-visible');
+      elem.style.height = height;
+
+      window.setTimeout(function () {
+        elem.style.height = '';
+      }, 350);
+    };
+
+    function hide(elem) {
+      elem.style.height = elem.scrollHeight + 'px';
+      window.setTimeout(function () {
+        elem.style.height = '0';
+      }, 1);
+      window.setTimeout(function () {
+        elem.classList.remove('is-visible');
+      }, 350);
+    };
+
+    function toggle(elem) {
+      if (elem.classList.contains('is-visible')) {
+        hide(elem);
+      } else {
+        show(elem);
       }
+    };
+    document.getElementById('audionotch-link').onclick = function () {
+      toggle(document.getElementById('audionotch-content'))
+    };
+    document.getElementById('wac-link').onclick = function () {
+      toggle(document.getElementById('wac-content'))
+    };
+    document.getElementById('small-projects-link').onclick = function () {
+      toggle(document.getElementById('small-projects-content'))
+    };
+  </script>
+</body>
 
-      // To ensure that you don't get the same punFact twice in a row, we iterate through the random array so that you see each punFact at least once before you see one twice. Thanks to Allison for prompting me to do this!
-      let counter = 0;
-      function randomPunFact(){
-        document.getElementById('pun-fact').innerHTML = '<p class="pun-fact">' + punFacts[counter] + '</p>' // I do this instead of directly changing the paragraph's innerHTML so the transition replays when the <p> is created
-        // here we just increment counter, and reset it to zero - creating an "infinite loop" through the array
-        if (counter + 1  == punFacts.length){
-          counter = 0;
-        }
-        else{
-          counter += 1;
-        }
-      }
-      randomPunFact()
-
-      // these are the controllers for the expanding content boxes
-      // i use a method from https://gomakethings.com/how-to-add-transition-animations-to-vanilla-javascript-show-and-hide-methods/ , which bypasses some issues with just setting display:block;
-
-      function getHeight (elem) {
-        elem.style.display = 'block';
-        let height = elem.scrollHeight + 'px';
-        elem.style.display = '';
-        return height;
-      };
-
-      function show(elem) {
-      	let height = getHeight(elem);
-      	elem.classList.add('is-visible');
-      	elem.style.height = height;
-
-      	window.setTimeout(function () {
-      		elem.style.height = '';
-      	}, 350);
-      };
-
-      function hide(elem) {
-        elem.style.height = elem.scrollHeight + 'px';
-        window.setTimeout(function () {
-        	elem.style.height = '0';
-        }, 1);
-        window.setTimeout(function () {
-        	elem.classList.remove('is-visible');
-        }, 350);
-      };
-
-      function toggle(elem) {
-        if (elem.classList.contains('is-visible')) {
-          hide(elem);
-        }
-        else{
-          show(elem);
-        }
-      };
-      document.getElementById('audionotch-link').onclick = function(){toggle(document.getElementById('audionotch-content'))};
-      document.getElementById('wac-link').onclick = function(){toggle(document.getElementById('wac-content'))};
-      document.getElementById('small-projects-link').onclick = function(){toggle(document.getElementById('small-projects-content'))};
-      document.getElementById('hs-ecs-link').onclick = function(){toggle(document.getElementById('hs-ecs-content'))};
-      document.getElementById('hs-awards-link').onclick = function(){toggle(document.getElementById('hs-awards-content'))};
-    </script>
-  </body>
 </html>
