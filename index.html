@@ -378,48 +378,57 @@
         </div>
       </li>
       <li>
-        <h2>
-          World Affairs Conference
-          <a rel="noopener" target="_blank" href="https://worldaffairsconference.github.io/wac-2018/"><span
-              class="fa fa-link" aria-label="Website Link"></span></a>
-          <a rel="noopener" target="_blank" href="https://github.com/malsf21/world.ac"><span class="fab fa-github"
-              aria-label="GitHub Repository"></span></a>
-          <a rel="noopener" target="_blank" href="assets/files/work/wac-cover.png"><span class="fa fa-image"
-              aria-label="WAC Delegate Package Cover"></span></a>
-          <a rel="noopener" target="_blank" href="assets/files/work/wac-recruitment.png"><span class="fa fa-image"
-              aria-label="WAC Recruitment Poster"></span></a>
-          <a rel="noopener" target="_blank" href="assets/files/work/wac-spread.png"><span class="fa fa-image"
-              aria-label="WAC Logo Spread"></span></a>
+        <h2 id="tla">
+          ACM Teach LA
+          (Static Site
+          <a rel="noopener" target="_blank" href="https://teachla.uclaacm.com/"><span
+              class="fa fa-link" aria-label="Static Website Link"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/uclaacm/teach-la-website"><span class="fab fa-github"
+              aria-label="Static Site GitHub Repository"></span></a>
+          ) 
+          (Editor
+          <a rel="noopener" target="_blank" href="https://uclaacm.github.io/TeachLAFron…"><span
+              class="fa fa-link" aria-label="Static Website Link"></span></a>
+          <a rel="noopener" target="_blank" href="https://github.com/uclaacm/TeachLAFrontend"><span class="fab fa-github"
+              aria-label="Editor Frontend GitHub Repository"></span></a>
+          )
         </h2>
         <p>
-          The World Affairs Conference was a current-affairs conference that I ran in high school for five years. I
-          juggled numerous responsibilities while I was there, with a balance of administrative, software development, and
-          graphic design work - my magnum opus being creating an online registration system.
+          ACM Teach LA is an organization that teaches programming and computer science to underserved students in the Los Angeles area. As part of the developer team, we create an online IDE and code environment to make it easier for our students to learn how to code. I'm the project director and a lead developer, which lets me juggle dev and project management.
         </p>
-        <small><a id="wac-link">click for more detail</a></small>
-        <div class="toggle-content" id="wac-content">
-          <p>I did a lot of things for WAC over five years; here they are.</p>
+        <small><a id="tla-link">click for more detail</a></small>
+        <div class="toggle-content" id="tla-content">
+          <p>As a (lead) developer, my hand is in lots of buckets:</p>
           <ul>
             <li>
-              Developed online registration system to manage registered schools and delegates (v1 PHP + mySQL, v2 React
-              + Firebase)
+              Architected and developed React + Redux Frontend
             </li>
             <li>
-              Designed front-end website (Jekyll + Bootstrap) with automated deployment via Travis
+              Implemented user-based login, account creation, and code-saving with React &amp; Firebase
             </li>
             <li>
-              Created preference-matching algorithm to optimize delegates' assigned events and venue capacity
+              Designed and created static site to enhance org's online presence
             </li>
             <li>
-              Designed promotional materials (e.g. nametags, event package, posters)
+              Rendered interactive user cards from Firebase-fetched data
             </li>
             <li>
-              Created style guide and handbook for conference design style and vision
+              Created new API endpoints for RESTful Express middleware
             </li>
             <li>
-              Managed live-streaming of conference speakers and events
+              Refactored design styling to use SASS, halved CSS bundle size
+            </li>
+            <li>
+              Wrote and updated tests written with Enzyme
+            </li>
+            <li>
+              Automated front-end deployment with Travis CI
+            </li>
+            <li>
+              Perform code review with other developers
             </li>
           </ul>
+          <p>And, as the project director, I work with instructors and students to develop new feature ideas, convert them to implementations in our sprints, and receive feedback from our users. I'm also continually leading developer training, which involves teaching our developers web development, React + Redux, Firebase, and software engineering practices.</p>
         </div>
       </li>
     </ul>
@@ -558,6 +567,19 @@
             <a rel="noopener" target="_blank" href="assets/files/work/omun-schedule.pdf"><span class="fa fa-image"
                 aria-label="OMUN Schedule"></span></a>
           </h3>
+          <h3>
+            World Affairs Conference Website, Backend &amp; Graphic Design
+            <a rel="noopener" target="_blank" href="https://worldaffairsconference.github.io/wac-2018/"><span
+                class="fa fa-link" aria-label="Website Link"></span></a>
+            <a rel="noopener" target="_blank" href="https://github.com/malsf21/world.ac"><span class="fab fa-github"
+                aria-label="GitHub Repository"></span></a>
+            <a rel="noopener" target="_blank" href="assets/files/work/wac-cover.png"><span class="fa fa-image"
+                aria-label="WAC Delegate Package Cover"></span></a>
+            <a rel="noopener" target="_blank" href="assets/files/work/wac-recruitment.png"><span class="fa fa-image"
+                aria-label="WAC Recruitment Poster"></span></a>
+            <a rel="noopener" target="_blank" href="assets/files/work/wac-spread.png"><span class="fa fa-image"
+                aria-label="WAC Logo Spread"></span></a>
+          </h3>
         </li>
       </ul>
     </div>
@@ -655,7 +677,7 @@
         Los Angeles area. As a dev team member, I write an online IDE that allow our students to develop, run, and save
         code online; the project is developed with a Node-heavy ecosystem of React, Redux, Express, and Firebase. In
         addition, I recently became the project director: I now manage the project's vision, and also write the code for a
-        static publicity site as well.
+        static publicity site as well. You can read <a href="#tla">this absurdly long list</a> for more info.
       </p>
       <h2>AudioNotch (2017)</h2>
       <p><b>Software Development Intern</b></p>
@@ -880,8 +902,8 @@
     document.getElementById('audionotch-link').onclick = function () {
       toggle(document.getElementById('audionotch-content'))
     };
-    document.getElementById('wac-link').onclick = function () {
-      toggle(document.getElementById('wac-content'))
+    document.getElementById('tla-link').onclick = function () {
+      toggle(document.getElementById('tla-content'))
     };
     document.getElementById('small-projects-link').onclick = function () {
       toggle(document.getElementById('small-projects-content'))
