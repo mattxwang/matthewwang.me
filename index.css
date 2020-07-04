@@ -53,10 +53,16 @@ html, body{
     width: 100%;
     height: 100%;
 }
+
 body{
     font-size: var(--font-size-root);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    
+}
+
+@media only screen and (max-width: 50rem) {
+    body {
+        padding-top: 3rem;
+    }
 }
 
 
@@ -138,6 +144,8 @@ p, ul > li{
 
 .row {
     display: grid;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 50rem) {
@@ -146,12 +154,20 @@ p, ul > li{
     }
 }
 
+.row-2{
+    grid-template-columns: 50% 50%;
+}
+
 .row-1-2{
     grid-template-columns: 33% 66%;
 }
 
 .row-2-1{
     grid-template-columns: 66% 33%;
+}
+
+.row-3{
+    grid-template-columns: 33% 33% 33%;
 }
 
 .col{
@@ -196,6 +212,7 @@ p, ul > li{
     display: inline-block;
     background: none;
     font-size: 1rem;
+    font-weight: bold;
 
     border: 1px solid var(--main-orange);
     border-radius: 4px;
@@ -209,7 +226,7 @@ p, ul > li{
     text-decoration: none;
 }
 
-.button:hover{
+.button:hover, .button-selected{
     background-color: var(--main-orange);
     color: var(--soft-white);
     cursor: pointer;
@@ -235,7 +252,7 @@ p, ul > li{
 /* Dark Mode Toggle */
 
 .dark-mode-toggle {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 999;
@@ -245,9 +262,14 @@ p, ul > li{
     border: none;
     font-size: 1.5rem;
     background-color: var(--main-orange);
-    color: var(--soft-white) !important;
+    color: var(--soft-white);
 
     border-bottom-right-radius: 10px;
+}
+
+.dark-mode-toggle:hover {
+    background-color: var(--font-color-root);
+    color: var(--background-color-root);
 }
 
 .dark-mode-toggle:hover{
@@ -354,7 +376,7 @@ hr{
 
 @keyframes text-whiten {
     from {
-        color: black;
+        color: inherit;
     }
 
     to {
@@ -414,9 +436,11 @@ hr{
     animation-iteration-count: infinite;
     transform-origin: 70% 70%;
     display: inline-block;
+    margin-right: 0.5em;
 }
 
 .handwave-delayed {
+    margin-left: 0.5em;
     animation-delay: 3.75s;
 }
 
