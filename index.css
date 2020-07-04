@@ -93,6 +93,10 @@ p, ul > li{
     }
 }
 
+.text-125x{
+    font-size: 1.25rem;
+}
+
 .text-15x{
     font-size: 1.5rem;
 }
@@ -188,6 +192,11 @@ p, ul > li{
     cursor: pointer;
 }
 
+.button-block{
+    display: block;
+    margin-bottom: 1em;
+}
+
 /* Misc. El Utils */
 
 .text-center{
@@ -202,6 +211,13 @@ p, ul > li{
 
 .card-full{
     height: 100%;
+}
+
+@media only screen and (min-width: 50rem) {
+    .sticky-helper{
+        position: sticky; 
+        top: 1rem;
+    }
 }
 
 .list-unstyled {
@@ -286,37 +302,63 @@ hr{
 
 /* This is the underline animation for the hero. It looks real bad on mobile so I've disabled it there */
 
-@keyframes underline {
+@keyframes text-whiten {
     from {
-        width: 0;
+        color: black;
     }
 
     to {
-        width: 100%;
+        color: white;
     }
 }
 
-@media only screen and (min-width: 50rem) {
-    .underline-expand {
-        display: inline-block;
+@keyframes underline {
+    0% {
+        height: 5px;
+        width: 0;
     }
 
-    .underline-expand:after {
-        animation-name: underline;
-        animation-duration: 1.5s;
-        /*animation-delay: calc(var(--animation1-delay) + 1s);*/
-        animation-delay: 1s;
-        animation-fill-mode: both;
-        content: "";
-        display: block;
+    50% {
         height: 5px;
-        background-color: var(--main-orange);
+        width: calc(100% + 1rem);
     }
+
+    100% {
+        width: calc(100% + 1rem);
+        height: 1.5em;
+    }
+}
+
+.underline-expand {
+    display: inline-block;
+    position: relative;
+
+    animation-name: text-whiten;
+    animation-duration: 0.5s;
+    animation-delay: 2.5s;
+    animation-fill-mode: both;
+}
+
+.underline-expand:after {
+    animation-name: underline;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+
+    content: "";
+    display: block;
+    background-color: var(--main-orange);
+
+    z-index: -1;
+    position: absolute;
+    bottom:  -10px;
+    left: -5px;
 }
 
 /* The keyframes for the waving hand emojis. Basic. I know. */
 
-.handwave1 {
+.handwave {
+    animation-delay: 2.5s;
     animation-name: handwave;
     animation-duration: 2.5s;
     animation-iteration-count: infinite;
@@ -324,13 +366,8 @@ hr{
     display: inline-block;
 }
 
-.handwave2 {
-    animation-name: handwave;
-    animation-duration: 2.5s;
-    animation-delay: 1.25s;
-    animation-iteration-count: infinite;
-    transform-origin: 70% 70%;
-    display: inline-block;
+.handwave-delayed {
+    animation-delay: 3.75s;
 }
 
 @keyframes handwave {
