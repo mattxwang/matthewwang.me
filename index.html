@@ -10,238 +10,25 @@
   <meta name="description"
     content="Matt is a computer science student at UCLA. He usually likes computers. He also likes education, helping people, and is probably interested in seeing how computers can help us help people. He's the second coolest Matt Wang he knows.">
   <!-- Now, before you tell me that most of this is unnecessary, I agree with you. But, it helps with SEO, and it also makes things slightly more accessible for a small subset of users. I think it's worth the extra 500 bytes. -->
-  <link rel="apple-touch-icon" sizes="57x57" href="assets/img/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="assets/img/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="assets/img/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/img/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="manifest" href="manifest.json">
   <meta name="msapplication-TileColor" content="#e95420">
-  <meta name="msapplication-TileImage" content="assets/img/ms-icon-144x144.png">
+  <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
   <meta name="theme-color" content="#e95420">
-  <!-- Heard there's a cool CSS framework called Liteweight: https://github.com/malsf21/liteweight -->
-  <link rel="stylesheet" href="assets/css/liteweight-duo.min.css?v3.0.0-beta" />
-  <!-- Here are a few more of my special additions for the site. I don't put it in a separate CSS file since this is the only page in this "site", and it can cause some jittery styling issues. -->
-  <style>
-    /* Fonts. Boring. */
-
-    @font-face {
-      font-family: Nexa;
-      src: url(./assets/fonts/nexa/nexa_regular.ttf)
-    }
-
-    @font-face {
-      font-family: Nexa;
-      font-weight: 700;
-      src: url(./assets/fonts/nexa/nexa_bold.otf)
-    }
-
-    body {
-      font-family: Nexa, Roboto, Helvetica, Arial, sans-serif;
-    }
-
-    .link-white {
-      text-decoration: underline;
-    }
-
-    .list-items {
-      font-size: 1.5em;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-
-    :root {
-      --animation1-percent1: -20%;
-      --animation1-percent2: -100%;
-      --animation1-delay: 250ms;
-      --animation2-percent1: 20%;
-      --animation2-percent2: 100%;
-      --animation2-delay: 500ms;
-    }
-
-    /* This is me playing around with what I think is a cool CSS animation. We'll see whether or not this is actually a good idea. Basically, I set defaults the translation, but then I also change the CSS variable (if supported) randomly on page load. */
-    @keyframes slide1 {
-      from {
-        transform: translate3d(var(--animation1-percent1), var(--animation1-percent2), 0);
-        visibility: visible;
-      }
-
-      to {
-        transform: translate3d(0, 0, 0);
-      }
-    }
-
-    @keyframes slide2 {
-      from {
-        transform: translate3d(var(--animation2-percent1), var(--animation2-percent2), 0);
-        visibility: visible;
-      }
-
-      to {
-        transform: translate3d(0, 0, 0);
-      }
-    }
-
-    /* I could probably have better variable names here, right? */
-    .slide1 {
-      animation-name: slide1;
-      animation-duration: 1.25s;
-      animation-delay: var(--animation1-delay);
-      animation-fill-mode: both;
-      display: inline-block;
-    }
-
-    .slide2 {
-      animation-name: slide2;
-      animation-duration: 1.25s;
-      animation-delay: var(--animation2-delay);
-      animation-fill-mode: both;
-      display: inline-block;
-    }
-
-    /* These are keyframes for the transition on pun facts */
-
-    @keyframes grow {
-      from {
-        transform: scale(0.1);
-      }
-
-      to {
-        transform: scale(1);
-      }
-    }
-
-    .pun-fact {
-      animation: grow 0.75s;
-    }
-
-    /* This is the underline animation for the hero. It looks real bad on mobile so I've disabled it there */
-
-    @keyframes underline {
-      from {
-        width: 0;
-      }
-
-      to {
-        width: 100%;
-      }
-    }
-
-    @media only screen and (min-width: 768px) {
-      .underline-expand {
-        display: inline-block;
-      }
-
-      .underline-expand:after {
-        animation-name: underline;
-        animation-duration: 1.5s;
-        /*animation-delay: calc(var(--animation1-delay) + 1s);*/
-        animation-delay: 1s;
-        animation-fill-mode: both;
-        content: "";
-        display: block;
-        height: 5px;
-        background-color: #E95420;
-      }
-    }
-
-    /* The keyframes for the waving hand emojis. Basic. I know. */
-
-    .handwave1 {
-      animation-name: handwave;
-      animation-duration: 2.5s;
-      animation-iteration-count: infinite;
-      transform-origin: 70% 70%;
-      display: inline-block;
-    }
-
-    .handwave2 {
-      animation-name: handwave;
-      animation-duration: 2.5s;
-      animation-delay: 1.25s;
-      animation-iteration-count: infinite;
-      transform-origin: 70% 70%;
-      display: inline-block;
-    }
-
-    @keyframes handwave {
-      0% {
-        transform: rotate(0.0deg)
-      }
-
-      10% {
-        transform: rotate(-10.0deg)
-      }
-
-      20% {
-        transform: rotate(12.0deg)
-      }
-
-      30% {
-        transform: rotate(-10.0deg)
-      }
-
-      40% {
-        transform: rotate(9.0deg)
-      }
-
-      50% {
-        transform: rotate(0.0deg)
-      }
-
-      100% {
-        transform: rotate(0.0deg)
-      }
-    }
-
-    /* The keyframes + class for the heartbeat animation I use across the site. */
-    @keyframes heartbeat {
-      0% {
-        transform: scale(0.75);
-      }
-
-      25% {
-        transform: scale(1);
-      }
-
-      50% {
-        transform: scale(0.75);
-      }
-
-      75% {
-        transform: scale(1);
-      }
-
-      100% {
-        transform: scale(0.75);
-      }
-    }
-
-    .animated-heartbeat {
-      animation: heartbeat 2s infinite;
-    }
-
-    .toggle-content {
-      display: none;
-      height: 0;
-      overflow: hidden;
-      transition: height 350ms ease-in-out;
-    }
-
-    .toggle-content.is-visible {
-      display: block;
-      height: auto;
-    }
-  </style>
+  <!-- Styling for the site - peep index.css! This used to be Liteweight, but I ended up customizing it so much that I just wrote CSS just for this website. -->
+  <link rel="stylesheet" href="index.css" />
   <!-- This is me loading Font Awesome - I've deferred it as it's not critical to the page load, but it's still pretty cool. I've opted to use Font Awesome's SVG + JS features instead of webfonts, just to see how it is! -->
   <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/solid.js"
     integrity="sha384-IA6YnujJIO+z1m4NKyAGvZ9Wmxrd4Px8WFqhFcgRmwLaJaiwijYgApVpo1MV8p77" crossorigin="anonymous">
@@ -254,350 +41,325 @@
   </script>
 </head>
 
-<body class="main-body">
-  <div class="text-center">
-    <p class="text-2x"><span class="handwave1">👋</span> Hey there! <span class="handwave2">👋</span></p>
-    <h1 class="text-3x">My name is <span class="underline-expand">Matthew Wang</span></h1>
-    <p>
-      But you can call me Matt.
-    </p>
-  </div>
-  <div class="text-center text-2x">
-    <a rel="noopener" target="_blank" href="https://github.com/malsf21/">GitHub</a> |
-    <a rel="noopener" target="_blank" href="assets/files/resume.pdf">Résumé</a> |
-    <a rel="noopener" target="_blank" href="https://www.linkedin.com/in/matthew-x-wang/">LinkedIn</a>
-  </div>
-  <div class="card border-primary">
-    <h1>Who's Matt?</h1>
-    <p>
-      That's me! I'm a student of the arcane art of computer science at UCLA, double-majoring in the slightly-less-arcane art of math-economics.
-    </p>
-    <p>
-      Simply put, I have two passions - computers and helping people - and ideally, I'd like to use computers to empower people.
-    </p>
-    <p>
-      In the realm of computers, I <span class="fa fa-heart animated-heartbeat" style="color:red;" aria-label="love"></span> making things with software (websites, apps, backends, servers, embedded systems, open-source software), and am generally fascinated by computers.
-    </p>
-    <p>
-      My favourite way to help people is through education and outreach; STEM &amp; computer science are my bread and butter, and I <em>mostly</em> like working with kids. More broadly, I like doing things that make a direct impact in people's lives.
-    </p>
-    <p>
-      In my spare time, I like to <a rel="noopener" target="_blank"
-      href="https://desk.matthewwang.me/books/">read</a> (usually about economics and political philosophy), <a rel="noopener" target="_blank"
-        href="https://open.spotify.com/user/11156788800">listen to music</a>, and <a rel="noopener" target="blank"
-        href="https://blog.matthewwang.me">write a bad blog</a>.
-    </p>
-    <p>
-      And come up with mediocre puns.
-    </p>
-  </div>
-
-  <div class="card bg-primary">
-    <h2>Pun Fact</h2>
-    <p>
-      <a class="button button-white" onclick="randomPunFact()"><span class="fa fa-redo"></span> Refresh</a>
-      <i> Picked from my library of pun facts.</i>
-    </p>
-    <div id="pun-fact">
-
+<body>
+  <section class="section-fh d-flex">
+    <div class="content-container v-center-parent">
+      <div class="row row-1-2">
+        <div class="col v-center-children">
+          <div class="img-silhouette rounded">
+            <img class="block-responsive rounded img-silhouette-shift" src="img/ew-a-photo-of-matt.jpg"
+              alt="a disgusting photo of matt" />
+          </div>
+        </div>
+        <div class="col v-center-children">
+          <div>
+            <p class="text-2x font-nexa">
+              <span class="handwave1">👋</span> hey there! <span class="handwave2">👋</span>
+            </p>
+            <h1 class="hero-title font-nexa">
+              my name is <span class="underline-expand">matthew wang</span>
+            </h1>
+            <p>
+              (but you can call me matt)
+            </p>
+            <p class="text-15x font-nexa">
+              I love computers.
+              <br />
+              I love helping people.
+              <br />
+              I'd love to use computers to empower people.
+            </p>
+            <p>
+              currently: <span class="text-black">SDE Intern @ AWS, </span>
+              <a class="tla-link" href="https://teachla.uclaacm.com" rel="noopener" target="_blank">
+                President @ ACM Teach LA
+              </a>
+            </p>
+            <div>
+              stalk me:&nbsp;&nbsp;
+              <a class="button" rel="noopener" target="_blank" href="https://github.com/malsf21/">
+                <span class="fab fa-github"></span> GitHub
+              </a>
+              <a class="button" rel="noopener" target="_blank" href="files/resume.pdf">
+                <span class="fa fa-file-alt"></span> Résumé
+              </a>
+              <a class="button" rel="noopener" target="_blank" href="https://www.linkedin.com/in/matthew-x-wang/">
+                <span class="fab fa-linkedin"></span> LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+  <hr />
+  <section class="section">
+    <div class="content-container">
+      <div class="row row-2-1">
+        <div class="col">
+          <h2 class="font-nexa">a bit more about matt</h2>
+          <p>
+            I just finished my second year at UCLA, double-majoring in the arcane arts of computer science and
+            math-economics! I'm particularly interested in the intersection between computer science, social justice,
+            and public/development economics.
+          </p>
+          <p>
+            I (mostly) enjoy working with computers: websites, apps, backends, servers, embedded systems, games, machine
+            learning, you name it! I am particularly passionate about open-source software - I spend more time on GitHub
+            than Instagram!
+          </p>
+          <p>
+            I really love education and outreach, especially when combined with STEM. Kids are <em>mostly</em> fun to
+            work with, and I want to make sure that everybody has a fair chance of receiving a high-quality education.
+          </p>
+          <p>
+            In my spare time, I like to <a rel="noopener" target="_blank"
+              href="https://desk.matthewwang.me/books/">read</a> (usually about economics and political philosophy), <a
+              rel="noopener" target="_blank" href="https://open.spotify.com/user/11156788800">listen to music</a>, and
+            <a rel="noopener" target="blank" href="https://blog.matthewwang.me">write a bad blog</a>.
+          </p>
+          <p>
+            And come up with mediocre puns.
+          </p>
+        </div>
+        <div class="col">
+          <div class="card">
+            <h3>pun fact</h3>
+            <p>
+              <a class="button" onclick="randomPunFact()">
+                <span class="fa fa-redo"></span>
+                new fact
+              </a>
+            </p>
+            <div id="pun-fact">
 
-  <div class="card border-primary">
-    <h1>My Projects &amp; Work</h1>
-    <p>
-      I occasionally do things with computers. Here are the big ones.
-    </p>
-    <p>
-      <span class="fab fa-fw fa-github text-primary"></span> GitHub Repository
-      <span class="fa fa-fw fa-link text-primary"></span> Website
-      <span class="fa fa-fw fa-image text-primary"></span> Visual Work
-      <span class="fab fa-fw fa-app-store-ios text-primary"></span><span
-        class="fab fa-fw fa-google-play text-primary"></span> Mobile App
-      <span class="fab fa-fw fa-app-store text-primary"></span> Desktop App
-    </p>
-    <hr />
-    <ul class="list-unstyled">
-      <li>
-        <h2 id="booz">Booz Allen Hamilton</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <hr />
+  <section class="section">
+    <div class="content-container">
+      <div class="col">
+        <h2 class="font-nexa">My Projects &amp; Work</h2>
         <p>
-          As a Summer Games 2019 Intern, I was part of a team of five interns that developed a pocket-sized embedded
-          system used to hack into a maritime vessel. We were able to remotely control the ship's rudder, spoof the GPS,
-          manipulate the AIS, map connected devices, and turn on the fire alarm.
+          I occasionally do things, usually with computers. Here are the big ones.
         </p>
+        <hr />
         <p>
-          As the sole software developer of the team, I performed several key responsibilities:
-        </p>
-        <ul>
-          <li>Reverse-engineered closed-source NMEA 2000 protocol by analyzing network traffic</li>
-          <li>Parsed & decoded data live ship data from sensors to CLI & over-the-air server (C)</li>
-          <li>Fabricated data packets to disable devices and spoof GPS, navigation, AIS, autopilot (C)</li>
-          <li>Developed GUI to control embedded system over TCP (React, Electron)</li>
-          <li>Presented solution to senior leadership at McLean headquarters</li>
-          <li>Supported at Hack the Machine, 700+ participant hackathon on maritime security</li>
+          <span class="fab fa-fw fa-github"></span> GitHub Repository •
+          <span class="fa fa-fw fa-link"></span> Website •
+          <span class="fa fa-fw fa-image"></span> Visual Work •
+          <span class="fab fa-fw fa-app-store-ios"></span><span
+            class="fab fa-fw fa-google-play"></span> Mobile App •
+          <span class="fab fa-fw fa-app-store"></span> Desktop App
+        </p> 
+        <hr />
+        <ul class="list-unstyled">
+          <li>
+            <h3 class="font-nexa" id="booz">Booz Allen Hamilton</h3>
+            <p>
+              As a Summer Games 2019 Intern, I was part of a team of five interns that developed a pocket-sized embedded
+              system used to hack into a maritime vessel. We were able to remotely control the ship's rudder, spoof the
+              GPS,
+              manipulate the AIS, map connected devices, and turn on the fire alarm.
+            </p>
+            <p>
+              As the sole software developer of the team, I performed several key responsibilities:
+            </p>
+            <ul>
+              <li>Reverse-engineered closed-source NMEA 2000 protocol by analyzing network traffic</li>
+              <li>Parsed & decoded data live ship data from sensors to CLI & over-the-air server (C)</li>
+              <li>Fabricated data packets to disable devices and spoof GPS, navigation, AIS, autopilot (C)</li>
+              <li>Developed GUI to control embedded system over TCP (React, Electron)</li>
+              <li>Presented solution to senior leadership at McLean headquarters</li>
+              <li>Supported at Hack the Machine, 700+ participant hackathon on maritime security</li>
+            </ul>
+            <br />
+          </li>
+          <li>
+            <h3 class="font-nexa" id="audionotch">
+              AudioNotch
+              <a rel="noopener" target="_blank" href="https://audionotch.com"><span class="fa fa-link"
+                  aria-label="Website Link"></span></a>
+              <a rel="noopener" target="_blank" href="https://itunes.apple.com/us/app/audionotch/id1270247019"><span
+                  class="fab fa-app-store-ios" aria-label="iOS App Store Link"></span></a>
+              <a rel="noopener" target="_blank"
+                href="https://play.google.com/store/apps/details?id=com.audionotch.audionotch&hl=en"><span
+                  class="fab fa-google-play" aria-label="Google Play Store Link"></span></a>
+            </h3>
+            <p>
+              AudioNotch is a web and mobile app that's designed to help people who suffer from tinnitus through
+              experimental audio therapy. I interned at AudioNotch as a software developer and put my hand in a lot of
+              different baskets, mainly focusing on creating a new mobile app and updating their web application.
+            </p>
+            <p>
+              <small><a id="audionotch-link">click for more detail</a></small>
+            </p>
+            <div class="toggle-content" id="audionotch-content">
+              <p>I put my hand in a lot of baskets. Here's a list of what I did:</p>
+              <ul>
+                <li>
+                  Developed mobile app for iOS/Android to help tinnitus sufferers with Angular/Ionic (authentication
+                  flow,
+                  audio manipulation w/ DSP, data visualization, in-app purchases)
+                </li>
+                <li>
+                  Implemented server-side REST API and data protocol for mobile app logic (Django)
+                </li>
+                <li>
+                  Refactored JS web application, halving bundle size (JS WebAudio API, jQuery)
+                </li>
+                <li>
+                  Redesigned website & blog to be mobile-responsive and ARIA-compliant (CSS, PHP)
+                </li>
+                <li>
+                  Ran A/B tests on landing page designs and CTAs (Google Analytics Experiments)
+                </li>
+                <li>
+                  Revamped products increased firm revenue by over 300% in the next three months
+                </li>
+              </ul>
+              <br />
+            </div>
+          </li>
+          <li>
+            <h3 class="font-nexa" id="tla">
+              ACM Teach LA
+              (Static Site
+              <a rel="noopener" target="_blank" href="https://teachla.uclaacm.com/"><span class="fa fa-link"
+                  aria-label="Static Website Link"></span></a>
+              <a rel="noopener" target="_blank" href="https://github.com/uclaacm/teach-la-website"><span
+                  class="fab fa-github" aria-label="Static Site GitHub Repository"></span></a>
+              )
+              (Editor
+              <a rel="noopener" target="_blank" href="https://editor.uclaacm.com"><span class="fa fa-link"
+                  aria-label="Editor Website Link"></span></a>
+              <a rel="noopener" target="_blank" href="https://github.com/uclaacm/TeachLAFrontend"><span
+                  class="fab fa-github" aria-label="Editor Frontend GitHub Repository"></span></a>
+              )
+            </h3>
+            <p>
+              ACM Teach LA is an organization that teaches programming and computer science to underserved students in
+              the
+              Los Angeles area. I have the pleasure of teaching an AI/ML class to high schoolers in North Hollywood!
+              And, as
+              part of the developer team, we create an online IDE and code environment to make it easier for our
+              students to
+              learn how to code. I'm the project director and a lead developer, which lets me juggle dev and project
+              management.
+            </p>
+            <small><a id="tla-link">click for more detail</a></small>
+            <div class="toggle-content" id="tla-content">
+              <p>As a (lead) developer, my hand is in lots of buckets:</p>
+              <ul>
+                <li>
+                  Architected and developed React + Redux Frontend
+                </li>
+                <li>
+                  Implemented user-based login, account creation, and code-saving with React &amp; Firebase
+                </li>
+                <li>
+                  Designed and created static site to enhance org's online presence
+                </li>
+                <li>
+                  Rendered interactive user cards from Firebase-fetched data
+                </li>
+                <li>
+                  Created new API endpoints for RESTful Express middleware
+                </li>
+                <li>
+                  Refactored design styling to use SASS, halved CSS bundle size
+                </li>
+                <li>
+                  Wrote and updated tests written with Enzyme
+                </li>
+                <li>
+                  Automated front-end deployment with Travis CI
+                </li>
+                <li>
+                  Perform code review with other developers
+                </li>
+              </ul>
+              <p>And, as the project director, I work with instructors and students to develop new feature ideas,
+                convert
+                them to implementations in our sprints, and receive feedback from our users. I'm also continually
+                leading
+                developer training, which involves teaching our developers web development, React + Redux, Firebase, and
+                software engineering practices.</p>
+              <br />
+            </div>
+          </li>
         </ul>
-        </p>
-      </li>
-      <li>
-        <h2 id="audionotch">
-          AudioNotch
-          <a rel="noopener" target="_blank" href="https://audionotch.com"><span class="fa fa-link"
-              aria-label="Website Link"></span></a>
-          <a rel="noopener" target="_blank" href="https://itunes.apple.com/us/app/audionotch/id1270247019"><span
-              class="fab fa-app-store-ios" aria-label="iOS App Store Link"></span></a>
-          <a rel="noopener" target="_blank"
-            href="https://play.google.com/store/apps/details?id=com.audionotch.audionotch&hl=en"><span
-              class="fab fa-google-play" aria-label="Google Play Store Link"></span></a>
-        </h2>
+        <hr />
         <p>
-          AudioNotch is a web and mobile app that's designed to help people who suffer from tinnitus through
-          experimental audio therapy. I interned at AudioNotch as a software developer and put my hand in a lot of
-          different baskets, mainly focusing on creating a new mobile app and updating their web application.
+          I have some smaller projects too! They're alright, you can check them out if you feel like it!
         </p>
-        <small><a id="audionotch-link">click for more detail</a></small>
-        <div class="toggle-content" id="audionotch-content">
-          <p>I put my hand in a lot of baskets. Here's a list of what I did:</p>
+        <p>
+          <small><a id="small-projects-link">(click to expand. but only if you want to, I don't want to force
+              you)</a></small>
+        </p>
+        <div class="toggle-content" id="small-projects-content">
           <ul>
             <li>
-              Developed mobile app for iOS/Android to help tinnitus sufferers with Angular/Ionic (authentication flow,
-              audio manipulation w/ DSP, data visualization, in-app purchases)
+              angery reacts (sentiment analysis on song lyrics, React &amp; Flask)
+              <a rel="noopener" target="_blank" href="https://malsf21.github.io/angery-reacts"><span
+                  class="fa fa-link" aria-label="Website Link"></span></a>
+              <a rel="noopener" target="_blank" href="https://github.com/malsf21/angery-reacts"><span
+                  class="fab fa-github" aria-label="GitHub Repository"></span></a>
             </li>
             <li>
-              Implemented server-side REST API and data protocol for mobile app logic (Django)
+              Fair Chair (Angular + Electron app for Model UN)
+              <a rel="noopener" target="_blank" href="https://itunes.apple.com/us/app/fair-chair/id1365686846"><span
+                  class="fab fa-app-store" aria-label="Mac App Store Link"></span></a>
+              <a rel="noopener" target="_blank" href="https://malsf21.github.io/fair-chair/"><span class="fa fa-link"
+                  aria-label="Website Link"></span></a>
+              <a rel="noopener" target="_blank" href="https://github.com/malsf21/fair-chair"><span
+                  class="fab fa-github" aria-label="GitHub Repository"></span></a>
             </li>
             <li>
-              Refactored JS web application, halving bundle size (JS WebAudio API, jQuery)
+              i don't got no type (typing game, React)
+              <a rel="noopener" target="_blank" href="https://malsf21.github.io/i-dont-got-no-type"><span
+                  class="fa fa-link" aria-label="Website Link"></span></a>
+              <a rel="noopener" target="_blank" href="https://github.com/malsf21/i-dont-got-no-type"><span
+                  class="fab fa-github" aria-label="GitHub Repository"></span></a>
             </li>
             <li>
-              Redesigned website & blog to be mobile-responsive and ARIA-compliant (CSS, PHP)
+              Liteweight (self-made CSS framework, SASS)
+              <a rel="noopener" target="_blank" href="http://malsf21.github.io/liteweight/"><span class="fa fa-link"
+                  aria-label="Website Link"></span></a>
+              <a rel="noopener" target="_blank" href="https://github.com/malsf21/liteweight"><span
+                  class="fab fa-github" aria-label="GitHub Repository"></span></a>
             </li>
             <li>
-              Ran A/B tests on landing page designs and CTAs (Google Analytics Experiments)
+              Lowkey (personal blog)
+              <a rel="noopener" target="_blank" href="https://blog.matthewwang.me"><span class="fa fa-link"
+                  aria-label="Website Link"></span></a>
+              <a rel="noopener" target="_blank" href="https://github.com/malsf21/lowkey"><span class="fab fa-github"
+                  aria-label="GitHub Repository"></span></a>
             </li>
             <li>
-              Revamped products increased firm revenue by over 300% in the next three months
+              onechan (online chatroom, React + Firebase)
+              <a rel="noopener" target="_blank" href="https://onechan.matthewwang.me/"><span class="fa fa-link"
+                  aria-label="Website Link"></span></a>
+              <a rel="noopener" target="_blank" href="https://github.com/malsf21/onechan"><span class="fab fa-github"
+                  aria-label="GitHub Repository"></span></a>
+            </li>
+            <li>
+              pop 'n lock (smart lock, IDEA Hacks 2019 best project)
+              <a rel="noopener" target="_blank" href="https://github.com/malsf21/ideahacks-2019"><span
+                  class="fab fa-github" aria-label="GitHub Repository"></span></a>
             </li>
           </ul>
         </div>
-      </li>
-      <li>
-        <h2 id="tla">
-          ACM Teach LA
-          (Static Site
-          <a rel="noopener" target="_blank" href="https://teachla.uclaacm.com/"><span class="fa fa-link"
-              aria-label="Static Website Link"></span></a>
-          <a rel="noopener" target="_blank" href="https://github.com/uclaacm/teach-la-website"><span
-              class="fab fa-github" aria-label="Static Site GitHub Repository"></span></a>
-          )
-          (Editor
-          <a rel="noopener" target="_blank" href="https://editor.uclaacm.com"><span class="fa fa-link"
-              aria-label="Editor Website Link"></span></a>
-          <a rel="noopener" target="_blank" href="https://github.com/uclaacm/TeachLAFrontend"><span
-              class="fab fa-github" aria-label="Editor Frontend GitHub Repository"></span></a>
-          )
-        </h2>
         <p>
-          ACM Teach LA is an organization that teaches programming and computer science to underserved students in the
-          Los Angeles area. I have the pleasure of teaching an AI/ML class to high schoolers in North Hollywood! And, as
-          part of the developer team, we create an online IDE and code environment to make it easier for our students to
-          learn how to code. I'm the project director and a lead developer, which lets me juggle dev and project
-          management.
+          You can also find fragments of code and defunct projects
+          <a rel="noopener" target="_blank" href="https://github.com/malsf21">on my GitHub profile.</a>
         </p>
-        <small><a id="tla-link">click for more detail</a></small>
-        <div class="toggle-content" id="tla-content">
-          <p>As a (lead) developer, my hand is in lots of buckets:</p>
-          <ul>
-            <li>
-              Architected and developed React + Redux Frontend
-            </li>
-            <li>
-              Implemented user-based login, account creation, and code-saving with React &amp; Firebase
-            </li>
-            <li>
-              Designed and created static site to enhance org's online presence
-            </li>
-            <li>
-              Rendered interactive user cards from Firebase-fetched data
-            </li>
-            <li>
-              Created new API endpoints for RESTful Express middleware
-            </li>
-            <li>
-              Refactored design styling to use SASS, halved CSS bundle size
-            </li>
-            <li>
-              Wrote and updated tests written with Enzyme
-            </li>
-            <li>
-              Automated front-end deployment with Travis CI
-            </li>
-            <li>
-              Perform code review with other developers
-            </li>
-          </ul>
-          <p>And, as the project director, I work with instructors and students to develop new feature ideas, convert
-            them to implementations in our sprints, and receive feedback from our users. I'm also continually leading
-            developer training, which involves teaching our developers web development, React + Redux, Firebase, and
-            software engineering practices.</p>
-        </div>
-      </li>
-    </ul>
-    <hr />
-    <p>
-      I have some smaller projects too! They're still pretty cool, and you should check them out!
-    </p>
-    <p>
-      <small><a id="small-projects-link">(click to expand. but only if you want to, I don't want to force
-          you)</a></small>
-    </p>
-    <div class="toggle-content" id="small-projects-content">
-      <ul class="list-unstyled">
-        <li>
-          <h3>
-            angery reacts (sentiment analysis on song lyrics, React &amp; Flask)
-            <a rel="noopener" target="_blank" href="https://malsf21.github.io/angery-reacts"><span class="fa fa-link"
-                aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/angery-reacts"><span
-                class="fab fa-github" aria-label="GitHub Repository"></span></a>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            Fair Chair (Angular + Electron app for Model UN)
-            <a rel="noopener" target="_blank" href="https://itunes.apple.com/us/app/fair-chair/id1365686846"><span
-                class="fab fa-app-store" aria-label="Mac App Store Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://malsf21.github.io/fair-chair/"><span class="fa fa-link"
-                aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/fair-chair"><span class="fab fa-github"
-                aria-label="GitHub Repository"></span></a>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            i don't got no type (typing game, React)
-            <a rel="noopener" target="_blank" href="https://malsf21.github.io/i-dont-got-no-type"><span
-                class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/i-dont-got-no-type"><span
-                class="fab fa-github" aria-label="GitHub Repository"></span></a>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            Liteweight (self-made CSS framework, SASS)
-            <a rel="noopener" target="_blank" href="http://malsf21.github.io/liteweight/"><span class="fa fa-link"
-                aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/liteweight"><span class="fab fa-github"
-                aria-label="GitHub Repository"></span></a>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            Lowkey (personal blog)
-            <a rel="noopener" target="_blank" href="https://blog.matthewwang.me"><span class="fa fa-link"
-                aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/lowkey"><span class="fab fa-github"
-                aria-label="GitHub Repository"></span></a>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            onechan (online chatroom, React + Firebase)
-            <a rel="noopener" target="_blank" href="https://onechan.matthewwang.me/"><span class="fa fa-link"
-                aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/onechan"><span class="fab fa-github"
-                aria-label="GitHub Repository"></span></a>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            pop 'n lock (smart lock, IDEA Hacks 2019 best project)
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/ideahacks-2019"><span
-                class="fab fa-github" aria-label="GitHub Repository"></span></a>
-          </h3>
-        </li>
-      </ul>
-      <hr />
-      <p>And things I did in high school...</p>
-      <ul class="list-unstyled">
-        <li>
-          <h3>
-            Convergence (high school newspaper website & design)
-            <a rel="noopener" target="_blank" href="https://convergence.today"><span class="fa fa-link"
-                aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/convergence"><span class="fab fa-github"
-                aria-label="GitHub Repository"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/c-lite-cover.png"><span class="fa fa-image"
-                aria-label="Example Convergence Cover"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/batt-ball-infographic-2017.png"><span
-                class="fa fa-image" aria-label="Batt Ball Infographic 2017"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/batt-ball-infographic-2018.png"><span
-                class="fa fa-image" aria-label="Batt Ball Infographic 2018"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/TPP.png"><span class="fa fa-image"
-                aria-label="TPP Infographic"></span></a>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            FoodSpan (old project for business competition)
-            <a rel="noopener" target="_blank" href="https://foodspan.github.io"><span class="fa fa-link"
-                aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-app"><span class="fa fa-mobile"
-                aria-label="GitHub Repository"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/foodspan/foodspan-website"><span
-                class="fab fa-github" aria-label="GitHub Repository"></span></a>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            IB Extended Essay (on image compression)
-            <a rel="noopener" target="_blank" href="assets/files/work/extended-essay.pdf"><span class="fa fa-file"
-                aria-label="Extended Essay File"></span></a>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            IB Math Exploration (on Lotka-Volterra equations, includes web-app)
-            <a rel="noopener" target="_blank" href="https://malsf21.github.io/lotka-volterra/"><span class="fa fa-link"
-                aria-label="Math Exploration Web App"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/math-exploration.pdf"><span class="fa fa-file"
-                aria-label="Math Exploration File"></span></a>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            Ontario Model United Nations Website &amp; Graphic Design
-            <a rel="noopener" target="_blank" href="http://malsf21.github.io/omun.ca/"><span class="fa fa-link"
-                aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/omun.ca"><span class="fab fa-github"
-                aria-label="GitHub Repository"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/omun-cover.png"><span class="fa fa-image"
-                aria-label="OMUN Delegate Package Cover"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/omun-placard.png"><span class="fa fa-image"
-                aria-label="OMUN Placards"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/omun-schedule.pdf"><span class="fa fa-image"
-                aria-label="OMUN Schedule"></span></a>
-          </h3>
-          <h3>
-            World Affairs Conference Website, Backend &amp; Graphic Design
-            <a rel="noopener" target="_blank" href="https://worldaffairsconference.github.io/wac-2018/"><span
-                class="fa fa-link" aria-label="Website Link"></span></a>
-            <a rel="noopener" target="_blank" href="https://github.com/malsf21/world.ac"><span class="fab fa-github"
-                aria-label="GitHub Repository"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/wac-cover.png"><span class="fa fa-image"
-                aria-label="WAC Delegate Package Cover"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/wac-recruitment.png"><span class="fa fa-image"
-                aria-label="WAC Recruitment Poster"></span></a>
-            <a rel="noopener" target="_blank" href="assets/files/work/wac-spread.png"><span class="fa fa-image"
-                aria-label="WAC Logo Spread"></span></a>
-          </h3>
-        </li>
-      </ul>
+      </div>
     </div>
-    <p>
-      You can also find fragments of code and defunct projects
-      <a rel="noopener" target="_blank" href="https://github.com/malsf21">on my GitHub profile.</a>
-    </p>
-  </div>
+  </section>
 
   <div class="card bg-primary">
     <h2>print fact.isFun <span class="fa fa-arrow-right"></span> <code class="bg-white">true</code></h2>
@@ -662,7 +424,7 @@
     <hr />
     <p>
       Want a more formal, detailed breakdown? Check out my <a rel="noopener" target="_blank"
-        href="assets/files/resume.pdf">résumé</a>, or <a href="mailto:matt@matthewwang.me">send me an email</a>.
+        href="files/resume.pdf">résumé</a>, or <a href="mailto:matt@matthewwang.me">send me an email</a>.
     </p>
   </div>
   <div class="card bg-primary">
@@ -814,43 +576,19 @@
       "%c\n __   __  _______  _______  _______ \n|  |_|  ||   _   ||       ||       |\n|       ||  |_|  ||_     _||_     _|\n|       ||       |  |   |    |   |  \n|       ||       |  |   |    |   |  \n| ||_|| ||   _   |  |   |    |   |  \n|_|   |_||__| |__|  |___|    |___|  ",
       "color:#e95420;")
     console.log(
-      "%cThis page runs very minimal Javascript (just a function that changes a CSS variable for what I think is a cool intro animation, pun-facts that change on page refresh, and Font Awesome), so don't fret.",
-      "color:#e95420;")
-    console.log("%cThough, I am planning on revamping this website and adding some fancy stuff. Stay tuned!",
+      "%cThis page runs very minimal Javascript (just content-collapse, pun-facts that change on page refresh, and Font Awesome), so don't fret.",
       "color:#e95420;")
     console.log(
       "%cAnyways, have fun browsing the rest of the website. If you have any feedback, let me know on my GitHub repo for this landing page: \nhttps://github.com/malsf21/matthewwang.me",
       "color:#e95420;")
 
-    /* I disabled this, but it might come back in the future.
-    // checks if the browser is safari - shamelessly stolen from https://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
-    const isSafari = (navigator.userAgent.indexOf("Safari") != -1) && (navigator.userAgent.indexOf("Chrome") === -1);
-
-    // These are the functions that generate the meh intro animations.
-    // Basically, it sets the CSS variable for the x and y transform distance to a random number, so it's different on each page load!
-    function randomAnimation(animationVar) {
-      if (!isSafari) { // safari acts weirdly
-        document.documentElement.style.setProperty(animationVar + '-percent1', (Math.random() * 8 - 4) * 100 + '%')
-        document.documentElement.style.setProperty(animationVar + '-percent2', (Math.random() * 8 - 4) * 100 + '%')
-      }
-    }
-
-    function randomDelay(animationVar) {
-      document.documentElement.style.setProperty(animationVar + '-delay', (Math.random() * 5 + 4) * 100 + 'ms')
-    }
-    randomAnimation("--animation1")
-    randomAnimation("--animation2")
-    randomDelay("--animation1")
-    randomDelay("--animation2")
-    */
-
     // Here's my list of fun facts. Or punFacts. It's up to you ;)
     const punFacts = [
-      'I love using mediocre puns for my Spotify playlist titles. For example, I have a playlist called <a rel="noopener" target="_blank" class="link-white" href="https://open.spotify.com/user/11156788800/playlist/2cT6Y3KwCvep7JZE6OUMlj">amperes</a> that has all the music I\'m current-ly listening to.',
-      'I\'m from Canada, which uses the metric system. This creates some oddities: while spiders in America have 8 feet, spiders in Canada have <a rel="noopener" target="_blank" class="link-white" href="https://www.google.com/search?q=8+feet+to+meters&oq=8+feet+to+meters">2.4 meters</a>!',
+      'I love using mediocre puns for my Spotify playlist titles. For example, I have a playlist called <a rel="noopener" target="_blank" href="https://open.spotify.com/user/11156788800/playlist/2cT6Y3KwCvep7JZE6OUMlj">amperes</a> that has all the music I\'m current-ly listening to.',
+      'I\'m from Canada, which uses the metric system. This creates some oddities: while spiders in America have 8 feet, spiders in Canada have <a rel="noopener" target="_blank" href="https://www.google.com/search?q=8+feet+to+meters&oq=8+feet+to+meters">2.4 meters</a>!',
       'I\'ve been told that college is the time to go on dates. To me, the perfect date would be DD/MM/YYYY; MM/DD/YY is just so cliché.',
       'It has taken me several years to <code class="text-primary">git good</code> at git and GitHub.',
-      'I love telling chemistry jokes, but all the good ones argon! Or, they\'re too boron to tell!',
+      // 'I love telling chemistry jokes, but all the good ones argon! Or, they\'re too boron to tell!',
       'After taking physics in high school, I realised how much potential there is for puns!',
       'One time (true story), I cut myself on a broken window. It was a world of pane.',
       'I used to play a lot of hockey and ice skate, which involved me slipping and falling all the time. Though, it works as a great icebreaker!',

@@ -1,0 +1,391 @@
+/* Vars  */
+
+:root{
+    /* general stuff */
+    --main-orange: #e95420;
+    --soft-white: white;
+    --font-size-root: 16px;
+    --font-color-root: #333333;
+}
+
+/* Fonts  */
+
+@font-face {
+    font-family: "Nexa";
+    font-weight: 700;
+    src: url(./fonts/nexa/nexa_bold.otf)
+}
+
+.font-nexa {
+    font-family: "Nexa";
+    font-weight: 700;
+    color: black;
+}
+
+/* Globals */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: var(--font-size-root);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+/* Content Sections */
+
+.content-container{
+    max-width: 70rem;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 2rem;
+}
+
+.section-fh{
+    min-height: 800px;
+    /* min-height: 100vh; */
+    padding: 2rem;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+a {
+    color: var(--main-orange);
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+p, ul > li{
+    color: var(--font-color-root);
+    line-height: 1.5;
+}
+
+.hero-title{
+    font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 50rem) {
+    .hero-title{
+        font-size: 2rem;
+    }
+}
+
+.text-15x{
+    font-size: 1.5rem;
+}
+
+.text-2x{
+    font-size: 2rem;
+}
+
+.text-black{
+    color: black;
+}
+
+.text-primary{
+    color: var(--main-orange);
+}
+
+
+/* Grid */
+
+.row {
+    display: grid;
+}
+
+@media only screen and (max-width: 50rem) {
+    .row{
+        grid-template-columns: 100% !important;
+    }
+}
+
+.row-1-2{
+    grid-template-columns: 33% 66%;
+}
+
+.row-2-1{
+    grid-template-columns: 66% 33%;
+}
+
+.col{
+    width: calc(100% - 2.5rem);
+    margin: 0 auto;
+    /* padding-right: 2.5rem; */
+}
+
+/* Content Toggle */
+
+.toggle-content {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: height 350ms ease-in-out;
+}
+
+.toggle-content.is-visible {
+    display: block;
+    height: auto;
+}
+
+/* Position Utilties */
+
+.d-flex {
+    display: flex;
+}
+
+.v-center-children{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.v-center-parent{
+    align-self: center;
+}
+
+/* Button */
+
+.button{
+    display: inline-block;
+    border: 1px solid var(--main-orange);
+    border-radius: 4px;
+    padding: 0.75em 1.5em;
+    margin-right: 0.5em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+
+    text-align: center;
+    color: var(--main-orange);
+    text-decoration: none;
+}
+
+.button:hover{
+    background-color: var(--main-orange);
+    color: var(--soft-white);
+    cursor: pointer;
+}
+
+/* Misc. El Utils */
+
+.text-center{
+    text-align: center;
+}
+
+.card{
+    border: 1px solid var(--main-orange);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.card-full{
+    height: 100%;
+}
+
+.list-unstyled {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.block-responsive{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+.img-silhouette {
+    padding: 0.5rem;
+    background-color: var(--main-orange);
+}
+
+@media only screen and (max-width: 50rem) {
+    .img-silhouette{
+        max-width: 50%;
+        /* display: block;
+        margin: 0 auto; */
+    }
+}
+
+.img-silhouette-shift{
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-color: var(--main-orange);
+}
+
+/* this is taken from the teach la website:
+    https://github.com/uclaacm/teach-la-website/blob/master/_sass/_basic.scss
+*/
+.tla-link{
+    color: black;
+    text-decoration: none;
+    background-position-y: -0%;
+    background-image: linear-gradient( white 50%, #C6DC85 50%);
+    transition: background 500ms ease;
+    background-size: 2.5px;
+    background-size: auto 175%;
+
+    display:inline-block;
+    line-height: 16.5px;
+}
+
+.tla-link:hover {
+    background-position-y: 100%;
+}
+
+
+/* Lots and lots of animation stuff */
+
+/* These are keyframes for the transition on pun facts */
+
+@keyframes grow {
+    from {
+        transform: scale(0.1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.pun-fact {
+    animation: grow 0.75s;
+}
+
+/* This is the underline animation for the hero. It looks real bad on mobile so I've disabled it there */
+
+@keyframes underline {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 50rem) {
+    .underline-expand {
+        display: inline-block;
+    }
+
+    .underline-expand:after {
+        animation-name: underline;
+        animation-duration: 1.5s;
+        /*animation-delay: calc(var(--animation1-delay) + 1s);*/
+        animation-delay: 1s;
+        animation-fill-mode: both;
+        content: "";
+        display: block;
+        height: 5px;
+        background-color: var(--main-orange);
+    }
+}
+
+/* The keyframes for the waving hand emojis. Basic. I know. */
+
+.handwave1 {
+    animation-name: handwave;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+.handwave2 {
+    animation-name: handwave;
+    animation-duration: 2.5s;
+    animation-delay: 1.25s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+@keyframes handwave {
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(-10.0deg)
+    }
+
+    20% {
+        transform: rotate(12.0deg)
+    }
+
+    30% {
+        transform: rotate(-10.0deg)
+    }
+
+    40% {
+        transform: rotate(9.0deg)
+    }
+
+    50% {
+        transform: rotate(0.0deg)
+    }
+
+    100% {
+        transform: rotate(0.0deg)
+    }
+}
+
+/* The keyframes + class for the heartbeat animation I use across the site. */
+@keyframes heartbeat {
+    0% {
+        transform: scale(0.75);
+    }
+
+    25% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.75);
+    }
+
+    75% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.75);
+    }
+}
+
+.animated-heartbeat {
+    animation: heartbeat 2s infinite;
+}
