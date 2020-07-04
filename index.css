@@ -3,9 +3,28 @@
 :root{
     /* general stuff */
     --main-orange: #e95420;
-    --soft-white: white;
+    --soft-white: #FAFAFA;
     --font-size-root: 16px;
-    --font-color-root: #333333;
+
+    --font-color-light-mode: #333333;
+    --font-color-dark-mode: var(--soft-white);
+    --font-color-root: black;
+
+    --font-em-color-light-mode: black;
+    --font-em-color-dark-mode: var(--soft-white);
+    --font-em-color-root: black;
+
+    --background-color-light-mode: var(--soft-white);
+    --background-color-dark-mode: #37393E;
+    --background-color-root: var(--soft-white);
+
+    color: var(--font-color-root);
+    background-color: var(--background-color-root);
+    /* transition:
+        color 1s ease,
+        background-color 1s ease; */
+
+    color-scheme: light dark;
 }
 
 /* Fonts  */
@@ -19,7 +38,7 @@
 .font-nexa {
     font-family: "Nexa";
     font-weight: 700;
-    color: black;
+    color: var(--font-em-color-root);
 }
 
 /* Globals */
@@ -33,8 +52,11 @@ html, body{
     padding: 0;
     width: 100%;
     height: 100%;
+}
+body{
     font-size: var(--font-size-root);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    
 }
 
 
@@ -79,7 +101,6 @@ a:hover{
 }
 
 p, ul > li{
-    color: var(--font-color-root);
     line-height: 1.5;
 }
 
@@ -105,14 +126,13 @@ p, ul > li{
     font-size: 2rem;
 }
 
-.text-black{
-    color: black;
-}
-
 .text-primary{
     color: var(--main-orange);
 }
 
+.text-center{
+    text-align: center;
+}
 
 /* Grid */
 
@@ -174,6 +194,9 @@ p, ul > li{
 
 .button{
     display: inline-block;
+    background: none;
+    font-size: 1rem;
+
     border: 1px solid var(--main-orange);
     border-radius: 4px;
     padding: 0.75em 1.5em;
@@ -197,11 +220,7 @@ p, ul > li{
     margin-bottom: 1em;
 }
 
-/* Misc. El Utils */
-
-.text-center{
-    text-align: center;
-}
+/* Card  */
 
 .card{
     border: 1px solid var(--main-orange);
@@ -213,10 +232,41 @@ p, ul > li{
     height: 100%;
 }
 
+/* Dark Mode Toggle */
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    padding: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    background-color: var(--main-orange);
+    color: var(--soft-white) !important;
+
+    border-bottom-right-radius: 10px;
+}
+
+.dark-mode-toggle:hover{
+    cursor: pointer;
+}
+
+.dark-mode-toggle:focus{
+    border: none;
+    outline: none;
+}
+
+/* Misc. El Utils */
+
 @media only screen and (min-width: 50rem) {
     .sticky-helper{
         position: sticky; 
-        top: 1rem;
+        top: 0;
+        padding-top: 1rem;
+        background-color: var(--background-color-root);
     }
 }
 
@@ -265,10 +315,10 @@ hr{
     https://github.com/uclaacm/teach-la-website/blob/master/_sass/_basic.scss
 */
 .tla-link{
-    color: black;
+    color: inherit;
     text-decoration: none;
     background-position-y: -0%;
-    background-image: linear-gradient( white 50%, #C6DC85 50%);
+    background-image: linear-gradient( var(--background-color-root) 50%, #C6DC85 50%);
     transition: background 500ms ease;
     background-size: 2.5px;
     background-size: auto 175%;

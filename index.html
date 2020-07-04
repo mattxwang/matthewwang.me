@@ -27,6 +27,7 @@
   <meta name="msapplication-TileColor" content="#e95420">
   <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
   <meta name="theme-color" content="#e95420">
+  <!-- I always thought this light-dark pattern was strangely done, and there seems to be no correct answer. I opted for JS, but see https://web.dev/prefers-color-scheme/ for another way to do it. -->
   <!-- Styling for the site - peep index.css! This used to be Liteweight, but I ended up customizing it so much that I just wrote CSS just for this website. -->
   <link rel="stylesheet" href="index.css" />
   <!-- This is me loading Font Awesome - I've deferred it as it's not critical to the page load, but it's still pretty cool. I've opted to use Font Awesome's SVG + JS features instead of webfonts, just to see how it is! -->
@@ -42,6 +43,9 @@
 </head>
 
 <body>
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+    <span class="fa fa-fw fa-cloud-sun"></span>
+  </button>
   <section class="section-fh d-flex">
     <div class="content-container v-center-parent">
       <div class="row row-1-2">
@@ -70,7 +74,7 @@
               I'd love to use computers to empower people.
             </p>
             <p>
-              currently: <span class="text-black">SDE Intern @ AWS, </span>
+              currently: SDE Intern @ AWS,
               <a class="tla-link" href="https://teachla.uclaacm.com" rel="noopener" target="_blank">
                 President @ ACM Teach LA
               </a>
@@ -126,10 +130,10 @@
           <div class="card">
             <h3>pun fact</h3>
             <p>
-              <a class="button" onclick="randomPunFact()">
+              <button class="button" onclick="randomPunFact()">
                 <span class="fa fa-redo"></span>
                 new fact
-              </a>
+              </button>
             </p>
             <div id="pun-fact">
 
@@ -143,19 +147,21 @@
     <div class="content-container">
       <div class="row row-2-1">
         <div class="col">
-          <h2 class="font-nexa">My Projects &amp; Work</h2>
+          <h2 class="font-nexa">my projects &amp; work</h2>
           <p>
             I occasionally do things, usually with computers. Here are the big ones.
           </p>
-          <hr />
-          <p>
-            <span class="fab fa-fw fa-github"></span> GitHub Repository •
-            <span class="fa fa-fw fa-link"></span> Website •
-            <span class="fab fa-fw fa-app-store-ios"></span><span
-              class="fab fa-fw fa-google-play"></span> Mobile App •
-            <span class="fab fa-fw fa-app-store"></span> Desktop App
-          </p> 
-          <hr />
+          <div class="sticky-helper">
+            <hr />
+            <p>
+              <span class="fab fa-fw fa-github"></span> GitHub Repository •
+              <span class="fa fa-fw fa-link"></span> Website •
+              <span class="fab fa-fw fa-app-store-ios"></span><span
+                class="fab fa-fw fa-google-play"></span> Mobile App •
+              <span class="fab fa-fw fa-app-store"></span> Desktop App
+            </p> 
+            <hr />
+          </div>
           <ul class="list-unstyled">
             <li>
               <h3 class="font-nexa" id="aws">SDE Intern at AWS (2020)</h3>
@@ -169,7 +175,7 @@
                 As a Summer Games 2019 Intern, I was part of a team of five interns that developed a pocket-sized embedded system designed to combat human trafficking by hacking into maritime vessels. We were able to remotely control the ship's rudder, spoof the GPS, manipulate the AIS, map connected devices, and turn on the fire alarm. We were apparently good enough to staff a maritime security-focused hackathon.
               </p>
               <p>
-                <a id="booz-link" role="button">click for more detail</a>
+                <a href="#" id="booz-link" role="button">click for more detail</a>
               </p>
               <div class="toggle-content" id="booz-content">
                 <p>
@@ -213,7 +219,7 @@
                 AudioNotch is a web and mobile app that's designed to help people who suffer from tinnitus through experimental audio therapy. I interned at AudioNotch as a software developer and put my hand in a lot of different baskets, mainly focusing on creating a new mobile app and updating their web application.
               </p>
               <p>
-                <a id="audionotch-link"role="button" >click for more detail</a>
+                <a href="#" id="audionotch-link" role="button" >click for more detail</a>
               </p>
               <div class="toggle-content" id="audionotch-content">
                 <p>I juggled several different roles as the sole intern:</p>
@@ -255,7 +261,7 @@
                 is a 501(c)(3) nonprofit at UCLA that aims to provide equitable access to K-12 computer science education in Los Angeles. I've worn a lot of hats at the club, from software developer, to curriculum development and instructor, to leading a dev team, and most recently, the president of the club. It's the thing I'm the most proud of at UCLA.
               </p>
               <p>
-                <a id="tla-link" role="button">click for more detail</a>
+                <a href="#" id="tla-link" role="button">click for more detail</a>
               </p>
               <div class="toggle-content" id="tla-content">
                 <p>
@@ -334,23 +340,25 @@
           </p>
         </div>
         <div class="col">
-          <div class="card sticky-helper">
-            <p>
-              Want a more formal breakdown? These might help:
-            </p>
-            
-            <a class="button button-block" rel="noopener" target="_blank" href="files/resume.pdf">
-              <span class="fa fa-file-alt"></span> Résumé
-            </a>
-            <!-- <a class="button button-block" rel="noopener" target="_blank" href="files/resume.pdf">
-              <span class="fa fa-file-alt"></span> CV (coming soon)
-            </a> -->
-            <a class="button button-block" rel="noopener" target="_blank" href="https://www.linkedin.com/in/matthew-x-wang/">
-              <span class="fab fa-linkedin"></span> LinkedIn
-            </a>
-            <a class="button button-block" rel="noopener" target="_blank" href="https://github.com/malsf21/">
-              <span class="fab fa-github"></span> GitHub
-            </a>
+          <div class="sticky-helper">
+            <div class="card">
+              <p>
+                Want a more formal breakdown? These might help:
+              </p>
+              
+              <a class="button button-block" rel="noopener" target="_blank" href="files/resume.pdf">
+                <span class="fa fa-file-alt"></span> Résumé
+              </a>
+              <!-- <a class="button button-block" rel="noopener" target="_blank" href="files/resume.pdf">
+                <span class="fa fa-file-alt"></span> CV (coming soon)
+              </a> -->
+              <a class="button button-block" rel="noopener" target="_blank" href="https://www.linkedin.com/in/matthew-x-wang/">
+                <span class="fab fa-linkedin"></span> LinkedIn
+              </a>
+              <a class="button button-block" rel="noopener" target="_blank" href="https://github.com/malsf21/">
+                <span class="fab fa-github"></span> GitHub
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -568,15 +576,12 @@
       While this isn't my favourite font or anything, it has no backslashes: those often cause problems in javascript.
 
     */
-    console.log(
-      "%c\n __   __  _______  _______  _______ \n|  |_|  ||   _   ||       ||       |\n|       ||  |_|  ||_     _||_     _|\n|       ||       |  |   |    |   |  \n|       ||       |  |   |    |   |  \n| ||_|| ||   _   |  |   |    |   |  \n|_|   |_||__| |__|  |___|    |___|  ",
-      "color:#e95420;")
-    console.log(
-      "%cThis page runs very minimal Javascript (just content-collapse, pun-facts that change on page refresh, and Font Awesome), so don't fret.",
-      "color:#e95420;")
-    console.log(
-      "%cAnyways, have fun browsing the rest of the website. If you have any feedback, let me know on my GitHub repo for this landing page: \nhttps://github.com/malsf21/matthewwang.me",
-      "color:#e95420;")
+    function colorLog(message){
+      console.log(`%c${message}`,"color:#e95420;");
+    }
+    colorLog("\n __   __  _______  _______  _______ \n|  |_|  ||   _   ||       ||       |\n|       ||  |_|  ||_     _||_     _|\n|       ||       |  |   |    |   |  \n|       ||       |  |   |    |   |  \n| ||_|| ||   _   |  |   |    |   |  \n|_|   |_||__| |__|  |___|    |___|  ");
+    colorLog("This page runs very minimal Javascript (just content-collapse, pun-facts that change on page refresh, and Font Awesome), so don't fret.");
+    colorLog("Anyways, have fun browsing the rest of the website. If you have any feedback, let me know on my GitHub repo for this landing page: \nhttps://github.com/malsf21/matthewwang.me");
 
     // Here's my list of fun facts. Or punFacts. It's up to you ;)
     const punFacts = [
@@ -625,6 +630,48 @@
       }
     }
     randomPunFact()
+
+    // Light Mode & Dark Mode Stuffs!
+
+    let darkMode = false;
+    let rootStyle = getComputedStyle(document.body);
+    // TODO: local storage check
+    if (
+      window.matchMedia('(prefers-color-scheme)').media !== 'not all'
+      && window.matchMedia('(prefers-color-scheme: dark)').matches
+    ) {
+      colorLog('Welcome to the dark side (you prefer dark mode).');
+      toggleDarkMode();
+    }
+    else{
+      setDarkMode("light");
+    }
+
+    function setDarkMode(newMode){
+      rootStyle = getComputedStyle(document.body);
+      document.documentElement.style.setProperty("--font-color-root", rootStyle.getPropertyValue(`--font-color-${newMode}-mode`));
+      document.documentElement.style.setProperty("--font-em-color-root", rootStyle.getPropertyValue(`--font-em-color-${newMode}-mode`));
+      document.documentElement.style.setProperty("--background-color-root", rootStyle.getPropertyValue(`--background-color-${newMode}-mode`));
+    }
+    function toggleDarkMode(){
+      if (darkMode) {
+        // switch to light
+        setDarkMode("light");
+      }
+      else{
+        // switch to dark
+        setDarkMode("dark");
+      }
+      darkMode = !darkMode;
+    }
+
+    // event listener for light/dark mode switch
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    darkModeMediaQuery.addListener((e) => {
+      const darkModeOn = e.matches;
+      console.log(`Dark was toggled to ${darkModeOn ? '🌒 on' : '☀️ off'}.`);
+      toggleDarkMode();
+    });
 
     // these are the controllers for the expanding content boxes
     // i use a method from https://gomakethings.com/how-to-add-transition-animations-to-vanilla-javascript-show-and-hide-methods/ , which bypasses some issues with just setting display:block;
