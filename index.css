@@ -226,10 +226,15 @@ p, ul > li{
     text-decoration: none;
 }
 
-.button:hover, .button-selected{
+.button:hover, .button:focus, .button-selected{
     background-color: var(--main-orange);
     color: var(--soft-white);
     cursor: pointer;
+}
+
+.button:focus{
+    border: none;
+    outline: none;
 }
 
 .button-block{
@@ -267,7 +272,7 @@ p, ul > li{
     border-bottom-right-radius: 10px;
 }
 
-.dark-mode-toggle:hover {
+.dark-mode-toggle:hover, .dark-mode-toggle:focus {
     background-color: var(--font-color-root);
     color: var(--background-color-root);
 }
