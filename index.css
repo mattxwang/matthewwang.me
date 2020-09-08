@@ -74,6 +74,10 @@ body{
     margin: 0 auto;
 }
 
+.content-tight {
+    max-width: 50rem;
+}
+
 .section {
     padding: 2rem;
 }
