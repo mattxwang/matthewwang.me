@@ -32,7 +32,8 @@
 @font-face {
     font-family: "Nexa";
     font-weight: 700;
-    src: url(./fonts/nexa/nexa_bold.otf)
+    src: url(./fonts/nexa/nexa_bold.otf);
+    font-display: swap;
 }
 
 .font-nexa {
