@@ -106,8 +106,8 @@
           <h2 class="font-nexa">a bit more about matt</h2>
           <p>
             I'm just starting my third year at UCLA, double-majoring in the arcane arts of computer science and
-            math-economics! I'm particularly interested in the intersection between computer science, social justice,
-            and public/development economics.
+            math-economics! I'm particularly interested in the intersection between computer science, social good,
+            and public/development/education economics.
           </p>
           <p>
             I (mostly) enjoy working with computers: websites, apps, backends, servers, embedded systems, games, machine
@@ -115,8 +115,8 @@
             than Instagram!
           </p>
           <p>
-            I really love education and outreach, especially when combined with STEM. Kids are <em>mostly</em> fun to
-            work with, and I want to make sure that everybody has a fair chance of receiving a high-quality education.
+            I'm really passionate about education and outreach. I am currently focused on democratizing access to CS education - through Teach LA, BEAM, and community-building at UCLA. Kids are <em>mostly</em> fun to
+            work with.
           </p>
           <p>
             In my spare time, I like to <a rel="noopener noreferrer" target="_blank"
@@ -283,13 +283,16 @@
                 continuing to (asynchronously) teach our AI & ML course at North Hollywood HS
               </li>
               <li>
-                kickstarting a new web and mobile app development course (with Facebook)
+                kickstarting a new React Native web and mobile app development course
               </li>
               <li>
                 expanding internal and external transparency through public financial & EDI reports and open-sourcing our curriculum
               </li>
               <li>
                 supporting and managing our 15-person board and our 50+ members
+              </li>
+              <li>
+                acted as the interim dev team director for Fall 2020 (see below)
               </li>
             </ul>
             <p>
@@ -306,7 +309,7 @@
                 architected and developed React + Redux frontend for online Code IDE
               </li>
               <li>
-                wrote middleware to handle userdata actions with React, Express, Firebase
+                wrote middleware to handle user data actions with React, Express, Firebase
               </li>
               <li>
                 developed static site to enhance org's online presence with Jekyll
@@ -474,15 +477,48 @@
           I'm currently a third year at the University of California, Los Angeles, double-majoring in Computer Science (B.S.) and Math-Economics (B.S.); my expected graduation date is June 2022.
         </p>
         <p>
-          Prior to UCLA, I grew up and went to high school in Toronto, Canada. I did competitive debating and Model UN, and dabbled in event planning, journalism, and robotics.
+          Prior to UCLA, I grew up and went to high school in Toronto, Canada. I did competitive debating and Model UN, taught computer science and robotics, and dabbled in event planning, journalism, and design.
         </p>
+      </div>
+      <div class="card border-primary">
+        <h3 class="font-nexa">coursework</h3>
+        <p>
+          If you're interested, here are the classes that I've taken at UCLA, by topic. Plus some recs!
+        </p>
+        <p>
+          <a id="coursework-link" role="button">
+            (click to expand. but only if you want to!)
+          </a>
+        </p>
+        <div class="toggle-content" id="coursework-content">
+          <ul>
+            <li>
+              Computer Science: data structures and algorithms (CS 32, CS 180), artificial intelligence (CS 161), data mining (CS 145), operating systems (CS 111), programming languages (CS 131) computer organization (CS 33), intro to C++ (CS 31), software lab (CS 35L), digital logic lab (CS M152A)
+            </li>
+            <li>
+              Proof-based Math: linear algebra (Math 115A), real analysis (Math 131A), optimization (Math 164), probability theory (Math 170A/B)
+            </li>
+            <li>
+              Economics: intermediate micro (Econ 11), advanced micro (Econ 101), advanced macro (Econ 102)
+            </li>
+            <li>
+              General Math: single-variable calculus (Math 31A/B), multivariable calculus (Math 32A/B), linear algebra (Math 33A), differential equations (Math 33B), intro to discrete math (Math 61)
+            </li>
+            <li>
+              Misc: engineering ethics (ENGR 188EW), intro linguistics (LING 1), American history (HIST 13C), english composition (ENGCOMP 3), engineering physics (Physics 1A, 4AL)
+            </li>
+          </ul>
+          <p>
+            My favourite classes at UCLA have been programming languages (CS 131), artificial intelligence (CS 161), discrete math (Math 61), intro to linguistics (LING 1), and American history (HIST 13C). If you're at UCLA and reading this, would recommend!
+          </p>
+        </div>
       </div>
       <div class="card border-primary">
         <h3 class="font-nexa">achievements</h3>
         <p>
           I had fun, which is what matters.
         </p>
-        <ul class="list-items">
+        <ul>
           <li>2019-2020 Engineering Dean's Honours List</li>
           <li>Eric &amp; Peggy Johnson Scholarship In Engineering Recipient 2019-2020</li>
           <li>Muriel K. and Robert B. Allan Fund Recipient 2018-2019</li>
@@ -499,6 +535,24 @@
           <li><a rel="noopener noreferrer" target="_blank" class="link-white"
             href="https://en.wikipedia.org/wiki/You_(Time_Person_of_the_Year)">TIME Magazine's Person of the Year in
             2006</a></li>
+        </ul>
+      </div>
+      <div class="card border-primary">
+        <h3 class="font-nexa">some favourites &amp; recommendations</h3>
+        <p>
+          You know, showing a bit of personality.
+        </p>
+        <ul>
+          <li>books: Poor Economics, Paradox, Justice, The Wind-Up Bird Chronicle, 1984</li>
+          <li>albums: To Pimp A Butterfly, Helplessness Blues, Acid Rap, Emotion, SATURATION II, Nothing Happens, Without Warning, Tradition</li>
+          <li>programming language: both JS and anything not JS</li>
+          <li>code editor: VSCode or <code>vi</code></li>
+          <li>city: Toronto</li>
+          <li>food: Japanese curry</li>
+          <li>soft tabs, two spaces</li>
+          <li>video games: Portal 2, Stardew Valley, Slime Rancher, Antichamber, Skyrim</li>
+          <li>spelling of favourite: refer to left</li>
+          <li>reader: you 😉</li>
         </ul>
       </div>
     </div>
@@ -708,6 +762,9 @@
     };
     document.getElementById('small-projects-link').onclick = function () {
       toggle(document.getElementById('small-projects-content'))
+    };
+    document.getElementById('coursework-link').onclick = function () {
+      toggle(document.getElementById('coursework-content'))
     };
   </script>
 </body>
