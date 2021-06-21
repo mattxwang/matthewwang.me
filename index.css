@@ -376,6 +376,10 @@ hr{
     display:inline-block;
 }
 
+.adobe-link{
+    background-image: linear-gradient( var(--background-color-root) 50%, #E53623 50%);
+}
+
 .tla-link{
     background-image: linear-gradient( var(--background-color-root) 50%, #5EDA12 50%);
 }
