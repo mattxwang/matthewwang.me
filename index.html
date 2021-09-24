@@ -77,8 +77,8 @@
             </p>
             <p>
               currently:
-              SRE Intern @ <a class="link-em adobe-link" href="https://adobe.com" rel="noopener noreferrer" target="_blank">
-                Adobe
+              SWE Intern @ <a class="link-em fb-link" href="https://facebook.com" rel="noopener noreferrer" target="_blank">
+                Facebook
               </a>,
               CS + Math-Econ @ UCLA,
               President @
@@ -163,10 +163,33 @@
           </p>
           <hr />
           <br />
-          <h3 class="font-nexa" id="aws">SRE Intern at Adobe (2021)</h3>
+          <h3 class="font-nexa" id="facebook">SWE Intern at Facebook (2021)</h3>
           <p>
             I just got started, so check back in a few!
           </p>
+          <h3 class="font-nexa" id="adobe">SRE Intern at Adobe (2021)</h3>
+          <p>
+            In a team of 3, I built a system to save money running Kubernetes clusters; the projection for our MVP was $330k/year!
+          </p>
+          <p>
+            <a id="adobe-link" role="button">click for more on me at adobe</a>
+          </p>
+          <div class="toggle-content" id="adobe-content">
+            <p>
+              The big focus of my role was implementing a cluster autoremediation system, to find issues in Kubernetes clusters and try to automatically resolve them. Our initial focus was on more graceful autoscaling (and scale-down). I:
+            </p>
+            <ul>
+              <li>
+                implemented the aforementioned auto-remediation system to resolve Kubernetes cluster resource issues (JavaScript, AWS: Lambda, DynamoDB, SQS, PromQL, Azure DevOpsn
+              </li>
+              <li>
+                system projected to save $330k/year across 30 AWS clusters; easily extendable to Azure + plug-and-play with other remediation
+              </li>
+              <li>
+                ran a variety of manual cluster scaling experiments and collected + presented data (Kubernetes, Splunk, Granafa, PromQL)
+              </li>
+            </ul>
+          </div>
           <h3 class="font-nexa" id="aws">SDE Intern at Amazon Web Services (2020)</h3>
           <p>
             I was the sole intern in charge of my project for the S3 Index Engine team: a system to enable anomaly detection for thousands of internal metrics.
@@ -195,7 +218,7 @@
           </div>
           <h3 class="font-nexa" id="booz">SWE Intern at Booz Allen Hamilton (2019)</h3>
           <p>
-            As a Summer Games 2019 Intern, I was part of a team of five interns that developed a pocket-sized embedded system to combat human trafficking by hacking into maritime vessels. We apparently did well enough to staff a maritime security-focused hackathon.
+            As a Summer Games 2019 Intern, I was part of a team of five interns that developed a pocket-sized embedded system to combat human trafficking by hacking into boats! We apparently did well enough to staff a maritime security-focused hackathon.
           </p>
           <p>
             <a id="booz-link" role="button">click for more on me at booz allen</a>
@@ -888,6 +911,7 @@
     // show/hide listeners
 
     const areaPrefixes = [
+      'adobe',
       'audionotch',
       'aws',
       'booz',

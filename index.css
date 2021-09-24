@@ -376,8 +376,8 @@ hr{
     display:inline-block;
 }
 
-.adobe-link{
-    background-image: linear-gradient( var(--background-color-root) 50%, #E53623 50%);
+.fb-link{
+    background-image: linear-gradient( var(--background-color-root) 50%, #1778F2 50%);
 }
 
 .tla-link{
