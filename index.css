@@ -361,43 +361,28 @@ hr{
     background-color: var(--main-orange);
 }
 
-/* this is taken from the teach la website:
-    https://github.com/uclaacm/teach-la-website/blob/master/_sass/_basic.scss#L214
-*/
-
 .link-em {
     color: inherit;
-    font-weight: bold;
-    text-decoration: none;
-    background-position-y: 0%;
-    background-image: linear-gradient( var(--background-color-root) 50%, var(--main-orange) 50%);
-    background-size: auto 175%;
-
-    display:inline-block;
+    font-weight: 500;
+    text-decoration-color: var(--main-orange);
+    text-decoration-thickness: 0.15em;
 }
 
 .fb-link{
-    background-image: linear-gradient( var(--background-color-root) 50%, #1778F2 50%);
+    text-decoration-color: #1778F2;
 }
 
 .tla-link{
-    background-image: linear-gradient( var(--background-color-root) 50%, #5EDA12 50%);
+    text-decoration-color: #5EDA12;
 }
 
 .acm-link{
-    background-image: linear-gradient( var(--background-color-root) 50%, #1E6CFF 50%);
+    text-decoration-color:#1E6CFF;
 }
 
-@media (min-width: 900px) {
-    .link-em {
-        transition: background 500ms ease;
-        line-height: calc(1em + 2px);
-    }
-    .tla-link.link-em:hover {
-        background-position-y: 100%;
-    }
+.jtd-link{
+    text-decoration-color: #7253ed;
 }
-
 
 /* Lots and lots of animation stuff */
 
@@ -544,5 +529,5 @@ hr{
 }
 
 .animated-heartbeat {
-    animation: heartbeat 2s infinite;
+    animation: heartbeat 4s infinite;
 }
