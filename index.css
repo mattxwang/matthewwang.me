@@ -106,7 +106,11 @@ h3{
 }
 
 a {
-    color: var(--main-orange);
+    color: inherit;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: var(--main-orange);
+    text-decoration-thickness: 0.15em;
 }
 
 a:hover{
