@@ -4,14 +4,9 @@
 name: Run pa11y CI
 
 on:
-  push:
-    branches: [ main ]
-    paths-ignore:
-      - '**/README.md'
-  pull_request:
-    branches: [ main ]
-    paths-ignore:
-      - '**/README.md'
+  schedule:
+    # Every Monday at 1PM UTC (9AM EST)
+    - cron: "0 13 * * 1"
 
 jobs:
   build:
