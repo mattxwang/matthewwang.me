@@ -233,7 +233,7 @@ p, ul > li{
     margin-bottom: 0.25em;
 
     text-align: center;
-    color: var(--main-orange);
+    color: inherit;
     text-decoration: none;
 }
 
