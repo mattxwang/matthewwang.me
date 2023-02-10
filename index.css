@@ -111,6 +111,7 @@ a {
     text-decoration: underline;
     text-decoration-color: var(--main-orange);
     text-decoration-thickness: 0.15em;
+    text-decoration-skip-ink: none;
 }
 
 a:hover{
@@ -398,18 +399,18 @@ hr{
 
 /* These are keyframes for the transition on pun facts */
 
-@keyframes grow {
+@keyframes fade {
     from {
-        transform: scale(0.1);
+        opacity: 0.5;
     }
 
     to {
-        transform: scale(1);
+        opacity: 1;
     }
 }
 
 .pun-fact {
-    animation: grow 0.75s;
+    animation: fade 1.5s;
 }
 
 /* This is the underline animation for the hero. */
