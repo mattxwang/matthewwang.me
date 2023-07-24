@@ -1,489 +1,92 @@
-/* Vars  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root{
-    /* general stuff */
-    --main-orange: #e95420;
-    --soft-white: #FAFAFA;
-    --font-size-root: 18px;
-
-    --font-color-light-mode: #333333;
-    --font-color-dark-mode: var(--soft-white);
-    --font-color-root: black;
-
-    --font-em-color-light-mode: black;
-    --font-em-color-dark-mode: var(--soft-white);
-    --font-em-color-root: black;
-
-    --background-color-light-mode: var(--soft-white);
-    --background-color-dark-mode: #37393E;
-    --background-color-root: var(--soft-white);
-
-    color: var(--font-color-root);
-    background-color: var(--background-color-root);
-    /* transition:
-        color 1s ease,
-        background-color 1s ease; */
-
-    color-scheme: light dark;
-}
-
-/* Fonts  */
-
-@font-face {
-    font-family: "Nexa";
-    font-weight: 700;
-    src: url(./fonts/nexa/nexa_bold.otf);
-    font-display: swap;
-}
-
-.font-nexa {
-    font-family: "Nexa";
-    font-weight: 700;
-    color: var(--font-em-color-root);
-}
-
-/* Globals */
-
-* {
-    box-sizing: border-box;
-}
-
-html, body{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
-body{
-    font-size: var(--font-size-root);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    line-height: 1.5;
-}
-
-@media only screen and (max-width: 900px) {
-    body {
-        padding-top: 3rem;
-        font-size: 16px;
-    }
-}
-
-
-/* Content Sections */
-
-.content-container{
-    max-width: 70rem;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.content-tight {
-    max-width: 50rem;
-}
-
-.section {
-    padding: 2rem;
-}
-
-.section-fh{
-    min-height: 800px;
-    /* min-height: 100vh; */
-    padding: 2rem;
-}
-
-/* Typography */
-
-h1, h2, h3, h4, h5, h6{
-    margin: 0;
-}
-
-h2{
-    font-size: 2rem;
-}
-
-h3{
-    font-size: 1.5rem;
-}
-
-a {
-    color: inherit;
-    font-weight: 500;
+.link {
     text-decoration: underline;
-    text-decoration-color: var(--main-orange);
-    text-decoration-thickness: 0.15em;
+    text-decoration-thickness: 2px;
     text-decoration-skip-ink: none;
+    text-decoration-color: #e95420;
 }
 
-a:hover{
-    cursor: pointer;
+/*
+.link-uw {
+    text-decoration-color: #4A2E83;
 }
 
-code {
-    border: 1px solid var(--main-orange);
-    border-radius: 2px;
-    padding: 4px;
+.link-ucla {
+    text-decoration-color: #2774AE;
 }
 
-p, ul > li{
-    line-height: 1.5;
+.link-neu {
+    text-decoration-color: #C8102E;
 }
 
-.hero-title{
-    font-size: 2.5rem;
+.link-czi {
+    text-decoration-color: #FF414B;
 }
 
-@media only screen and (max-width: 900px) {
-    .hero-title{
-        font-size: 2rem;
-    }
-}
-
-.text-125x{
-    font-size: 1.25rem;
-}
-
-.text-15x{
-    font-size: 1.5rem;
-}
-
-.text-2x{
-    font-size: 2rem;
-}
-
-.text-primary{
-    color: var(--main-orange);
-}
-
-.text-center{
-    text-align: center;
-}
-
-/* Grid */
-
-.row {
-    display: grid;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    column-gap: 1rem;
-}
-
-@media only screen and (max-width: 900px) {
-    .row{
-        grid-template-columns: 100% !important;
-    }
-}
-
-.row-2{
-    grid-template-columns: 50% 50%;
-}
-
-.row-1-2{
-    grid-template-columns: 33% 66%;
-}
-
-.row-2-1{
-    grid-template-columns: 66% 33%;
-}
-
-.row-3{
-    grid-template-columns: 33% 33% 33%;
-}
-
-.col{
-    width: calc(100% - 1rem);
-    height: 100%;
-}
-
-/* Content Toggle */
-
-.toggle-content {
-    display: none;
-    height: 0;
-    overflow: hidden;
-    transition: height 350ms ease-in-out;
-}
-
-.toggle-content.is-visible {
-    display: block;
-    height: auto;
-}
-
-/* Position Utilties */
-
-.d-flex {
-    display: flex;
-}
-
-.v-center-children{
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-
-.v-center-parent{
-    align-self: center;
-}
-
-/* Button */
-
-.button{
-    display: inline-block;
-    background: none;
-    font-size: 1rem;
-    font-weight: bold;
-
-    border: 1px solid var(--main-orange);
-    border-radius: 4px;
-    padding: 0.75em 1.5em;
-    margin-right: 0.5em;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
-
-    text-align: center;
-    color: inherit;
-    text-decoration: none;
-}
-
-.button:hover, .button:focus, .button-selected{
-    background-color: var(--main-orange);
-    color: var(--soft-white);
-    cursor: pointer;
-}
-
-.button:focus{
-    border: none;
-    outline: none;
-}
-
-.button-block{
-    display: block;
-    margin-bottom: 1em;
-}
-
-@media only screen and (max-width: 900px) {
-    .buttons>.button{
-        display: block;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-}
-
-/* Card  */
-
-.card{
-    border: 1px solid var(--main-orange);
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-.card-full{
-    height: 100%;
-}
-
-/* Dark Mode Toggle */
-
-.dark-mode-toggle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 999;
-
-    padding: 1rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    background-color: var(--main-orange);
-    color: var(--soft-white);
-
-    border-bottom-right-radius: 10px;
-}
-
-.dark-mode-toggle:hover, .dark-mode-toggle:focus {
-    background-color: var(--font-color-root);
-    color: var(--background-color-root);
-}
-
-.dark-mode-toggle:hover{
-    cursor: pointer;
-}
-
-.dark-mode-toggle:focus{
-    border: none;
-    outline: none;
-}
-
-/* Misc. El Utils */
-
-@media only screen and (min-width: 900px) {
-    .sticky-helper{
-        position: sticky;
-        top: 0;
-        padding-top: 1rem;
-        background-color: var(--background-color-root);
-    }
-    .lpad-lg {
-        padding-left: 2rem;
-    }
-}
-
-.list-unstyled {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.block-responsive{
-    display: block;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.rounded {
-    border-radius: 10px;
-}
-
-.img-silhouette {
-    padding: 0.5rem;
-    background-color: var(--main-orange);
-}
-
-@media only screen and (max-width: 900px) {
-    .img-silhouette{
-        max-width: 50%;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .img-silhouette{
-        max-width: 80%;
-    }
-}
-
-.img-silhouette-shift{
-    position: relative;
-    top: 1rem;
-    left: 1rem;
-}
-
-hr{
-    border: 0;
-    height: 1px;
-    background-color: var(--main-orange);
-}
-
-.link-em {
-    color: inherit;
-    font-weight: 500;
-    text-decoration-color: var(--main-orange);
-    text-decoration-thickness: 0.15em;
-}
-
-.fb-link{
+.link-fb {
     text-decoration-color: #1778F2;
 }
 
-.tla-link{
+.link-aws {
+    text-decoration-color: #FF9900;
+}
+
+.link-adobe {
+    text-decoration-color: #FA0E00;
+}
+
+.link-booz {
+    text-decoration-color: #03807E;
+}
+
+.link-audionotch {
+    text-decoration-color: #FF7700;
+}
+
+.link-tla {
     text-decoration-color: #5EDA12;
 }
 
-.acm-link{
+.link-acm {
     text-decoration-color:#1E6CFF;
 }
 
-.jtd-link{
+.link-beam {
+    text-decoration-color: #C3ECFF;
+}
+
+.link-jtd {
     text-decoration-color: #7253ed;
 }
 
-/* Lots and lots of animation stuff */
+.link-black {
+    text-decoration-color: #000;
+} */
 
-/* These are keyframes for the transition on pun facts */
-
-@keyframes fade {
-    from {
-        opacity: 0.5;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.pun-fact {
-    animation: fade 1.5s;
-}
-
-/* This is the underline animation for the hero. */
-
-@keyframes text-whiten {
-    from {
-        color: inherit;
-    }
-
-    to {
-        color: white;
-    }
-}
-
-@keyframes underline {
-    0% {
-        height: 5px;
-        width: 0;
-    }
-
-    50% {
-        height: 5px;
-        width: calc(100% + 1rem);
-    }
-
-    100% {
-        width: calc(100% + 1rem);
-        height: 1.5em;
-    }
-}
-
-.underline-expand {
-    line-height: 1;
-    display: inline-block;
+.img-silhouette {
+    padding: 0.20rem;
+    background-color: #e95420;
     position: relative;
-
-    animation-name: text-whiten;
-    animation-duration: 0.5s;
-    animation-delay: 2.5s;
-    animation-fill-mode: both;
+    top: -0.7rem;
+    left: -0.7rem;
 }
 
-.underline-expand:after {
-    animation-name: underline;
-    animation-duration: 1.5s;
-    animation-delay: 1s;
-    animation-fill-mode: both;
-
-    content: "";
-    display: block;
-    background-color: var(--main-orange);
-
-    z-index: -1;
-    position: absolute;
-    bottom:  -10px;
-    left: -5px;
+.img-silhouette-shift {
+    position: relative;
+    top: 0.7rem;
+    left: 0.7rem;
 }
-
-/* The keyframes for the waving hand emojis. Basic. I know. */
 
 .handwave {
-    animation-delay: 2.5s;
     animation-name: handwave;
     animation-duration: 2.5s;
     animation-iteration-count: infinite;
     transform-origin: 70% 70%;
     display: inline-block;
     margin-right: 0.5em;
-}
-
-.handwave-delayed {
-    margin-left: 0.5em;
-    animation-delay: 3.75s;
 }
 
 @keyframes handwave {
@@ -514,31 +117,4 @@ hr{
     100% {
         transform: rotate(0.0deg)
     }
-}
-
-/* The keyframes + class for the heartbeat animation I use across the site. */
-@keyframes heartbeat {
-    0% {
-        transform: scale(0.75);
-    }
-
-    25% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(0.75);
-    }
-
-    75% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(0.75);
-    }
-}
-
-.animated-heartbeat {
-    animation: heartbeat 4s infinite;
 }

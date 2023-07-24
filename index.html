@@ -6,9 +6,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>matthew wang (but you can call him matt)</title>
+  <title>matt wang</title>
   <meta name="description"
-    content="Matt is a computer science student at UCLA. He usually likes computers. He also likes education, helping people, and is probably interested in seeing how computers can help us help people. He's the second coolest Matt Wang he knows.">
+    content="Assistant Teaching Professor at the University of Washington, maintainer of Just the Docs and Stylelint. Second coolest Matt Wang he knows.">
   <!-- Now, before you tell me that most of this is unnecessary, I agree with you. But, it helps with SEO, and it also makes things slightly more accessible for a small subset of users. I think it's worth the extra 500 bytes. -->
   <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
@@ -23,722 +23,92 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-  <link rel="manifest" href="manifest.json">
   <meta name="msapplication-TileColor" content="#e95420">
   <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
   <meta name="theme-color" content="#e95420">
-  <!-- I always thought this light-dark pattern was strangely done, and there seems to be no correct answer. I opted for JS, but see https://web.dev/prefers-color-scheme/ for another way to do it. -->
-  <!-- Styling for the site - peep index.css! This used to be Liteweight, but I ended up customizing it so much that I just wrote CSS just for this website. -->
-  <link rel="stylesheet" href="index.css" />
-  <!-- This is me loading Font Awesome - I've deferred it as it's not critical to the page load, but it's still pretty cool. I've opted to use Font Awesome's SVG + JS features instead of webfonts, just to see how it is! -->
-  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/solid.js"
-    integrity="sha384-IA6YnujJIO+z1m4NKyAGvZ9Wmxrd4Px8WFqhFcgRmwLaJaiwijYgApVpo1MV8p77" crossorigin="anonymous">
-  </script>
-  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/brands.js"
-    integrity="sha384-rUOIFHM3HXni/WG5pzDhA1e2Js5nn4bWudTYujHbbI9ztBIxK54CL4ZNZWwcBQeD" crossorigin="anonymous">
-  </script>
-  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/fontawesome.js"
-    integrity="sha384-EMmnH+Njn8umuoSMZ3Ae3bC9hDknHKOWL2e9WJD/cN6XLeAN7tr5ZQ0Hx5HDHtkS" crossorigin="anonymous">
-  </script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
-  <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="dark mode toggle button">
-    <span class="fa fa-fw fa-cloud-sun"></span>
-  </button>
-  <section class="section-fh d-flex">
-    <div class="content-container v-center-parent">
-      <div class="row row-1-2">
-        <div class="col v-center-children">
-          <div class="img-silhouette rounded">
-            <img class="block-responsive rounded img-silhouette-shift" src="img/ew-a-photo-of-matt.jpg"
-              alt="a disgusting photo of matt" />
-          </div>
-        </div>
-        <div class="col v-center-children lpad-lg">
-          <div style="width: 100%">
-            <p class="text-2x font-nexa">
-              <span class="handwave">👋</span>
-              hey there!
-              <span class="handwave handwave-delayed">👋</span>
-            </p>
-            <h1 class="hero-title font-nexa">
-              my name is <span class="underline-expand">matthew wang</span>
-            </h1>
-            <p>
-              but you can call me matt 😉
-            </p>
-            <p class="text-15x font-nexa">
-              I (mostly) like computers.
-              <br />
-              I love love love teaching.
-              <br />
-              I want to teach computer science <em>better</em>.
-              <br />
-              (putting equity and inclusion first)
-            </p>
-            <p style="margin-top: 0; margin-bottom: 0;">
-              <em>currently</em>:
-              <ul class="list-unstyled">
-                <li>research assistant at <a class="link-em" href="https://prl.khoury.northeastern.edu/">northeastern prl</a> (specifically, <a class="link-em" href="https://www.khoury.northeastern.edu/home/sholtzen/">neuppl</a>)</li>
-                <li>
-                  maintaining some open-source projects (including <a class="link-em jtd-link" href="https://github.com/just-the-docs/just-the-docs">
-                   just-the-docs</a>)
-                </li>
-              </ul>
-            </p>
-            <p style="margin-top: 0; margin-bottom: 0;">
-              <em>previously</em>:
-              <ul class="list-unstyled">
-                <li>ta for <a class="link-em" href="https://ucla-cs-131.github.io/spring-23/">cs 131</a> (<a class="link-em" href="https://mattxw.com/131slides">slides</a>)</li>
-                <li>inaugural outreach co-chair, neurips</li>
-                <li>
-                  president @
-                  <a class="link-em acm-link" href="https://uclaacm.com">
-                    ACM at UCLA
-                  </a>
-                </li>
-                <li>
-                  swe intern @ czi, facebook, adobe, aws, booz allen
-                </li>
-                <li>
-                  masters in cs, b.s. in cs + math-econ @ ucla
-                </li>
-              </ul>
-            </p>
-            <div class="buttons">
-              stalk me:&nbsp;&nbsp;
-              <a class="button" href="https://github.com/mattxwang/">
-                <span class="fab fa-github"></span> GitHub
-              </a>
-              <a class="button" href="files/resume.pdf">
-                <span class="fa fa-file-alt"></span> Résumé
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <hr />
-  <section class="section">
-    <div class="content-container">
-      <div class="row row-2-1">
-        <div class="col">
-          <h2 class="font-nexa">a bit more about matt</h2>
-          <p>
-            I'm a current M.S. student in computer science at UCLA, where I also did my undergrad in CS + Math-Economics. I'm particularly interested in the intersection between computer science and education. Can we teach people better with computers? Can we design computers to be easier to learn? How does accessibility and equity play into this?
-          </p>
-          <p>
-            Diversity, equity, and inclusion are core to everything I do.
-          </p>
-          <p>
-            I (mostly) enjoy working with computers: websites, programming languages, apps, backends, embedded systems, compilers, games, machine learning, data science, cloud computing, you name it! I'm also a huge fan of open-source - I'm always on GitHub!
-          </p>
-          <p>
-            I'm really passionate about education and outreach. My undergraduate career was focused on equitable access to CS education - through <a class="link-em acm-link" href="https://uclaacm.com">
-              ACM at UCLA</a>, <a class="link-em tla-link" href="https://teachla.uclaacm.com">
-              Teach LA</a>, <a class="link-em" href="https://beam.ucla.edu">
-              BEAM</a>, and community-building at UCLA. Kids are <em>mostly</em> fun to
-            work with.
-          </p>
-          <p>
-            I am still occasionally interested in applied economics, particularly in development, education, healthcare, and antitrust.
-          </p>
-          <p>
-            In my spare time, I like to <a class="link-em"
-              href="https://blog.matthewwang.me/stats/books">read</a>, <a
-              class="link-em" href="https://open.spotify.com/user/11156788800">listen to music</a>, and
-            <a class="link-em" href="https://blog.matthewwang.me">write a bad blog</a>.
-          </p>
-        </div>
-        <div class="col">
-          <div class="card">
-            <h3>pun fact</h3>
-            <p>
-              <button class="button" onclick="randomPunFact()">
-                <span class="fa fa-redo"></span>
-                new fact
-              </button>
-            </p>
-            <div id="pun-fact">
-
-            </div>
-          </div>
-        </div>
-      </div>
-  </section>
-  <hr />
-  <section class="section">
-    <div class="content-container">
-      <div class="row row-2-1">
-        <div class="col">
-          <h2 class="font-nexa">experience &amp; work</h2>
-          <p>
-            I occasionally do things, usually with computers and education. Here are the big ones.
-          </p>
-          <hr />
-          <br />
-          <h3 class="font-nexa" id="czi">SWE Intern at Chan Zuckerberg Initiative (2022)</h3>
-          <p>
-            beep bop booped in the Education Initiative; did some Slack automation, some Rails, some large-scale Ruby + Sorbet codegen &amp; upgrading, and some open-source maintenance; wrote about an open-source contribution on <a class="link-em" href="https://medium.com/p/91b2a5de28dc">CZI's Medium</a>.
-          </p>
-          <h3 class="font-nexa" id="facebook">SWE Intern at Facebook (2021)</h3>
-          <p>
-            Worked to unify four different Hack-based data sources into one unified UI. Juggled React, GraphQL/Relay, and Hack/PHP work - all at Facebook scale!
-          </p>
-          <h3 class="font-nexa" id="adobe">SRE Intern at Adobe (2021)</h3>
-          <p>
-            In a team of 3, I built a system to save money running Kubernetes clusters; the projection for our MVP was $330k/year!
-          </p>
-          <p>
-            <a id="adobe-link" role="button">click for more on me at adobe</a>
-          </p>
-          <div class="toggle-content" id="adobe-content">
-            <p>
-              The big focus of my role was implementing a cluster autoremediation system, to find issues in Kubernetes clusters and try to automatically resolve them. Our initial focus was on more graceful autoscaling (and scale-down). I:
-            </p>
-            <ul>
-              <li>
-                implemented the aforementioned auto-remediation system to resolve Kubernetes cluster resource issues (JavaScript, AWS: Lambda, DynamoDB, SQS, PromQL, Azure DevOps
-              </li>
-              <li>
-                system projected to save $330k/year across 30 AWS clusters; easily extendable to Azure + plug-and-play with other remediation
-              </li>
-              <li>
-                ran a variety of manual cluster scaling experiments and collected + presented data (Kubernetes, Splunk, Grafana, PromQL)
-              </li>
-            </ul>
-          </div>
-          <h3 class="font-nexa" id="aws">SDE Intern at Amazon Web Services (2020)</h3>
-          <p>
-            I was the sole intern in charge of my project for the S3 Index Engine team: a system to enable anomaly detection for thousands of internal metrics.
-          </p>
-          <p>
-            <a id="aws-link" role="button">click for more on me at aws</a>
-          </p>
-          <div class="toggle-content" id="aws-content">
-            <p>
-              While I can't tell you <i>everything</i> I did at AWS, here's a general overview of what my role was:
-            </p>
-            <ul>
-              <li>
-                wrote overall design document, performed user research, and presented top-level design + financials to team
-              </li>
-              <li>
-                implemented automated data pipeline to ingest, filter, and upload 10k metrics/5 min (Java, AWS: SNS, SQS, Lambda, DynamoDB, CloudWatch, CloudFormation)
-              </li>
-              <li>
-                performed user research, designed & developed multi-paged dashboard + wizard + webservice (React, Java)
-              </li>
-              <li>
-                presented final solution to management and team
-              </li>
-            </ul>
-          </div>
-          <h3 class="font-nexa" id="booz">SWE Intern at Booz Allen Hamilton (2019)</h3>
-          <p>
-            As a Summer Games 2019 Intern, I was part of a team of five interns that developed a pocket-sized embedded system to combat human trafficking by hacking into boats! We apparently did well enough to staff a maritime security-focused hackathon.
-          </p>
-          <p>
-            <a id="booz-link" role="button">click for more on me at booz allen</a>
-          </p>
-          <div class="toggle-content" id="booz-content">
-            <p>
-              As the sole software developer of the team, I performed several key responsibilities:
-            </p>
-            <ul>
-              <li>
-                Reverse-engineered closed-source NMEA 2000 protocol by analyzing network traffic
-              </li>
-              <li>
-                Parsed & decoded data live ship data from sensors to CLI & over-the-air server (C)
-              </li>
-              <li>
-                Fabricated data to disable devices and spoof GPS, navigation, AIS, autopilot (C)
-              </li>
-              <li>
-                Developed GUI to control embedded system over TCP (React, Electron)
-              </li>
-              <li>
-                Presented solution to senior leadership at McLean headquarters
-              </li>
-              <li>
-                Supported at Hack the Machine, 700+ participant hackathon on maritime security
-              </li>
-            </ul>
-            <br />
-          </div>
-          <h3 class="font-nexa" id="audionotch">
-            SWE Intern at AudioNotch (2017)
-            <a href="https://audionotch.com" aria-label="AudioNotch Website"><span class="fa fa-link"></span></a>
-            <a href="https://itunes.apple.com/us/app/audionotch/id1270247019" aria-label="iOS App Store Link"><span
-                class="fab fa-app-store-ios"></span></a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.audionotch.audionotch&hl=en" aria-label="Google Play Store Link"><span
-                class="fab fa-google-play"></span></a>
-          </h3>
-          <p>
-            AudioNotch is a web and mobile app that's designed to help people who suffer from tinnitus through experimental audio therapy. I put my hand in a lot of different baskets, mainly focusing on creating a new mobile app and updating their web application.
-          </p>
-          <p>
-            <a id="audionotch-link" role="button">click for more on me at audionotch</a>
-          </p>
-          <div class="toggle-content" id="audionotch-content">
-            <p>I juggled several different roles as the sole intern:</p>
-            <ul>
-              <li>
-                Developed mobile app for iOS &amp; Android with Ionic + Angular + Cordova stack (authentication flow, audio manipulation w/ DSP, data visualization, in-app purchases)
-              </li>
-              <li>
-                Implemented server-side REST API and data protocol for mobile app logic (Django)
-              </li>
-              <li>
-                Refactored JS web application, halving bundle size (JS WebAudio API, jQuery)
-              </li>
-              <li>
-                Redesigned website & blog to be mobile-responsive and ARIA-compliant (CSS, PHP)
-              </li>
-              <li>
-                Ran A/B tests on landing page designs and CTAs (Google Analytics Experiments)
-              </li>
-              <li>
-                Revamped products increased firm revenue by over 300% in the next three months
-              </li>
-            </ul>
-            <br />
-          </div>
-          <hr />
-          <h3 class="font-nexa">President at <a class="link-em acm-link" href="https://uclaacm.com">
-            ACM at UCLA
-          </a> (2021-2022)</h3>
-          <p>
-            I ran the largest tech organization on campus, with 250+ officers and 1500+ event attendees. It's hard to describe my role; I juggled a safe return-to-campus, EDI advocacy work, some web dev, some event planning, helped my officers grow, and tried my hand at making the tech community as inclusive and accessible as possible.
-          </p>
-          <p>
-            Eventually, I might write about this experience.
-          </p>
-          <h3 class="font-nexa" id="tla">
-            President, Lead Dev at ACM Teach LA (2018-2021)
-            <a href="https://teachla.uclaacm.com/" aria-label="Teach LA Website">
-              <span class="fa fa-link"></span>
-            </a>
-          </h3>
-          <p>
-            <a class="link-em tla-link" href="https://teachla.uclaacm.com">
-              ACM Teach LA
-            </a>
-            is a 501(c)(3) nonprofit at UCLA that aims to provide equitable access to K-12 computer science education in Los Angeles. I've worn a lot of hats at the club, from software developer, to curriculum development and instructor, to leading a dev team, and most recently, the president of the club. It's the thing I'm the most proud of at UCLA.
-          </p>
-          <p>
-            <a id="tla-link" role="button">click for more on me at teach la</a>
-          </p>
-          <div class="toggle-content" id="tla-content">
-            <p>
-              I got started in 2018 as a web developer for Teach LA, and promptly fell in love. I last served as the president of the club (2020-2021), which let me handle a broad scope of activities:
-            </p>
-            <ul>
-              <li>
-                handled transition to fully virtual learning: organizing synchronous and asynchronous classes, one-off events, meetings, and recruitment
-              </li>
-              <li>
-                spearheaded <b>learning labs</b>, an internally-developed set of interactive web modules; acted as a PM, lead dev, and supporting dev for different projects
-              </li>
-              <li>
-                continued to (asynchronously) teach our AI & ML course at North Hollywood HS
-              </li>
-              <li>
-                kickstarted a new React Native web and mobile app development course
-              </li>
-              <li>
-                expanded internal and external transparency through public financial & EDI reports and open-sourcing our curriculum
-              </li>
-              <li>
-                supported and managed our 15-person board and our 50+ members
-              </li>
-              <li>
-                acted as the interim dev team director for Fall &amp; Winter 2020 (see below)
-              </li>
-            </ul>
-            <p>
-              Prior to that, I was the dev team director in 2019-2020, which was a great opportunity to grow our team. Here's what I did:
-            </p>
-            <ul>
-              <li>
-                managed, trained, and led code review with a team of 15+ student developers, the majority of which were new to web development
-              </li>
-              <li>
-                kickstarted work on interactive web modules to teach cybersecurity, networking and machine learning concepts; eventually became <b>learning labs</b>
-              </li>
-              <li>
-                architected and developed React + Redux frontend for online Code IDE
-              </li>
-              <li>
-                wrote middleware to handle user data actions with React, Express, Firebase
-              </li>
-              <li>
-                developed static site to enhance org's online presence with Jekyll
-              </li>
-              <li>
-                wrote and updated tests written with Enzyme + Jest
-              </li>
-              <li>
-                integrated CI/CD into our development workflow (GitHub Actions, Travis CI)
-              </li>
-              <li>
-                taught our brand-new AI & ML course at North Hollywood HS
-              </li>
-            </ul>
-          </div>
-          <hr />
-          <br />
-          <h3 class="font-nexa">
-            smaller experiences & work
-          </h3>
-          <p>
-              <a id="small-projects-link" role="button">
-                click for my small stuff. but only if you want to!
-              </a>
-          </p>
-          <div class="toggle-content" id="small-projects-content">
-            <ul>
-              <li>
-                I was recently the inaugural Outreach Chair for NeurIPS 2022, along with <a class="link-em" href="https://jzf2101.github.io/">Jessica Forde</a>. We bootstrapped an outreach program from scratch that brought 200 students to the conference.
-              </li>
-              <li>
-                I helped out with <a href="https://qwerhacks.com">QWER Hacks</a>, America's first collegiate LGTBTQIA+ hackathon. In 2021, I led workshops on <a href="https://github.com/mattxwang/qwerhacks-21-workshops">React, Firestore, and the education track</a>. In 2020, I led workshops on <a href="https://github.com/mattxwang/qwerhacks-web-dev-workshop">web development (with React + Firebase)</a> and EdTech. I passed on the torch of leading workshops in 2022, but still am involved!
-              </li>
-              <li>
-                I advised and volunteered for <a href="https://beam.ucla.edu/">BEAM</a>, a science outreach club at UCLA. I help with site visits, curriculum planning, and have written lesson plans for coding in Scratch and programming robots. I also set up their website!
-              </li>
-              <li>
-                Before COVID, I was a UCLA MakerSpace technician, teaching classes on 3D printing, laser cutting, t-shirt fabrication, graphic design, and electronics.
-              </li>
-              <li>
-                Over Summer 2020, I taught a 15-hour virtual crash course on web development with my good friend Leo. <a href="https://github.com/uclaacm/learning-lab-crash-course-su20">Check out the notes on GitHub!</a>
-              </li>
-              <li>
-                Won IDEA Hacks 2019 with pop 'n lock, a student-card enabled smart lock. Proved that student cards were duplicatable in the process.
-                <a href="https://github.com/mattxwang/ideahacks-2019">Code on GitHub!</a>
-              </li>
-            </ul>
-          </div>
-          <hr />
-          <p>
-            If you want to see contributions I make to open-source, fragments of software projects, or just how addicted I am to GitHub, you can check out
-            <a href="https://github.com/mattxwang">my GitHub profile.</a>
-          </p>
-        </div>
-        <div class="col">
-          <div class="sticky-helper">
-            <div class="card">
-              <p>
-                Want a more formal breakdown? These might help:
-              </p>
-
-              <a class="button button-block" href="files/resume.pdf">
-                <span class="fa fa-file-alt"></span> Résumé
-              </a>
-              <!-- <a class="button button-block" href="files/resume.pdf">
-                <span class="fa fa-file-alt"></span> CV (coming soon)
-              </a> -->
-              <a class="button button-block" href="https://www.linkedin.com/in/matthew-x-wang/">
-                <span class="fab fa-linkedin"></span> LinkedIn
-              </a>
-              <a class="button button-block" href="https://github.com/mattxwang/">
-                <span class="fab fa-github"></span> GitHub
-              </a>
-              <p>
-                not enough, or more questions? shoot me an email at <a href="mailto:matt@matthewwang.me">matt@matthewwang.me</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <hr />
-  <section class="section">
-    <div class="content-container content-tight">
-      <div class="text-center">
-        <h2 class="title font-nexa">other misc. things about me</h2>
-        <p>(to be honest, I'm surprised you're still here)</p>
-      </div>
-      <div class="card border-primary">
-        <h3 class="font-nexa">education</h3>
-        <p>
-          I'm currently a Computer Science Masters student at the University of California, Los Angeles. I graduated from UCLA in 2022 with two degrees: a B.S. in Computer Science, and a B.S. in Math-Economics.
-        </p>
-        <p>
-          Prior to UCLA, I grew up and went to high school in Toronto, Canada. I did competitive debating and Model UN, taught computer science, math, and robotics, and dabbled in event planning, journalism, and design.
-        </p>
-      </div>
-      <div class="card border-primary">
-        <h3 class="font-nexa" id="coursework">coursework (undergrad)</h3>
-        <p>
-          If you're interested, here are the classes that I've taken at UCLA, by area of focus.
-        </p>
-        <h4>
-          <a id="coursework-cs-link" role="button">
-            computer science
-          </a>
-        </h4>
-        <div class="toggle-content" id="coursework-cs-content">
-          <ul>
-            <li>
-              data structures and algorithms (CS 32, CS 180)
-            </li>
-            <li>
-              operating systems (CS 111)
-            </li>
-            <li>
-              networking (CS 118)
-            </li>
-            <li>
-              programming languages (CS 131)
-            </li>
-            <li>
-              compilers (CS 132)
-            </li>
-            <li>
-              data mining (CS 145)
-            </li>
-            <li>
-              machine learning (CS M146)
-            </li>
-            <li>
-              computer systems architecture (CS M151B)
-            </li>
-            <li>
-              artificial intelligence (CS 161)
-            </li>
-            <li>
-              automata theory (CS 181)
-            </li>
-            <li>
-              quantum programming [grad class] (CS 239)
-            </li>
-            <li>
-              computer organization (CS 33)
-            </li>
-            <li>
-              software engineering capstone (CS 130)
-            </li>
-            <li>
-              intro to C++ (CS 31)
-            </li>
-            <li>
-              software construction lab (CS 35L)
-            </li>
-            <li>
-              digital logic (CS M51A) and digital logic lab (CS M152A)
-            </li>
-          </ul>
-        </div>
-        <h4>
-          <a id="coursework-pmath-link" role="button">
-            proof-based math
-          </a>
-        </h4>
-        <div class="toggle-content" id="coursework-pmath-content">
-          <ul>
-            <li>
-              linear algebra (Math 115A)
-            </li>
-            <li>
-              real analysis (Math 131A/B)
-            </li>
-            <li>
-              optimization (Math 164)
-            </li>
-            <li>
-              probability theory (Math 170A/B)
-            </li>
-            <li>
-              stochastic processes (Math 171)
-            </li>
-            <li>
-              financial mathematics (Math 174E)
-            </li>
-          </ul>
-        </div>
-        <h4>
-          <a id="coursework-econ-link" role="button">
-            economics
-          </a>
-        </h4>
-        <div class="toggle-content" id="coursework-econ-content">
-          <ul>
-            <li>
-              intermediate micro (Econ 11)
-            </li>
-            <li>
-              econometrics (Econ 103, Econ 103L)
-            </li>
-            <li>
-              advanced micro (Econ 101)
-            </li>
-            <li>
-              advanced macro (Econ 102)
-            </li>
-            <li>
-              feminist economics (Econ 113)
-            </li>
-            <li>
-              intergenerational poverty (Econ 133)
-            </li>
-            <li>
-              labor economics (Econ 150)
-            </li>
-          </ul>
-        </div>
-        <h4>
-          <a id="coursework-emath-link" role="button">
-            general (engineering) math
-          </a>
-        </h4>
-        <div class="toggle-content" id="coursework-emath-content">
-          <ul>
-            <li>
-              single-variable calculus (Math 31A/B)
-            </li>
-            <li>
-              multivariable calculus (Math 32A/B)
-            </li>
-            <li>
-              linear algebra (Math 33A)
-            </li>
-            <li>
-              differential equations (Math 33B)
-            </li>
-            <li>
-              intro to discrete math (Math 61)
-            </li>
-          </ul>
-        </div>
-        <h4>
-          <a id="coursework-misc-link" role="button">
-            misc
-          </a>
-        </h4>
-        <div class="toggle-content" id="coursework-misc-content">
-          <ul>
-            <li>
-              engineering ethics (ENGR 188EW)
-            </li>
-            <li>
-              engineering physics (Physics 1A, 1B, 1C, 4AL)
-            </li>
-            <li>
-              digital cultures and societies (INFO STD 20)
-            </li>
-            <li>
-              artificial intelligence and justice (INFO STD 180)
-            </li>
-            <li>
-              intro linguistics (LING 1)
-            </li>
-            <li>
-              American history (HIST 13C)
-            </li>
-            <li>
-              introduction to statistics (STATS 10)
-            </li>
-            <li>
-              english composition (ENGCOMP 3)
-            </li>
-          </ul>
-        </div>
-        <p>
-          My favourite classes have been programming languages (CS 131), automata theory (CS 181 w/ Sahai), intergenerational poverty (ECON 133), discrete math (Math 61), and intro to linguistics (LING 1). Would highly recommend!
-        </p>
-      </div>
-      <div class="card border-primary">
-        <h3 class="font-nexa">"achievements"</h3>
-        <p>
-          I had fun, which is what matters.
-        </p>
-        <ul>
-          <li>Russell R. O'Neill Distinguished Service Award 2022</li>
-          <li>Chancellor's Service Award 2022</li>
-          <li>Engineering Achievement Award in Student Welfare 2022</li>
-          <li>Outstanding Chapter Website 2022 (for my work at ACM)</li>
-          <li>Guru Krupa Foundation Centennial Scholar 2021-2022</li>
-          <li>Frank Peters Scholarship for Engineering Recipient 2020-2021</li>
-          <li>Eric &amp; Peggy Johnson Scholarship In Engineering Recipient 2019-2020</li>
-          <li>Muriel K. and Robert B. Allan Fund Recipient 2018-2019</li>
-          <li>UCLA Achievement Scholarship Recipient 2018-2022</li>
-          <li>IDEA Hacks 2019 Best Project
-            <a
-              href="https://github.com/mattxwang/ideahacks-2019" aria-label="GitHub Repository">
-              <span class="fab fa-github"></span>
-            </a>
-          </li>
-          <li>USC Debate IV 2019 Champion, Top Team, Top Speaker</li>
-          <li>UC Berkeley Debate IV 2019 Champion</li>
-          <li><a class="link-white"
-            href="https://en.wikipedia.org/wiki/You_(Time_Person_of_the_Year)">TIME Magazine's Person of the Year in
-            2006</a></li>
-        </ul>
-      </div>
-      <div class="card border-primary">
-        <h3 class="font-nexa">some favourites &amp; recommendations</h3>
-        <p>
-          You know, showing a bit of personality.
-        </p>
-        <ul>
-          <li>books: Poor Economics, Paradox, Justice, The Wind-Up Bird Chronicle, Pachinko, 1984</li>
-          <li>albums: To Pimp A Butterfly, Helplessness Blues, Acid Rap, Emotion, SATURATION II, Nothing Happens, Without Warning, Sometimes I Might Be Introvert, NOT TiGHT, Tradition</li>
-          <li>programming language: both JS and anything not JS</li>
-          <li>code editor: VSCode or <code>vim</code></li>
-          <li>city: Toronto</li>
-          <li>food: Japanese curry</li>
-          <li>soft tabs, two spaces (but really, whatever the project convention is)</li>
-          <li>video games: Portal 2, Stardew Valley, Slime Rancher, Antichamber, Mini Metro, Hades</li>
-          <li>spelling of favourite: refer to left</li>
-          <li>reader: you 😉</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <hr />
-  <section class="section">
-    <div class="content-container content-tight">
-      <div class="row row-2">
+<body class="bg-slate-50 dark:bg-zinc-900 dark:text-slate-50 px-8">
+  <main class="md:mt-32 my-8">
+    <section class="max-w-6xl mx-auto py-4">
+      <div class="md:grid md:grid-cols-4 md:gap-4">
         <div>
-          <h2 class="font-nexa">say hi! <span class="handwave">👋</span></h2>
-          <p>
-            I won't byte, I promise.
-          </p>
+          <div class="img-silhouette rounded max-w-sm m-auto mb-8">
+            <img class="d-block w-full rounded img-silhouette-shift" src="img/ew-a-photo-of-matt.jpg" alt="matt smiling and making a korean heart" />
+          </div>
         </div>
-        <ul class="list-unstyled list-items text-15x font-nexa">
-          <li>
-            <a class="link-em" href="mailto:matt@matthewwang.me"><span class="fa fa-envelope"></span> Email:
-              matt@matthewwang.me</a>
-          </li>
-          <li>
-            <a class="link-em" href="https://github.com/mattxwang"><span class="fab fa-github"></span> GitHub: mattxwang</a>
-          </li>
-          <li>
-            <a class="link-em" href="https://www.linkedin.com/in/matthew-x-wang/"><span class="fab fa-linkedin"></span>
-              LinkedIn: Matthew Wang
-            </a>
-          </li>
-        </ul>
+        <div class="md:col-span-3 max-w-prose px-4 mb-8">
+          <h1 class="mb-2"><span class="text-3xl font-semibold">matt wang</span> (he/him)</h1>
+          <p class="my-2">
+            <a class="link" href="mailto:mxw@cs.washington.edu"><code>mxw@cs.washington.edu</code></a> |
+            <a class="link" href="https://github.com/mattxwang"><code>github.com/mattxwang</code></a></p>
+          <hr />
+          <p class="text-lg my-2">
+            <span class="handwave">👋</span> hi! I'm an (incoming) Assistant Teaching Professor in the <a class="link link-uw" href="https://www.cs.washington.edu/">Paul G. Allen School of Computer Science &amp; Engineering</a> at the <a class="link link-uw" href="https://www.washington.edu/">University of Washington</a>.
+          </p>
+          <p class="text-lg my-2">
+            Broadly, I love computer science and am interested in making computer science education more accessible, equitable, and inclusive.
+          </p>
+          <p class="text-lg my-2">
+            Right now, I'm especially interested in teaching digital accessibility, improving developer tooling with a pedagogical lens, studying student organizations, broader education policy, and developing open-source software &amp; content.
+          </p>
+          <hr />
+          <p class="leading-relaxed mt-2">
+            Currently, I'm:
+          </p>
+          <ul class="list-disc pl-4">
+            <li>working on <a class="link link-neu" href="https://github.com/neuppl/rsdd">RSDD</a> at <a class="link link-neu" href="https://neuppl.khoury.northeastern.edu/">NeuPPL</a></li>
+            <li>
+              preparing to teach CSE 190 and CSE 391 in Au23
+            </li>
+            <li>
+              maintaining <a class="link link-jtd" href="https://just-the-docs.com">Just the Docs</a> and <a class="link link-black" href="https://stylelint.io">Stylelint</a>
+            </li>
+            <li>
+              trying to enjoy my summer 😅
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
-  <hr />
-  <section class="section">
-    <div class="content-container">
-      <footer class="text-center">
-        <div class="text-2x font-nexa"><b>made by matt wang</b></div>
-        <span class="fa fa-heart text-primary handwave handwave-delayed" style="margin-right: 0;"></span>
-        <a href="https://github.com/mattxwang/matthewwang.me" aria-label="GitHub Repository"><span class="fab fa-github text-black"></span></a>
-        <span class="fa fa-heart text-primary animated-heartbeat"></span>
-      </footer>
-    </div>
-  </section>
+    </section>
+    <hr class="max-w-prose mx-auto" />
+    <section class="max-w-prose mx-auto leading-relaxed">
+      <h2 class="text-2xl font-semibold mt-8 mb-2"><a href="https://en.wikipedia.org/wiki/Past_Lives_(film)">past lives</a></h2>
+      <p class="my-2">
+        I received two B.S.'s and an M.S. from the <a class="link link-ucla" href="https://www.ucla.edu/">University of California, Los Angeles</a>. I grew up in Toronto, Canada, and still maintain my love of winter sports and poutine.
+      </p>
+      <p class="my-2">
+        As a student, I was a research assistant at the <a class="link link-neu" href="https://neuppl.khoury.northeastern.edu/">Northeastern Probabilistic Programming Lab</a>, within the <a class="link link-neu" href="https://prl.khoury.northeastern.edu/">PRL</a>; the inaugural outreach chair for <a class="link link-black" href="https://nips.cc/Conferences/2022">NeurIPS 2022</a>; wearer of many hats at <a class="link link-acm" href="https://uclaacm.com">ACM at UCLA</a> and <a class="link link-tla" href="https://teachla.uclaacm.com">ACM Teach LA</a>; a software engineering intern at <a class="link link-czi" href="https://chanzuckerberg.com/">CZI</a>, <a class="link link-fb" href="https://facebook.com">Facebook</a>, <a class="link link-adobe" href="https://adobe.com">Adobe</a>, <a class="link link-aws" href="https://aws.amazon.com/">AWS</a>, <a class="link link-booz" href="https://www.boozallen.com/">Booz Allen</a>, and <a class="link link-audionotch" href="https://audionotch.com/">AudioNotch</a>; and, one of the first employees of the UCLA Makerspace.
+      </p>
+      <p class="my-2">
+        Prior to becoming a professor, I've been doing some sort of teaching for about a decade. As a graduate student, I TA'd three quarters of <a class="link link-ucla" href="https://github.com/UCLA-CS-131">CS 131: Programming Languages</a> at UCLA. As an undergraduate, I taught hundreds of undergrads web development through <a class="link link-acm" href="https://uclaacm.com">ACM at UCLA</a> and <a class="link link-acm" href="https://qwerhacks.com">QWER Hacks</a>, middle and high school classes through <a class="link link-tla" href="https://teachla.uclaacm.com">ACM Teach LA</a> and <a class="link link-beam" href="https://beam.ucla.edu/">BEAM at UCLA</a>, and dedicated a big chunk of my life to student advocacy &amp; institution-building. I also developed and taught various workshops at the UCLA Makerspace. In high school, I taught various classes, workshops, camps, and afterschool programs in computer science, robotics, debate, and math.
+      </p>
+      <p class="my-2">
+        When I was younger, I had the (admittedly strange) dream job of working for the <a class="link" href="https://www.consumerfinance.gov/">CFPB</a> or <a class="link" href="https://www.ftc.gov/">FTC</a>. I'm still interested in a handful of areas surrounding education and health policy, public economics, consumer protection, and antitrust — though I'm far from an expert!
+      </p>
+    </section>
+    <section class="max-w-prose mx-auto leading-relaxed">
+      <h2 class="text-2xl font-semibold mt-8 mb-2">some favourites &amp; recommendations</h2>
+      <ul>
+        <li class="my-2">
+          albums: Acid Rap, Emotion, Faces, Heard It In A Past Life, Helplessness Blues, Saturation II, NOT TiGHT, To Pimp A Butterfly, Random Access Memories, Since I Left You, Sometimes I Might Be Introvert, Tradition, Without Warning, Women In Music Pt. III
+        </li>
+        <hr />
+        <li class="my-2">
+          books: Because Internet, Crying in H Mart, Death At An Early Age, Design Justice, Never Let Me Go, Pachinko, Paradox, Piranesi, Poor Economics, The Three-Body Problem
+        </li>
+        <hr />
+        <li class="my-2">
+          movies: Arrival, Everything Everywhere All at Once, Ex Machina, Ladybird, Moonlight, My Neighbor Totoro, Princess Mononoke, Strange Brew, The Grand Budapest Hotel
+        </li>
+      </ul>
+    </section>
+  </main>
+  <hr class="max-w-prose mx-auto" />
+  <footer class="max-w-prose mx-auto my-8">
+    made with ❤️ by matt
+  </footer>
   <script>
     "use strict";
     /*
@@ -761,159 +131,8 @@
       console.log(`%c${message}`,"color:#e95420;");
     }
     colorLog("\n __   __  _______  _______  _______ \n|  |_|  ||   _   ||       ||       |\n|       ||  |_|  ||_     _||_     _|\n|       ||       |  |   |    |   |  \n|       ||       |  |   |    |   |  \n| ||_|| ||   _   |  |   |    |   |  \n|_|   |_||__| |__|  |___|    |___|  ");
-    colorLog("This page runs very minimal Javascript (just content-collapse, pun-facts that change on page refresh, and Font Awesome), so don't fret.");
-    colorLog("Anyways, have fun browsing the rest of the website. If you have any feedback, let me know on my GitHub repo for this landing page: \nhttps://github.com/mattxwang/matthewwang.me");
-
-    // Here's my list of fun facts. Or punFacts. It's up to you ;)
-    const punFacts = [
-      'I love using mediocre puns for my Spotify playlist titles. For example, I have a playlist called <a href="https://open.spotify.com/user/11156788800/playlist/2cT6Y3KwCvep7JZE6OUMlj">amperes</a> that has all the music I\'m current-ly listening to.',
-      'I\'m from Canada, which uses the metric system. This creates some oddities: while spiders in America have 8 feet, spiders in Canada have <a href="https://www.google.com/search?q=8+feet+to+meters&oq=8+feet+to+meters">2.4 meters</a>!',
-      'I\'ve been told that college is the time to go on dates. To me, the perfect date would be DD/MM/YYYY; MM/DD/YY is just so cliché.',
-      'It took me years to <code>git good</code> at git and GitHub.',
-      'I love telling chemistry jokes, but all the good ones argon!',
-      'After taking physics in high school, I realised how much potential there is for puns!',
-      'One time (true story), I cut myself on a broken window. It was a world of pane.',
-      'I used to play a lot of hockey and ice skate, which involved me slipping and falling all the time. Though, it works as a great icebreaker!',
-      'I don\'t have great eyesight (I wear contacts), but I have no fear: I\'ll get my adult supervision soon!',
-      'I like ketchup, mustard, and mayo, but as soon as I see ranch, I dip.',
-      'Many Canadians love ketchup chips, but I\'m pretty impartial to them - I never had them when I was younger, and now there\'s too much ground to ketchup on.',
-      'I never understood Fifty Shades of Gray - there are at least thousands in RGB color space.',
-      'I used to play houseleague baseball, though I was awful; but nobody is good at baseball right off the bat! I really was awful though.',
-      'I don\'t get cold very easily, but if I am, I just draw a square on the ground and stand in one of the corners - it\'s always 90 degrees!',
-      //'One of my favourite comfort foods to make is mashed potatoes - it\'s usually a s-mash hit!',
-      'Learning recursion was a bit hard for me, but I figured it out eventually: I first had to learn recursion.',
-      'Sometimes, I struggle reading other developer\'s handwriting: it\'s like a code!',
-      'I respect spiders because they\'re such good web developers.',
-      'I try my best with my chemistry puns, but they usually get a bad reaction.',
-      'At UCLA\'s gym, I sometimes lift dumbells. When I graduate, I plan on lifting smartbells instead.',
-      'Paradoxically, taking computer organisation has made my computer less organized; there\'s stacks and heaps of files everywhere now!',
-      'I forking hate merge conflicts.',
-      'Learning about DAGs is tricky: everything is so graphic!',
-      'I had a French teacher who loved keto; I really understood that bread was pain!',
-      'I used to teach an ML class, but since then I\'ve gotten a bit rusty - my knowlege has regressed!'
-    ]
-
-    // This randomly "shuffles" the punFacts array - this is so the "order" of the punFacts is different on every visit!
-    for (let i = punFacts.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [punFacts[i], punFacts[j]] = [punFacts[j], punFacts[i]];
-    }
-
-    // To ensure that you don't get the same punFact twice in a row, we iterate through the random array so that you see each punFact at least once before you see one twice. Thanks to Allison for prompting me to do this!
-    let counter = 0;
-
-    function randomPunFact() {
-      document.getElementById('pun-fact').innerHTML = '<p class="pun-fact">' + punFacts[counter] +
-        '</p>' // I do this instead of directly changing the paragraph's innerHTML so the transition replays when the <p> is created
-      // here we just increment counter, and reset it to zero - creating an "infinite loop" through the array
-      if (counter + 1 == punFacts.length) {
-        counter = 0;
-      } else {
-        counter += 1;
-      }
-    }
-    randomPunFact()
-
-    // Light Mode & Dark Mode Stuffs!
-
-    let darkMode = false;
-    let rootStyle = getComputedStyle(document.body);
-    // for now, I'm making dark mode opt-in just because it's still not perfect
-    // if (
-    //   window.matchMedia('(prefers-color-scheme)').media !== 'not all'
-    //   && window.matchMedia('(prefers-color-scheme: dark)').matches
-    // ) {
-    //   colorLog('Welcome to the dark side (you prefer dark mode).');
-    //   toggleDarkMode();
-    // }
-    // else{
-    //   setDarkMode("light");
-    // }
-
-    function setDarkMode(newMode){
-      rootStyle = getComputedStyle(document.body);
-      document.documentElement.style.setProperty("--font-color-root", rootStyle.getPropertyValue(`--font-color-${newMode}-mode`));
-      document.documentElement.style.setProperty("--font-em-color-root", rootStyle.getPropertyValue(`--font-em-color-${newMode}-mode`));
-      document.documentElement.style.setProperty("--background-color-root", rootStyle.getPropertyValue(`--background-color-${newMode}-mode`));
-    }
-    function toggleDarkMode(){
-      if (darkMode) {
-        // switch to light
-        setDarkMode("light");
-      }
-      else{
-        // switch to dark
-        setDarkMode("dark");
-      }
-      darkMode = !darkMode;
-    }
-
-    // event listener for light/dark mode switch
-    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    darkModeMediaQuery.addListener((e) => {
-      const darkModeOn = e.matches;
-      console.log(`Dark was toggled to ${darkModeOn ? '🌒 on' : '☀️ off'}.`);
-      toggleDarkMode();
-    });
-
-    // these are the controllers for the expanding content boxes
-    // i use a method from https://gomakethings.com/how-to-add-transition-animations-to-vanilla-javascript-show-and-hide-methods/ , which bypasses some issues with just setting display:block;
-
-    function getHeight(elem) {
-      elem.style.display = 'block';
-      let height = elem.scrollHeight + 'px';
-      elem.style.display = '';
-      return height;
-    };
-
-    function show(elem) {
-      let height = getHeight(elem);
-      elem.classList.add('is-visible');
-      elem.style.height = height;
-
-      window.setTimeout(function () {
-        elem.style.height = '';
-      }, 350);
-    };
-
-    function hide(elem) {
-      elem.style.height = elem.scrollHeight + 'px';
-      window.setTimeout(function () {
-        elem.style.height = '0';
-      }, 1);
-      window.setTimeout(function () {
-        elem.classList.remove('is-visible');
-      }, 350);
-    };
-
-    function toggle(elem) {
-      if (elem.classList.contains('is-visible')) {
-        hide(elem);
-      } else {
-        show(elem);
-      }
-    };
-
-    // show/hide listeners
-
-    const areaPrefixes = [
-      'adobe',
-      'audionotch',
-      'aws',
-      'booz',
-      'tla',
-      'small-projects',
-      'coursework-cs',
-      'coursework-pmath',
-      'coursework-emath',
-      'coursework-econ',
-      'coursework-misc'
-    ];
-    areaPrefixes.forEach(function (prefix) {
-      document.getElementById(`${prefix}-link`).onclick = function () {
-        toggle(document.getElementById(`${prefix}-content`))
-      }
-    });
+    colorLog("This page doesn't run any JavaScript other than these messages. No analytics, no stress!");
+    colorLog("Anyways, have fun browsing the rest of the website. If you have any feedback, let me know on GitHub: \nhttps://github.com/mattxwang/matthewwang.me");
   </script>
 </body>
 
