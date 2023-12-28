@@ -45,11 +45,11 @@
               <br />
 
               <dt class="inline">github:</dt>
-              <dd class="inline"><a class="link" href="https://github.com/mattxwang"><code>mattxwang</code></a></dd>
+              <dd class="inline"><a class="link link-black" href="https://github.com/mattxwang"><code>mattxwang</code></a></dd>
               <br />
 
               <dt class="inline">office:</dt>
-              <dd class="inline"><a class="link" href="https://www.washington.edu/maps/#!/cse">CSE</a> 464</dd>
+              <dd class="inline"><a class="link link-uw" href="https://www.washington.edu/maps/#!/cse">CSE</a> 464</dd>
               <br />
 
               <dt class="inline">office hours:</dt>
@@ -80,7 +80,7 @@
               maintaining <a class="link link-jtd" href="https://just-the-docs.com">Just the Docs</a> and <a class="link link-black" href="https://stylelint.io">Stylelint</a> (and sometimes, <a class="link link-neu" href="https://github.com/neuppl/rsdd">RSDD</a>)
             </li>
             <li>
-              preparing to be a co-editor of the <a class="link link-acm" href="https://cacm.acm.org">CACM</a> <a class="link link-acm" href="https://cacm.acm.org/about-communications/editorial-board/">Education column</a> (with the stellar <a class="link link-uw" href="https://benshapi.ro/">R. Benjamin Shapiro</a>)
+              preparing to be a co-editor of the <a class="link link-acm" href="https://cacm.acm.org">Communications of the ACM</a> <a class="link link-acm" href="https://cacm.acm.org/about-communications/editorial-board/">Education column</a> (with the stellar <a class="link link-uw" href="https://benshapi.ro/">R. Benjamin Shapiro</a>)
             </li>
           </ul>
         </div>
@@ -110,7 +110,7 @@
         </li>
         <hr />
         <li class="my-2">
-          books: Because Internet, Crying in H Mart, Death At An Early Age, Design Justice, Never Let Me Go, Pachinko, Paradox, Piranesi, Poor Economics, The Memory Police, The Three-Body Problem, Weapons of Math Destruction, what if
+          books: Algorithms of Oppression, Because Internet, Crying in H Mart, Death At An Early Age, Design Justice, Never Let Me Go, Pachinko, Paradox, Piranesi, Poor Economics, The Memory Police, The Three-Body Problem, Weapons of Math Destruction, what if
         </li>
         <hr />
         <li class="my-2">
@@ -118,7 +118,7 @@
         </li>
         <hr />
         <li class="my-2">
-          games: Antichamber, Baba Is You, Hades, Mini Metro, Portal 2, Stardew Valley
+          games: Antichamber, Baba Is You, Borderlands 2, Civilization V, Chants of Sennaar, Dave the Diver, Hades, Mini Metro, Portal 2, Starbound, Stardew Valley, Super Hexagon
         </li>
         <hr />
         <li class="my-2">
@@ -133,7 +133,8 @@
   </main>
   <hr class="max-w-prose mx-auto" />
   <footer class="max-w-prose mx-auto my-8">
-    made with ❤️ by matt
+    made with ❤️ by matt<br /><br />
+    <a class="text-sm link link-black" href="https://github.com/mattxwang/matthewwang.me">view source code</a> | <button class="text-sm" id="toggle-link-colors">toggle colourful mode</button>
   </footer>
   <script>
     "use strict";
@@ -157,8 +158,14 @@
       console.log(`%c${message}`,"color:#e95420;");
     }
     colorLog("\n __   __  _______  _______  _______ \n|  |_|  ||   _   ||       ||       |\n|       ||  |_|  ||_     _||_     _|\n|       ||       |  |   |    |   |  \n|       ||       |  |   |    |   |  \n| ||_|| ||   _   |  |   |    |   |  \n|_|   |_||__| |__|  |___|    |___|  ");
-    colorLog("This page doesn't run any JavaScript other than these messages. No analytics, no stress!");
+    colorLog("This page doesn't run any JavaScript other than these messages and some fun buttons. No analytics, no stress!");
     colorLog("Anyways, have fun browsing the rest of the website. If you have any feedback, let me know on GitHub: \nhttps://github.com/mattxwang/matthewwang.me");
+
+    document.getElementById('toggle-link-colors').addEventListener('click', () => {
+      document.querySelector('body').classList.toggle('enable-colored-links');
+      document.querySelector('body').classList.toggle('dark:bg-zinc-900');
+      document.querySelector('body').classList.toggle('dark:text-slate-50');
+    });
   </script>
 </body>
 

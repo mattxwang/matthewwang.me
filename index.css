@@ -9,62 +9,64 @@
     text-decoration-color: #e95420;
 }
 
-/*
-.link-uw {
-    text-decoration-color: #4A2E83;
-}
+.enable-colored-links {
+    .link-uw {
+        text-decoration-color: #4A2E83;
+    }
 
-.link-ucla {
-    text-decoration-color: #2774AE;
-}
+    .link-ucla {
+        text-decoration-color: #2774AE;
+    }
 
-.link-neu {
-    text-decoration-color: #C8102E;
-}
+    .link-neu {
+        text-decoration-color: #C8102E;
+    }
 
-.link-czi {
-    text-decoration-color: #FF414B;
-}
+    .link-czi {
+        text-decoration-color: #FF414B;
+    }
 
-.link-fb {
-    text-decoration-color: #1778F2;
-}
+    .link-fb {
+        text-decoration-color: #1778F2;
+    }
 
-.link-aws {
-    text-decoration-color: #FF9900;
-}
+    .link-aws {
+        text-decoration-color: #FF9900;
+    }
 
-.link-adobe {
-    text-decoration-color: #FA0E00;
-}
+    .link-adobe {
+        text-decoration-color: #FA0E00;
+    }
 
-.link-booz {
-    text-decoration-color: #03807E;
-}
+    .link-booz {
+        text-decoration-color: #03807E;
+    }
 
-.link-audionotch {
-    text-decoration-color: #FF7700;
-}
+    .link-audionotch {
+        text-decoration-color: #FF7700;
+    }
 
-.link-tla {
-    text-decoration-color: #5EDA12;
-}
+    .link-tla {
+        text-decoration-color: #5EDA12;
+    }
 
-.link-acm {
-    text-decoration-color:#1E6CFF;
-}
+    .link-acm {
+        text-decoration-color:#1E6CFF;
+    }
 
-.link-beam {
-    text-decoration-color: #C3ECFF;
-}
+    .link-beam {
+        text-decoration-color: #C3ECFF;
+    }
 
-.link-jtd {
-    text-decoration-color: #7253ed;
-}
+    .link-jtd {
+        text-decoration-color: #7253ed;
+    }
 
-.link-black {
-    text-decoration-color: #000;
-} */
+    .link-black {
+        text-decoration-color: #000;
+    }
+
+}
 
 .img-silhouette {
     padding: 0.20rem;
