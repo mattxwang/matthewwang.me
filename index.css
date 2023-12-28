@@ -9,6 +9,11 @@
     text-decoration-color: #e95420;
 }
 
+.link.link-muted {
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
+}
+
 .enable-colored-links {
     .link-uw {
         text-decoration-color: #4A2E83;
