@@ -12,6 +12,7 @@
 .link.link-muted {
     text-decoration-style: dotted;
     text-decoration-thickness: 1px;
+    text-decoration-color: currentColor;
 }
 
 .enable-colored-links {

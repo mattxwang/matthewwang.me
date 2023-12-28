@@ -715,6 +715,10 @@ video {
   margin-top: 2rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -2411,6 +2415,7 @@ video {
 .link.link-muted {
   text-decoration-style: dotted;
   text-decoration-thickness: 1px;
+  text-decoration-color: currentColor;
 }
 
 .enable-colored-links {
