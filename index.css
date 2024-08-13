@@ -88,6 +88,15 @@
     left: 0.7rem;
 }
 
+.dl-unstyled > dt, .dl-unstyled > dd {
+    display: inline;
+    margin: 0;
+}
+
+.list-unstyled > li {
+    display: inline;
+}
+
 .handwave {
     animation-name: handwave;
     animation-duration: 2.5s;
