@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.9 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -590,10 +590,6 @@ video {
   margin-top: 2rem;
 }
 
-.inline-block {
-  display: inline-block;
-}
-
 .inline {
   display: inline;
 }
@@ -612,6 +608,10 @@ video {
 
 .max-w-sm {
   max-width: 24rem;
+}
+
+.list-decimal {
+  list-style-type: decimal;
 }
 
 .list-disc {
