@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "watch": "npx tailwindcss -i ./index.css -o ./style.css --watch"
+    "watch": "npx @tailwindcss/cli -i ./index.css -o ./style.css --watch"
   },
   "devDependencies": {
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^4.1.12"
   }
 }
