@@ -230,6 +230,9 @@
   .list-disc {
     list-style-type: disc;
   }
+  .rounded {
+    border-radius: 0.25rem;
+  }
   .rounded-sm {
     border-radius: var(--radius-sm);
   }
