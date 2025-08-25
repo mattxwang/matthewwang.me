@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-slate-50: oklch(98.4% 0.003 247.858);
+    --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-zinc-900: oklch(21% 0.006 285.885);
     --spacing: 0.25rem;
     --container-sm: 24rem;
@@ -25,7 +26,6 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --leading-relaxed: 1.625;
-    --radius-sm: 0.25rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -233,9 +233,6 @@
   .rounded {
     border-radius: 0.25rem;
   }
-  .rounded-sm {
-    border-radius: var(--radius-sm);
-  }
   .bg-slate-50 {
     background-color: var(--color-slate-50);
   }
@@ -335,6 +332,11 @@
     @media (prefers-color-scheme: dark) {
       color: var(--color-slate-50);
     }
+  }
+}
+@layer base {
+  hr {
+    border-color: var(--color-gray-200, currentColor);
   }
 }
 .link {

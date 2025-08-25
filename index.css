@@ -1,5 +1,11 @@
 @import 'tailwindcss';
 
+@layer base {
+    hr {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
+
 .link {
     text-decoration: underline;
     text-decoration-thickness: 2px;
