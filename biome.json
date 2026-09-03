@@ -14,7 +14,7 @@
     "indentWidth": 2,
     "lineEnding": "lf",
     "lineWidth": 120,
-    "bracketSameLine": false
+    "bracketSameLine": true
   },
   "linter": {
     "enabled": false
