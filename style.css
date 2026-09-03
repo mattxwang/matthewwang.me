@@ -1,4 +1,4 @@
-/*! tailwindcss v4.3.2 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -282,6 +282,9 @@
   .pl-6 {
     padding-left: calc(var(--spacing) * 6);
   }
+  .text-center {
+    text-align: center;
+  }
   .text-left {
     text-align: left;
   }
@@ -323,58 +326,40 @@
   .line-through {
     text-decoration-line: line-through;
   }
-  .md\:col-span-3 {
-    @media (width >= 48rem) {
+  @media (width >= 48rem) {
+    .md\:col-span-3 {
       grid-column: span 3 / span 3;
     }
-  }
-  .md\:mt-16 {
-    @media (width >= 48rem) {
+    .md\:mt-16 {
       margin-top: calc(var(--spacing) * 16);
     }
-  }
-  .md\:mt-32 {
-    @media (width >= 48rem) {
+    .md\:mt-32 {
       margin-top: calc(var(--spacing) * 32);
     }
-  }
-  .md\:grid {
-    @media (width >= 48rem) {
+    .md\:grid {
       display: grid;
     }
-  }
-  .md\:max-w-sm {
-    @media (width >= 48rem) {
+    .md\:max-w-sm {
       max-width: var(--container-sm);
     }
-  }
-  .md\:grid-cols-4 {
-    @media (width >= 48rem) {
+    .md\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
-  }
-  .md\:gap-4 {
-    @media (width >= 48rem) {
+    .md\:gap-4 {
       gap: calc(var(--spacing) * 4);
     }
-  }
-  .md\:px-4 {
-    @media (width >= 48rem) {
+    .md\:px-4 {
       padding-inline: calc(var(--spacing) * 4);
     }
-  }
-  .md\:px-8 {
-    @media (width >= 48rem) {
+    .md\:px-8 {
       padding-inline: calc(var(--spacing) * 8);
     }
   }
-  .dark\:bg-zinc-900 {
-    @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: dark) {
+    .dark\:bg-zinc-900 {
       background-color: var(--color-zinc-900);
     }
-  }
-  .dark\:text-slate-50 {
-    @media (prefers-color-scheme: dark) {
+    .dark\:text-slate-50 {
       color: var(--color-slate-50);
     }
   }
@@ -395,49 +380,47 @@
   text-decoration-thickness: 1px;
   text-decoration-color: currentColor;
 }
-.enable-colored-links {
-  .link-uw {
-    text-decoration-color: #4A2E83;
-  }
-  .link-ucla {
-    text-decoration-color: #2774AE;
-  }
-  .link-neu {
-    text-decoration-color: #C8102E;
-  }
-  .link-czi {
-    text-decoration-color: #FF414B;
-  }
-  .link-fb {
-    text-decoration-color: #1778F2;
-  }
-  .link-aws {
-    text-decoration-color: #FF9900;
-  }
-  .link-adobe {
-    text-decoration-color: #FA0E00;
-  }
-  .link-booz {
-    text-decoration-color: #03807E;
-  }
-  .link-audionotch {
-    text-decoration-color: #FF7700;
-  }
-  .link-tla {
-    text-decoration-color: #5EDA12;
-  }
-  .link-acm {
-    text-decoration-color: #1E6CFF;
-  }
-  .link-beam {
-    text-decoration-color: #C3ECFF;
-  }
-  .link-jtd {
-    text-decoration-color: #7253ed;
-  }
-  .link-black {
-    text-decoration-color: #000;
-  }
+.enable-colored-links .link-uw {
+  text-decoration-color: #4A2E83;
+}
+.enable-colored-links .link-ucla {
+  text-decoration-color: #2774AE;
+}
+.enable-colored-links .link-neu {
+  text-decoration-color: #C8102E;
+}
+.enable-colored-links .link-czi {
+  text-decoration-color: #FF414B;
+}
+.enable-colored-links .link-fb {
+  text-decoration-color: #1778F2;
+}
+.enable-colored-links .link-aws {
+  text-decoration-color: #FF9900;
+}
+.enable-colored-links .link-adobe {
+  text-decoration-color: #FA0E00;
+}
+.enable-colored-links .link-booz {
+  text-decoration-color: #03807E;
+}
+.enable-colored-links .link-audionotch {
+  text-decoration-color: #FF7700;
+}
+.enable-colored-links .link-tla {
+  text-decoration-color: #5EDA12;
+}
+.enable-colored-links .link-acm {
+  text-decoration-color: #1E6CFF;
+}
+.enable-colored-links .link-beam {
+  text-decoration-color: #C3ECFF;
+}
+.enable-colored-links .link-jtd {
+  text-decoration-color: #7253ed;
+}
+.enable-colored-links .link-black {
+  text-decoration-color: #000;
 }
 .img-silhouette {
   padding: 0.20rem;
