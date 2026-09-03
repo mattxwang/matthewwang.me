@@ -1,495 +1,790 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>matt wang</title>
+    <meta
+      name="description"
+      content="Assistant Teaching Professor at the University of Washington, maintainer of Just the Docs and Stylelint. Second coolest Matt Wang he knows."
+    >
+    <link rel="canonical" href="https://mattx.wang">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#e95420">
+    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#e95420">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>matt wang</title>
-  <meta name="description"
-    content="Assistant Teaching Professor at the University of Washington, maintainer of Just the Docs and Stylelint. Second coolest Matt Wang he knows.">
-  <link rel="canonical" href="https://mattx.wang">
-  <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-  <meta name="msapplication-TileColor" content="#e95420">
-  <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
-  <meta name="theme-color" content="#e95420">
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body class="bg-slate-50 dark:bg-zinc-900 dark:text-slate-50 px-4 md:px-8">
+    <main class="md:mt-32 my-8">
+      <section class="max-w-6xl mx-auto">
+        <div class="md:grid md:grid-cols-4 md:gap-4">
+          <div>
+            <div class="img-silhouette rounded m-auto mb-8 max-w-1/2 md:max-w-sm">
+              <img
+                class="d-block w-full rounded img-silhouette-shift"
+                src="img/matt.jpg"
+                alt="matt (mostly) smiling standing against a blurred background of the Bill and Melinda Gates Center at the University of Washington. He's wearing glasses, a gray blazer, and a white shirt."
+              >
+            </div>
+          </div>
+          <div class="md:col-span-3 max-w-prose md:px-4 mb-8">
+            <h1 class="mb-2"><span class="text-3xl font-semibold">matt wang</span> (he/him)</h1>
+            <dl class="my-2">
+              <dt class="inline">email:</dt>
+              <dd class="inline"
+                ><a class="link" href="mailto:mxw@cs.washington.edu"><code>mxw@cs.washington.edu</code></a><br></dd
+              >
 
-<body class="bg-slate-50 dark:bg-zinc-900 dark:text-slate-50 px-4 md:px-8">
-  <main class="md:mt-32 my-8">
-    <section class="max-w-6xl mx-auto">
-      <div class="md:grid md:grid-cols-4 md:gap-4">
-        <div>
-          <div class="img-silhouette rounded m-auto mb-8 max-w-1/2 md:max-w-sm">
-            <img class="d-block w-full rounded img-silhouette-shift" src="img/matt.jpg"
-              alt="matt (mostly) smiling standing against a blurred background of the Bill and Melinda Gates Center at the University of Washington. He's wearing glasses, a gray blazer, and a white shirt.">
+              <dt class="inline">github:</dt>
+              <dd class="inline">
+                <a class="link link-black" href="https://github.com/mattxwang"><code>mattxwang</code></a><br>
+              </dd>
+
+              <dt class="inline">office:</dt>
+              <dd class="inline"><a class="link link-uw" href="https://www.washington.edu/maps/#!/cse">CSE</a>
+                464<br>
+              </dd>
+
+              <dt class="inline">office hours:</dt>
+              <dd>
+                <ul class="pl-6 list-disc">
+                  <li>Fri 3:00 - 5:00 PM [CSE 195, from 08/25-09/18]</li>
+                  <li>I won't have open office hours until 26au. Want to chat? Shoot me an email!</li>
+                </ul>
+              </dd>
+            </dl>
+            <p class="my-2">
+              Interested in TAing with me? Please see: <a class="link link-uw" href="ta/">TAing w/ Matt</a>.
+            </p>
+            <hr class="my-4">
+            <p class="text-lg my-2">
+              <span class="handwave">👋</span>
+              hi! I'm an Assistant
+              <a class="link link-uw" href="https://www.cs.washington.edu/people/faculty-members/"
+                >Teaching Professor</a
+              >
+              in the
+              <a class="link link-uw" href="https://www.cs.washington.edu/"
+                >Paul G. Allen School of Computer Science &amp; Engineering</a
+              >
+              at the <a class="link link-uw" href="https://www.washington.edu/">University of Washington</a>.
+            </p>
+            <p class="text-lg my-2">
+              Broadly, I love computer science and am interested in making computer science education "at scale" more
+              accessible, equitable, and inclusive.
+            </p>
+            <p class="text-lg my-2">
+              Right now, I'm especially interested in systems for teaching accessibly <em>and</em> teaching
+              accessibility, targeted interventions for students in introductory programming courses, and developing
+              open-source software &amp; content.
+            </p>
+            <hr class="my-4">
+            <p class="leading-relaxed"> Currently, I'm: </p>
+            <ul class="list-disc pl-4">
+              <li>
+                co-teaching
+                <a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse195/26au/">CSE 195</a>
+                (with the ASSP dream team)
+              </li>
+              <li> chairing the CSE Accessibility Implementation committee </li>
+              <li> tinkering on infrastructure for the CSE 12X course sequence </li>
+              <li> maintaining <a class="link link-jtd" href="https://just-the-docs.com">Just the Docs</a> </li>
+              <li>
+                <a class="link link-acm" href="https://cacm.acm.org/editorial-staff-board/">co-editing</a>
+                the <a class="link link-acm" href="https://cacm.acm.org">CACM</a>'s
+                <a class="link link-acm" href="https://cacm.acm.org/category/education/">Education opinion column</a>
+                (w/ the stellar <a class="link link-uw" href="https://benshapi.ro/">Ben Shapiro</a>)
+              </li>
+            </ul>
+            <p class="my-4">
+              I am also just wrapping up my time as a CSE
+              <a class="link link-uw" href="https://www.uwhs.uw.edu/">UW in the High School</a>
+              liaison (w/ the wonderful
+              <a class="link link-uw" href="https://homes.cs.washington.edu/~brettwo/">Brett Wortzman</a>, filling in
+              for the brilliant
+              <a class="link link-uw" href="https://homes.cs.washington.edu/~bricker/">Lauren Bricker</a>).
+            </p>
+            <hr class="my-4">
+            <p class="leading-relaxed"> In recent memory, I... </p>
+            <ul class="list-disc pl-4">
+              <li>
+                was delighted that "<a class="link link-uw" href="https://g.riteshkanchi.com/chi26-arboretum/"
+                  >Nonvisual Support for Understanding and Reasoning about Data Structures</a
+                >" was accepted to and presented at CHI 2026!
+              </li>
+              <li>
+                was delighted that "<a
+                  class="link link-uw"
+                  href="https://g.riteshkanchi.com/sigcse26-systems-for-scaling-accessibility/"
+                  >Systems for Scaling Accessibility Efforts in Large Computing Courses</a
+                >" was accepted to and presented at SIGCSE TS 2026!
+              </li>
+              <li>
+                was honoured to win the
+                <a
+                  class="link link-uw"
+                  href="https://news.cs.washington.edu/2024/06/17/you-write-your-own-story-allen-school-celebrates-the-graduating-class-of-2024/"
+                  >2024 COM<sup>2</sup>
+                  Teaching Award</a
+                >
+                alongside the absolutely amazing
+                <a class="link link-uw" href="https://homes.cs.washington.edu/~mnats/">Miya Natsuhara</a>
+                at the 2024 CSE graduation!
+              </li>
+              <li>
+                was on the panel "<a
+                  class="link"
+                  href="https://sigcse2024.sigcse.org/details/sigcse-ts-2024-panels/5/Interviewing-the-Teaching-Faculty-Hiring-Process"
+                  >Interviewing the Teaching Faculty Hiring Process</a
+                >" at <a class="link" href="https://sigcse2024.sigcse.org">SIGCSE TS 2024</a> with some lovely
+                panelists!
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="md:col-span-3 max-w-prose md:px-4 mb-8">
-          <h1 class="mb-2"><span class="text-3xl font-semibold">matt wang</span> (he/him)</h1>
-          <dl class="my-2">
-            <dt class="inline">email:</dt>
-            <dd class="inline"><a class="link"
-                href="mailto:mxw@cs.washington.edu"><code>mxw@cs.washington.edu</code></a><br></dd>
-
-            <dt class="inline">github:</dt>
-            <dd class="inline"><a class="link link-black"
-                href="https://github.com/mattxwang"><code>mattxwang</code></a><br></dd>
-
-            <dt class="inline">office:</dt>
-            <dd class="inline"><a class="link link-uw" href="https://www.washington.edu/maps/#!/cse">CSE</a> 464<br>
-            </dd>
-
-            <dt class="inline">office hours:</dt>
-            <dd>
-              <ul class="pl-6 list-disc">
-                <li>Fri 3:00 - 5:00 PM [CSE 195, from 08/25-09/18]</li>
-                <li>I won't have open office hours until 26au. Want to chat? Shoot me an email!</li>
-              </ul>
-            </dd>
-          </dl>
-          <p class="my-2">
-            Interested in TAing with me? Please see: <a class="link link-uw" href="ta/">TAing w/ Matt</a>.
-          </p>
-          <hr class="my-4">
-          <p class="text-lg my-2">
-            <span class="handwave">👋</span> hi! I'm an Assistant <a class="link link-uw"
-              href="https://www.cs.washington.edu/people/faculty-members/">Teaching
-              Professor</a> in the <a class="link link-uw" href="https://www.cs.washington.edu/">Paul G. Allen School of
-              Computer Science &amp; Engineering</a> at the <a class="link link-uw"
-              href="https://www.washington.edu/">University of Washington</a>.
-          </p>
-          <p class="text-lg my-2">
-            Broadly, I love computer science and am interested in scaling computer science education while making it
-            more accessible, equitable, and inclusive.
-          </p>
-          <p class="text-lg my-2">
-            Right now, I'm especially interested in building systems to enable accessible teaching, targeted
-            interventions to support students in introductory programming, and developing open-source software &amp;
-            content.
-          </p>
-          <hr class="my-4">
-          <p class="leading-relaxed">
-            Currently, I'm:
-          </p>
-          <ul class="list-disc pl-4">
-            <li>
-              co-teaching <a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse195/26au/">CSE 195</a> (with the ASSP dream team)
-            </li>
-            <li>
-              chairing the CSE Accessibility Implementation committee
-            </li>
-            <li>
-              tinkering on infrastructure for the CSE 12X course sequence
-            </li>
-            <li>
-              maintaining <a class="link link-jtd" href="https://just-the-docs.com">Just the Docs</a>
-            </li>
-            <li>
-              <a class="link link-acm" href="https://cacm.acm.org/editorial-staff-board/">co-editing</a> the <a
-                class="link link-acm" href="https://cacm.acm.org">CACM</a>'s <a class="link link-acm"
-                href="https://cacm.acm.org/category/education/">Education opinion column</a> (w/ the stellar <a
-                class="link link-uw" href="https://benshapi.ro/">Ben Shapiro</a>)
-            </li>
-          </ul>
-          <p class="my-4">
-            I am also just wrapping up my time as a CSE <a class="link link-uw" href="https://www.uwhs.uw.edu/">UW in the High School</a> liaison
-              (w/ the wonderful <a class="link link-uw" href="https://homes.cs.washington.edu/~brettwo/">Brett
-                Wortzman</a>, filling in for the brilliant <a class="link link-uw" href="https://homes.cs.washington.edu/~bricker/">Lauren Bricker</a>).
-          </p>
-          <hr class="my-4">
-          <p class="leading-relaxed">
-            In recent memory, I...
-          </p>
-          <ul class="list-disc pl-4">
-            <li>
-              was delighted that "<a class="link link-uw" href="https://g.riteshkanchi.com/chi26-arboretum/">Nonvisual Support for Understanding and Reasoning about Data Structures</a>" was accepted to and presented at CHI 2026!
-            </li>
-            <li>
-              was delighted that "<a class="link link-uw" href="https://g.riteshkanchi.com/sigcse26-systems-for-scaling-accessibility/">Systems for Scaling Accessibility Efforts in Large Computing Courses</a>" was accepted to and presented at SIGCSE TS 2026!
-            </li>
-            <li>
-              was honoured to win the <a class="link link-uw"
-                href="https://news.cs.washington.edu/2024/06/17/you-write-your-own-story-allen-school-celebrates-the-graduating-class-of-2024/">2024
-                COM<sup>2</sup> Teaching Award</a> alongside the absolutely amazing <a class="link link-uw"
-                href="https://homes.cs.washington.edu/~mnats/">Miya Natsuhara</a> at the 2024 CSE graduation!
-            </li>
-            <li>
-              was on the panel "<a class="link"
-                href="https://sigcse2024.sigcse.org/details/sigcse-ts-2024-panels/5/Interviewing-the-Teaching-Faculty-Hiring-Process">Interviewing
-                the Teaching Faculty Hiring Process</a>" at <a class="link"
-                href="https://sigcse2024.sigcse.org">SIGCSE TS 2024</a> with some lovely panelists!
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+      </section>
+      <hr class="max-w-prose mx-auto">
+      <section class="max-w-prose mx-auto leading-relaxed">
+        <h2 class="text-2xl font-semibold mt-8 mb-2">courses I've taught (or will teach) at UW</h2>
+        <p>
+          Every course that I have taught at UW has had some sort of public-facing course website, though access to
+          course materials otherwise varies. Please ask if you have questions!
+        </p>
+        <table class="w-full my-2 mb-4 border-collapse">
+          <thead>
+            <tr class="border-b border-gray-500 text-left">
+              <th class="py-2 pr-4 font-semibold" scope="col">course</th>
+              <th class="py-2 font-semibold" scope="col">quarters taught</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-500 align-top">
+              <td class="py-1 pr-4"
+                ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse121/">CSE 121</a>:
+                Introduction to Programming I</td
+              >
+              <td class="py-1">
+                <ol class="list-unstyled">
+                  <li><span class="sr-only">CSE 121</span>27sp,</li>
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse121/26sp/"
+                      ><span class="sr-only">CSE 121</span>26sp</a
+                    >,</li
+                  >
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse121/25wi/"
+                      ><span class="sr-only">CSE 121</span>25wi</a
+                    >,</li
+                  >
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse121/24au/"
+                      ><span class="sr-only">CSE 121</span>24au</a
+                    >
+                    (w/ the wonderful
+                    <a class="link link-uw" href="https://homes.cs.washington.edu/~brettwo/">Brett Wortzman</a>),</li
+                  >
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse121/24sp/"
+                      ><span class="sr-only">CSE 121</span>24sp</a
+                    >,</li
+                  >
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse121/24wi/"
+                      ><span class="sr-only">CSE 121</span>24wi</a
+                    >
+                    (w/ the great Elba Garza)</li
+                  >
+                </ol>
+              </td>
+            </tr>
+            <tr class="border-b border-gray-500 align-top">
+              <td class="py-1 pr-4"
+                ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse195/">CSE 195</a>
+                (formerly 190E): Allen Scholars Summer Bridge</td
+              >
+              <td class="py-1">
+                <ol class="list-unstyled">
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse195/26au/"
+                      ><span class="sr-only">CSE 195</span>26su</a
+                    >
+                    (w/ the ASSP dream team),</li
+                  >
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse195/25au/"
+                      ><span class="sr-only">CSE 195</span>25su</a
+                    >
+                    (w/ the ASSP dream team),</li
+                  >
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse190e/24au/"
+                      ><span class="sr-only">CSE 190E</span>24su</a
+                    >
+                    (w/ the ASSP dream team)</li
+                  >
+                </ol>
+              </td>
+            </tr>
+            <tr class="border-b border-gray-500 align-top">
+              <td class="py-1 pr-4"
+                ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse197w/">CSE 197W/Z</a>
+                (formerly 190W/Z): CSE 121 Workshop Course</td
+              >
+              <td class="py-1">
+                <ol class="list-unstyled">
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse197w/25au/"
+                      ><span class="sr-only">CSE 197W</span>25au</a
+                    >,</li
+                  >
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse190w/23au/"
+                      ><span class="sr-only">CSE 190W</span>23au</a
+                    >
+                    (w/ the brilliant
+                    <a class="link link-uw" href="https://homes.cs.washington.edu/~bricker/">Lauren Bricker</a>)</li
+                  >
+                </ol>
+              </td>
+            </tr>
+            <tr class="border-b border-gray-500 align-top">
+              <td class="py-1 pr-4"
+                ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse197x/">CSE 197X/Z</a>: CSE
+                122 Workshop Course</td
+              >
+              <td class="py-1">
+                <ol class="list-unstyled">
+                  <li><span class="sr-only">CSE 197X</span>26au,</li>
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse197x/26wi/"
+                      ><span class="sr-only">CSE 197X</span>26wi</a
+                    ></li
+                  >
+                </ol>
+              </td>
+            </tr>
+            <tr class="border-b border-gray-500 align-top">
+              <td class="py-1 pr-4"
+                ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse197y/">CSE 197Y/Z</a>: CSE
+                123 Workshop Course</td
+              >
+              <td class="py-1">
+                <ol class="list-unstyled">
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse197z/26sp/"
+                      ><span class="sr-only">CSE 197Z</span>26sp</a
+                    ></li
+                  >
+                </ol>
+              </td>
+            </tr>
+            <tr class="border-b border-gray-500 align-top">
+              <td class="py-1 pr-4"
+                ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse331/">CSE 331</a>: Software
+                Design &amp; Implementation</td
+              >
+              <td class="py-1">
+                <ol class="list-unstyled">
+                  <li><span class="sr-only">CSE 331</span>27wi,</li>
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse331/25sp/"
+                      ><span class="sr-only">CSE 331</span>25sp</a
+                    ></li
+                  >
+                </ol>
+              </td>
+            </tr>
+            <tr class="border-b border-gray-500 align-top">
+              <td class="py-1 pr-4"
+                ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse390ha/">CSE 390HA</a>: CSE
+                122 Honors Seminar</td
+              >
+              <td class="py-1">
+                <ol class="list-unstyled">
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse390ha/26wi/"
+                      ><span class="sr-only">CSE 390HA</span>26wi</a
+                    >,</li
+                  >
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse390ha/24sp/"
+                      ><span class="sr-only">CSE 390HA</span>24sp</a
+                    ></li
+                  >
+                </ol>
+              </td>
+            </tr>
+            <tr class="border-b border-gray-500 align-top">
+              <td class="py-1 pr-4"
+                ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse391/">CSE 391</a>: Systems
+                and Software Tools</td
+              >
+              <td class="py-1">
+                <ol class="list-unstyled">
+                  <li><span class="sr-only">CSE 391</span>27sp,</li>
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse391/24su/"
+                      ><span class="sr-only">CSE 391</span>24su</a
+                    >,</li
+                  >
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse391/24wi/"
+                      ><span class="sr-only">CSE 391</span>24wi</a
+                    >,</li
+                  >
+                  <li
+                    ><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse391/23au/"
+                      ><span class="sr-only">CSE 391</span>23au</a
+                    ></li
+                  >
+                </ol>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          You may also be interested in the
+          <a class="link link-uw" href="https://www.cs.washington.edu/academics/time-schedules/"
+            >CSE time and teaching schedules</a
+          >.
+        </p>
+      </section>
+      <hr class="max-w-prose mx-auto mt-8">
+      <section class="max-w-prose mx-auto leading-relaxed">
+        <h2 class="text-2xl font-semibold mt-8 mb-2">
+          <a href="https://en.wikipedia.org/wiki/Past_Lives_(film)">past lives</a>
+        </h2>
+        <p class="my-2">
+          I received two B.S.'s and an M.S. from the
+          <a class="link link-ucla" href="https://www.ucla.edu/">University of California, Los Angeles</a>. I grew up in
+          Toronto, Canada, and still maintain my love of winter sports and poutine.
+        </p>
+        <p class="my-2">
+          As a student, I was a research assistant at the
+          <a class="link link-neu" href="https://neuppl.khoury.northeastern.edu/"
+            >Northeastern Probabilistic Programming Lab</a
+          >
+          (and <a class="link link-neu" href="https://prl.khoury.northeastern.edu/">PRL</a>) working primarily on
+          <a class="link link-neu" href="https://github.com/neuppl/rsdd">RSDD</a>; the inaugural outreach co-chair for
+          <a class="link link-black" href="https://nips.cc/Conferences/2022">NeurIPS 2022</a>; wearer of many hats at
+          <a class="link link-acm" href="https://uclaacm.com">ACM at UCLA</a>
+          and
+          <a class="link link-tla" href="https://teachla.uclaacm.com">ACM Teach LA</a>; a software engineering intern at
+          <a class="link link-czi" href="https://chanzuckerberg.com/">CZI</a>,
+          <a class="link link-fb" href="https://facebook.com">Facebook</a>,
+          <a class="link link-adobe" href="https://adobe.com">Adobe</a>,
+          <a class="link link-aws" href="https://aws.amazon.com/">AWS</a>,
+          <a class="link link-booz" href="https://www.boozallen.com/">Booz Allen</a>, and
+          <a class="link link-audionotch" href="https://audionotch.com/">AudioNotch</a>; and, one of the first employees
+          of the UCLA Makerspace.
+        </p>
+        <p class="my-2">
+          Prior to becoming teaching faculty, I've been doing some sort of teaching for about a decade. As a graduate
+          student, I TA'd three quarters of CS 131: Programming Languages at UCLA (w/ a focus on building course
+          infrastructure and novel content). As an undergraduate, I taught hundreds of undergrads web development
+          through <a class="link link-acm" href="https://uclaacm.com">ACM at UCLA</a> and
+          <a class="link link-acm" href="https://qwerhacks.com">QWER Hacks</a>, middle and high school classes through
+          <a class="link link-tla" href="https://teachla.uclaacm.com">ACM Teach LA</a>
+          and
+          <a class="link link-beam" href="https://beam.ucla.edu/">BEAM at UCLA</a>, and dedicated a big chunk of my life
+          to student advocacy &amp; institution-building. I also developed and taught various workshops at the UCLA
+          Makerspace. In high school, I taught various formal and informal classes, workshops, camps, and afterschool
+          programs in computer science, robotics, debate, and math.
+        </p>
+        <p class="my-2">
+          I was also previously a maintainer of <a class="link link-black" href="https://stylelint.io">Stylelint</a>,
+          but have been inactive since 2024 (and offically left in 2026). They do some great work, and I still continue
+          to cheer them on - working on Stylelint was one of my fondest memories in open-source!
+        </p>
+        <p class="my-2">
+          When I was younger, I had the (admittedly strange) dream job of working for the
+          <a class="link" href="https://www.consumerfinance.gov/">CFPB</a>
+          or
+          <a class="link" href="https://www.ftc.gov/">FTC</a>. I'm still interested in a handful of areas surrounding
+          education and health policy, public economics, consumer protection, and antitrust — though I'm far from an
+          expert!
+        </p>
+      </section>
+      <section class="max-w-prose mx-auto leading-relaxed">
+        <h2 class="text-2xl font-semibold mt-8 mb-2">some favourites &amp; recommendations</h2>
+        <dl class="dl-unstyled my-2">
+          <dt>recently:</dt>
+          <dd>
+            <ul class="list-unstyled inline">
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Algospeak_(book)">Algospeak</a>
+                (Adam Aleksic book),</li
+              >
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Emotional_Junglist"
+                  >Emotional Junglist</a
+                >
+                (Nia Archives album)</li
+              >
+            </ul>
+          </dd>
+        </dl>
+        <hr>
+        <dl class="dl-unstyled my-2">
+          <dt>albums:</dt>
+          <dd>
+            <ul class="list-unstyled inline">
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/After_Laughter">After Laughter</a>,</li
+              >
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Anak_Ko">Anak Ko</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Bewitched_(Laufey_album)">Bewitched</a>,
+              </li>
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Brat_(album)">Brat</a>,</li>
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Charm_(Clairo_album)">Charm</a>,</li>
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Donuts_(album)">Donuts</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Emotion_(Carly_Rae_Jepsen_album)"
+                  >Emotion</a
+                >,</li
+              >
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Faces_(mixtape)">Faces</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Heard_It_in_a_Past_Life"
+                  >Heard It In A Past Life</a
+                >,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Helplessness_Blues"
+                  >Helplessness Blues</a
+                >,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/I_Love_My_Computer"
+                  >I Love My Computer</a
+                >,</li
+              >
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Imaginal_Disk">Imaginal Disk</a>,</li>
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Louie_(album)">Louie</a>,</li>
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Madvillainy">Madvillainy</a>,</li>
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Not_Tight">NOT TiGHT</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Random_Access_Memories"
+                  >Random Access Memories</a
+                >,</li
+              >
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Saturation_II">SATURATION II</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Since_I_Left_You">Since I Left You</a>,
+              </li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Sometimes_I_Might_Be_Introvert"
+                  >Sometimes I Might Be Introvert</a
+                >,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/The_Melodic_Blue">The Melodic Blue</a>,
+              </li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/To_Pimp_a_Butterfly"
+                  >To Pimp A Butterfly</a
+                >,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://soundcloud.com/monsune_inc/sets/tradition-2">Tradition</a>,
+              </li>
+              <li
+                ><a class="link link-muted" href="https://lunali.bandcamp.com/album/when-a-thought-grows-wings"
+                  >When a Thought Grows Wings</a
+                >,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Without_Warning_(album)"
+                  >Without Warning</a
+                >,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Women_in_Music_Pt._III"
+                  >Women In Music Pt. III</a
+                ></li
+              >
+            </ul>
+          </dd>
+        </dl>
+        <hr>
+        <dl class="dl-unstyled my-2">
+          <dt>books:</dt>
+          <dd>
+            <ul class="list-unstyled inline">
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Algorithms_of_Oppression"
+                  >Algorithms of Oppression</a
+                >,</li
+              >
+              <li><a class="link link-muted" href="https://gretchenmcculloch.com/book/">Because Internet</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Capital_in_the_Twenty-First_Century"
+                  >Capital in the Twenty-First Century</a
+                >,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Crying_in_H_Mart">Crying in H Mart</a>,
+              </li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Death_at_an_Early_Age"
+                  >Death At An Early Age</a
+                >,</li
+              >
+              <li><a class="link link-muted" href="https://designjustice.mitpress.mit.edu/">Design Justice</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Exhalation:_Stories"
+                  >Exhalation: Stories</a
+                >,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Homegoing_(Gyasi_novel)">Homegoing</a>,
+              </li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Never_Let_Me_Go_(novel)"
+                  >Never Let Me Go</a
+                >,</li
+              >
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Pachinko_(novel)">Pachinko</a>,</li>
+              <li
+                ><a
+                  class="link link-muted"
+                  href="https://www.penguinrandomhouse.com/books/218205/paradox-by-jim-al-khalili/"
+                  >Paradox</a
+                >,</li
+              >
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Piranesi_(novel)">Piranesi</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Poor_Economics">Poor Economics</a>,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Stories_of_Your_Life_and_Others"
+                  >Stories of Your Life and Others</a
+                >,</li
+              >
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/The_Food_Lab">The Food Lab</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/The_Memory_Police">The Memory Police</a
+                >,
+              </li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/The_Remains_of_the_Day"
+                  >The Remains of the Day</a
+                >,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)"
+                  >The Three-Body Problem</a
+                >,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Weapons_of_Math_Destruction"
+                  >Weapons of Math Destruction</a
+                >,</li
+              >
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/What_If%3F_(book)">What If?</a></li>
+            </ul>
+          </dd>
+        </dl>
+        <hr>
+        <dl class="dl-unstyled my-2">
+          <dt>food:</dt>
+          <dd>carbonara, gochujang pasta, Japanese curry, katsu, sushi, tiramisu, udon</dd>
+        </dl>
+        <hr>
+        <dl class="dl-unstyled my-2">
+          <dt>games:</dt>
+          <dd>
+            <ul class="list-unstyled inline">
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Antichamber">Antichamber</a>,</li>
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Baba_Is_You">Baba Is You</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Bloons_Tower_Defense#Bloons_TD_4"
+                  >Bloons TD 4</a
+                >,</li
+              >
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Borderlands_2">Borderlands 2</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Civilization_V">Civilization V</a>,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Chants_of_Sennaar">Chants of Sennaar</a
+                >,
+              </li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Counter-Strike:_Global_Offensive"
+                  >CS:GO</a
+                >,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Doom_(2016_video_game)">Doom (2016)</a>,
+              </li>
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Hades_(video_game)">Hades</a>,</li>
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Inscryption">Inscryption</a>,</li>
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Minecraft">Minecraft</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Mini_Metro_(video_game)">Mini Metro</a>,
+              </li>
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Outer_Wilds">Outer Wilds</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Pok%C3%A9mon_Platinum"
+                  >Pokémon Platinum</a
+                >,</li
+              >
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Portal_2">Portal 2</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Return_of_the_Obra_Dinn"
+                  >Return of the Obra Dinn</a
+                >,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim">Skyrim</a>,
+              </li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Stardew_Valley">Stardew Valley</a>,</li
+              >
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Super_Hexagon">Super Hexagon</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/The_Stanley_Parable"
+                  >The Stanley Parable</a
+                ></li
+              >
+            </ul>
+          </dd>
+        </dl>
+        <hr>
+        <dl class="dl-unstyled my-2">
+          <dt>movies:</dt>
+          <dd>
+            <ul class="list-unstyled inline">
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Arrival_(film)">Arrival</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Everything_Everywhere_All_at_Once"
+                  >Everything Everywhere All at Once</a
+                >,</li
+              >
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Ex_Machina_(film)">Ex Machina</a>,</li>
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Lady_Bird_(film)">Lady Bird</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Moonlight_(2016_film)">Moonlight</a>,
+              </li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/My_Neighbor_Totoro"
+                  >My Neighbor Totoro</a
+                >,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/Princess_Mononoke">Princess Mononoke</a
+                >,
+              </li>
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Strange_Brew">Strange Brew</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://en.wikipedia.org/wiki/The_Grand_Budapest_Hotel"
+                  >The Grand Budapest Hotel</a
+                >,</li
+              >
+              <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/WALL-E">WALL-E</a></li>
+            </ul>
+          </dd>
+        </dl>
+        <hr>
+        <dl class="dl-unstyled my-2">
+          <dt>music videos:</dt>
+          <dd>
+            <ul class="list-unstyled inline">
+              <li><a class="link link-muted" href="https://www.youtube.com/watch?v=q3lX2p_Uy9I">Back on 74</a>,</li>
+              <li><a class="link link-muted" href="https://www.youtube.com/watch?v=PEmqJBcQ2lg">Break</a>,</li>
+              <li><a class="link link-muted" href="https://www.youtube.com/watch?v=fWNaR-rxAic">Call Me Maybe</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://www.youtube.com/watch?v=cKEwnhc8ItY">Cash In Cash Out</a>,</li
+              >
+              <li><a class="link link-muted" href="https://www.youtube.com/watch?v=sy1dYFGkPUE">D.A.N.C.E.</a>,</li>
+              <li><a class="link link-muted" href="https://www.youtube.com/watch?v=qRAJowgHqxA">Girl Like Me</a>,</li>
+              <li><a class="link link-muted" href="https://www.youtube.com/watch?v=p2ZdeIKJA8c">Infohazard</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://www.youtube.com/watch?v=MejbOFk7H6c">Needing/Getting</a>,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://www.youtube.com/watch?v=wpqm-05R2Jk">Since I Left You</a>,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://www.youtube.com/watch?v=4JkIs37a2JE">Virtual Insanity</a></li
+              >
+            </ul>
+          </dd>
+        </dl>
+        <hr>
+        <dl class="dl-unstyled my-2">
+          <dt>clickable potpourri:</dt>
+          <dd>
+            <ul class="list-unstyled inline">
+              <li><a class="link link-muted" href="https://anvaka.github.io/city-roads/">City Roads</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://www.nayuki.io/page/creating-a-qr-code-step-by-step"
+                  >Creating a QR Code Step By Step</a
+                >,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://thenumb.at/Exponential-Rotations/"
+                  >Exponentially Better Rotations</a
+                >,</li
+              >
+              <li
+                ><a class="link link-muted" href="https://tn1ck.com/blog/how-to-generate-sudokus"
+                  >Generating Sudokus For Fun and No Profit</a
+                >,</li
+              >
+              <li><a class="link link-muted" href="https://www.inkandswitch.com/peritext/">Peritext</a>,</li>
+              <li><a class="link link-muted" href="https://ciechanow.ski/sound/">Sound</a>,</li>
+              <li><a class="link link-muted" href="https://ncase.me/trust/">The Evolution of Trust</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://pudding.cool/projects/vocabulary/"
+                  >The Largest Vocabulary In Hip Hop</a
+                >,</li
+              >
+              <li><a class="link link-muted" href="https://neal.fun/password-game/">The Password Game</a>,</li>
+              <li
+                ><a class="link link-muted" href="https://bost.ocks.org/mike/algorithms/">Visualizing Algorithms</a></li
+              >
+            </ul>
+          </dd>
+        </dl>
+      </section>
+    </main>
     <hr class="max-w-prose mx-auto">
-    <section class="max-w-prose mx-auto leading-relaxed">
-      <h2 class="text-2xl font-semibold mt-8 mb-2">courses I've taught (or will teach) at UW</h2>
-      <p>
-        Every course that I have taught at UW has had some sort of public-facing course website, though access to course materials otherwise varies. Please ask if you have questions!
+    <footer class="max-w-prose mx-auto my-8">
+      <p>made with ❤️ by matt</p>
+      <p class="my-4 text-sm"
+        >photo of matt taken by <a class="link link-uw" href="https://matthagen.com/main/">matt hagen</a>, on behalf of
+        UW CSE. thanks matt!</p
+      >
+      <p class="my-4 text-sm">
+        <a class="link link-black" href="https://github.com/mattxwang/matthewwang.me">view source code</a>
+        | <button class="link link-muted" id="toggle-link-colors" type="button">toggle colourful mode</button>
+        | <a class="link link-muted" id="pick-random-link" href="/">take me to a random link from this page</a>
       </p>
-      <table class="w-full my-2 mb-4 border-collapse">
-        <thead>
-          <tr class="border-b border-gray-500 text-left">
-            <th class="py-2 pr-4 font-semibold" scope="col">course</th>
-            <th class="py-2 font-semibold" scope="col">quarters taught</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="border-b border-gray-500 align-top">
-            <td class="py-1 pr-4"><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse121/">CSE 121</a>: Introduction to Programming I</td>
-            <td class="py-1"><ol class="list-unstyled">
-              <li><span class="sr-only">CSE 121</span>27sp,</li>
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse121/26sp/"><span class="sr-only">CSE 121</span>26sp</a>,</li>
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse121/25wi/"><span class="sr-only">CSE 121</span>25wi</a>,</li>
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse121/24au/"><span class="sr-only">CSE 121</span>24au</a> (w/ the wonderful <a class="link link-uw"
-                    href="https://homes.cs.washington.edu/~brettwo/">Brett Wortzman</a>),</li>
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse121/24sp/"><span class="sr-only">CSE 121</span>24sp</a>,</li>
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse121/24wi/"><span class="sr-only">CSE 121</span>24wi</a> (w/ the great Elba Garza)</li>
-            </ol></td>
-          </tr>
-          <tr class="border-b border-gray-500 align-top">
-            <td class="py-1 pr-4"><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse195/">CSE 195</a> (formerly 190E): Allen Scholars Summer Bridge</td>
-            <td class="py-1"><ol class="list-unstyled">
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse195/26au/"><span class="sr-only">CSE 195</span>26su</a> (w/ the ASSP dream team),</li>
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse195/25au/"><span class="sr-only">CSE 195</span>25su</a> (w/ the ASSP dream team),</li>
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse190e/24au/"><span class="sr-only">CSE 190E</span>24su</a> (w/ the ASSP dream team)</li>
-            </ol></td>
-          </tr>
-          <tr class="border-b border-gray-500 align-top">
-            <td class="py-1 pr-4"><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse197w/">CSE 197W/Z</a> (formerly 190W/Z): CSE 121 Workshop Course</td>
-            <td class="py-1"><ol class="list-unstyled">
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse197w/25au/"><span class="sr-only">CSE 197W</span>25au</a>,</li>
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse190w/23au/"><span class="sr-only">CSE 190W</span>23au</a> (w/ the brilliant <a class="link link-uw" href="https://homes.cs.washington.edu/~bricker/">Lauren Bricker</a>)</li>
-            </ol></td>
-          </tr>
-          <tr class="border-b border-gray-500 align-top">
-            <td class="py-1 pr-4"><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse197x/">CSE 197X/Z</a>: CSE 122 Workshop Course</td>
-            <td class="py-1"><ol class="list-unstyled">
-              <li><span class="sr-only">CSE 197X</span>26au,</li>
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse197x/26wi/"><span class="sr-only">CSE 197X</span>26wi</a></li>
-            </ol></td>
-          </tr>
-          <tr class="border-b border-gray-500 align-top">
-            <td class="py-1 pr-4"><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse197y/">CSE 197Y/Z</a>: CSE 123 Workshop Course</td>
-            <td class="py-1"><ol class="list-unstyled">
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse197z/26sp/"><span class="sr-only">CSE 197Z</span>26sp</a></li>
-            </ol></td>
-          </tr>
-          <tr class="border-b border-gray-500 align-top">
-            <td class="py-1 pr-4"><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse331/">CSE 331</a>: Software Design &amp; Implementation</td>
-            <td class="py-1"><ol class="list-unstyled">
-              <li><span class="sr-only">CSE 331</span>27wi,</li>
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse331/25sp/"><span class="sr-only">CSE 331</span>25sp</a></li>
-            </ol></td>
-          </tr>
-          <tr class="border-b border-gray-500 align-top">
-            <td class="py-1 pr-4"><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse390ha/">CSE 390HA</a>: CSE 122 Honors Seminar</td>
-            <td class="py-1"><ol class="list-unstyled">
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse390ha/26wi/"><span class="sr-only">CSE 390HA</span>26wi</a>,</li>
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse390ha/24sp/"><span class="sr-only">CSE 390HA</span>24sp</a></li>
-            </ol></td>
-          </tr>
-          <tr class="border-b border-gray-500 align-top">
-            <td class="py-1 pr-4"><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse391/">CSE 391</a>: Systems and Software Tools</td>
-            <td class="py-1"><ol class="list-unstyled">
-              <li><span class="sr-only">CSE 391</span>27sp,</li>
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse391/24su/"><span class="sr-only">CSE 391</span>24su</a>,</li>
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse391/24wi/"><span class="sr-only">CSE 391</span>24wi</a>,</li>
-              <li><a class="link link-uw" href="https://courses.cs.washington.edu/courses/cse391/23au/"><span class="sr-only">CSE 391</span>23au</a></li>
-            </ol></td>
-          </tr>
-        </tbody>
-      </table>
-      <p>
-        You may also be interested in the <a class="link link-uw" href="https://www.cs.washington.edu/academics/time-schedules/">CSE time and teaching schedules</a>.
+      <p class="text-sm">
+        <span id="not-so-fun-fact">(not a helpful) </span><span class="line-through">"fun"</span>
+        <span class="line-through">pun</span>
+        fact: <span id="fun-fact">you've disabled javascript</span>
       </p>
-    </section>
-    <hr class="max-w-prose mx-auto mt-8">
-    <section class="max-w-prose mx-auto leading-relaxed">
-      <h2 class="text-2xl font-semibold mt-8 mb-2"><a href="https://en.wikipedia.org/wiki/Past_Lives_(film)">past
-          lives</a></h2>
-      <p class="my-2">
-        I received two B.S.'s and an M.S. from the <a class="link link-ucla" href="https://www.ucla.edu/">University of
-          California, Los Angeles</a>. I grew up in Toronto, Canada, and still maintain my love of winter sports and
-        poutine.
-      </p>
-      <p class="my-2">
-        As a student, I was a research assistant at the <a class="link link-neu"
-          href="https://neuppl.khoury.northeastern.edu/">Northeastern Probabilistic Programming Lab</a> (and <a
-          class="link link-neu" href="https://prl.khoury.northeastern.edu/">PRL</a>) working primarily on <a
-          class="link link-neu" href="https://github.com/neuppl/rsdd">RSDD</a>; the inaugural outreach co-chair for <a
-          class="link link-black" href="https://nips.cc/Conferences/2022">NeurIPS 2022</a>; wearer of many hats at <a
-          class="link link-acm" href="https://uclaacm.com">ACM at UCLA</a> and <a class="link link-tla"
-          href="https://teachla.uclaacm.com">ACM Teach LA</a>; a software engineering intern at <a class="link link-czi"
-          href="https://chanzuckerberg.com/">CZI</a>, <a class="link link-fb" href="https://facebook.com">Facebook</a>,
-        <a class="link link-adobe" href="https://adobe.com">Adobe</a>, <a class="link link-aws"
-          href="https://aws.amazon.com/">AWS</a>, <a class="link link-booz" href="https://www.boozallen.com/">Booz
-          Allen</a>, and <a class="link link-audionotch" href="https://audionotch.com/">AudioNotch</a>; and, one of the
-        first employees of the UCLA Makerspace.
-      </p>
-      <p class="my-2">
-        Prior to becoming teaching faculty, I've been doing some sort of teaching for about a decade. As a graduate
-        student, I TA'd three quarters of CS 131: Programming Languages at UCLA (w/ a focus on building course
-        infrastructure and novel content). As an
-        undergraduate, I taught hundreds of undergrads web development through <a class="link link-acm"
-          href="https://uclaacm.com">ACM at UCLA</a> and <a class="link link-acm" href="https://qwerhacks.com">QWER
-          Hacks</a>, middle and high school classes through <a class="link link-tla"
-          href="https://teachla.uclaacm.com">ACM Teach LA</a> and <a class="link link-beam"
-          href="https://beam.ucla.edu/">BEAM at UCLA</a>, and dedicated a big chunk of my life to student advocacy &amp;
-        institution-building. I also developed and taught various workshops at the UCLA Makerspace. In high school, I
-        taught various formal and informal classes, workshops, camps, and afterschool programs in computer science,
-        robotics, debate, and math.
-      </p>
-      <p class="my-2">
-        I was also previously a maintainer of <a class="link link-black" href="https://stylelint.io">Stylelint</a>, but have been inactive since 2024 (and offically left in 2026). They do some great work, and I still continue to cheer them on - working on Stylelint was one of my fondest memories in open-source!
-      </p>
-      <p class="my-2">
-        When I was younger, I had the (admittedly strange) dream job of working for the <a class="link"
-          href="https://www.consumerfinance.gov/">CFPB</a> or <a class="link" href="https://www.ftc.gov/">FTC</a>. I'm
-        still interested in a handful of areas surrounding education and health policy, public economics, consumer
-        protection, and antitrust — though I'm far from an expert!
-      </p>
-    </section>
-    <section class="max-w-prose mx-auto leading-relaxed">
-      <h2 class="text-2xl font-semibold mt-8 mb-2">some favourites &amp; recommendations</h2>
-      <dl class="dl-unstyled my-2">
-        <dt>recently:</dt>
-        <dd>
-          <ul class="list-unstyled inline">
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Algospeak_(book)">Algospeak</a>
-              (Adam Aleksic book),</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Emotional_Junglist">Emotional Junglist</a>
-              (Nia Archives album)</li>
-          </ul>
-        </dd>
-      </dl>
-      <hr>
-      <dl class="dl-unstyled my-2">
-        <dt>albums:</dt>
-        <dd>
-          <ul class="list-unstyled inline">
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/After_Laughter">After Laughter</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Anak_Ko">Anak Ko</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Bewitched_(Laufey_album)">Bewitched</a>,
-            </li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Brat_(album)">Brat</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Charm_(Clairo_album)">Charm</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Donuts_(album)">Donuts</a>,</li>
-            <li><a class="link link-muted"
-                href="https://en.wikipedia.org/wiki/Emotion_(Carly_Rae_Jepsen_album)">Emotion</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Faces_(mixtape)">Faces</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Heard_It_in_a_Past_Life">Heard It In A
-                Past Life</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Helplessness_Blues">Helplessness
-                Blues</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/I_Love_My_Computer">I Love My Computer</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Imaginal_Disk">Imaginal Disk</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Louie_(album)">Louie</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Madvillainy">Madvillainy</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Not_Tight">NOT TiGHT</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Random_Access_Memories">Random Access
-                Memories</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Saturation_II">SATURATION II</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Since_I_Left_You">Since I Left You</a>,
-            </li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Sometimes_I_Might_Be_Introvert">Sometimes
-                I Might Be Introvert</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/The_Melodic_Blue">The Melodic Blue</a>,
-            </li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/To_Pimp_a_Butterfly">To Pimp A
-                Butterfly</a>,</li>
-            <li><a class="link link-muted" href="https://soundcloud.com/monsune_inc/sets/tradition-2">Tradition</a>,
-            </li>
-            <li><a class="link link-muted" href="https://lunali.bandcamp.com/album/when-a-thought-grows-wings">When a Thought Grows Wings</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Without_Warning_(album)">Without
-                Warning</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Women_in_Music_Pt._III">Women In Music
-                Pt. III</a></li>
-          </ul>
-        </dd>
-      </dl>
-      <hr>
-      <dl class="dl-unstyled my-2">
-        <dt>books:</dt>
-        <dd>
-          <ul class="list-unstyled inline">
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Algorithms_of_Oppression">Algorithms of
-                Oppression</a>,</li>
-            <li><a class="link link-muted" href="https://gretchenmcculloch.com/book/">Because Internet</a>,</li>
-            <li><a class="link link-muted"
-                href="https://en.wikipedia.org/wiki/Capital_in_the_Twenty-First_Century">Capital in the Twenty-First
-                Century</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Crying_in_H_Mart">Crying in H Mart</a>,
-            </li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Death_at_an_Early_Age">Death At An Early
-                Age</a>,</li>
-            <li><a class="link link-muted" href="https://designjustice.mitpress.mit.edu/">Design Justice</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Exhalation:_Stories">Exhalation:
-                Stories</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Homegoing_(Gyasi_novel)">Homegoing</a>,
-            </li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Never_Let_Me_Go_(novel)">Never Let Me
-                Go</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Pachinko_(novel)">Pachinko</a>,</li>
-            <li><a class="link link-muted"
-                href="https://www.penguinrandomhouse.com/books/218205/paradox-by-jim-al-khalili/">Paradox</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Piranesi_(novel)">Piranesi</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Poor_Economics">Poor Economics</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Stories_of_Your_Life_and_Others">Stories
-                of Your Life and Others</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/The_Food_Lab">The Food Lab</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/The_Memory_Police">The Memory Police</a>,
-            </li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/The_Remains_of_the_Day">The Remains of
-                the Day</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)">The
-                Three-Body Problem</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Weapons_of_Math_Destruction">Weapons of
-                Math Destruction</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/What_If%3F_(book)">What If?</a></li>
-          </ul>
-        </dd>
-      </dl>
-      <hr>
-      <dl class="dl-unstyled my-2">
-        <dt>food:</dt>
-        <dd>carbonara, gochujang pasta, Japanese curry, katsu, sushi, tiramisu, udon</dd>
-      </dl>
-      <hr>
-      <dl class="dl-unstyled my-2">
-        <dt>games:</dt>
-        <dd>
-          <ul class="list-unstyled inline">
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Antichamber">Antichamber</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Baba_Is_You">Baba Is You</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Bloons_Tower_Defense#Bloons_TD_4">Bloons
-                TD 4</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Borderlands_2">Borderlands 2</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Civilization_V">Civilization V</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Chants_of_Sennaar">Chants of Sennaar</a>,
-            </li>
-            <li><a class="link link-muted"
-                href="https://en.wikipedia.org/wiki/Counter-Strike:_Global_Offensive">CS:GO</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Doom_(2016_video_game)">Doom (2016)</a>,
-            </li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Hades_(video_game)">Hades</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Inscryption">Inscryption</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Minecraft">Minecraft</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Mini_Metro_(video_game)">Mini Metro</a>,
-            </li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Outer_Wilds">Outer Wilds</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Pok%C3%A9mon_Platinum">Pokémon
-                Platinum</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Portal_2">Portal 2</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Return_of_the_Obra_Dinn">Return of the
-                Obra Dinn</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim">Skyrim</a>,
-            </li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Stardew_Valley">Stardew Valley</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Super_Hexagon">Super Hexagon</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/The_Stanley_Parable">The Stanley
-                Parable</a></li>
-          </ul>
-        </dd>
-      </dl>
-      <hr>
-      <dl class="dl-unstyled my-2">
-        <dt>movies:</dt>
-        <dd>
-          <ul class="list-unstyled inline">
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Arrival_(film)">Arrival</a>,</li>
-            <li><a class="link link-muted"
-                href="https://en.wikipedia.org/wiki/Everything_Everywhere_All_at_Once">Everything Everywhere All at
-                Once</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Ex_Machina_(film)">Ex Machina</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Lady_Bird_(film)">Lady Bird</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Moonlight_(2016_film)">Moonlight</a>,
-            </li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/My_Neighbor_Totoro">My Neighbor
-                Totoro</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Princess_Mononoke">Princess Mononoke</a>,
-            </li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/Strange_Brew">Strange Brew</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/The_Grand_Budapest_Hotel">The Grand
-                Budapest Hotel</a>,</li>
-            <li><a class="link link-muted" href="https://en.wikipedia.org/wiki/WALL-E">WALL-E</a></li>
-          </ul>
-        </dd>
-      </dl>
-      <hr>
-      <dl class="dl-unstyled my-2">
-        <dt>music videos:</dt>
-        <dd>
-          <ul class="list-unstyled inline">
-            <li><a class="link link-muted" href="https://www.youtube.com/watch?v=q3lX2p_Uy9I">Back on 74</a>,</li>
-            <li><a class="link link-muted" href="https://www.youtube.com/watch?v=PEmqJBcQ2lg">Break</a>,</li>
-            <li><a class="link link-muted" href="https://www.youtube.com/watch?v=fWNaR-rxAic">Call Me Maybe</a>,</li>
-            <li><a class="link link-muted" href="https://www.youtube.com/watch?v=cKEwnhc8ItY">Cash In Cash Out</a>,</li>
-            <li><a class="link link-muted" href="https://www.youtube.com/watch?v=sy1dYFGkPUE">D.A.N.C.E.</a>,</li>
-            <li><a class="link link-muted" href="https://www.youtube.com/watch?v=qRAJowgHqxA">Girl Like Me</a>,</li>
-            <li><a class="link link-muted" href="https://www.youtube.com/watch?v=p2ZdeIKJA8c">Infohazard</a>,</li>
-            <li><a class="link link-muted" href="https://www.youtube.com/watch?v=MejbOFk7H6c">Needing/Getting</a>,</li>
-            <li><a class="link link-muted" href="https://www.youtube.com/watch?v=wpqm-05R2Jk">Since I Left You</a>,</li>
-            <li><a class="link link-muted" href="https://www.youtube.com/watch?v=4JkIs37a2JE">Virtual Insanity</a></li>
-          </ul>
-        </dd>
-      </dl>
-      <hr>
-      <dl class="dl-unstyled my-2">
-        <dt>clickable potpourri:</dt>
-        <dd>
-          <ul class="list-unstyled inline">
-            <li><a class="link link-muted" href="https://anvaka.github.io/city-roads/">City Roads</a>,</li>
-            <li><a class="link link-muted" href="https://www.nayuki.io/page/creating-a-qr-code-step-by-step">Creating a
-                QR Code Step By Step</a>,</li>
-            <li><a class="link link-muted" href="https://thenumb.at/Exponential-Rotations/">Exponentially Better
-                Rotations</a>,</li>
-            <li><a class="link link-muted" href="https://tn1ck.com/blog/how-to-generate-sudokus">Generating Sudokus For
-                Fun and No Profit</a>,</li>
-            <li><a class="link link-muted" href="https://www.inkandswitch.com/peritext/">Peritext</a>,</li>
-            <li><a class="link link-muted" href="https://ciechanow.ski/sound/">Sound</a>,</li>
-            <li><a class="link link-muted" href="https://ncase.me/trust/">The Evolution of Trust</a>,</li>
-            <li><a class="link link-muted" href="https://pudding.cool/projects/vocabulary/">The Largest Vocabulary In
-                Hip Hop</a>,</li>
-            <li><a class="link link-muted" href="https://neal.fun/password-game/">The Password Game</a>,</li>
-            <li><a class="link link-muted" href="https://bost.ocks.org/mike/algorithms/">Visualizing Algorithms</a></li>
-          </ul>
-        </dd>
-      </dl>
-    </section>
-  </main>
-  <hr class="max-w-prose mx-auto">
-  <footer class="max-w-prose mx-auto my-8">
-    <p>made with ❤️ by matt</p>
-    <p class="my-4 text-sm">photo of matt taken by <a class="link link-uw" href="https://matthagen.com/main/">matt
-        hagen</a>, on behalf of UW CSE. thanks matt!</p>
-    <p class="my-4 text-sm">
-      <a class="link link-black" href="https://github.com/mattxwang/matthewwang.me">view source code</a>
-      | <button class="link link-muted" id="toggle-link-colors" type="button">toggle colourful mode</button>
-      | <a class="link link-muted" id="pick-random-link" href="/">take me to a random link from this page</a>
-    </p>
-    <p class="text-sm">
-      <span id="not-so-fun-fact">(not a helpful) </span><span class="line-through">"fun"</span> <span
-        class="line-through">pun</span> fact: <span id="fun-fact">you've disabled javascript</span>
-    </p>
-  </footer>
-  <script>
+    </footer>
+    <script>
     "use strict";
     /*
       I think this is pretty cool: basically, you can use CSS styles for console logs. You can check out what this looks like by looking at the Javascript console.
@@ -510,45 +805,49 @@
     function colorLog(message) {
       console.log(`%c${message}`, "color:#e95420;");
     }
-    colorLog("\n __   __  _______  _______  _______ \n|  |_|  ||   _   ||       ||       |\n|       ||  |_|  ||_     _||_     _|\n|       ||       |  |   |    |   |  \n|       ||       |  |   |    |   |  \n| ||_|| ||   _   |  |   |    |   |  \n|_|   |_||__| |__|  |___|    |___|  ");
-    colorLog("This page doesn't run any JavaScript other than these messages and some fun buttons. No analytics, no stress!");
-    colorLog("Anyways, have fun browsing the rest of the website. If you have any feedback, let me know on GitHub: \nhttps://github.com/mattxwang/matthewwang.me");
+    colorLog(
+      "\n __   __  _______  _______  _______ \n|  |_|  ||   _   ||       ||       |\n|       ||  |_|  ||_     _||_     _|\n|       ||       |  |   |    |   |  \n|       ||       |  |   |    |   |  \n| ||_|| ||   _   |  |   |    |   |  \n|_|   |_||__| |__|  |___|    |___|  ",
+    );
+    colorLog(
+      "This page doesn't run any JavaScript other than these messages and some fun buttons. No analytics, no stress!",
+    );
+    colorLog(
+      "Anyways, have fun browsing the rest of the website. If you have any feedback, let me know on GitHub: \nhttps://github.com/mattxwang/matthewwang.me",
+    );
 
     const punFacts = [
       'I\'m from Canada, which uses the metric system. This creates some oddities: while spiders in America have 8 feet, spiders in Canada have <a class="link link-muted" href="https://www.google.com/search?q=8+feet+to+meters&oq=8+feet+to+meters">2.4 meters</a>!',
-      'Seattle is wonderful for coffee dates. For me, the perfect date would be YYYY-MM-DD; MM/DD/YY is just so cliché.',
-      'I love telling chemistry jokes, but all the good ones argon!',
-      'I grew up ice skating, playing hockey, and thus fell all the time. It makes for a great icebreaker!',
-      'I never understood Fifty Shades of Gray - there are at least thousands in RGB color space.',
-      'I don\'t get cold very easily, but if I am, I just draw a square on the ground and stand in one of the corners - it\'s always 90 degrees!',
-      'People think learning recursion is hard, but it\'s actually simple: you just need to first learn recursion.',
-      'I respect spiders because they\'re such good web developers.',
-      'I once had a French teacher on a keto diet; he really understood that bread was pain!',
-      'I used to teach machine learning, but since then I\'ve gotten a bit rusty - my skills may have regressed!',
-      'Some programming languages folks are pretty outspoken; you\'ll hear them make a Racket!',
+      "Seattle is wonderful for coffee dates. For me, the perfect date would be YYYY-MM-DD; MM/DD/YY is just so cliché.",
+      "I love telling chemistry jokes, but all the good ones argon!",
+      "I grew up ice skating, playing hockey, and thus fell all the time. It makes for a great icebreaker!",
+      "I never understood Fifty Shades of Gray - there are at least thousands in RGB color space.",
+      "I don't get cold very easily, but if I am, I just draw a square on the ground and stand in one of the corners - it's always 90 degrees!",
+      "People think learning recursion is hard, but it's actually simple: you just need to first learn recursion.",
+      "I respect spiders because they're such good web developers.",
+      "I once had a French teacher on a keto diet; he really understood that bread was pain!",
+      "I used to teach machine learning, but since then I've gotten a bit rusty - my skills may have regressed!",
+      "Some programming languages folks are pretty outspoken; you'll hear them make a Racket!",
       'It\'s tricky picking between <a class="link link-muted" href="https://en.wikipedia.org/wiki/Binary_decision_diagram">BDDs</a>, <a class="link link-muted" href="https://en.wikipedia.org/wiki/Algebraic_decision_diagram">ADDs</a>, <a class="link link-muted" href="https://en.wikipedia.org/wiki/Propositional_directed_acyclic_graph">PDAGs</a>, <a class="link link-muted" href="https://en.wikipedia.org/wiki/Sentential_Decision_Diagram">SDDs</a>, and <a class="link link-muted" href="https://en.wikipedia.org/wiki/Zero-suppressed_decision_diagram">ZDDs</a>. Maybe drawing a diagram will help...',
-      'I learned Java as a kid by reading the Oracle tutorials by myself. Even without pointers, I still had references.',
-      'One of my favourite memories is first learning the diagonalization proof for the halting problem. I just know I could go on and on and on about it - forever! Oh...',
-    ]
+      "I learned Java as a kid by reading the Oracle tutorials by myself. Even without pointers, I still had references.",
+      "One of my favourite memories is first learning the diagonalization proof for the halting problem. I just know I could go on and on and on about it - forever! Oh...",
+    ];
 
-    const randFromArray = arr => arr[Math.floor(Math.random() * arr.length)];
+    const randFromArray = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
     window.onload = () => {
-      const anchorLinks = Array.from(document.querySelectorAll('a').values()).map(anchor => anchor.href)
+      const anchorLinks = Array.from(document.querySelectorAll("a").values()).map((anchor) => anchor.href);
 
-      document.getElementById('toggle-link-colors').addEventListener('click', () => {
-        document.querySelector('body').classList.toggle('enable-colored-links');
-        document.querySelector('body').classList.toggle('dark:bg-zinc-900');
-        document.querySelector('body').classList.toggle('dark:text-slate-50');
+      document.getElementById("toggle-link-colors").addEventListener("click", () => {
+        document.querySelector("body").classList.toggle("enable-colored-links");
+        document.querySelector("body").classList.toggle("dark:bg-zinc-900");
+        document.querySelector("body").classList.toggle("dark:text-slate-50");
       });
 
-      document.getElementById('pick-random-link').href = randFromArray(anchorLinks);
+      document.getElementById("pick-random-link").href = randFromArray(anchorLinks);
 
-      document.getElementById('not-so-fun-fact').remove();
-      document.getElementById('fun-fact').innerHTML = randFromArray(punFacts);
-
-    }
-  </script>
-</body>
-
+      document.getElementById("not-so-fun-fact").remove();
+      document.getElementById("fun-fact").innerHTML = randFromArray(punFacts);
+    };
+    </script>
+  </body>
 </html>
