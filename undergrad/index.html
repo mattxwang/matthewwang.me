@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Hey, you're looking through the source code here? Cool! You can peep the GitHub Repo too if you'd like: https://github.com/mattxwang/matthewwang.me -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>an overview of matt's undergrad</title>
+  <meta name="description"
+    content="A play-by-play of Matt's undergrad at UCLA, getting a B.S. in Computer Science and a B.S. in Math-Economics. Other than that, no BS.">
+  <!-- Now, before you tell me that most of this is unnecessary, I agree with you. But, it helps with SEO, and it also makes things slightly more accessible for a small subset of users. I think it's worth the extra 500 bytes. -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="msapplication-TileColor" content="#e95420">
+  <meta name="msapplication-TileImage" content="../img/ms-icon-144x144.png">
+  <meta name="theme-color" content="#e95420">
+  <!-- I always thought this light-dark pattern was strangely done, and there seems to be no correct answer. I opted for JS, but see https://web.dev/prefers-color-scheme/ for another way to do it. -->
+  <!-- Styling for the site - peep index.css! This used to be Liteweight, but I ended up customizing it so much that I just wrote CSS just for this website. -->
+  <link rel="stylesheet" href="../index.css" />
+  <!-- This is me loading Font Awesome - I've deferred it as it's not critical to the page load, but it's still pretty cool. I've opted to use Font Awesome's SVG + JS features instead of webfonts, just to see how it is! -->
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/solid.js"
+    integrity="sha384-IA6YnujJIO+z1m4NKyAGvZ9Wmxrd4Px8WFqhFcgRmwLaJaiwijYgApVpo1MV8p77" crossorigin="anonymous">
+  </script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/brands.js"
+    integrity="sha384-rUOIFHM3HXni/WG5pzDhA1e2Js5nn4bWudTYujHbbI9ztBIxK54CL4ZNZWwcBQeD" crossorigin="anonymous">
+  </script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/fontawesome.js"
+    integrity="sha384-EMmnH+Njn8umuoSMZ3Ae3bC9hDknHKOWL2e9WJD/cN6XLeAN7tr5ZQ0Hx5HDHtkS" crossorigin="anonymous">
+  </script>
+</head>
+
+<body>
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="dark mode toggle button">
+    <span class="fa fa-fw fa-cloud-sun"></span>
+  </button>
+
+  <section class="section">
+    <div class="content-container content-tight">
+      <h1 class="hero-title font-nexa text-center">
+        matt's <span class="underline-expand">undergrad</span>
+      </h1>
+      <hr class="divider" />
+      <h2>what is this?</h2>
+      <p>
+        a quick overview of my time in undergrad! I often get asked to explain what happened (especially for people planning out their years at UCLA); here it is!
+      </p>
+      <hr />
+
+      <h2>coursework</h2>
+      <p>
+        note: I use some shorthands for course codes: COM SCI -> CS, INFO STD -> IS, etc.
+      </p>
+      <div class="buttons" role="tablist" aria-label="Sample Tabs">
+        <button class="button" role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">
+          chronological
+        </button>
+        <button class="button" role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1">
+          department
+        </button>
+        <button class="button" role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" tabindex="-1">
+          enjoyment
+        </button>
+      </div>
+      <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+        <h3>chronological order</h3>
+        <ul id="classes-chronological"></ul>
+      </div>
+      <div id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
+        <h3>by department</h3>
+      </div>
+      <div id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
+        <h3>"enjoyment"</h3>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <section class="section">
+    <div class="content-container">
+      <footer class="text-center">
+        <div class="text-2x font-nexa"><b>made by matt wang</b></div>
+        <span class="fa fa-heart text-primary handwave handwave-delayed" style="margin-right: 0;"></span>
+        <a rel="noopener noreferrer" href="https://github.com/mattxwang/matthewwang.me" aria-label="GitHub Repository"><span class="fab fa-github text-black"></span></a>
+        <span class="fa fa-heart text-primary animated-heartbeat"></span>
+      </footer>
+    </div>
+  </section>
+  <script src="undergradClasses.js"></script>
+  <script>
+    "use strict";
+    /*
+      I think this is pretty cool: basically, you can use CSS styles for console logs. You can check out what this looks like by looking at the Javascript console.
+
+      Here's what the banner text looks like:
+
+         __   __  _______  _______  _______
+        |  |_|  ||   _   ||       ||       |
+        |       ||  |_|  ||_     _||_     _|
+        |       ||       |  |   |    |   |
+        |       ||       |  |   |    |   |
+        | ||_|| ||   _   |  |   |    |   |
+        |_|   |_||__| |__|  |___|    |___|
+
+      While this isn't my favourite font or anything, it has no backslashes: those often cause problems in javascript.
+
+    */
+    function colorLog(message){
+      console.log(`%c${message}`,"color:#e95420;");
+    }
+    colorLog("\n __   __  _______  _______  _______ \n|  |_|  ||   _   ||       ||       |\n|       ||  |_|  ||_     _||_     _|\n|       ||       |  |   |    |   |  \n|       ||       |  |   |    |   |  \n| ||_|| ||   _   |  |   |    |   |  \n|_|   |_||__| |__|  |___|    |___|  ");
+    colorLog("This page runs very minimal Javascript (just dark mode and fonts)");
+    colorLog("Anyways, have fun browsing the rest of the website. If you have any feedback, let me know on my GitHub repo for this landing page: \nhttps://github.com/mattxwang/matthewwang.me");
+
+
+    // Light Mode & Dark Mode Stuffs!
+
+    let darkMode = false;
+    let rootStyle = getComputedStyle(document.body);
+    // for now, I'm making dark mode opt-in just because it's still not perfect
+
+    function setDarkMode(newMode){
+      rootStyle = getComputedStyle(document.body);
+      document.documentElement.style.setProperty("--font-color-root", rootStyle.getPropertyValue(`--font-color-${newMode}-mode`));
+      document.documentElement.style.setProperty("--font-em-color-root", rootStyle.getPropertyValue(`--font-em-color-${newMode}-mode`));
+      document.documentElement.style.setProperty("--background-color-root", rootStyle.getPropertyValue(`--background-color-${newMode}-mode`));
+    }
+    function toggleDarkMode(){
+      if (darkMode) {
+        // switch to light
+        setDarkMode("light");
+      }
+      else{
+        // switch to dark
+        setDarkMode("dark");
+      }
+      darkMode = !darkMode;
+    }
+
+    // event listener for light/dark mode switch
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    darkModeMediaQuery.addListener((e) => {
+      const darkModeOn = e.matches;
+      console.log(`Dark was toggled to ${darkModeOn ? '🌒 on' : '☀️ off'}.`);
+      toggleDarkMode();
+    });
+
+    // this code manages the coursework/classes renderer
+    // undergradClasses is defined in undergradClasses.js
+
+    function renderCourseCategory(courses, predicate) {
+      const ul = document.createElement('ul');
+      courses
+        .filter((course) => predicate(course))
+        .forEach((course) => ul.appendChild(renderCourse(course)));
+      return ul;
+    }
+
+    function renderCourse(course) {
+      const li = document.createElement('li');
+      const courseName = course.informal ?? course.name;
+      li.innerHTML = `${course.dept} ${course.number}: ${courseName}`;
+      return li;
+    }
+
+    const quarters = new Set(undergradClasses.map((course) => `${course.quarter}${course.year}`));
+    console.log(quarters);
+
+    const quartersList = document.getElementById('classes-chronological');
+    quarters.forEach(quarter => {
+      const predicate = (course) => `${course.quarter}${course.year}` === quarter;
+      const li = document.createElement('li');
+      const ul = renderCourseCategory(undergradClasses, predicate);
+      li.innerText = quarter;
+      li.appendChild(ul);
+      quartersList.appendChild(li);
+    });
+
+    // from here 'till the end is code that runs a tablist;
+    // shamelessly taken (with attribution) from MDN:
+    // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role#example
+    window.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('[role="tab"]');
+      const tabList = document.querySelector('[role="tablist"]');
+
+      // Add a click event handler to each tab
+      tabs.forEach(tab => {
+        tab.addEventListener('click', changeTabs);
+      });
+
+      // Enable arrow navigation between tabs in the tab list
+      let tabFocus = 0;
+
+      tabList.addEventListener('keydown', e => {
+        // Move right
+        if (e.keyCode === 39 || e.keyCode === 37) {
+          tabs[tabFocus].setAttribute('tabindex', -1);
+          if (e.keyCode === 39) {
+            tabFocus++;
+            // If we're at the end, go to the start
+            if (tabFocus >= tabs.length) {
+              tabFocus = 0;
+            }
+            // Move left
+          } else if (e.keyCode === 37) {
+            tabFocus--;
+            // If we're at the start, move to the end
+            if (tabFocus < 0) {
+              tabFocus = tabs.length - 1;
+            }
+          }
+
+          tabs[tabFocus].setAttribute('tabindex', 0);
+          tabs[tabFocus].focus();
+        }
+      });
+    });
+
+    function changeTabs(e) {
+      const target = e.target;
+      const parent = target.parentNode;
+      const grandparent = parent.parentNode;
+
+      // Remove all current selected tabs
+      parent
+        .querySelectorAll('[aria-selected="true"]')
+        .forEach(t => t.setAttribute('aria-selected', false));
+
+      // Set this tab as selected
+      target.setAttribute('aria-selected', true);
+
+      // Hide all tab panels
+      grandparent
+        .querySelectorAll('[role="tabpanel"]')
+        .forEach(p => p.setAttribute('hidden', true));
+
+      // Show the selected panel
+      grandparent.parentNode
+        .querySelector(`#${target.getAttribute('aria-controls')}`)
+        .removeAttribute('hidden');
+    }
+
+  </script>
+</body>
+
+</html>
